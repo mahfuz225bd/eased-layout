@@ -9,7 +9,9 @@ Full documentation (in a website) will be published after releasing the first ve
 ### Files
 
 1. **`layout.css`:** For basic html layout designing with div.envelope and html5 semantic layout elements (header, aside, main, section, article, footer).
-2. **`layout.100grid.css`:** For (maximum) 100 columned grid system layout desiging.
+2. **`layout.100grid.css`:** For (maximum) 100 columned grid system layout designing.
+
+> `layout.css` is always required in your project.
 
 ### Basic File Structure
 
