@@ -1,6 +1,6 @@
 # Eased Layout
 
-Status: `Working...`, first release will be published as early as possible but still able to use.
+Status: `Working...`, first release will be published as early as possible but still you can use.
 
 ## Documentation
 
