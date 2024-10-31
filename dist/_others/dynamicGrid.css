@@ -1,0 +1,39 @@
+:root {
+    --grid-columns: 100; /* Total number of columns */
+}
+
+.row {
+    display: flex;          /* Enable flexbox on the row */
+    flex-wrap: wrap;       /* Allow children to wrap onto new lines */
+}
+
+.row > * {
+    flex: 1 0 auto;        /* Allow items to grow and shrink, with a base width of auto */
+}
+
+/* Set the widths based on the number of columns */
+.row > * {
+    flex: 1 0 calc(100% / var(--grid-columns)); /* Default: full width divided by total columns */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        display: grid; /* Enable grid layout on the row */
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        /* Set a gap between grid items */
+        /* gap: 16px; */
+    }
+
+    .row > * {
+        /* No additional styles needed; items will take full width by default */
+        width: 100%; /* Each item takes full width */
+    }
+}
+
+/* Specific number of columns */
+@for $i from 1 through var(--grid-columns) {
+    .row > *:nth-child(#{$i}n) {
+        flex: 1 0 calc(100% / (var(--grid-columns) / #{$i})); /* Calculate width based on the current column count */
+    }
+}

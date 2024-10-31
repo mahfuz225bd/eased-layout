@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Start: Basic Layout System using float with or without .envelope (.container in html-easy-layout library) */
+
+div.envelope {
+    /* Clearfix to contain floated children */
+    overflow: hidden;
+}
+
+header,
+footer {
+    width: 100%;
+    display: block;
+    /* Ensures block display */
+}
+
+main {
+    display: block;
+    overflow: hidden;
+    /* Ensures block display */
+}
+
+main>aside,
+main>section,
+main>article,
+div.envelope>aside,
+div.envelope>section,
+div.envelope>article {
+    float: left;
+    /* Floats elements to create a horizontal layout */
+    width: 33.33%;
+    /* Adjust this width for the desired layout */
+}
+
+ul {
+    padding-left: 25px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    /* Clear floats */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 900px) {
+    div.envelope {
+        /* Remove float and ensure children stack vertically */
+        overflow: hidden;
+    }
+
+    main>aside,
+    main>section,
+    main>article,
+    div.envelope>aside,
+    div.envelope>section,
+    div.envelope>article {
+        float: none;
+        /* Clear floats for small screens */
+        width: 100%;
+        /* Full width stacking */
+        padding: 0;
+        /* Remove padding */
+    }
+}
+
+/* Rules for layout designing:
+    Header Placement:
+        Can be excluded, placed in the body, inside a div.envelope, or as a child of aside, main, article, or section.
+
+    Aside Combinations:
+        None, one (left), one (right), or two asides.
+
+    Main Content:
+        Can use only main, section, or article.
+
+    Footer Placement:
+        Can be excluded, placed in the body, inside a div.envelope.
+
+    Envelope Usage:
+        The div.envelope can be included or excluded and can be placed as a child of any element. Here div.envelope working as container. */

@@ -39,10 +39,6 @@ div.envelope > article {
   flex: 1;
 }
 
-article {
-  /* height: fit-content; */
-}
-
 ul {
   padding-left: 25px;
 }
