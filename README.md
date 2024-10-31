@@ -23,6 +23,7 @@ Full documentation (in a website) will be published after releasing the first ve
 |   └── layout.100.grid.css
 ├── test1.html (for testing, included for temporary)
 ├── test2.html (for testing, included for temporary)
+├── test3.grid.html (for testing, included for temporary)
 ```
 
 ### Guideline for Designing Layout
