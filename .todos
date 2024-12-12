@@ -1,0 +1,160 @@
+## TODOs for Future Releases
+
+**Primary Decisions:**
+
+- **Improving Grid Layout:** Make the existing grid system responsive with breakpoints.
+- **Complete CSS Support for Older Browsers (layout.old.css):**
+  - Float layout
+  - Inline-block layout
+  - Table-based layouts (**Note:** Semantically incorrect, avoid for new layouts)
+  - Source File: `/_others/layout.old.css`
+- **Implement Modern CSS Grid Layout:**
+  - Experiment with various possibilities of CSS Grid for modern layouts.
+- Renaming .container to .wrapper or others, if found the best class name.
+
+**Possible Future Enhancements:**
+
+- **Special Built-in Layouts:**
+  - Masonry Layout
+  - Overlay Layout
+  - (List more layouts here)
+- **Old Browser Support for Special Layouts:**
+  - Explore implementing with CSS1 for older browsers (**Note:** Challenging)
+- **Advanced Responsive Techniques for Grid System or Semantic Layout:** Breakpoints, container fluid, min max width, gutter, column wrapping, unlimited auto column,
+- **To Explore and Implement New Techniques:**
+  Here is the list of unique URLs for layout design libraries:
+  1. https://github.com/kristoferjoseph/flexboxgrid
+  2. https://github.com/devlint/gridlex
+  3. https://simplegrid.io/
+  4. https://www.oddbird.net/2017/06/28/susy3/
+  5. http://gridlex.devlint.fr/
+  6. https://milligram.io/grids.html
+  7. http://www.responsivegridsystem.com/
+  8. https://semantic-ui.com/collections/grid.html
+  9. https://github.com/jonikorpi/Golden-Grid-System
+  10. https://neat.joeldare.com/#examples
+  11. https://vladocar.github.io/SMART-CSS-GRID/
+  12. https://github.com/oddbird/susy
+  13. https://github.com/daveberning/griddle
+  14. https://github.com/necolas/griddle
+  15. https://jackpopp.github.io/griddle/
+  16. https://goldengridsystem.com
+  17. https://neat.bourbon.io
+  18. http://oddbird.net/susy/
+  19. https://thisisdallas.github.io/Simple-Grid/
+  20. http://960.gs/
+  21. https://baselinecss.com
+  22. https://materializecss.com
+  23. http://blueprintcss.org/
+  24. https://cardinalcss.com/
+  25. https://tachyons.io/
+  26. https://picturepan2.github.io/spectre/
+  27. https://grid.simplecss.org
+  28. https://blazecss.com/
+  29. https://cssgr.id/
+  30. https://www.cutestrap.com/
+  31. https://purecss.io/
+  32. https://bulma.io/
+  33. https://get.foundation/
+  34. https://getskeleton.com/
+  35. https://www.jeet.gs/
+  36. https://unsemantic.com/
+  37. https://www.ymc.ch/en/multicolumn-css-grid/
+  38. https://www.chota.io/
+  39. https://picnicss.com/
+  40. https://kube.cssblocks.com/
+  41. https://mini.css.org/
+  42. https://korynikollari.com/alkaline/
+  43. NPM Package Tag: https://www.npmjs.com/search?q=keywords:layout
+  44. NPM Package Tag: https://www.npmjs.com/search?q=keywords:breakpoints
+  45. NPM Package Tag: https://www.npmjs.com/search?q=keywords%3Ablueprint&page=16&perPage=20
+  46. Search "Layout" at: https://bower.io/search/
+  47. https://plugins.jquery.com/tag/ui/
+  48. https://plugins.jquery.com/tag/responsive/
+  49. https://plugins.jquery.com/tag/scroll/
+
+List of special types of layouts (Generated from ChatGPT):
+
+| Layout                 | Key Feature                                                    | Use Case                                                                    |
+| ---------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **F-layout**           | F-shaped content flow, focused on the top left                 | Websites with key content placed in the top-left corner, like news websites |
+| **Lattice**            | Grid-like structure with items arranged in rows and columns    | Interactive interfaces, complex forms, and applications                     |
+| **Single Column**      | A single vertical column layout                                | Mobile-first websites, blogs, and simple landing pages                      |
+| **Full Screen**        | Content stretches across the entire viewport                   | Immersive websites, landing pages, single-page applications                 |
+| **Magazine Layout**    | Newspaper-style layout with multiple columns                   | Digital magazines, newspapers, and multi-article websites                   |
+| **Stacked**            | Items stacked vertically or horizontally                       | Simple blogs, content-heavy sites where elements stack cleanly              |
+| **Hero Layout**        | Large, visually-striking header section, often with an image   | Landing pages, product promotions, and portfolio sites                      |
+| **Sidebar Layout**     | Main content with a sidebar for extra information              | Blogs, documentation, product pages                                         |
+| **Circular Layout**    | Content arranged in circular or spiral fashion                 | Creative websites, portfolios, artistic pages                               |
+| **Tile Layout**        | Items arranged in uniform tiles, typically with equal height   | Product displays, online catalogs, photo galleries                          |
+| **Interactive Layout** | Layout that adjusts dynamically with user interaction          | Games, interactive applications, custom UI systems                          |
+| **Parallax Scrolling** | Background and foreground move at different speeds             | Storytelling websites, promotional pages, creative portfolios               |
+| **Card Deck**          | Cards stacked in a grid with clear visual separation           | Social media feeds, product listings, service features                      |
+| **Modular Layout**     | Repetitive blocks or modules that can be rearranged            | E-commerce websites, portfolio sites, content management systems            |
+| **Split Screen**       | Two or more sections, each taking up a full half of the screen | Product showcases, interactive pages, contrast-based designs                |
+| **Timeline Layout**    | Content displayed chronologically, often in a line or path     | Events, project milestones, historical content pages                        |
+
+These additional layout types cover a broad range of design purposes, from creative and artistic websites to practical and function-oriented sites. While the exact number of total can vary, it is safe to say there are **more than 100 layout types** across all design disciplines when considering both traditional and modern approaches. Many of these layouts overlap or evolve as new trends and technologies emerge, which further expands the number.
+
+Categories of Layout (Generated from ChatGPT):
+
+1. Web Design Layouts (20-30 types)
+
+   Includes types like Masonry, Grid, Flexbox, Card, Magazine, F-Layout, Lattice, and others.
+
+2. Print Layouts (10-20 types)
+
+   Includes Magazine, Newspaper, Poster, Flyer, Brochure, Report, and Book layouts.
+
+3. UI/UX Layouts (15-20 types)
+
+   Includes Modal, Dashboard, Sidebar Navigation, Form, Tab, and Content Area layouts.
+
+4. Architectural Layouts (10-15 types)
+
+   Includes Open-Plan, Closed-Plan, Zoning, Grid (city planning), Radial, and Linear layouts.
+
+5. Product Layouts (5-10 types)
+
+   Includes Product Display, Retail Shelf, Packaging, and E-commerce layouts.
+
+6. Other Layouts (5-10 types)
+
+   Includes layouts for Gaming UI, 3D Environments, Virtual Reality, and Industrial Design.
+
+Urgent TODOs:
+
+- Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
+- Classes for flex
+- Modern CSS grid (apply with researching all possible ways) (https://getbootstrap.com/docs/5.3/layout/css-grid/)
+- Classes for grid (https://www.w3schools.com/css/css_grid.asp)
+
+For Helpers
+
+- margin
+- padding
+- gutter
+- gap vs gutter?
+- horizontal and vertical alignments
+- order
+- offset
+- visibility
+- z-index (https://getbootstrap.com/docs/5.3/layout/z-index/)
+- position
+- ratio
+
+For Utilities:
+
+- display
+- flex
+- float
+- object-fit (can be deleted, after decision)
+- overflow
+- position
+- sizing
+- spacing
+- text
+- vertical align
+- visibility
+- z-index (https://getbootstrap.com/docs/5.3/utilities/z-index/)
+  \*/

@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-div.envelope {
+div.container {
     display: grid;
     grid-template-columns: 1fr;
     /* Default single column layout */
@@ -36,7 +36,7 @@ ul {
 
 /* Responsive Design */
 @media screen and (max-width: 900px) {
-    div.envelope {
+    div.container {
         grid-template-columns: 1fr;
         /* Switch to single column */
     }
@@ -61,7 +61,7 @@ ul {
 
 /* Fallback for unsupported browsers */
 @supports not (display: grid) {
-    div.envelope {
+    div.container {
         display: block;
         /* Fallback to block layout */
     }
@@ -79,7 +79,7 @@ ul {
 
 /* Rules for layout designing:
     Header Placement:
-        Can be excluded, placed in the body, inside a div.envelope, or as a child of aside, main, article, or section.
+        Can be excluded, placed in the body, inside a div.container, or as a child of aside, main, article, or section.
 
     Aside Combinations:
         None, one (left), one (right), or two asides.
@@ -88,7 +88,7 @@ ul {
         Can use only main, section, or article.
 
     Footer Placement:
-        Can be excluded, placed in the body, inside a div.envelope.
+        Can be excluded, placed in the body, inside a div.container.
 
-    Envelope Usage:
-        The div.envelope can be included or excluded and can be placed as a child of any element. Here div.envelope working as container. */
+    container Usage:
+        The div.container can be included or excluded and can be placed as a child of any element. Here div.container working as container. */

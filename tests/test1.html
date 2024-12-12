@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Example of Eased Layout with HTML5 Semantic Elements</title>
+    <link rel="stylesheet" href="../dist/eased-layout.css">
+    <style>
+        header,
+        aside,
+        main,
+        section,
+        article,
+        footer {
+            border: 1px solid #000;
+        }
+
+        div.container {
+            border: 1px solid red;
+        }
+
+        h1 {
+            margin-top: 17px;
+        }
+
+        body {
+            padding: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Method 1 [header + (div.container -> aside + main + aside) + footer]:</h1>
+    <header>Header, in body</header>
+    <div class="container">
+        <aside>Left aside, in div.container</aside>
+        <main>Main Content as main, in div.container</main>
+        <aside>Right aside, in div.container</aside>
+    </div>
+    <footer>Footer, in body</footer>
+
+    <h1>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h1>
+    <header>Header, in body</header>
+    <main>
+        <aside>Left aside, in main, no any div.container</aside>
+        <section>Main Content as section, in main, no any div.container</section>
+        <aside>Right aside, in main, no any div.container</aside>
+    </main>
+    <footer>Footer, in body</footer>
+
+    <h1>Method 2.2 [header + main -> (aside + article + aside) + footer]:</h1>
+    <header>Header, in body</header>
+    <main>
+        <aside>Left aside, in main, no any div.container</aside>
+        <article>Main Content as article, in main, no any div.container</article>
+        <aside>Right aside, in main, no any div.container</aside>
+    </main>
+    <footer>Footer, in body</footer>
+
+    <h1>Method 3.1 [main -> (header + aside + section + aside + footer)]:</h1>
+    <main>
+        <header>Header, in main, no any div.container</header>
+        <aside>Left aside, in main, no any div.container</aside>
+        <section>Main Content as section, in main, no any div.container</section>
+        <aside>Right aside, in main, no any div.container</aside>
+        <footer>Footer, in main, no div.container</footer>
+    </main>
+
+    <h1>Method 3.2 [main -> (header + aside + article + aside + footer)]:</h1>
+    <main>
+        <header>Header, in main, no any div.container</header>
+        <aside>Left aside, in main, no any div.container</aside>
+        <section>Main Content as article, in main, no any div.container</section>
+        <aside>Right aside, in main, no any div.container</aside>
+        <footer>Footer, in main, no div.container</footer>
+    </main>
+
+    <h1>Method 4 [(div.container -> header + aside + main + aside + footer)]:</h1>
+    <div class="container">
+        <header>Header, in div.container</header>
+        <aside>Left aside, in div.container</aside>
+        <main>Main Content as main, in div.container</main>
+        <aside>Right aside, in div.container</aside>
+        <footer>Footer, in div.container</footer>
+    </div>
+
+    <h1>Singe Aside Example 1:</h1>
+    <header>Header</header>
+    <div class="container">
+        <aside>Left aside (25%)</aside>
+        <main>Main Content (100 - 25 = 75%)</main>
+    </div>
+    <footer>Footer</footer>
+
+    <h1>Singe Aside Example 2:</h1>
+    <header>Header</header>
+    <div class="container">
+        <main>Main Content (100 - 25 = 75%)</main>
+        <aside>Right aside (25%)</aside>
+    </div>
+    <footer>Footer</footer>
+
+    <h1>Double Aside Example:</h1>
+    <header>Header</header>
+    <div class="container">
+        <aside>Left aside (20%)</aside>
+        <main>Main Content (100 - (20 + 20) = 60%)</main>
+        <aside>Right aside (20%)</aside>
+    </div>
+    <footer>Footer</footer>
+</body>
+
+</html>

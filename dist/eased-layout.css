@@ -1,0 +1,559 @@
+@charset "UTF-8";
+
+/*!
+ * Eased Layout CSS Library v1.0.0
+ * File Name: eased-layout.css
+ * File Description: 
+ * Copyright (c) 2024 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+hr,
+table,
+caption {
+  margin: 0;
+}
+
+/* Start: Semantic layout */
+
+header,
+footer {
+  width: 100%;
+}
+
+div.container,
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Main content and container's direct child elements take equal space by default */
+
+main,
+main>section,
+main>article,
+div.container>section,
+div.container>article {
+  flex: 1;
+}
+
+/* Sidebars (asides) have a default width of 20% */
+
+main>aside,
+div.container>aside {
+  flex: 0 0 20%;
+}
+
+/* Single aside takes up 25% width */
+
+main>aside:only-of-type,
+div.container>aside:only-of-type {
+  flex: 0 0 25%;
+}
+
+/* Responsive design for smaller screens */
+
+@media screen and (max-width: 900px) {
+
+  div.container,
+  main {
+    flex-direction: column;
+  }
+
+  header,
+  aside,
+  main,
+  section,
+  article,
+  footer,
+  div.container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Fallback for browsers not supporting flexbox */
+
+@supports not (display: flex) {
+
+  header,
+  aside,
+  main,
+  section,
+  article,
+  footer,
+  div.container {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* End: Semantic layout */
+
+/* Start: Grid system with flex */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Single column (full width) as default */
+.row>* {
+  flex: 0 0 100%;
+}
+
+/* 1 column (Optional class) */
+.row.total-columns-1>*,
+.row.total-columns-sm-1>*,
+.row.total-columns-md-1>*,
+.row.total-columns-lg-1>*,
+.row.total-columns-xl-1>*,
+.row.total-columns-xxl-1>* {
+  flex: 0 0 100%;
+}
+
+/* 2 columns */
+.row.total-columns-2>*,
+.row.total-columns-sm-2>*,
+.row.total-columns-md-2>*,
+.row.total-columns-lg-2>*,
+.row.total-columns-xl-2>*,
+.row.total-columns-xxl-2>* {
+  flex: 0 0 50%;
+}
+
+/* 3 columns */
+.row.total-columns-3>*,
+.row.total-columns-sm-3>*,
+.row.total-columns-md-3>*,
+.row.total-columns-lg-3>*,
+.row.total-columns-xl-3>*,
+.row.total-columns-xxl-3>* {
+  flex: 0 0 33.33%;
+}
+
+/* 4 columns */
+.row.total-columns-4>*,
+.row.total-columns-sm-4>*,
+.row.total-columns-md-4>*,
+.row.total-columns-lg-4>*,
+.row.total-columns-xl-4>*,
+.row.total-columns-xxl-4>* {
+  flex: 0 0 25%;
+}
+
+/* 5 columns */
+.row.total-columns-5>*,
+.row.total-columns-sm-5>*,
+.row.total-columns-md-5>*,
+.row.total-columns-lg-5>*,
+.row.total-columns-xl-5>*,
+.row.total-columns-xxl-5>* {
+  flex: 0 0 20%;
+}
+
+/* 6 columns */
+.row.total-columns-6>*,
+.row.total-columns-sm-6>*,
+.row.total-columns-md-6>*,
+.row.total-columns-lg-6>*,
+.row.total-columns-xl-6>*,
+.row.total-columns-xxl-6>* {
+  flex: 0 0 16.67%;
+}
+
+/* 7 columns */
+.row.total-columns-7>*,
+.row.total-columns-sm-7>*,
+.row.total-columns-md-7>*,
+.row.total-columns-lg-7>*,
+.row.total-columns-xl-7>*,
+.row.total-columns-xxl-7>* {
+  flex: 0 0 14.29%;
+}
+
+/* 8 columns */
+.row.total-columns-8>*,
+.row.total-columns-sm-8>*,
+.row.total-columns-md-8>*,
+.row.total-columns-lg-8>*,
+.row.total-columns-xl-8>*,
+.row.total-columns-xxl-8>* {
+  flex: 0 0 12.5%;
+}
+
+/* 9 columns */
+.row.total-columns-9>*,
+.row.total-columns-sm-9>*,
+.row.total-columns-md-9>*,
+.row.total-columns-lg-9>*,
+.row.total-columns-xl-9>*,
+.row.total-columns-xxl-9>* {
+  flex: 0 0 11.11%;
+}
+
+/* 10 columns */
+.row.total-columns-10>*,
+.row.total-columns-sm-10>*,
+.row.total-columns-md-10>*,
+.row.total-columns-lg-10>*,
+.row.total-columns-xl-10>*,
+.row.total-columns-xxl-10>* {
+  flex: 0 0 10%;
+}
+
+/* 11 columns */
+.row.total-columns-11>*,
+.row.total-columns-sm-11>*,
+.row.total-columns-md-11>*,
+.row.total-columns-lg-11>*,
+.row.total-columns-xl-11>*,
+.row.total-columns-xxl-11>* {
+  flex: 0 0 9.09%;
+}
+
+/* 12 columns */
+.row.total-columns-12>*,
+.row.total-columns-sm-12>*,
+.row.total-columns-md-12>*,
+.row.total-columns-lg-12>*,
+.row.total-columns-xl-12>*,
+.row.total-columns-xxl-12>* {
+  flex: 0 0 8.33%;
+}
+
+/* 12+ columns */
+.row.total-columns-n>* {
+  flex: 0 0 calc(100% / var(--columns));
+}
+
+/* End: Grid system with flex */
+
+/* Start: Helper */
+
+/* End: Helper */
+
+/* Start: Breakpoints for responsiveness */
+
+/* Extra small: <576px */
+@media (max-width: 575.98px) {
+  .row.total-columns-sm-1>* {
+    flex: 0 0 100%;
+  }
+
+  .row.total-columns-sm-2>* {
+    flex: 0 0 50%;
+  }
+
+  .row.total-columns-sm-3>* {
+    flex: 0 0 33.33%;
+  }
+
+  .row.total-columns-sm-4>* {
+    flex: 0 0 25%;
+  }
+
+  .row.total-columns-sm-5>* {
+    flex: 0 0 20%;
+  }
+
+  .row.total-columns-sm-6>* {
+    flex: 0 0 16.67%;
+  }
+
+  .row.total-columns-sm-7>* {
+    flex: 0 0 14.29%;
+  }
+
+  .row.total-columns-sm-8>* {
+    flex: 0 0 12.5%;
+  }
+
+  .row.total-columns-sm-9>* {
+    flex: 0 0 11.11%;
+  }
+
+  .row.total-columns-sm-10>* {
+    flex: 0 0 10%;
+  }
+
+  .row.total-columns-sm-11>* {
+    flex: 0 0 9.09%;
+  }
+
+  .row.total-columns-sm-12>* {
+    flex: 0 0 8.33%;
+  }
+
+  .row.total-columns-breakpoints-n>* {
+    flex: 0 0 calc(100% / var(--columns-sm));
+  }
+}
+
+/* Small: ≥576px */
+@media (min-width: 576px) {
+  .row.total-columns-md-1>* {
+    flex: 0 0 100%;
+  }
+
+  .row.total-columns-md-2>* {
+    flex: 0 0 50%;
+  }
+
+  .row.total-columns-md-3>* {
+    flex: 0 0 33.33%;
+  }
+
+  .row.total-columns-md-4>* {
+    flex: 0 0 25%;
+  }
+
+  .row.total-columns-md-5>* {
+    flex: 0 0 20%;
+  }
+
+  .row.total-columns-md-6>* {
+    flex: 0 0 16.67%;
+  }
+
+  .row.total-columns-md-7>* {
+    flex: 0 0 14.29%;
+  }
+
+  .row.total-columns-md-8>* {
+    flex: 0 0 12.5%;
+  }
+
+  .row.total-columns-md-9>* {
+    flex: 0 0 11.11%;
+  }
+
+  .row.total-columns-md-10>* {
+    flex: 0 0 10%;
+  }
+
+  .row.total-columns-md-11>* {
+    flex: 0 0 9.09%;
+  }
+
+  .row.total-columns-md-12>* {
+    flex: 0 0 8.33%;
+  }
+
+  .row.total-columns-breakpoints-n>* {
+    flex: 0 0 calc(100% / var(--columns-md));
+  }
+}
+
+
+/* Medium: ≥768px */
+@media (min-width: 768px) {
+  .row.total-columns-lg-1>* {
+    flex: 0 0 100%;
+  }
+
+  .row.total-columns-lg-2>* {
+    flex: 0 0 50%;
+  }
+
+  .row.total-columns-lg-3>* {
+    flex: 0 0 33.33%;
+  }
+
+  .row.total-columns-lg-4>* {
+    flex: 0 0 25%;
+  }
+
+  .row.total-columns-lg-5>* {
+    flex: 0 0 20%;
+  }
+
+  .row.total-columns-lg-6>* {
+    flex: 0 0 16.67%;
+  }
+
+  .row.total-columns-lg-7>* {
+    flex: 0 0 14.29%;
+  }
+
+  .row.total-columns-lg-8>* {
+    flex: 0 0 12.5%;
+  }
+
+  .row.total-columns-lg-9>* {
+    flex: 0 0 11.11%;
+  }
+
+  .row.total-columns-lg-10>* {
+    flex: 0 0 10%;
+  }
+
+  .row.total-columns-lg-11>* {
+    flex: 0 0 9.09%;
+  }
+
+  .row.total-columns-lg-12>* {
+    flex: 0 0 8.33%;
+  }
+
+  .row.total-columns-breakpoints-n>* {
+    flex: 0 0 calc(100% / var(--columns-lg));
+  }
+}
+
+/* Large: ≥992px */
+@media (min-width: 992px) {
+  .row.total-columns-xl-1>* {
+    flex: 0 0 100%;
+  }
+
+  .row.total-columns-xl-2>* {
+    flex: 0 0 50%;
+  }
+
+  .row.total-columns-xl-3>* {
+    flex: 0 0 33.33%;
+  }
+
+  .row.total-columns-xl-4>* {
+    flex: 0 0 25%;
+  }
+
+  .row.total-columns-xl-5>* {
+    flex: 0 0 20%;
+  }
+
+  .row.total-columns-xl-6>* {
+    flex: 0 0 16.67%;
+  }
+
+  .row.total-columns-xl-7>* {
+    flex: 0 0 14.29%;
+  }
+
+  .row.total-columns-xl-8>* {
+    flex: 0 0 12.5%;
+  }
+
+  .row.total-columns-xl-9>* {
+    flex: 0 0 11.11%;
+  }
+
+  .row.total-columns-xl-10>* {
+    flex: 0 0 10%;
+  }
+
+  .row.total-columns-xl-11>* {
+    flex: 0 0 9.09%;
+  }
+
+  .row.total-columns-xl-12>* {
+    flex: 0 0 8.33%;
+  }
+
+  .row.total-columns-breakpoints-n>* {
+    flex: 0 0 calc(100% / var(--columns-xl));
+  }
+}
+
+/* Extra extra large: ≥1400px */
+@media (min-width: 1400px) {
+  .row.total-columns-xxl-1>* {
+    flex: 0 0 100%;
+  }
+
+  .row.total-columns-xxl-2>* {
+    flex: 0 0 50%;
+  }
+
+  .row.total-columns-xxl-3>* {
+    flex: 0 0 33.33%;
+  }
+
+  .row.total-columns-xxl-4>* {
+    flex: 0 0 25%;
+  }
+
+  .row.total-columns-xxl-5>* {
+    flex: 0 0 20%;
+  }
+
+  .row.total-columns-xxl-6>* {
+    flex: 0 0 16.67%;
+  }
+
+  .row.total-columns-xxl-7>* {
+    flex: 0 0 14.29%;
+  }
+
+  .row.total-columns-xxl-8>* {
+    flex: 0 0 12.5%;
+  }
+
+  .row.total-columns-xxl-9>* {
+    flex: 0 0 11.11%;
+  }
+
+  .row.total-columns-xxl-10>* {
+    flex: 0 0 10%;
+  }
+
+  .row.total-columns-xxl-11>* {
+    flex: 0 0 9.09%;
+  }
+
+  .row.total-columns-xxl-12>* {
+    flex: 0 0 8.33%;
+  }
+
+  .row.total-columns-breakpoints-n>* {
+    flex: 0 0 calc(100% / var(--columns-xxl));
+  }
+}
+
+/* End: Breakpoints for responsiveness */
+
+/* Layout Rules (HTML5 Semantic Layout):
+    Header Placement:
+        Optional; can be placed in the body, inside a div.container, or as a child of aside, main, article, or section.
+        Though optional, having at least one header element is highly recommended as it improves SEO by providing search engines with context, and enhances accessibility too.
+
+    Aside Combinations:
+        None, one (left), one (right), or two asides.
+
+    Main Content:
+        Must use main. Can section, or article be used as optional.
+
+    Footer Placement:
+        Optional; can be placed in the body or inside a div.container.
+
+    container Usage:
+        The div.container serves as a container. It is optional and can be placed as a child of any element.
+*/
+
+/* Layout Rules (Grid Layout):
+   - The grid system uses `.row` for organizing content in columns. Without classes for columns, immediate child elements of a `.row` are considered columns.
+   - Fixed Grid (12 columns): Use `.total-columns-1` to `.total-columns-12` to define column widths (e.g., `.total-columns-2` = 50%).
+   - For 12+ columns: Use `.total-columns-n` to `.row` element with `--columns` variable. The column widths will be calculated automatically by `width: calc(100% / var(--columns))`.
+*/
+
+/* Responsive for Layout Rules (Grid Layout):
+   - There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
+   - For Fixed Grid (12 columns): Along with `.row`, use any class according to the format: `.total-{sm|md|lg|xl|xxl}-{columns}`; columns should be 1 to 12.
+   - 12+ columns: Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{sm|md|lg|xl|xxl}: {columns}; columns can be any value
+*/
