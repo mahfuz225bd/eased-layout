@@ -555,5 +555,5 @@ div.container>aside:only-of-type {
 /* Responsive for Layout Rules (Grid Layout):
    - There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
    - For Fixed Grid (12 columns): Along with `.row`, use any class according to the format: `.total-{sm|md|lg|xl|xxl}-{columns}`; columns should be 1 to 12.
-   - 12+ columns: Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{sm|md|lg|xl|xxl}: {columns}; columns can be any value
+   - 12+ columns: Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{sm|md|lg|xl|xxl}: {columns}; columns can be any integer value
 */

@@ -284,7 +284,7 @@ Along with `.row`, use any class according to the format: `.total-{sm|md|lg|xl|x
 
 ##### For 12+ columns
 
-Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{sm|md|lg|xl|xxl}: {columns}; columns can be any value
+Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{sm|md|lg|xl|xxl}: {columns}; columns can be any integer value.
 
 ### Complete Example for HTML5 Semantic Elements:
 
@@ -740,3 +740,36 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
 ## TODOs
 
 [Click here](.todos) to show todos for future releases.
+
+## Release Note (Draft)
+
+**Release Note**
+
+**Version 1.0.0 - {date}**
+
+**Features:**
+
+1. **CSS Reset for Consistency:**
+
+   - Introduced a basic CSS reset for consistent cross-browser styling:
+     - Applied `box-sizing: border-box` for intuitive layout calculations.
+     - Removed default margins from common elements (e.g., headings, paragraphs, and tables) to ensure uniform spacing.
+   - Included a feature to restore browser defaults if needed.
+
+2. **Responsive Layout Design:**
+
+   - Simplified layout creation with HTML5 semantic elements: `header`, `aside`, `main`, `section`, `article`, and `footer`.
+
+3. **12-Column Grid System:**
+
+   - Added a class-based grid system for responsive designs:
+     - `.total-{breakpoints}-{columns}` (e.g., `.total-md-6`).
+     - Supports breakpoints (`sm`, `md`, `lg`, `xl`, `xxl`) and column counts from 1 to 12.
+
+4. **Dynamic Column Grid System:**
+   - Introduced a flexible grid system for custom layouts:
+     - Use `.dynamic-columned` with CSS variables for unlimited column configurations.
+     - Configure breakpoints with `.total-columns-{breakpoints}-{n}` and CSS variables (e.g., `--columns-md: 16`).
+     - Supports any integer column count for precise designs.
+
+This release lays the foundation for a robust, responsive, and customizable front-end framework.
