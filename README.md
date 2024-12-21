@@ -756,7 +756,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
      - Removed default margins from common elements (e.g., headings, paragraphs, and tables) to ensure uniform spacing.
    - Included a feature to restore browser defaults if needed.
 
-2. **Responsive Layout Design:**
+2. **Sematic Layout Design:**
 
    - Simplified layout creation with HTML5 semantic elements: `header`, `aside`, `main`, `section`, `article`, and `footer`.
 
@@ -764,11 +764,11 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
 
    - Added a class-based grid system for responsive designs:
      - `.total-{breakpoints}-{columns}` (e.g., `.total-md-6`).
-     - Supports breakpoints (`sm`, `md`, `lg`, `xl`, `xxl`) and column counts from 1 to 12.
+     - Supported breakpoints (`sm`, `md`, `lg`, `xl`, `xxl`) and the value of {columns} should between 1 to 12 according to need.
 
-4. **Dynamic Column Grid System:**
+4. **12+ Column Grid System:**
    - Introduced a flexible grid system for custom layouts:
-     - Use `.dynamic-columned` with CSS variables for unlimited column configurations.
+     - Use `.total-columns-n` with CSS variables for unlimited column configurations.
      - Configure breakpoints with `.total-columns-{breakpoints}-{n}` and CSS variables (e.g., `--columns-md: 16`).
      - Supports any integer column count for precise designs.
 
