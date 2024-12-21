@@ -1,6 +1,6 @@
 # Eased Layout
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+![github release](https://img.shields.io/github/release/mahfuz225bd/eased-layout.svg?label=current+release) ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 The `eased-layout.css` library provides predefined CSS for building web layouts. It offers a pre-designed responsive layout with HTML5 semantic elements such as `header`, `aside`, `main`, `section`, `article`, and `footer`, as well as a multi-columned grid system that offers 12 columns as primary and also can be extended with just a CSS variable.
 
