@@ -20,7 +20,7 @@
             border: 1px solid red;
         }
 
-        h1 {
+        h2 {
             margin-top: 17px;
         }
 
@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <h1>Method 1 [header + (div.container -> aside + main + aside) + footer]:</h1>
+    <h2>Method 1 [header + (div.container -> aside + main + aside) + footer]:</h2>
     <header>Header, in body</header>
     <div class="container">
         <aside>Left aside, in div.container</aside>
@@ -40,7 +40,7 @@
     </div>
     <footer>Footer, in body</footer>
 
-    <h1>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h1>
+    <h2>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h2>
     <header>Header, in body</header>
     <main>
         <aside>Left aside, in main, no any div.container</aside>
@@ -49,7 +49,7 @@
     </main>
     <footer>Footer, in body</footer>
 
-    <h1>Method 2.2 [header + main -> (aside + article + aside) + footer]:</h1>
+    <h2>Method 2.2 [header + main -> (aside + article + aside) + footer]:</h2>
     <header>Header, in body</header>
     <main>
         <aside>Left aside, in main, no any div.container</aside>
@@ -58,7 +58,7 @@
     </main>
     <footer>Footer, in body</footer>
 
-    <h1>Method 3.1 [main -> (header + aside + section + aside + footer)]:</h1>
+    <h2>Method 3.1 [main -> (header + aside + section + aside + footer)]:</h2>
     <main>
         <header>Header, in main, no any div.container</header>
         <aside>Left aside, in main, no any div.container</aside>
@@ -67,7 +67,7 @@
         <footer>Footer, in main, no div.container</footer>
     </main>
 
-    <h1>Method 3.2 [main -> (header + aside + article + aside + footer)]:</h1>
+    <h2>Method 3.2 [main -> (header + aside + article + aside + footer)]:</h2>
     <main>
         <header>Header, in main, no any div.container</header>
         <aside>Left aside, in main, no any div.container</aside>
@@ -76,7 +76,7 @@
         <footer>Footer, in main, no div.container</footer>
     </main>
 
-    <h1>Method 4 [(div.container -> header + aside + main + aside + footer)]:</h1>
+    <h2>Method 4 [(div.container -> header + aside + main + aside + footer)]:</h2>
     <div class="container">
         <header>Header, in div.container</header>
         <aside>Left aside, in div.container</aside>
@@ -85,7 +85,7 @@
         <footer>Footer, in div.container</footer>
     </div>
 
-    <h1>Singe Aside Example 1:</h1>
+    <h2>Singe Aside Example 1:</h2>
     <header>Header</header>
     <div class="container">
         <aside>Left aside (25%)</aside>
@@ -93,7 +93,7 @@
     </div>
     <footer>Footer</footer>
 
-    <h1>Singe Aside Example 2:</h1>
+    <h2>Singe Aside Example 2:</h2>
     <header>Header</header>
     <div class="container">
         <main>Main Content (100 - 25 = 75%)</main>
@@ -101,7 +101,7 @@
     </div>
     <footer>Footer</footer>
 
-    <h1>Double Aside Example:</h1>
+    <h2>Double Aside Example:</h2>
     <header>Header</header>
     <div class="container">
         <aside>Left aside (20%)</aside>
@@ -110,88 +110,51 @@
     </div>
     <footer>Footer</footer>
 
-    <!-- <h1>Nested Aside Example</h1>
-    <header>Header</header>
-    <div class="container">
-        <aside>Main Aside (Left)</aside>
-        <main>
-            <section role="main">
-                <h2>Main Section 1</h2>
-                <section role="main">
-                    <h3>Subsection 1.1</h3>
-                    <section role="main">
-                        <h4>Subsection 1.1.1</h4>
-                        <section role="main">
-                            <h5>Subsection 1.1.1.1</h5>
-                            <article>
-                                <h6>Article 1.1.1.1.1</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </article>
-                            <aside>Subsection 1.1.1.1 Aside</aside>
-                        </section>
-                        <article>
-                            <h6>Article 1.1.1</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </article>
-                    </section>
-                    <aside>Subsection 1.1 Aside</aside>
-                </section>
-                <section role="main">
-                    <h4>Subsection 1.2</h4>
-                    <article>
-                        <h5>Article 1.2.1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </article>
-                    <aside>Subsection 1.2 Aside</aside>
-                </section>
-            </section>
-            <section role="main">
-                <h2>Main Section 2</h2>
-                <section role="main">
-                    <h3>Subsection 2.1</h3>
-                    <section role="main">
-                        <h4>Subsection 2.1.1</h4>
-                        <article>
-                            <h5>Article 2.1.1.1</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </article>
-                        <aside>Subsection 2.1.1 Aside</aside>
-                    </section>
-                    <aside>Subsection 2.1 Aside</aside>
-                </section>
-                <section role="main">
-                    <h4>Subsection 2.2</h4>
-                    <article>
-                        <h5>Article 2.2.1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </article>
-                    <aside>Subsection 2.2 Aside</aside>
-                </section>
-            </section>
-        </main>
-        <aside>Main Aside (Right)</aside>
-    </div>
-    <footer>Footer</footer> -->
-
-    <h1>Nested Aside Example</h1>
-    <header>Header</header>
-    <div class="container">
+    <h2>Nested Aside Example:</h2>
+    <header>Header, in body</header>
+    <main>
         <aside>Left aside</aside>
-        <main>
-            <div class="container">
-                <aside>Left aside</aside>
-                <section>
-                    <div class="container">
-                        <aside>Left aside</aside>
-                        <section>Main Content as section</section>
-                        <aside>Right aside</aside>
-                    </div>
-                </section>
-                <aside>Right aside</aside>
-            </div>
-        </main>
+        <div class="container">
+            <aside>Left aside</aside>
+            <article>
+                <h3>Header</h3>
+                <div class="container">
+                    <aside>Left aside</aside>
+                    <section>
+                        <h4>Sub Header</h4>
+                        <div class="container">
+                            <aside>Left aside</aside>
+                            <section>
+                                <h5>Sub Header</h5>
+                                <div class="container">
+                                    <aside>Left aside</aside>
+                                    <section>
+                                        <h6>Sub Header</h6>
+                                        <div class="container">
+                                            <aside>Left aside</aside>
+                                            <section>
+                                                <div class="container">
+                                                    <aside>Left aside of the article</aside>
+                                                    <article>Main Content as article</article>
+                                                    <aside>Right aside of the article</aside>
+                                                </div>
+                                            </section>
+                                            <aside>Right aside</aside>
+                                        </div>
+                                    </section>
+                                    <aside>Right aside</aside>
+                                </div>
+                            </section>
+                            <aside>Right aside</aside>
+                        </div>
+                    </section>
+                    <aside>Right aside</aside>
+                </div>
+            </article>
+            <aside>Right aside</aside>
+        </div>
         <aside>Right aside</aside>
-    </div>
+    </main>
     <footer>Footer, in body</footer>
 </body>
 

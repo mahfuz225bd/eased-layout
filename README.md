@@ -130,6 +130,7 @@ This library is very helpful for making semantic layouts with one or two asides 
 4. **[main -> (header + aside + section + aside + footer)]:** Integrated header for standalone content-dominant pages.
 5. **[main -> (header + aside + article + aside + footer)]:** Article-focused layout for single content pages.
 6. **[(div.container -> header + aside + main + aside + footer)]:** Encapsulated layout for complete design control.
+7. **Nested Aside Layout:** For multiple layers of asides to organize content hierarchically, ideal for complex websites or applications with side content for navigation or highlighting sub-sections.
 
 #### Use Cases for Different Approaches
 
@@ -196,7 +197,115 @@ The listed layout structures represent different approaches to organizing a webp
   - Ideal for dashboards or applications where layout constraints are essential.
 - **Examples:** Admin dashboards, web applications, or corporate websites with strict design guidelines.
 
-### Guideline for Designing Grid System (Row Columned) Layout
+##### **7. Nested Aside Layout**
+
+A **nested `aside` layout** introduces multiple layers of asides, typically used when content needs to be organized in a more hierarchical or nested fashion. This layout is suitable for more complex websites or applications where certain sections or sub-sections need to be highlighted or navigated through specific side content areas.
+
+**Rules:**
+
+- **Structure:** header + main -> (aside + div.container -> (aside + section -> (...) + aside) + aside) + footer
+
+  _Or,_ header + div.container -> (aside + main -> (aside + section -> (...) + aside) + aside) + footer
+
+- **(...):** div.container -> aside + section + aside Or, div.container -> aside + article + aside
+
+- Can be implemented with one or two asides along with further nesting according to the **Structure** and **(...)**.
+
+**Use Case: Complex Content Hierarchy with Multiple Contexts**
+
+- **Purpose:** Ideal for websites with a lot of content that requires navigation, categorization, or deep linking within specific sub-sections.
+- **Why Choose It:**
+  - **Nested Asides** allow for contextual navigation where the content might change depending on what section the user is currently viewing.
+  - Multiple **sidebars (asides)** within the main content area enable highly organized sections, such as:
+    - Primary aside for overall navigation or category links.
+    - Secondary asides for filtering options, related content, or sub-navigation that is relevant to specific sections or articles.
+  - Great for **documentation**, **knowledge bases**, or **multi-level product pages** where there are deep categories or content types.
+
+###### **Examples:**
+
+1. **Documentation Platforms**
+   - The main area could hold the primary document or tutorial, and nested asides could contain:
+     - A **primary navigation sidebar** linking to other sections or chapters.
+     - A **secondary sidebar** for quick links to glossary, references, or related documents.
+     - A **third sidebar** for extra contextual information or notes specific to the section being viewed.
+2. **E-commerce Sites with Multiple Categories**
+
+   - The main area could display product listings or a product page, and nested asides could include:
+     - A **primary aside** showing category navigation.
+     - A **secondary aside** displaying filters for size, price, or other attributes.
+     - A **tertiary aside** offering recommendations or related products for upselling.
+
+3. **News or Multi-Topic Blogs**
+   - Main content for articles could be flanked by asides for related stories or topics:
+     - **Primary aside**: Related posts, categories, or featured news.
+     - **Secondary aside**: Social sharing tools, comments, or popular topics.
+     - **Tertiary aside**: Author info, ads, or external links related to the article.
+
+###### **Advantages of Nested Aside Layout:**
+
+- **Improved content organization**: Multiple layers of asides allow for more structured and organized content delivery, which is useful for hierarchical content.
+- **Contextual relevance**: By placing relevant information in nested asides, users can easily find content that complements or relates to the section they are currently viewing.
+- **Navigation efficiency**: This layout improves navigation for complex websites with multiple sections, categories, or sub-categories, helping users quickly locate information.
+- **Scalability**: It's suitable for websites or applications that require scalable layouts with a large volume of content.
+
+###### **Challenges:**
+
+- **Increased complexity**: With multiple nested asides, the layout might get more complex and harder to manage, requiring careful planning for content flow and user navigation.
+- **Possible clutter**: Too many sidebars or nested sections could overwhelm the user, so it's essential to maintain a clear focus on the most important content.
+
+###### **Example Layout Breakdown:**
+
+```html
+<header>Header, in body</header>
+<div class="container">
+  <aside>Left aside</aside>
+  <main>
+    <aside>Left aside</aside>
+    <section>
+      <h3>Header</h3>
+      <div class="container">
+        <aside>Left aside</aside>
+        <section>
+          <h4>Sub Header</h4>
+          <div class="container">
+            <aside>Left aside</aside>
+            <section>
+              <h5>Sub Header</h5>
+              <div class="container">
+                <aside>Left aside</aside>
+                <section>
+                  <h6>Sub Header</h6>
+                  <div class="container">
+                    <aside>Left aside</aside>
+                    <section>
+                      <div class="container">
+                        <aside>Left aside of the article</aside>
+                        <article>Main Content as article</article>
+                        <aside>Right aside of the article</aside>
+                      </div>
+                    </section>
+                    <aside>Right aside</aside>
+                  </div>
+                </section>
+                <aside>Right aside</aside>
+              </div>
+            </section>
+            <aside>Right aside</aside>
+          </div>
+        </section>
+        <aside>Right aside</aside>
+      </div>
+    </section>
+    <aside>Right aside</aside>
+  </main>
+  <aside>Right aside</aside>
+</div>
+<footer>Footer, in body</footer>
+```
+
+This structure allows for **layered, multi-level navigation**, where each aside focuses on different types of supplementary content depending on the section or context within the page.
+
+### Guideline for Designing Grid Layout
 
 `eased-layout.css` is also providing a design grid system (row-columned) layout. CSS rules are applied for creating a flexible grid layout using the classes `.row` and `.total-columns-N`, where N should be 1 to 12.
 
@@ -215,7 +324,7 @@ The listed layout structures represent different approaches to organizing a webp
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Methods of Using the .total-columns-n Class</title>
-      <link rel="stylesheet" href="../dist/eased-layout.css" />
+      <link rel="stylesheet" href="{root directory}/dist/eased-layout.css" />
       <style>
         .custom-total-columns-15 {
           --columns: 15;
@@ -282,19 +391,17 @@ For simplicity, there are no any class provided to make a container fluid. Inste
 | Extra large       | xl          | ≥1200px    |
 | Extra extra large | xxl         | ≥1400px    |
 
-#### Responsive Design for Semantic Layout
+#### Semantic Layout
 
-No need for any extra classes to apply responsiveness, provided styles for it as built-in. It will automatically change asides from horizontal to vertical when the media screen will be less than 900px.
+No need for any extra classes to apply basic responsiveness; provided styles for it as built-in. It will automatically change asides from horizontal to vertical when the media screen is less than 900px.
 
-#### Responsive Design for Grid System (Row Columned) Layout
+#### Grid Layout
 
 There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
 
-##### For Fixed Grid (12 columns)
-
 Along with `.row`, use any class according to the format: `.total-{sm|md|lg|xl|xxl}-{columns}`; columns should be 1 to 12.
 
-##### For 12+ columns
+##### 12+ Columns
 
 Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{sm|md|lg|xl|xxl}: {columns}; columns can be any integer value.
 
@@ -307,7 +414,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Complete Example of Eased Layout with HTML5 Semantic Elements</title>
-    <link rel="stylesheet" href="../dist/eased-layout.css" />
+    <link rel="stylesheet" href="{root directory}/dist/eased-layout.css" />
     <style>
       header,
       aside,
@@ -322,7 +429,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
         border: 1px solid red;
       }
 
-      h1 {
+      h2 {
         margin-top: 17px;
       }
 
@@ -333,9 +440,9 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
   </head>
 
   <body>
-    <h1>
+    <h2>
       Method 1 [header + (div.container -> aside + main + aside) + footer]:
-    </h1>
+    </h2>
     <header>Header, in body</header>
     <div class="container">
       <aside>Left aside, in div.container</aside>
@@ -344,7 +451,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
     </div>
     <footer>Footer, in body</footer>
 
-    <h1>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h1>
+    <h2>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h2>
     <header>Header, in body</header>
     <main>
       <aside>Left aside, in main, no any div.container</aside>
@@ -353,7 +460,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
     </main>
     <footer>Footer, in body</footer>
 
-    <h1>Method 2.2 [header + main -> (aside + article + aside) + footer]:</h1>
+    <h2>Method 2.2 [header + main -> (aside + article + aside) + footer]:</h2>
     <header>Header, in body</header>
     <main>
       <aside>Left aside, in main, no any div.container</aside>
@@ -362,7 +469,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
     </main>
     <footer>Footer, in body</footer>
 
-    <h1>Method 3.1 [main -> (header + aside + section + aside + footer)]:</h1>
+    <h2>Method 3.1 [main -> (header + aside + section + aside + footer)]:</h2>
     <main>
       <header>Header, in main, no any div.container</header>
       <aside>Left aside, in main, no any div.container</aside>
@@ -371,7 +478,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
       <footer>Footer, in main, no div.container</footer>
     </main>
 
-    <h1>Method 3.2 [main -> (header + aside + article + aside + footer)]:</h1>
+    <h2>Method 3.2 [main -> (header + aside + article + aside + footer)]:</h2>
     <main>
       <header>Header, in main, no any div.container</header>
       <aside>Left aside, in main, no any div.container</aside>
@@ -380,9 +487,9 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
       <footer>Footer, in main, no div.container</footer>
     </main>
 
-    <h1>
+    <h2>
       Method 4 [(div.container -> header + aside + main + aside + footer)]:
-    </h1>
+    </h2>
     <div class="container">
       <header>Header, in div.container</header>
       <aside>Left aside, in div.container</aside>
@@ -391,7 +498,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
       <footer>Footer, in div.container</footer>
     </div>
 
-    <h1>Singe Aside Example 1:</h1>
+    <h2>Singe Aside Example 1:</h2>
     <header>Header</header>
     <div class="container">
       <aside>Left aside (25%)</aside>
@@ -399,7 +506,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
     </div>
     <footer>Footer</footer>
 
-    <h1>Singe Aside Example 2:</h1>
+    <h2>Singe Aside Example 2:</h2>
     <header>Header</header>
     <div class="container">
       <main>Main Content (100 - 25 = 75%)</main>
@@ -407,7 +514,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
     </div>
     <footer>Footer</footer>
 
-    <h1>Double Aside Example:</h1>
+    <h2>Double Aside Example:</h2>
     <header>Header</header>
     <div class="container">
       <aside>Left aside (20%)</aside>
@@ -415,6 +522,53 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
       <aside>Right aside (20%)</aside>
     </div>
     <footer>Footer</footer>
+
+    <h2>Nested Aside Example:</h2>
+    <header>Header, in body</header>
+    <main>
+      <aside>Left aside</aside>
+      <div class="container">
+        <aside>Left aside</aside>
+        <article>
+          <h3>Header</h3>
+          <div class="container">
+            <aside>Left aside</aside>
+            <section>
+              <h4>Sub Header</h4>
+              <div class="container">
+                <aside>Left aside</aside>
+                <section>
+                  <h5>Sub Header</h5>
+                  <div class="container">
+                    <aside>Left aside</aside>
+                    <section>
+                      <h6>Sub Header</h6>
+                      <div class="container">
+                        <aside>Left aside</aside>
+                        <section>
+                          <div class="container">
+                            <aside>Left aside of the article</aside>
+                            <article>Main Content as article</article>
+                            <aside>Right aside of the article</aside>
+                          </div>
+                        </section>
+                        <aside>Right aside</aside>
+                      </div>
+                    </section>
+                    <aside>Right aside</aside>
+                  </div>
+                </section>
+                <aside>Right aside</aside>
+              </div>
+            </section>
+            <aside>Right aside</aside>
+          </div>
+        </article>
+        <aside>Right aside</aside>
+      </div>
+      <aside>Right aside</aside>
+    </main>
+    <footer>Footer, in body</footer>
   </body>
 </html>
 ```
@@ -429,7 +583,7 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Example of Eased Layout Grid System</title>
-    <link rel="stylesheet" href="../dist/eased-layout.css">
+    <link rel="stylesheet" href="{root directory}/dist/eased-layout.css">
     <style>
         div.row,
         div.row>*,
@@ -763,16 +917,16 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
 
 1. **Built-in Features:**
 
-    **CSS Reset for Consistency:**
+   **CSS Reset for Consistency:**
 
-    - Introduced a basic CSS reset for consistent cross-browser styling:
-      - Applied `box-sizing: border-box` for intuitive layout calculations.
-      - Removed default margins from common elements (e.g., headings, paragraphs, and tables) to ensure uniform spacing.
-    - Included a feature to restore browser defaults if needed.
+   - Introduced a basic CSS reset for consistent cross-browser styling:
+     - Applied `box-sizing: border-box` for intuitive layout calculations.
+     - Removed default margins from common elements (e.g., headings, paragraphs, and tables) to ensure uniform spacing.
+   - Included a feature to restore browser defaults if needed.
 
-    **Focus Styles for Accessibility:**
+   **Focus Styles for Accessibility:**
 
-    This library added focus styles for accessibility with a green outline for buttons, blue for links and interactive items, and red for other focusable elements.
+   This library added focus styles for accessibility with a green outline for buttons, blue for links and interactive items, and red for other focusable elements.
 
 2. **Debugging:** {some text}
 
