@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Drag Bar</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .drag-bar-content {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .drag-bar-content>* {
+            height: 100%;
+        }
+
+        .drag-bar-content>*:first-child {
+            width: 50%;
+        }
+
+        .drag-bar-content>*:last-child {
+            flex-grow: 1;
+        }
+
+        .drag-bar {
+            width: 4px;
+            background: #AAA;
+            cursor: col-resize;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="drag-bar-content">
+        <div>Left Panel Content</div>
+        <div>Right Panel Content</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.drag-bar-content');
+            const leftPanel = container.children[0];
+            const rightPanel = container.children[1];
+
+            // Call the function to initialize drag bar with the panels
+            initializeDragBar(leftPanel, rightPanel);
+        });
+
+        function initializeDragBar(leftPanel, rightPanel) {
+            const container = document.querySelector('.drag-bar-content');
+
+            // Create the drag bar dynamically
+            const dragBar = document.createElement('div');
+            dragBar.classList.add('drag-bar');
+
+            // Insert the drag bar between the two panels
+            container.insertBefore(dragBar, rightPanel);
+
+            let isDragging = false;
+
+            dragBar.addEventListener('mousedown', () => isDragging = true);
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+
+                const containerRect = container.getBoundingClientRect();
+                const newWidth = e.clientX - containerRect.left;
+
+                // Ensure width constraints
+                if (newWidth > 50 && newWidth < containerRect.width - 50) {
+                    leftPanel.style.width = newWidth + 'px';
+                    rightPanel.style.width = (containerRect.width - newWidth - dragBar.offsetWidth) + 'px';
+                }
+            });
+
+            document.addEventListener('mouseup', () => isDragging = false);
+        }
+    </script>
+</body>
+
+</html>
