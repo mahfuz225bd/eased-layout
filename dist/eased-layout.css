@@ -72,6 +72,7 @@ footer {
 div.container,
 main {
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Main content and container's direct child elements take equal space by default */

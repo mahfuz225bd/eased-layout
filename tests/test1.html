@@ -110,18 +110,18 @@
     </div>
     <footer>Footer</footer>
 
-    <h1>Nested Aside Example</h1>
+    <!-- <h1>Nested Aside Example</h1>
     <header>Header</header>
     <div class="container">
         <aside>Main Aside (Left)</aside>
         <main>
-            <section>
+            <section role="main">
                 <h2>Main Section 1</h2>
-                <section>
+                <section role="main">
                     <h3>Subsection 1.1</h3>
-                    <section>
+                    <section role="main">
                         <h4>Subsection 1.1.1</h4>
-                        <section>
+                        <section role="main">
                             <h5>Subsection 1.1.1.1</h5>
                             <article>
                                 <h6>Article 1.1.1.1.1</h6>
@@ -136,7 +136,7 @@
                     </section>
                     <aside>Subsection 1.1 Aside</aside>
                 </section>
-                <section>
+                <section role="main">
                     <h4>Subsection 1.2</h4>
                     <article>
                         <h5>Article 1.2.1</h5>
@@ -145,11 +145,11 @@
                     <aside>Subsection 1.2 Aside</aside>
                 </section>
             </section>
-            <section>
+            <section role="main">
                 <h2>Main Section 2</h2>
-                <section>
+                <section role="main">
                     <h3>Subsection 2.1</h3>
-                    <section>
+                    <section role="main">
                         <h4>Subsection 2.1.1</h4>
                         <article>
                             <h5>Article 2.1.1.1</h5>
@@ -159,7 +159,7 @@
                     </section>
                     <aside>Subsection 2.1 Aside</aside>
                 </section>
-                <section>
+                <section role="main">
                     <h4>Subsection 2.2</h4>
                     <article>
                         <h5>Article 2.2.1</h5>
@@ -171,8 +171,28 @@
         </main>
         <aside>Main Aside (Right)</aside>
     </div>
-    <footer>Footer</footer>
+    <footer>Footer</footer> -->
 
+    <h1>Nested Aside Example</h1>
+    <header>Header</header>
+    <div class="container">
+        <aside>Left aside</aside>
+        <main>
+            <div class="container">
+                <aside>Left aside</aside>
+                <section>
+                    <div class="container">
+                        <aside>Left aside</aside>
+                        <section>Main Content as section</section>
+                        <aside>Right aside</aside>
+                    </div>
+                </section>
+                <aside>Right aside</aside>
+            </div>
+        </main>
+        <aside>Right aside</aside>
+    </div>
+    <footer>Footer, in body</footer>
 </body>
 
 </html>
