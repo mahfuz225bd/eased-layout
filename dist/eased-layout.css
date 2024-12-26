@@ -33,8 +33,10 @@ caption {
 
 /* Universal focus style */
 :focus {
-  outline: 3px solid #FF0;  /* Red outline for general focusable elements */
-  outline-offset: 3px;  /* Standard behavior for modern browsers */
+  outline: 3px solid #FF0;
+  /* Red outline for general focusable elements */
+  outline-offset: 3px;
+  /* Standard behavior for modern browsers */
 }
 
 /* Focus style for buttons */
@@ -43,7 +45,8 @@ input[type="button"]:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 [role="button"] {
-  outline: 3px solid #0F0;  /* Green outline for buttons */
+  outline: 3px solid #0F0;
+  /* Green outline for buttons */
 }
 
 /* Focus style for links, menu items and tab */
@@ -53,7 +56,8 @@ a:focus,
 [role="menuitemradio"]:focus,
 [role="menuitemcheckbox"]:focus,
 [role="tab"]:focus {
-  outline: 3px solid #00F;  /* Blue outline for links */
+  outline: 3px solid #00F;
+  /* Blue outline for links */
 }
 
 /* End: high-contrast outline on focus */
@@ -68,7 +72,6 @@ footer {
 div.container,
 main {
   display: flex;
-  flex-wrap: wrap;
 }
 
 /* Main content and container's direct child elements take equal space by default */
@@ -84,14 +87,18 @@ div.container>article {
 /* Sidebars (asides) have a default width of 20% */
 
 main>aside,
-div.container>aside {
+div.container>aside,
+section>aside,
+article>aside {
   flex: 0 0 20%;
 }
 
 /* Single aside takes up 25% width */
 
 main>aside:only-of-type,
-div.container>aside:only-of-type {
+div.container>aside:only-of-type,
+section>aside:only-of-type,
+article>aside:only-of-type {
   flex: 0 0 25%;
 }
 
@@ -100,7 +107,9 @@ div.container>aside:only-of-type {
 @media screen and (max-width: 900px) {
 
   div.container,
-  main {
+  main,
+  section,
+  article {
     flex-direction: column;
   }
 
@@ -111,7 +120,7 @@ div.container>aside:only-of-type {
   article,
   footer,
   div.container {
-    width: 100%;
+    flex: 0 0 100%;
     margin: 0;
   }
 }
