@@ -49,26 +49,38 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 ```
 /eased-layout
 ├── /dist
-|   ├── _others (unnecessary, included for temporary)
+|   ├── /_others (unnecessary, included for temporary)
+|   ├── /helpers (unnecessary, included for temporary)
+|   |   ├── debugger.css
+|   |   ├── eased-layout.restore-box-sizing.css
+|   |   ├── restore-margins.css
 |   ├── eased-layout.css
-|   ├── eased-layout.restore-box-sizing.css
-|   ├── eased-layout.restore-margins.css
 ├── /tests (for testing, included temporarily)
 ```
 
-### Basic CSS Reset
+### Builtin Features
+
+#### Basic CSS Reset
 
 No need for a basic CSS reset; a built-in basic CSS reset is already provided in the `eased-layout` library for all HTML elements with `box-sizing: border-box;`. Additionally, this provided zero margin for `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` elements to ensure consistent spacing across these elements and eliminate default browser styling that may interfere with the layout.
 
 #### Restoring the CSS Resets
 
-##### Restoring Box Sizing
+- **Restoring Box Sizing:** For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/helpers/restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
-For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `eased-layout.restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/eased-layout.restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
+- **Restoring Margins:** For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/helpers/restore-margins.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
-##### Restoring Margins
+#### Focus Styles for Accessibility
 
-For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `eased-layout.restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/eased-layout.restore-margins.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
+This `eased-layout` library includes focus styles for accessibility: a green outline for buttons, blue for links and interactive items, as well as a red outline for all other focusable elements. The outline is offset by 3px to avoid content overlap.
+
+##### Restoring the Focus Style
+
+Not provided to restore the focus style. However, it can be removed to edit downloaded `eased-layout.css` or `eased-layout.min.css`.
+
+### Debugging
+
+{something}
 
 ### Guideline for Designing Semantic Layout
 
@@ -121,11 +133,11 @@ This library is very helpful for making semantic layouts with one or two asides 
 
 #### Use Cases for Different Approaches
 
-The listed layout structures represent different approaches to organizing a webpage's content. Each has unique use cases, depending on the website's purpose, complexity, and design requirements. Here’s a breakdown of when and why you might use each approach:
+The listed layout structures represent different approaches to organizing a webpage's content. Each has unique use cases, depending on the website's purpose, complexity, and design requirements. Here’s a breakdown of some basic ideas of when and why you may use each approach:
 
 ##### **1. [header + (div.container -> aside + main + aside) + footer]**
 
-###### **Use Case: Standard Layout for Content-Rich Websites**
+**Use Case: Standard Layout for Content-Rich Websites**
 
 - **Purpose:** Common for blogs, news portals, or content-heavy sites where the header provides navigation, the main section holds the primary content, and asides offer related content or ads.
 - **Advantages:**
@@ -134,9 +146,9 @@ The listed layout structures represent different approaches to organizing a webp
   - Footer for global site information (e.g., copyright or links).
 - **Examples:** News websites, online magazines, or e-commerce homepages.
 
-#### **2. [header + main -> (aside + section + aside) + footer]**
+##### **2. [header + main -> (aside + section + aside) + footer]**
 
-##### **Use Case: Emphasis on Content Sections**
+**Use Case: Emphasis on Content Sections**
 
 - **Purpose:** Suitable for websites with multiple sections of information within the main content, such as educational or technical documentation sites.
 - **Advantages:**
@@ -144,9 +156,9 @@ The listed layout structures represent different approaches to organizing a webp
   - Asides for quick navigation (e.g., a table of contents or contextual links).
 - **Examples:** Documentation, tutorial sites, or educational platforms.
 
-#### **3. [header + main -> (aside + article + aside) + footer]**
+##### **3. [header + main -> (aside + article + aside) + footer]**
 
-##### **Use Case: Article-Centric Websites**
+**Use Case: Article-Centric Websites**
 
 - **Purpose:** Best for single articles, blogs, or storytelling platforms where the article is the focal point.
 - **Advantages:**
@@ -154,9 +166,9 @@ The listed layout structures represent different approaches to organizing a webp
   - Asides for supplementary content like author bios, related posts, or call-to-action widgets.
 - **Examples:** Blogs, news articles, and storytelling platforms.
 
-#### **4. [main -> (header + aside + section + aside + footer)]**
+##### **4. [main -> (header + aside + section + aside + footer)]**
 
-##### **Use Case: Content-Dominant Pages Without a Dedicated Header**
+**Use Case: Content-Dominant Pages Without a Dedicated Header**
 
 - **Purpose:** Ideal for standalone pages or single-page applications (SPAs) that don't need a persistent header outside the main content.
 - **Advantages:**
@@ -164,9 +176,9 @@ The listed layout structures represent different approaches to organizing a webp
   - Suitable for microsites or standalone landing pages.
 - **Examples:** Single-product landing pages, focused campaign pages, or standalone applications.
 
-#### **5. [main -> (header + aside + article + aside + footer)]**
+##### **5. [main -> (header + aside + article + aside + footer)]**
 
-##### **Use Case: Article or Post-Oriented Standalone Layout**
+**Use Case: Article or Post-Oriented Standalone Layout**
 
 - **Purpose:** Similar to the previous structure but tailored for pages where the article is the primary focus, and the header supports the article rather than the site as a whole.
 - **Advantages:**
@@ -174,9 +186,9 @@ The listed layout structures represent different approaches to organizing a webp
   - Footer and asides provide additional resources or navigation related to the article.
 - **Examples:** Editorial pages, blog posts, or content-heavy product descriptions.
 
-#### **6. [(div.container -> header + aside + main + aside + footer)]**
+##### **6. [(div.container -> header + aside + main + aside + footer)]**
 
-##### **Use Case: Fully Encapsulated Layout for Complete Control**
+**Use Case: Fully Encapsulated Layout for Complete Control**
 
 - **Purpose:** Used when you want strict control over layout width and behavior, with a self-contained design.
 - **Advantages:**
@@ -270,7 +282,7 @@ For simplicity, there are no any class provided to make a container fluid. Inste
 | Extra large       | xl          | ≥1200px    |
 | Extra extra large | xxl         | ≥1400px    |
 
-#### Responsive Design for Grid Semantic Layout
+#### Responsive Design for Semantic Layout
 
 No need for any extra classes to apply responsiveness, provided styles for it as built-in. It will automatically change asides from horizontal to vertical when the media screen will be less than 900px.
 
@@ -749,24 +761,32 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
 
 **Features:**
 
-1. **CSS Reset for Consistency:**
+1. **Built-in Features:**
 
-   - Introduced a basic CSS reset for consistent cross-browser styling:
-     - Applied `box-sizing: border-box` for intuitive layout calculations.
-     - Removed default margins from common elements (e.g., headings, paragraphs, and tables) to ensure uniform spacing.
-   - Included a feature to restore browser defaults if needed.
+    **CSS Reset for Consistency:**
 
-2. **Sematic Layout Design:**
+    - Introduced a basic CSS reset for consistent cross-browser styling:
+      - Applied `box-sizing: border-box` for intuitive layout calculations.
+      - Removed default margins from common elements (e.g., headings, paragraphs, and tables) to ensure uniform spacing.
+    - Included a feature to restore browser defaults if needed.
+
+    **Focus Styles for Accessibility:**
+
+    This library added focus styles for accessibility with a green outline for buttons, blue for links and interactive items, and red for other focusable elements.
+
+2. **Debugging:** {some text}
+
+3. **Sematic Layout Design:**
 
    - Simplified layout creation with HTML5 semantic elements: `header`, `aside`, `main`, `section`, `article`, and `footer`.
 
-3. **12-Column Grid System:**
+4. **12-Column Grid System:**
 
    - Added a class-based grid system for responsive designs:
      - `.total-{breakpoints}-{columns}` (e.g., `.total-md-6`).
      - Supported breakpoints (`sm`, `md`, `lg`, `xl`, `xxl`) and the value of {columns} should between 1 to 12 according to need.
 
-4. **12+ Column Grid System:**
+5. **12+ Column Grid System:**
    - Introduced a flexible grid system for custom layouts:
      - Use `.total-columns-n` with CSS variables for unlimited column configurations.
      - Configure breakpoints with `.total-columns-{breakpoints}-{n}` and CSS variables (e.g., `--columns-md: 16`).

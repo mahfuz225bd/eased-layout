@@ -1,0 +1,16 @@
+/* Universal outline for all elements */
+* {
+  outline: 2px solid #F0F; /* Magenta outline for all elements */
+}
+
+/* Enhanced hover outline */
+:hover {
+  outline: 3px solid #FF0; /* Solid yellow outline for hover */
+  outline-offset: 2px; /* Match focus offset for consistency */
+}
+
+/* Accessible keyboard navigation focus */
+:focus {
+  outline: 3px dashed #0FF; /* Cyan outline for keyboard focus */
+  outline-offset: 4px; /* Extra spacing for clarity */
+}

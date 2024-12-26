@@ -29,6 +29,35 @@ caption {
   margin: 0;
 }
 
+/* Start: high-contrast outline on focus */
+
+/* Universal focus style */
+:focus {
+  outline: 3px solid #FF0;  /* Red outline for general focusable elements */
+  outline-offset: 3px;  /* Standard behavior for modern browsers */
+}
+
+/* Focus style for buttons */
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+[role="button"] {
+  outline: 3px solid #0F0;  /* Green outline for buttons */
+}
+
+/* Focus style for links, menu items and tab */
+a:focus,
+[role="link"]:focus,
+[role="menuitem"]:focus,
+[role="menuitemradio"]:focus,
+[role="menuitemcheckbox"]:focus,
+[role="tab"]:focus {
+  outline: 3px solid #00F;  /* Blue outline for links */
+}
+
+/* End: high-contrast outline on focus */
+
 /* Start: Semantic layout */
 
 header,
