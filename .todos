@@ -10,7 +10,42 @@
   - Source File: `/_others/layout.old.css`
 - **Implement Modern CSS Grid Layout:**
   - Experiment with various possibilities of CSS Grid for modern layouts.
-- Renaming .container to .wrapper or others, if found the best class name.
+
+Urgent TODOs:
+
+- Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
+- Classes for flex
+- Modern CSS grid (apply with researching all possible ways) (https://getbootstrap.com/docs/5.3/layout/css-grid/)
+- Classes for grid (https://www.w3schools.com/css/css_grid.asp)
+
+For Helpers
+
+- margin
+- padding
+- gutter
+- gap vs gutter?
+- horizontal and vertical alignments
+- order
+- offset
+- visibility
+- z-index (https://getbootstrap.com/docs/5.3/layout/z-index/)
+- position
+- ratio
+
+For Utilities:
+
+- display
+- flex
+- float
+- object-fit (can be deleted, after decision)
+- overflow
+- position
+- sizing
+- spacing
+- text
+- vertical align
+- visibility
+- z-index (https://getbootstrap.com/docs/5.3/utilities/z-index/)
 
 **Possible Future Enhancements:**
 
@@ -122,39 +157,4 @@ Categories of Layout (Generated from ChatGPT):
 
    Includes layouts for Gaming UI, 3D Environments, Virtual Reality, and Industrial Design.
 
-Urgent TODOs:
 
-- Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
-- Classes for flex
-- Modern CSS grid (apply with researching all possible ways) (https://getbootstrap.com/docs/5.3/layout/css-grid/)
-- Classes for grid (https://www.w3schools.com/css/css_grid.asp)
-
-For Helpers
-
-- margin
-- padding
-- gutter
-- gap vs gutter?
-- horizontal and vertical alignments
-- order
-- offset
-- visibility
-- z-index (https://getbootstrap.com/docs/5.3/layout/z-index/)
-- position
-- ratio
-
-For Utilities:
-
-- display
-- flex
-- float
-- object-fit (can be deleted, after decision)
-- overflow
-- position
-- sizing
-- spacing
-- text
-- vertical align
-- visibility
-- z-index (https://getbootstrap.com/docs/5.3/utilities/z-index/)
-  \*/
