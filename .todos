@@ -2,7 +2,6 @@
 
 **Primary Decisions:**
 
-- **Improving Grid Layout:** Make the existing grid system responsive with breakpoints.
 - **Complete CSS Support for Older Browsers (layout.old.css):**
   - Float layout
   - Inline-block layout

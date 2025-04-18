@@ -372,7 +372,7 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 #### Container Fluid
 
-For simplicity, there are no any class provided to make a container fluid. Instead
+For simplicity, there are no any class provided to make a container fluid. Moreover, `.total-columns-1` can be used for a container fluid which is completely optional.
 
 ### Helpers
 
@@ -399,11 +399,15 @@ No need for any extra classes to apply basic responsiveness; provided styles for
 
 There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
 
-Along with `.row`, use any class according to the format: `.total-{sm|md|lg|xl|xxl}-{columns}`; columns should be 1 to 12.
+Along with `.row`, use any class according to the format: `.total-{available breakpoints}-{columns}`; columns should be 1 to 12.
 
 ##### 12+ Columns
 
-Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{sm|md|lg|xl|xxl}: {columns}; columns can be any integer value.
+Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need, whose format is --columns-{available breakpoints}: {columns}; columns can be any integer value.
+
+Alternatively, along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoints}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoints}: {columns}; columns can be any integer value.
+
+This is highly recommended: use a custom class for each variable, and remember that you don't need custom or additional classes and variables for any breakpoints if the total column number is not more than 12.
 
 ### Complete Example for HTML5 Semantic Elements:
 

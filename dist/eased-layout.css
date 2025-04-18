@@ -10,6 +10,11 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
+/* !
+  * Index
+  * (1)  
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -104,7 +109,7 @@ article>aside:only-of-type {
   flex: 0 0 25%;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for semantic element while rendering in smaller screens */
 
 @media screen and (max-width: 900px) {
 
@@ -157,7 +162,7 @@ article>aside:only-of-type {
   flex: 0 0 100%;
 }
 
-/* 1 column (Optional class) */
+/* 1 column (.total-columns-1 is optional) */
 .row.total-columns-1>*,
 .row.total-columns-sm-1>*,
 .row.total-columns-md-1>*,
@@ -284,10 +289,6 @@ article>aside:only-of-type {
 
 /* End: Grid system with flex */
 
-/* Start: Helper */
-
-/* End: Helper */
-
 /* Start: Breakpoints for responsiveness */
 
 /* Extra small: <576px */
@@ -341,6 +342,10 @@ article>aside:only-of-type {
   }
 
   .row.total-columns-breakpoints-n>* {
+    flex: 0 0 calc(100% / var(--columns-sm));
+  }
+
+  .row.total-columns-sm-n>* {
     flex: 0 0 calc(100% / var(--columns-sm));
   }
 }
@@ -398,8 +403,11 @@ article>aside:only-of-type {
   .row.total-columns-breakpoints-n>* {
     flex: 0 0 calc(100% / var(--columns-md));
   }
-}
 
+  .row.total-columns-md-n>* {
+    flex: 0 0 calc(100% / var(--columns-md));
+  }
+}
 
 /* Medium: ≥768px */
 @media (min-width: 768px) {
@@ -452,6 +460,10 @@ article>aside:only-of-type {
   }
 
   .row.total-columns-breakpoints-n>* {
+    flex: 0 0 calc(100% / var(--columns-lg));
+  }
+
+  .row.total-columns-lg-n>* {
     flex: 0 0 calc(100% / var(--columns-lg));
   }
 }
@@ -509,6 +521,10 @@ article>aside:only-of-type {
   .row.total-columns-breakpoints-n>* {
     flex: 0 0 calc(100% / var(--columns-xl));
   }
+
+  .row.total-columns-xl-n>* {
+    flex: 0 0 calc(100% / var(--columns-xl));
+  }
 }
 
 /* Extra extra large: ≥1400px */
@@ -564,9 +580,17 @@ article>aside:only-of-type {
   .row.total-columns-breakpoints-n>* {
     flex: 0 0 calc(100% / var(--columns-xxl));
   }
+
+  .row.total-columns-xxl-n>* {
+    flex: 0 0 calc(100% / var(--columns-xxl));
+  }
 }
 
 /* End: Breakpoints for responsiveness */
+
+/* Start: Helper */
+
+/* End: Helper */
 
 /* Layout Rules (HTML5 Semantic Layout):
     Header Placement:
