@@ -403,9 +403,9 @@ Along with `.row`, use any class according to the format: `.total-{available bre
 
 ##### 12+ Columns
 
-Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need, whose format is --columns-{available breakpoints}: {columns}; columns can be any integer value.
+Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need, whose format is --columns-{available breakpoints}: {columns}; columns can be any non-zero integer value.
 
-Alternatively, along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoints}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoints}: {columns}; columns can be any integer value.
+Alternatively, along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoints}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoints}: {columns}; columns can be any non-zero integer value.
 
 This is highly recommended: use a custom class for each variable, and remember that you don't need custom or additional classes and variables for any breakpoints if the total column number is not more than 12.
 
@@ -941,13 +941,14 @@ This is highly recommended: use a custom class for each variable, and remember t
 4. **12-Column Grid System:**
 
    - Added a class-based grid system for responsive designs:
-     - `.total-{breakpoints}-{columns}` (e.g., `.total-md-6`).
+     - `.total-{available breakpoints}-{columns}` (e.g., `.total-md-6`).
      - Supported breakpoints (`sm`, `md`, `lg`, `xl`, `xxl`) and the value of {columns} should between 1 to 12 according to need.
 
 5. **12+ Column Grid System:**
    - Introduced a flexible grid system for custom layouts:
      - Use `.total-columns-n` with CSS variables for unlimited column configurations.
-     - Configure breakpoints with `.total-columns-{breakpoints}-{n}` and CSS variables (e.g., `--columns-md: 16`).
-     - Supports any integer column count for precise designs.
+     - Configure breakpoints with `.total-columns-breakpoints-n` and CSS variables like `--columns-{available breakpoints}: {columns}`.
+     - Alternatively, configure with `total-columns-{available breakpoints}-n` and CSS variables like `--columns-{available breakpoints}: {columns}`.
+     - The `{columns}` value should any non-zero integer column count for precise designs.
 
 This release lays the foundation for a robust, responsive, and customizable front-end framework.
