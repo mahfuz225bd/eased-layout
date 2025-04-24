@@ -74,27 +74,35 @@ footer {
   width: 100%;
 }
 
-div.container,
+.container,
 main {
   display: flex;
   flex-wrap: wrap;
 }
 
+*:has(.row) {
+  flex-direction: column;
+}
+
+*.row {
+  flex-direction: row;
+}
+
 /* Main content and container's direct child elements take equal space by default */
 
 main,
-div.container,
+.container,
 main>section,
 main>article,
-div.container>section,
-div.container>article {
+.container>section,
+.container>article {
   flex: 1;
 }
 
 /* Sidebars (asides) have a default width of 20% */
 
 main>aside,
-div.container>aside,
+.container>aside,
 section>aside,
 article>aside {
   flex: 0 0 20%;
@@ -103,7 +111,7 @@ article>aside {
 /* Single aside takes up 25% width */
 
 main>aside:only-of-type,
-div.container>aside:only-of-type,
+.container>aside:only-of-type,
 section>aside:only-of-type,
 article>aside:only-of-type {
   flex: 0 0 25%;
@@ -113,7 +121,7 @@ article>aside:only-of-type {
 
 @media screen and (max-width: 900px) {
 
-  div.container,
+  .container,
   main,
   section,
   article {
@@ -126,7 +134,7 @@ article>aside:only-of-type {
   section,
   article,
   footer,
-  div.container {
+  .container {
     flex: 0 0 100%;
     margin: 0;
   }
@@ -142,7 +150,7 @@ article>aside:only-of-type {
   section,
   article,
   footer,
-  div.container {
+  .container {
     display: block;
     width: 100%;
   }
@@ -219,7 +227,7 @@ article>aside:only-of-type {
 .row.total-columns-lg-6>*,
 .row.total-columns-xl-6>*,
 .row.total-columns-xxl-6>* {
-  flex: 0 0 16.67%;
+  flex: 0 0 16.66666666666667%;
 }
 
 /* 7 columns */
@@ -229,7 +237,7 @@ article>aside:only-of-type {
 .row.total-columns-lg-7>*,
 .row.total-columns-xl-7>*,
 .row.total-columns-xxl-7>* {
-  flex: 0 0 14.29%;
+  flex: 0 0 14.28571428571429%;
 }
 
 /* 8 columns */
@@ -249,7 +257,7 @@ article>aside:only-of-type {
 .row.total-columns-lg-9>*,
 .row.total-columns-xl-9>*,
 .row.total-columns-xxl-9>* {
-  flex: 0 0 11.11%;
+  flex: 0 0 11.11111111111111%;
 }
 
 /* 10 columns */
@@ -269,7 +277,7 @@ article>aside:only-of-type {
 .row.total-columns-lg-11>*,
 .row.total-columns-xl-11>*,
 .row.total-columns-xxl-11>* {
-  flex: 0 0 9.09%;
+  flex: 0 0 9.090909090909091%;
 }
 
 /* 12 columns */
@@ -279,7 +287,7 @@ article>aside:only-of-type {
 .row.total-columns-lg-12>*,
 .row.total-columns-xl-12>*,
 .row.total-columns-xxl-12>* {
-  flex: 0 0 8.33%;
+  flex: 0 0 calc(100% / 12);
 }
 
 /* 12+ columns */
@@ -594,7 +602,7 @@ article>aside:only-of-type {
 
 /* Layout Rules (HTML5 Semantic Layout):
     Header Placement:
-        Optional; can be placed in the body, inside a div.container, or as a child of aside, main, article, or section.
+        Optional; can be placed in the body, inside a .container, or as a child of aside, main, article, or section.
         Though optional, having at least one header element is highly recommended as it improves SEO by providing search engines with context, and enhances accessibility too.
 
     Aside Combinations:
@@ -604,10 +612,10 @@ article>aside:only-of-type {
         Must use main. Can section, or article be used as optional.
 
     Footer Placement:
-        Optional; can be placed in the body or inside a div.container.
+        Optional; can be placed in the body or inside a .container.
 
     container Usage:
-        The div.container serves as a container. It is optional and can be placed as a child of any element.
+        The .container serves as a container. It is optional and can be placed as a child of any element.
 */
 
 /* Layout Rules (Grid Layout):
