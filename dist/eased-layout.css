@@ -12,7 +12,7 @@
 
 /* !
   * Index
-  * (1)  
+  * (1) 
 */
 
 * {
@@ -287,6 +287,13 @@ article>aside:only-of-type {
   section:not(:has(.row)),
   article:not(:has(.row)) {
     flex-direction: column;
+  }
+
+  .container.row,
+  main.row,
+  section.row,
+  article.row {
+    flex-direction: row;
   }
 
   header:not(:has(.row)),
