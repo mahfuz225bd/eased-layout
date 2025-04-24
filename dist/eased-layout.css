@@ -80,14 +80,6 @@ main {
   flex-wrap: wrap;
 }
 
-*:has(.row) {
-  flex-direction: column;
-}
-
-*.row {
-  flex-direction: row;
-}
-
 /* Main content and container's direct child elements take equal space by default */
 
 main,
@@ -117,32 +109,9 @@ article>aside:only-of-type {
   flex: 0 0 25%;
 }
 
-/* Responsive design for semantic element while rendering in smaller screens */
-
-@media screen and (max-width: 900px) {
-
-  .container,
-  main,
-  section,
-  article {
-    flex-direction: column;
-  }
-
-  header,
-  aside,
-  main,
-  section,
-  article,
-  footer,
-  .container {
-    flex: 0 0 100%;
-    margin: 0;
-  }
-}
-
 /* Fallback for browsers not supporting flexbox */
 
-@supports not (display: flex) {
+/* @supports not (display: flex) {
 
   header,
   aside,
@@ -154,7 +123,7 @@ article>aside:only-of-type {
     display: block;
     width: 100%;
   }
-}
+} */
 
 /* End: Semantic layout */
 
@@ -163,6 +132,14 @@ article>aside:only-of-type {
 .row {
   display: flex;
   flex-wrap: wrap;
+}
+
+*:has(.row) {
+  flex-direction: column;
+}
+
+*.row {
+  flex-direction: row;
 }
 
 /* Single column (full width) as default */
@@ -296,6 +273,33 @@ article>aside:only-of-type {
 }
 
 /* End: Grid system with flex */
+
+/* Start: Helper */
+
+/* End: Helper */
+
+/* Responsive design for semantic element while rendering in smaller screens */
+
+@media screen and (max-width: 900px) {
+
+  .container:not(:has(.row)),
+  main:not(:has(.row)),
+  section:not(:has(.row)),
+  article:not(:has(.row)) {
+    flex-direction: column;
+  }
+
+  header:not(:has(.row)),
+  aside:not(:has(.row)),
+  section:not(:has(.row)),
+  article:not(:has(.row)),
+  footer:not(:has(.row)),
+  .container:not(:has(.row)),
+  main:not(:has(.row)) {
+    flex: 0 0 100%;
+    margin: 0;
+  }
+}
 
 /* Start: Breakpoints for responsiveness */
 
@@ -595,10 +599,6 @@ article>aside:only-of-type {
 }
 
 /* End: Breakpoints for responsiveness */
-
-/* Start: Helper */
-
-/* End: Helper */
 
 /* Layout Rules (HTML5 Semantic Layout):
     Header Placement:
