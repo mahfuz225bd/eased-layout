@@ -376,6 +376,8 @@ For simplicity, there are no any class provided to make a container fluid. Moreo
 
 ### Helpers
 
+{something}
+
 ### Responsive Design
 
 #### Available Breakpoints
@@ -409,7 +411,7 @@ Alternatively, along with `.row`, use multiple classes whose format is like `tot
 
 This is highly recommended: use a custom class for each variable, and remember that you don't need custom or additional classes and variables for any breakpoints if the total column number is not more than 12.
 
-### Complete Example for HTML5 Semantic Elements:
+### Complete Examples for HTML5 Semantic Elements:
 
 ```html
 <!DOCTYPE html>
@@ -417,7 +419,9 @@ This is highly recommended: use a custom class for each variable, and remember t
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Complete Example of Eased Layout with HTML5 Semantic Elements</title>
+    <title>
+      Complete Examples of Eased Layout with HTML5 Semantic Elements
+    </title>
     <link rel="stylesheet" href="{root directory}/dist/eased-layout.css" />
     <style>
       header,
@@ -577,7 +581,7 @@ This is highly recommended: use a custom class for each variable, and remember t
 </html>
 ```
 
-### Complete Example for Grid System:
+### Complete Examples for Grid System:
 
 ```html
 <!DOCTYPE html>
@@ -586,7 +590,7 @@ This is highly recommended: use a custom class for each variable, and remember t
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Example of Eased Layout Grid System</title>
+    <title>Complete Examples of Eased Layout Grid System</title>
     <link rel="stylesheet" href="{root directory}/dist/eased-layout.css">
     <style>
         div.row,
@@ -623,7 +627,7 @@ This is highly recommended: use a custom class for each variable, and remember t
 </head>
 
 <body>
-    <h1>Complete Example of Eased Layout Grid System</h1>
+    <h1>Complete Examples of Eased Layout Grid System</h1>
     <h2>1.1: 10 columned grid without .container</h2>
     <div class="row total-columns-10">
         <div>1</div>
@@ -945,10 +949,13 @@ This is highly recommended: use a custom class for each variable, and remember t
      - Supported breakpoints (`sm`, `md`, `lg`, `xl`, `xxl`) and the value of {columns} should between 1 to 12 according to need.
 
 5. **12+ Column Grid System:**
+
    - Introduced a flexible grid system for custom layouts:
      - Use `.total-columns-n` with CSS variables for unlimited column configurations.
      - Configure breakpoints with `.total-columns-breakpoints-n` and CSS variables like `--columns-{available breakpoint}: {columns}`.
      - Alternatively, configure with `total-columns-{available breakpoint}-n` and CSS variables like `--columns-{available breakpoint}: {columns}`.
      - The `{columns}` value should any non-zero integer column count for precise designs.
+
+6. **Available Breakpoints for Responsive Design:** {some text}
 
 This release lays the foundation for a robust, responsive, and customizable front-end framework.
