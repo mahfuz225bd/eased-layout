@@ -374,10 +374,6 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 For simplicity, there are no any class provided to make a container fluid. Moreover, `.total-columns-1` can be used for a container fluid which is completely optional.
 
-### Extensions
-
-{something}
-
 ### Responsive Design
 
 #### Available Breakpoints
@@ -410,6 +406,10 @@ Along with `.row`, use the class `.total-columns-breakpoints-n` and available CS
 Alternatively, along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoint}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
 
 This is highly recommended: use a custom class for each variable, and remember that you don't need custom or additional classes and variables for any breakpoints if the total column number is not more than 12.
+
+### Extensions
+
+{something}
 
 ### Complete Examples for HTML5 Semantic Elements:
 
