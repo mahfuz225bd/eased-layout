@@ -50,7 +50,7 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 /eased-layout
 ├── /dist
 |   ├── /_others (unnecessary, included for temporary)
-|   ├── /helpers (unnecessary, included for temporary)
+|   ├── /extensions (unnecessary, included for temporary)
 |   |   ├── debugger.css
 |   |   ├── eased-layout.restore-box-sizing.css
 |   |   ├── restore-margins.css
@@ -66,9 +66,9 @@ No need for a basic CSS reset; a built-in basic CSS reset is already provided in
 
 #### Restoring the CSS Resets
 
-- **Restoring Box Sizing:** For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/helpers/restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
+- **Restoring Box Sizing:** For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
-- **Restoring Margins:** For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/helpers/restore-margins.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
+- **Restoring Margins:** For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-margins.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
 #### Focus Styles for Accessibility
 
@@ -374,7 +374,7 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 For simplicity, there are no any class provided to make a container fluid. Moreover, `.total-columns-1` can be used for a container fluid which is completely optional.
 
-### Helpers
+### Extensions
 
 {something}
 
