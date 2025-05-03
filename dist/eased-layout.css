@@ -10,12 +10,9 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-/* !
-  * Index
-  * (1) 
-*/
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -148,122 +145,62 @@ article>aside:only-of-type {
 }
 
 /* 1 column (.total-columns-1 is optional) */
-.row.total-columns-1>*,
-.row.total-columns-sm-1>*,
-.row.total-columns-md-1>*,
-.row.total-columns-lg-1>*,
-.row.total-columns-xl-1>*,
-.row.total-columns-xxl-1>* {
+.row.total-columns-1>* {
   flex: 0 0 100%;
 }
 
 /* 2 columns */
-.row.total-columns-2>*,
-.row.total-columns-sm-2>*,
-.row.total-columns-md-2>*,
-.row.total-columns-lg-2>*,
-.row.total-columns-xl-2>*,
-.row.total-columns-xxl-2>* {
+.row.total-columns-2>* {
   flex: 0 0 50%;
 }
 
 /* 3 columns */
-.row.total-columns-3>*,
-.row.total-columns-sm-3>*,
-.row.total-columns-md-3>*,
-.row.total-columns-lg-3>*,
-.row.total-columns-xl-3>*,
-.row.total-columns-xxl-3>* {
+.row.total-columns-3>* {
   flex: 0 0 33.33%;
 }
 
 /* 4 columns */
-.row.total-columns-4>*,
-.row.total-columns-sm-4>*,
-.row.total-columns-md-4>*,
-.row.total-columns-lg-4>*,
-.row.total-columns-xl-4>*,
-.row.total-columns-xxl-4>* {
+.row.total-columns-4>* {
   flex: 0 0 25%;
 }
 
 /* 5 columns */
-.row.total-columns-5>*,
-.row.total-columns-sm-5>*,
-.row.total-columns-md-5>*,
-.row.total-columns-lg-5>*,
-.row.total-columns-xl-5>*,
-.row.total-columns-xxl-5>* {
+.row.total-columns-5>* {
   flex: 0 0 20%;
 }
 
 /* 6 columns */
-.row.total-columns-6>*,
-.row.total-columns-sm-6>*,
-.row.total-columns-md-6>*,
-.row.total-columns-lg-6>*,
-.row.total-columns-xl-6>*,
-.row.total-columns-xxl-6>* {
+.row.total-columns-6>* {
   flex: 0 0 16.66666666666667%;
 }
 
 /* 7 columns */
-.row.total-columns-7>*,
-.row.total-columns-sm-7>*,
-.row.total-columns-md-7>*,
-.row.total-columns-lg-7>*,
-.row.total-columns-xl-7>*,
-.row.total-columns-xxl-7>* {
+.row.total-columns-7>* {
   flex: 0 0 14.28571428571429%;
 }
 
 /* 8 columns */
-.row.total-columns-8>*,
-.row.total-columns-sm-8>*,
-.row.total-columns-md-8>*,
-.row.total-columns-lg-8>*,
-.row.total-columns-xl-8>*,
-.row.total-columns-xxl-8>* {
+.row.total-columns-8>* {
   flex: 0 0 12.5%;
 }
 
 /* 9 columns */
-.row.total-columns-9>*,
-.row.total-columns-sm-9>*,
-.row.total-columns-md-9>*,
-.row.total-columns-lg-9>*,
-.row.total-columns-xl-9>*,
-.row.total-columns-xxl-9>* {
+.row.total-columns-9>* {
   flex: 0 0 11.11111111111111%;
 }
 
 /* 10 columns */
-.row.total-columns-10>*,
-.row.total-columns-sm-10>*,
-.row.total-columns-md-10>*,
-.row.total-columns-lg-10>*,
-.row.total-columns-xl-10>*,
-.row.total-columns-xxl-10>* {
+.row.total-columns-10>* {
   flex: 0 0 10%;
 }
 
 /* 11 columns */
-.row.total-columns-11>*,
-.row.total-columns-sm-11>*,
-.row.total-columns-md-11>*,
-.row.total-columns-lg-11>*,
-.row.total-columns-xl-11>*,
-.row.total-columns-xxl-11>* {
+.row.total-columns-11>* {
   flex: 0 0 9.090909090909091%;
 }
 
 /* 12 columns */
-.row.total-columns-12>*,
-.row.total-columns-sm-12>*,
-.row.total-columns-md-12>*,
-.row.total-columns-lg-12>*,
-.row.total-columns-xl-12>*,
-.row.total-columns-xxl-12>* {
+.row.total-columns-12>* {
   flex: 0 0 calc(100% / 12);
 }
 
@@ -274,9 +211,6 @@ article>aside:only-of-type {
 
 /* End: Grid system with flex */
 
-/* Start: Helper */
-
-/* End: Helper */
 
 /* Responsive design for semantic element while rendering in smaller screens */
 
@@ -636,4 +570,12 @@ article>aside:only-of-type {
    - For Fixed Grid (12 columns): Along with `.row`, use any class according to the format: `.total-{available breakpoint}-{columns}`; columns should be 1 to 12.
    - 12+ columns: Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value
                   Alternatively, along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoint}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
+*/
+
+/* Extensions:
+  - css-grid.css: 
+  - debugger.css: 
+  - helper.css: 
+  - restore-box-sizing: 
+  - restore-margins: 
 */

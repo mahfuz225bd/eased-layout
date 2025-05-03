@@ -7,15 +7,10 @@
   - Inline-block layout
   - Table-based layouts (**Note:** Semantically incorrect, avoid for new layouts)
   - Source File: `/_others/layout.old.css`
-- **Implement Modern CSS Grid Layout:**
-  - Experiment with various possibilities of CSS Grid for modern layouts.
 
 Urgent TODOs:
 
 - Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
-- Classes for flex
-- Modern CSS grid (apply with researching all possible ways) (https://getbootstrap.com/docs/5.3/layout/css-grid/)
-- Classes for grid (https://www.w3schools.com/css/css_grid.asp)
 
 For Helpers
 
