@@ -1,0 +1,135 @@
+nav ul,
+[role="navigation"] ul,
+ul[role="navigation"] {
+    list-style: none;
+    white-space: nowrap;
+}
+
+nav>ul>li,
+[role="navigation"]>ul>li,
+ul[role="navigation"]>li {
+    display: inline-block;
+    position: relative;
+}
+
+nav li,
+[role="navigation"] li,
+ul[role="navigation"] li {
+    position: relative;
+}
+
+nav a,
+[role="navigation"] a,
+ul[role="navigation"] a {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav li:hover>a,
+[role="navigation"] li:hover>a,
+ul[role="navigation"] li:hover>a {}
+
+/* Submenu base style */
+nav li ul,
+[role="navigation"] li ul,
+ul[role="navigation"] li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+}
+
+/* Show submenu on hover */
+nav li:hover>ul,
+[role="navigation"] li:hover>ul,
+ul[role="navigation"] li:hover>ul {
+    display: block;
+}
+
+/* Nested submenu positioning */
+nav li ul li ul,
+[role="navigation"] li ul li ul,
+ul[role="navigation"] li ul li ul {
+    top: 0;
+    left: 100%;
+}
+
+/* Down arrow for top-level items with submenu */
+nav>ul>li:has(ul)>a::after,
+[role="navigation"]>ul>li:has(ul)>a::after,
+ul[role="navigation"]>li:has(ul)>a::after {
+    content: " ▼";
+    font-size: 0.8em;
+}
+
+/* Right arrow for deeper submenu items */
+nav ul ul li:has(ul)>a::after,
+[role="navigation"] ul ul li:has(ul)>a::after,
+ul[role="navigation"] ul li:has(ul)>a::after {
+    content: " ▶";
+    font-size: 0.8em;
+}
+
+/* Vertical layout support + vertical while nav is inside aside */
+aside nav>ul>li,
+aside [role="navigation"]>ul>li,
+aside ul[role="navigation"]>li,
+nav.vertical>ul>li,
+[role="navigation"].vertical>ul>li,
+ul.vertical[role="navigation"]>li {
+    display: block !important;
+}
+
+aside nav ul,
+aside [role="navigation"]>ul,
+aside ul[role="navigation"],
+.vertical>ul {
+    display: block;
+}
+
+aside nav ul li ul,
+aside [role="navigation"]>ul li ul,
+aside ul[role="navigation"] li ul,
+.vertical li ul {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin-left: 1em;
+    display: none;
+}
+
+aside nav ul ul li:has(ul)>a::after,
+aside [role="navigation"] ul ul li:has(ul)>a::after,
+aside ul[role="navigation"] ul li:has(ul)>a::after,
+nav.vertical ul ul li:has(ul)>a::after,
+[role="navigation"].vertical ul ul li:has(ul)>a::after,
+ul[role="navigation"].vertical ul li:has(ul)>a::after {
+    content: " ▼";
+    font-size: 0.8em;
+}
+
+/* Horizontal override (same as default for clarity) */
+nav.horizontal>ul>li,
+[role="navigation"].horizontal>ul>li,
+ul[role="navigation"].horizontal>li {
+    display: inline-block !important;
+}
+
+nav.horizontal li ul,
+[role="navigation"].horizontal li ul,
+ul[role="navigation"].horizontal li ul,
+.horizontal li ul {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+}
+
+nav.horizontal li ul li ul,
+[role="navigation"].horizontal li ul li ul,
+ul[role="navigation"].horizontal li ul li ul,
+.horizontal li ul li ul {
+    top: 0;
+    left: 100%;
+}
