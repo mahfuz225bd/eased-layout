@@ -12,35 +12,6 @@ Urgent TODOs:
 
 - Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
 
-For Helpers
-
-- margin
-- padding
-- gutter
-- gap vs gutter?
-- horizontal and vertical alignments
-- order
-- offset
-- visibility
-- z-index (https://getbootstrap.com/docs/5.3/layout/z-index/)
-- position
-- ratio
-
-For Utilities:
-
-- display
-- flex
-- float
-- object-fit (can be deleted, after decision)
-- overflow
-- position
-- sizing
-- spacing
-- text
-- vertical align
-- visibility
-- z-index (https://getbootstrap.com/docs/5.3/utilities/z-index/)
-
 **Possible Future Enhancements:**
 
 - **Special Built-in Layouts:**
