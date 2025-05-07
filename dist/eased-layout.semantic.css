@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/*!
+ * Eased Layout CSS Library v1.0.0
+ * File Name: eased-layout.semantic.css
+ * File Description: 
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+header,
+footer {
+    width: 100%;
+}
+
+.container,
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Main content and container's direct child elements take equal space by default */
+
+main,
+.container,
+main>section,
+main>article,
+.container>section,
+.container>article {
+    flex: 1;
+}
+
+/* Sidebars (asides) have a default width of 20% */
+
+main>aside,
+.container>aside,
+section>aside,
+article>aside {
+    flex: 0 0 20%;
+}
+
+/* Single aside takes up 25% width */
+
+main>aside:only-of-type,
+.container>aside:only-of-type,
+section>aside:only-of-type,
+article>aside:only-of-type {
+    flex: 0 0 25%;
+}
+
+/* Fallback for browsers not supporting flexbox */
+
+@supports not (display: flex) {
+
+    header,
+    aside,
+    main,
+    section,
+    article,
+    footer,
+    .container {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Responsive design for semantic element while rendering in smaller screens */
+@media screen and (max-width: 900px) {
+
+    .container:not(:has(.row)),
+    main:not(:has(.row)),
+    section:not(:has(.row)),
+    article:not(:has(.row)) {
+        flex-direction: column;
+    }
+
+    .container.row,
+    main.row,
+    section.row,
+    article.row {
+        flex-direction: row;
+    }
+
+    header:not(:has(.row)),
+    aside:not(:has(.row)),
+    section:not(:has(.row)),
+    article:not(:has(.row)),
+    footer:not(:has(.row)),
+    .container:not(:has(.row)),
+    main:not(:has(.row)) {
+        flex: 0 0 100%;
+        margin: 0;
+    }
+}

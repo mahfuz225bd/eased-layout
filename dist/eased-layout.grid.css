@@ -2,7 +2,7 @@
 
 /*!
  * Eased Layout CSS Library v1.0.0
- * File Name: eased-layout.css
+ * File Name: eased-layout.grid.css
  * File Description: 
  * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
  * Licensed under the MIT License
@@ -10,74 +10,6 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-*, *::before, *::after { box-sizing: border-box; }
-
-body, h1, h2, h3, h4, h5, h6, p, pre, hr, table, caption { margin: 0; }
-
-/* Start: High-contrast outline on focus */
-
-/* Universal focus style */
-:focus { outline: 3px solid #FF0; outline-offset: 3px; }
-
-/* Focus style for buttons */
-button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus, [role="button"] { outline: 3px solid #0F0; }
-
-/* Focus style for links, menu items and tab */
-a:focus, [role="link"]:focus, [role="menuitem"]:focus, [role="menuitemradio"]:focus, [role="menuitemcheckbox"]:focus, [role="tab"]:focus { outline: 3px solid #00F; }
-
-/* End: High-contrast outline on focus */
-
-/* Start: Semantic layout */
-
-header,
-footer {
-  width: 100%;
-}
-
-.container,
-main {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Main content and container's direct child elements take equal space by default */
-
-main,
-.container,
-main>section,
-main>article,
-.container>section,
-.container>article {
-  flex: 1;
-}
-
-/* Sidebars (asides) have a default width of 20% */
-
-main>aside,
-.container>aside,
-section>aside,
-article>aside {
-  flex: 0 0 20%;
-}
-
-/* Single aside takes up 25% width */
-
-main>aside:only-of-type,
-.container>aside:only-of-type,
-section>aside:only-of-type,
-article>aside:only-of-type {
-  flex: 0 0 25%;
-}
-
-/* Fallback for browsers not supporting flexbox */
-
-@supports not (display: flex) {
-  header, aside, main, section, article, footer, .container { display: block; width: 100%; }
-}
-
-/* End: Semantic layout */
-
-/* Start: Grid system with flex */
 .row { display: flex; flex-wrap: wrap; }
 
 *:has(.row) { flex-direction: column; }
@@ -379,47 +311,3 @@ article>aside:only-of-type {
   .row.total-columns-breakpoints-n>*,
   .row.total-columns-xxl-n>* { flex: 0 0 calc(100% / var(--columns-xxl, 1)); }
 }
-
-/* End: Breakpoints for responsiveness */
-
-
-/* Layout Rules (HTML5 Semantic Layout):
-    Header Placement:
-        Optional; can be placed in the body, inside a .container, or as a child of aside, main, article, or section.
-        Though optional, having at least one header element is highly recommended as it improves SEO by providing search engines with context, and enhances accessibility too.
-
-    Aside Combinations:
-        None, one (left), one (right), or two asides.
-
-    Main Content:
-        Must use main. Can section, or article be used as optional.
-
-    Footer Placement:
-        Optional; can be placed in the body or inside a .container.
-
-    container Usage:
-        The .container serves as a container. It is optional and can be placed as a child of any element.
-*/
-
-/* Layout Rules (Grid Layout):
-   - The grid system uses `.row` for organizing content in columns. Without classes for columns, immediate child elements of a `.row` are considered columns.
-   - Fixed Grid (12 columns): Use `.total-columns-1` to `.total-columns-12` to define column widths (e.g., `.total-columns-2` = 50%).
-   - For 12+ columns: Use `.total-columns-n` to `.row` element with `--columns` variable. The column widths will be calculated automatically by `width: calc(100% / var(--columns))`.
-*/
-
-/* Responsive for Layout Rules (Grid Layout):
-   - There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
-   - For Fixed Grid (12 columns): Along with `.row`, use any class according to the format: `.total-{available breakpoint}-{columns}`; columns should be 1 to 12.
-   - 12+ columns: Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value
-                  Alternatively, along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoint}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
-*/
-
-/* Extensions:
-  - css-grid.css: 
-  - debugger.css: 
-  - helper.css: 
-  - navbar.css: 
-  - print.css: 
-  - restore-box-sizing: 
-  - restore-margins: 
-*/
