@@ -403,13 +403,19 @@ This is highly recommended: use a custom class for each variable, and remember t
 
 ### Extensions
 
-  - `css-grid.css`: 
-  - `debugger.css`: 
-  - `helper.css`: 
-  - `navbar.css`: 
-  - `print.css`: 
-  - `restore-box-sizing.css`: 
-  - `restore-margins.css`: 
+#### CSS Grid
+
+#### Debugger
+
+#### Helpers
+
+#### Navbar
+
+#### Print
+
+#### Restore Box Sizing
+
+#### Restore Margins
 
 #### Restoring the Box Sizing
 
