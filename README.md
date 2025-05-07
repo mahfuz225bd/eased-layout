@@ -403,6 +403,14 @@ This is highly recommended: use a custom class for each variable, and remember t
 
 ### Extensions
 
+  - `css-grid.css`: 
+  - `debugger.css`: 
+  - `helper.css`: 
+  - `navbar.css`: 
+  - `print.css`: 
+  - `restore-box-sizing.css`: 
+  - `restore-margins.css`: 
+
 #### Restoring the Box Sizing
 
 For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
@@ -954,8 +962,22 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
      - Alternatively, configure with `total-columns-{available breakpoint}-n` and CSS variables like `--columns-{available breakpoint}: {columns}`.
      - The `{columns}` value should any non-zero integer column count for precise designs.
 
-5. **Available Breakpoints for Responsive Design:** {some text}
+5. **Available Breakpoints for Responsive Design:**
 
-6. **Extensions:** {some text}
+  - **Extra small** (`<576px`): No class infix needed.
+  - **Small** (`≥576px`): Uses the `sm` class infix.
+  - **Medium** (`≥768px`): Uses the `md` class infix.
+  - **Large** (`≥992px`): Uses the `lg` class infix.
+  - **Extra large** (`≥1200px`): Uses the `xl` class infix.
+  - **Extra extra large** (`≥1400px`): Uses the `xxl` class infix.
+
+6. **Extensions:**
+  - `css-grid.css`: 
+  - `debugger.css`: 
+  - `helper.css`: 
+  - `navbar.css`: 
+  - `print.css`: 
+  - `restore-box-sizing.css`: 
+  - `restore-margins.css`: 
 
 This release lays the foundation for a robust, responsive, and customizable front-end framework.
