@@ -122,4 +122,14 @@ Categories of Layout (Generated from ChatGPT):
 
    Includes layouts for Gaming UI, 3D Environments, Virtual Reality, and Industrial Design.
 
+Screen Width of Small Devices (Collected from ChatGPT):
+
+| **Device Type**       | **Typical Screen Width** | **Example Resolution**        | **Notes**                           |
+| --------------------- | ------------------------ | ----------------------------- | ----------------------------------- |
+| **Tiny OLED Modules** | 64px – 128px             | 64×32, 128×64                 | Arduino/Raspberry Pi add-ons        |
+| **Fitness Trackers**  | 72px – 160px             | 72×40, 128×64, 160×80         | Xiaomi Mi Band, Fitbit, etc.        |
+| **Feature Phones**    | 128px – 240px            | 128×160, 176×220, 240×320     | Nokia 3310 (new), old Samsung, etc. |
+| **Smartwatches**      | 240px – 454px            | 240×240, 360×360, 454×454     | Apple Watch, Galaxy Watch           |
+| **Small Phones**      | 320px – 540px            | 320×480 (iPhone 3GS), 540×960 | Android phones (2010–2014 era)      |
+| **Mini Web Views**    | \~360px                  | 360 CSS pixels (viewport)     | Often used as mobile design base    |
 
