@@ -936,19 +936,17 @@ This is highly recommended: use a custom class for each variable, and remember t
 
    This library added focus styles for accessibility with a green outline for buttons, blue for links and interactive items, and red for other focusable elements.
 
-2. **Debugging:** {some text}
-
-3. **Sematic Layout Design:**
+2. **Sematic Layout Design:**
 
    - Simplified layout creation with HTML5 semantic elements: `header`, `aside`, `main`, `section`, `article`, and `footer`.
 
-4. **12-Column Grid System:**
+3. **12-Column Grid System:**
 
    - Added a class-based grid system for responsive designs:
      - `.total-{available breakpoint}-{columns}` (e.g., `.total-md-6`).
      - Supported breakpoints (`sm`, `md`, `lg`, `xl`, `xxl`) and the value of {columns} should between 1 to 12 according to need.
 
-5. **12+ Column Grid System:**
+4. **12+ Column Grid System:**
 
    - Introduced a flexible grid system for custom layouts:
      - Use `.total-columns-n` with CSS variables for unlimited column configurations.
@@ -956,6 +954,8 @@ This is highly recommended: use a custom class for each variable, and remember t
      - Alternatively, configure with `total-columns-{available breakpoint}-n` and CSS variables like `--columns-{available breakpoint}: {columns}`.
      - The `{columns}` value should any non-zero integer column count for precise designs.
 
-6. **Available Breakpoints for Responsive Design:** {some text}
+5. **Available Breakpoints for Responsive Design:** {some text}
+
+6. **Extensions:** {some text}
 
 This release lays the foundation for a robust, responsive, and customizable front-end framework.
