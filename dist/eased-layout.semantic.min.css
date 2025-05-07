@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/*!
+ * Eased Layout CSS Library v1.0.0
+ * File Name: eased-layout.semantic.min.css
+ * File Description: 
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+footer,header{width:100%}.container,main{display:flex;flex-wrap:wrap}.container,.container>article,.container>section,main,main>article,main>section{flex:1}.container>aside,article>aside,main>aside,section>aside{flex:0 0 20%}.container>aside:only-of-type,article>aside:only-of-type,main>aside:only-of-type,section>aside:only-of-type{flex:0 0 25%}@supports not (display:flex){.container,article,aside,footer,header,main,section{display:block;width:100%}}@media screen and (max-width:900px){.container:not(:has(.row)),article:not(:has(.row)),main:not(:has(.row)),section:not(:has(.row)){flex-direction:column}.container.row,article.row,main.row,section.row{flex-direction:row}.container:not(:has(.row)),article:not(:has(.row)),aside:not(:has(.row)),footer:not(:has(.row)),header:not(:has(.row)),main:not(:has(.row)),section:not(:has(.row)){flex:0 0 100%;margin:0}}
