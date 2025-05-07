@@ -17,7 +17,7 @@
 .grid.total-columns-n { grid-template-columns: repeat(var(--columns), 1fr); }
 .grid.total-columns-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-/* Extra small: <576px */
+/* <576px */
 @media (max-width: 575.98px) {
     .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
     .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
@@ -94,7 +94,7 @@
     .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))), 1fr); }
 }
 
-/* Small: ≥576px */
+/* ≥576px */
 @media (min-width: 576px) {
     .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
     .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
@@ -171,7 +171,7 @@
     .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))), 1fr); }
 }
 
-/* Medium: ≥768px */
+/* ≥768px */
 @media (min-width: 768px) {
     .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
     .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
@@ -234,7 +234,7 @@
     .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))), 1fr); }
 }
 
-/* Large: ≥992px */
+/* ≥992px */
 @media (min-width: 992px) {
     .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
     .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
@@ -281,7 +281,7 @@
     .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 }
 
-/* Extra large: ≥1200px */
+/* ≥1200px */
 @media (min-width: 1200px) {
     .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
     .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
@@ -314,7 +314,7 @@
     .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-xl, var(--columns-xxl, 1)), 1fr); }
 }
 
-/* Extra extra large: ≥1400px */
+/* ≥1400px */
 @media (min-width: 1400px) {
     .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
     .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
