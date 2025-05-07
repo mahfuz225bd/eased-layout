@@ -50,9 +50,13 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 /eased-layout
 ├── /dist
 |   ├── /_others (unnecessary, included for temporary)
-|   ├── /extensions (unnecessary, included for temporary)
+|   ├── /extensions
+|   |   ├── css-grid.css
 |   |   ├── debugger.css
-|   |   ├── eased-layout.restore-box-sizing.css
+|   |   ├── helper.css
+|   |   ├── navbar.css
+|   |   ├── print.css
+|   |   ├── restore-box-sizing.css
 |   |   ├── restore-margins.css
 |   ├── eased-layout.css
 ├── /tests (for testing, included temporarily)
@@ -64,12 +68,6 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 
 No need for a basic CSS reset; a built-in basic CSS reset is already provided in the `eased-layout` library for all HTML elements with `box-sizing: border-box;`. Additionally, this provided zero margin for `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` elements to ensure consistent spacing across these elements and eliminate default browser styling that may interfere with the layout.
 
-#### Restoring the CSS Resets
-
-- **Restoring Box Sizing:** For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
-
-- **Restoring Margins:** For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-margins.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
-
 #### Focus Styles for Accessibility
 
 This `eased-layout` library includes focus styles for accessibility: a green outline for buttons, blue for links and interactive items, as well as a red outline for all other focusable elements. The outline is offset by 3px to avoid content overlap.
@@ -77,10 +75,6 @@ This `eased-layout` library includes focus styles for accessibility: a green out
 ##### Restoring the Focus Style
 
 Not provided to restore the focus style. However, it can be removed to edit downloaded `eased-layout.css` or `eased-layout.min.css`.
-
-### Debugging
-
-{something}
 
 ### Guideline for Designing Semantic Layout
 
@@ -409,7 +403,13 @@ This is highly recommended: use a custom class for each variable, and remember t
 
 ### Extensions
 
-{something}
+#### Restoring the Box Sizing
+
+For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
+
+#### Restoring the Restoring Margins
+
+For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-margins.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
 ### Complete Examples for HTML5 Semantic Elements:
 
