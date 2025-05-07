@@ -430,168 +430,165 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Complete Examples of Eased Layout with HTML5 Semantic Elements
-    </title>
-    <link rel="stylesheet" href="{root directory}/dist/eased-layout.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eased Layout: Complete Examples with HTML5 Semantic Elements</title>
+    <link rel="stylesheet" href="{root directory}/dist/eased-layout.css">
     <style>
-      header,
-      aside,
-      main,
-      section,
-      article,
-      footer {
-        border: 1px solid #000;
-      }
+        header,
+        aside,
+        main,
+        section,
+        article,
+        footer {
+            border: 1px solid #000;
+        }
 
-      div.container {
-        border: 1px solid red;
-      }
+        div.container {
+            border: 1px solid red;
+        }
 
-      h2 {
-        margin-top: 17px;
-      }
+        h2 {
+            margin-top: 17px;
+        }
 
-      body {
-        padding: 17px;
-      }
+        body {
+            padding: 17px;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
-    <h2>
-      Method 1 [header + (div.container -> aside + main + aside) + footer]:
-    </h2>
+<body>
+    <h1>Eased Layout: Complete Examples with HTML5 Semantic Elements</h1>
+    <h2>Method 1 [header + (div.container -> aside + main + aside) + footer]:</h2>
     <header>Header, in body</header>
     <div class="container">
-      <aside>Left aside, in div.container</aside>
-      <main>Main Content as main, in div.container</main>
-      <aside>Right aside, in div.container</aside>
+        <aside>Left aside, in div.container</aside>
+        <main>Main Content as main, in div.container</main>
+        <aside>Right aside, in div.container</aside>
     </div>
     <footer>Footer, in body</footer>
 
     <h2>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h2>
     <header>Header, in body</header>
     <main>
-      <aside>Left aside, in main, no any div.container</aside>
-      <section>Main Content as section, in main, no any div.container</section>
-      <aside>Right aside, in main, no any div.container</aside>
+        <aside>Left aside, in main, no any div.container</aside>
+        <section>Main Content as section, in main, no any div.container</section>
+        <aside>Right aside, in main, no any div.container</aside>
     </main>
     <footer>Footer, in body</footer>
 
     <h2>Method 2.2 [header + main -> (aside + article + aside) + footer]:</h2>
     <header>Header, in body</header>
     <main>
-      <aside>Left aside, in main, no any div.container</aside>
-      <article>Main Content as article, in main, no any div.container</article>
-      <aside>Right aside, in main, no any div.container</aside>
+        <aside>Left aside, in main, no any div.container</aside>
+        <article>Main Content as article, in main, no any div.container</article>
+        <aside>Right aside, in main, no any div.container</aside>
     </main>
     <footer>Footer, in body</footer>
 
     <h2>Method 3.1 [main -> (header + aside + section + aside + footer)]:</h2>
     <main>
-      <header>Header, in main, no any div.container</header>
-      <aside>Left aside, in main, no any div.container</aside>
-      <section>Main Content as section, in main, no any div.container</section>
-      <aside>Right aside, in main, no any div.container</aside>
-      <footer>Footer, in main, no div.container</footer>
+        <header>Header, in main, no any div.container</header>
+        <aside>Left aside, in main, no any div.container</aside>
+        <section>Main Content as section, in main, no any div.container</section>
+        <aside>Right aside, in main, no any div.container</aside>
+        <footer>Footer, in main, no div.container</footer>
     </main>
 
     <h2>Method 3.2 [main -> (header + aside + article + aside + footer)]:</h2>
     <main>
-      <header>Header, in main, no any div.container</header>
-      <aside>Left aside, in main, no any div.container</aside>
-      <section>Main Content as article, in main, no any div.container</section>
-      <aside>Right aside, in main, no any div.container</aside>
-      <footer>Footer, in main, no div.container</footer>
+        <header>Header, in main, no any div.container</header>
+        <aside>Left aside, in main, no any div.container</aside>
+        <section>Main Content as article, in main, no any div.container</section>
+        <aside>Right aside, in main, no any div.container</aside>
+        <footer>Footer, in main, no div.container</footer>
     </main>
 
-    <h2>
-      Method 4 [(div.container -> header + aside + main + aside + footer)]:
-    </h2>
+    <h2>Method 4 [(div.container -> header + aside + main + aside + footer)]:</h2>
     <div class="container">
-      <header>Header, in div.container</header>
-      <aside>Left aside, in div.container</aside>
-      <main>Main Content as main, in div.container</main>
-      <aside>Right aside, in div.container</aside>
-      <footer>Footer, in div.container</footer>
+        <header>Header, in div.container</header>
+        <aside>Left aside, in div.container</aside>
+        <main>Main Content as main, in div.container</main>
+        <aside>Right aside, in div.container</aside>
+        <footer>Footer, in div.container</footer>
     </div>
 
     <h2>Singe Aside Example 1:</h2>
     <header>Header</header>
     <div class="container">
-      <aside>Left aside (25%)</aside>
-      <main>Main Content (100 - 25 = 75%)</main>
+        <aside>Left aside (25%)</aside>
+        <main>Main Content (100 - 25 = 75%)</main>
     </div>
     <footer>Footer</footer>
 
     <h2>Singe Aside Example 2:</h2>
     <header>Header</header>
     <div class="container">
-      <main>Main Content (100 - 25 = 75%)</main>
-      <aside>Right aside (25%)</aside>
+        <main>Main Content (100 - 25 = 75%)</main>
+        <aside>Right aside (25%)</aside>
     </div>
     <footer>Footer</footer>
 
     <h2>Double Aside Example:</h2>
     <header>Header</header>
     <div class="container">
-      <aside>Left aside (20%)</aside>
-      <main>Main Content (100 - (20 + 20) = 60%)</main>
-      <aside>Right aside (20%)</aside>
+        <aside>Left aside (20%)</aside>
+        <main>Main Content (100 - (20 + 20) = 60%)</main>
+        <aside>Right aside (20%)</aside>
     </div>
     <footer>Footer</footer>
 
     <h2>Nested Aside Example:</h2>
     <header>Header, in body</header>
     <main>
-      <aside>Left aside</aside>
-      <div class="container">
         <aside>Left aside</aside>
-        <article>
-          <h3>Header</h3>
-          <div class="container">
+        <div class="container">
             <aside>Left aside</aside>
-            <section>
-              <h4>Sub Header</h4>
-              <div class="container">
-                <aside>Left aside</aside>
-                <section>
-                  <h5>Sub Header</h5>
-                  <div class="container">
+            <article>
+                <h3>Header</h3>
+                <div class="container">
                     <aside>Left aside</aside>
                     <section>
-                      <h6>Sub Header</h6>
-                      <div class="container">
-                        <aside>Left aside</aside>
-                        <section>
-                          <div class="container">
-                            <aside>Left aside of the article</aside>
-                            <article>Main Content as article</article>
-                            <aside>Right aside of the article</aside>
-                          </div>
-                        </section>
-                        <aside>Right aside</aside>
-                      </div>
+                        <h4>Sub Header</h4>
+                        <div class="container">
+                            <aside>Left aside</aside>
+                            <section>
+                                <h5>Sub Header</h5>
+                                <div class="container">
+                                    <aside>Left aside</aside>
+                                    <section>
+                                        <h6>Sub Header</h6>
+                                        <div class="container">
+                                            <aside>Left aside</aside>
+                                            <section>
+                                                <div class="container">
+                                                    <aside>Left aside of the article</aside>
+                                                    <article>Main Content as article</article>
+                                                    <aside>Right aside of the article</aside>
+                                                </div>
+                                            </section>
+                                            <aside>Right aside</aside>
+                                        </div>
+                                    </section>
+                                    <aside>Right aside</aside>
+                                </div>
+                            </section>
+                            <aside>Right aside</aside>
+                        </div>
                     </section>
                     <aside>Right aside</aside>
-                  </div>
-                </section>
-                <aside>Right aside</aside>
-              </div>
-            </section>
+                </div>
+            </article>
             <aside>Right aside</aside>
-          </div>
-        </article>
+        </div>
         <aside>Right aside</aside>
-      </div>
-      <aside>Right aside</aside>
     </main>
     <footer>Footer, in body</footer>
-  </body>
+</body>
+
 </html>
 ```
 
@@ -604,11 +601,11 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Examples of Eased Layout Grid System</title>
+    <title>Eased Layout: Complete Examples of Grid System</title>
     <link rel="stylesheet" href="{root directory}/dist/eased-layout.css">
     <style>
-        div.row,
-        div.row>*,
+        .row,
+        .row>*,
         section.row,
         section.row>* {
             border: 1px solid #000;
@@ -625,39 +622,13 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         body {
             padding: 17px;
         }
-
-        .custom-column-count {
-            --columns-sm: 2;
-            --columns-md: 4;
-            --columns-lg: 8;
-            --columns-xl: 12;
-            --columns-xxl: 16;
-        }
-
-        .total-columns-xxl-16 {
-            --columns-xxl: 16;
-        }
     </style>
 </head>
 
 <body>
-    <h1>Complete Examples of Eased Layout Grid System</h1>
-    <h2>1.1: 10 columned grid without .container</h2>
-    <div class="row total-columns-10">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </div>
-
-    <h2>1.2: 10 columned grid without .container + external column is added</h2>
-    <div class="row total-columns-10">
+    <h1>Eased Layout: Complete Examples of Grid System</h1>
+    <h2>1.1. 12-Column Grid without `.container` or &lt;main&gt;</h2>
+    <div class="row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -669,173 +640,11 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>9</div>
         <div>10</div>
         <div>11</div>
+        <div>12</div>
     </div>
 
-    <h2>1.3: 10 columned grid without .container + external column is added (making 10 columned single row into 2 rows)
-    </h2>
-    <div class="row total-columns-5">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </div>
-
-    <h2>2.1: 10 columned grid with .container</h2>
-    <div class="container row total-columns-10">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </div>
-
-    <h2>2.2: 10 columned grid with .container + external column is added</h2>
-    <div class="container row total-columns-10">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-    </div>
-
-    <h2>2.3: 10 columned grid with .container + external column is added (making 10 columned single row into 2 rows)
-    </h2>
-    <div class="container row total-columns-5">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </div>
-
-    <h2>3.1: 10 columned grid with wrapping into div.container</h2>
-    <div class="container">
-        <div class="row total-columns-10">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-        </div>
-    </div>
-
-    <h2>3.2: 10 columned grid with wrapping into div.container + external column is added</h2>
-    <div class="container">
-        <div class="row total-columns-10">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-        </div>
-    </div>
-
-    <h2>3.3: 10 columned grid with wrapping into div.container + external column is added (making 10 columned single row
-        into 2 rows)</h2>
-    <div class="container">
-        <div class="row total-columns-5">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-        </div>
-    </div>
-
-    <h2>4: 10 columned Example with semantic elements (Eg: section)</h2>
-    <section class="row total-columns-10">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </section>
-
-    <h2>5: 10 columned grid with setting different different widths to all columns</h2>
-    <div class="row total-columns-10">
-        <div style="flex-basis: 50px;">1 (50px)</div>
-        <div style="flex-basis: 75px;">2 (75px)</div>
-        <div style="flex-basis: 50px;">3 (50px)</div>
-        <div style="flex-basis: 100px;">4 (100px)</div>
-        <div style="flex-basis: 50px;">5 (50px)</div>
-        <div style="flex-basis: 80px;">6 (80px)</div>
-        <div style="flex-basis: 50px;">7 (50px)</div>
-        <div style="flex-basis: 60px;">8 (60px)</div>
-        <div style="flex-basis: 90px;">9 (90px)</div>
-        <div style="flex-basis: 50px;">10 (50px)</div>
-    </div>
-
-    <h2>6.1: Single columned Example without .total-columns-1 (by default, work as container fluid; .container can be
-        include or excluded)</h2>
-    <div class="row">
-        <div>1</div>
-    </div>
-
-    <h2>6.2: Single columned Example with .total-columns-1 (work as container fluid, .container can be include or
-        excluded)</h2>
-    <div class="row total-columns-1">
-        <div>1</div>
-    </div>
-
-    <h2>6.3: Single columned Example without .total-columns-1 + external column is added (work as by default, container
-        fluid; .container can be include or excluded)</h2>
-    <div class="row">
-        <div>1</div>
-        <div>2</div>
-    </div>
-
-    <h2>6.4: Single columned Example with .total-columns-1 + external column is added (work as container fluid,
-        .container can be include or excluded)</h2>
-    <div class="row total-columns-1">
-        <div>1</div>
-        <div>2</div>
-    </div>
-
-    <h2>7: 12+ Columned Grid</h2>
-    <div class="row total-columns-n" style="--columns: 15;">
+    <h2>1.2. 12-Column Grid without `.container` or &lt;main&gt; + External Column Added</h2>
+    <div class="row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -849,27 +658,296 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>11</div>
         <div>12</div>
         <div>13</div>
-        <div>14</div>
-        <div>15</div>
-        <div>16</div>
-        <div>17</div>
-        <div>18</div>
-        <div>19</div>
-        <div>20</div>
-        <div>20</div>
-        <div>21</div>
-        <div>22</div>
-        <div>23</div>
-        <div>24</div>
-        <div>25</div>
-        <div>26</div>
-        <div>27</div>
-        <div>28</div>
-        <div>29</div>
-        <div>50</div>
     </div>
 
-    <h2>8.1: Responsive Grid Layout with Breakpoints (Total 8/12 Columns)</h2>
+    <h2>1.3. 12-Column Grid without `.container` or &lt;main&gt; + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <div class="row total-columns-6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h2>2.1.1. 12-Column Grid with `.container`</h2>
+    <div class="container row total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h2>2.1.2. 12-Column Grid with `.container` + External Column Added</h2>
+    <div class="container row total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+    </div>
+
+    <h2>2.1.3. 12-Column Grid with `.container` + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <div class="container row total-columns-6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h2>2.2.1. 12-Column Grid with &lt;main&gt;</h2>
+    <main class="row total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </main>
+
+    <h2>2.2.2. 12-Column Grid with &lt;main&gt; + External Column Added</h2>
+    <main class="row total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+    </main>
+
+    <h2>2.2.3. 12-Column Grid with &lt;main&gt; + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <main class="row total-columns-6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </main>
+
+    <h2>3.1.1. 12-Column Grid Wrapped in `div.container`</h2>
+    <div class="container">
+        <div class="row total-columns-12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <h2>3.1.2. 12-Column Grid Wrapped in `div.container` + External Column Added</h2>
+    <div class="container">
+        <div class="row total-columns-12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+        </div>
+    </div>
+
+    <h2>3.1.3. 12-Column Grid Wrapped in `div.container` + External Column Added (Combined into 10-Column Grid Like Two Grids)</h2>
+    <div class="container">
+        <div class="row total-columns-6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <h2>3.2.1. 12-Column Grid Wrapped in &lt;main&gt;</h2>
+    <main>
+        <div class="row total-columns-12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </main>
+
+    <h2>3.2.2. 12-Column Grid Wrapped in &lt;main&gt; + External Column Added</h2>
+    <main>
+        <div class="row total-columns-12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+        </div>
+    </main>
+
+    <h2>3.2.3. 10-Column Grid Wrapped in &lt;main&gt; + External Column Added (Combined into 12-Column Grid Like Two Grids)</h2>
+    <main>
+        <div class="row total-columns-6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </main>
+
+    <h2>4. 12-Column Grid with Semantic Elements (e.g., &lt;section&gt;)</h2>
+    <section class="row total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </section>
+
+    <h2>5. 10-Column Grid with Individually Set Column Widths</h2>
+    <div class="row total-columns-10">
+        <div style="flex-basis: 50px;">1 (50px)</div>
+        <div style="flex-basis: 75px;">2 (75px)</div>
+        <div style="flex-basis: 50px;">3 (50px)</div>
+        <div style="flex-basis: 100px;">4 (100px)</div>
+        <div style="flex-basis: 50px;">5 (50px)</div>
+        <div style="flex-basis: 80px;">6 (80px)</div>
+        <div style="flex-basis: 50px;">7 (50px)</div>
+        <div style="flex-basis: 60px;">8 (60px)</div>
+        <div style="flex-basis: 90px;">9 (90px)</div>
+        <div style="flex-basis: 50px;">10 (50px)</div>
+        <div style="flex-basis: 50px;">11 (50px)</div>
+        <div style="flex-basis: 60px;">12 (60px)</div>
+    </div>
+
+    <h2>6.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `.container` Optional)</h2>
+    <div class="row">
+        <div>1</div>
+    </div>
+
+    <h2>6.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid; `.container` Optional)</h2>
+    <div class="row">
+        <div>1</div>
+        <div>2</div>
+    </div>
+
+    <h2>6.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `.container` Optional)</h2>
+    <div class="row total-columns-1">
+        <div>1</div>
+    </div>
+
+    <h2>6.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid; `.container` Optional)</h2>
+    <div class="row total-columns-1">
+        <div>1</div>
+        <div>2</div>
+    </div>
+
+    <h2>7. Grid with 12+ Columns (100-Column Grid)</h2>
+    <div class="row total-columns-n" style="--columns: 50;">
+        <script>
+            for (let n = 1; n <= 1000; n++) {
+                document.write(`<div>${n}</div>`)
+            }
+        </script>
+    </div>
+
+    <h2>8.1.1. Responsive Grid with Breakpoints (8 of 12 Columns Used)</h2>
     <div class="row total-columns-sm-2 total-columns-md-4 total-columns-lg-8">
         <div>1</div>
         <div>2</div>
@@ -881,7 +959,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>8</div>
     </div>
 
-    <h2>8.2: Responsive Grid Layout with Breakpoints (Total 12/12 Columns)</h2>
+    <h2>8.1.2. Responsive Grid with Breakpoints (12 of 12 Columns Used)</h2>
     <div class="row total-columns-sm-2 total-columns-md-4 total-columns-lg-12">
         <div>1</div>
         <div>2</div>
@@ -898,8 +976,30 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
     </div>
     </section>
 
-    <h2>8.3: Responsive Grid Layout with Breakpoints (Total 12+ Columns)</h2>
-    <div class="row total-columns-breakpoints-n custom-column-count">
+    <h2>8.2.1. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-breakpoints-n`</h2>
+    <div class="row total-columns-breakpoints-n"
+        style="--columns-sm: 1; --columns-md: 2; --columns-lg: 4; --columns-xl: 8; --columns-xxl: 16;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+    <h2>8.2.2. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-{breakpoint}-n`</h2>
+    <div class="row total-columns-sm-n total-columns-md-n total-columns-lg-n total-columns-xl-n total-columns-xxl-n"
+        style="--columns-sm: 1; --columns-md: 2; --columns-lg: 4; --columns-xl: 8; --columns-xxl: 16;">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -920,6 +1020,491 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
 
     <blockquote><strong>N.B.:</strong> Inline CSS is not a good practice. Always use an externally defined class
         instead of it.</blockquote>
+</body>
+
+</html>
+```
+
+### Complete Examples for Grid System (CSS Grid):
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eased Layout: Complete Examples of Grid System (CSS Grid)</title>
+    <link rel="stylesheet" href="../dist/eased-layout.css">
+    <link rel="stylesheet" href="../dist/extensions/css-grid.css">
+    <style>
+        .grid,
+        .grid>*,
+        section.grid,
+        section.grid>* {
+            border: 1px solid #000;
+        }
+
+        div.container {
+            border: 1px solid red;
+        }
+
+        h2 {
+            margin-top: 17px;
+        }
+
+        body {
+            padding: 17px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Eased Layout: Complete Examples of Grid System (CSS Grid)</h1>
+
+    <h2>1. Unlimited Columns with `.total-column-auto`</h2>
+    <div class="grid total-columns-auto">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+        <div>25</div>
+        <div>26</div>
+        <div>27</div>
+        <div>28</div>
+        <div>29</div>
+        <div>30</div>
+    </div>
+
+    <h2>2.1. 12-Column Grid without `.container` or &lt;main&gt;</h2>
+    <div class="grid total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h2>2.2. 12-Column Grid without `.container` or &lt;main&gt; + External Column Added</h2>
+    <div class="grid total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+    </div>
+
+    <h2>2.3. 12-Column Grid without `.container` or &lt;main&gt; + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <div class="grid total-columns-6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h2>3.1.1. 12-Column Grid with `.container`</h2>
+    <div class="container grid total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h2>3.1.2. 12-Column Grid with `.container` + External Column Added</h2>
+    <div class="container grid total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+    </div>
+
+    <h2>3.1.3. 12-Column Grid with `.container` + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <div class="container grid total-columns-6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h2>3.2.1. 12-Column Grid with &lt;main&gt;</h2>
+    <main class="grid total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </main>
+
+    <h2>3.2.2. 12-Column Grid with &lt;main&gt; + External Column Added</h2>
+    <main class="grid total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+    </main>
+
+    <h2>3.2.3. 12-Column Grid with &lt;main&gt; + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <main class="grid total-columns-6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </main>
+
+    <h2>4.1.1. 12-Column Grid Wrapped in `div.container`</h2>
+    <div class="container">
+        <div class="grid total-columns-12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <h2>4.1.2. 12-Column Grid Wrapped in `div.container` + External Column Added</h2>
+    <div class="container">
+        <div class="grid total-columns-12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+        </div>
+    </div>
+
+    <h2>4.1.3. 12-Column Grid Wrapped in `div.container` + External Column Added (Combined into 10-Column Grid Like Two Grids)</h2>
+    <div class="container">
+        <div class="grid total-columns-6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <h2>4.2.1. 12-Column Grid Wrapped in &lt;main&gt;</h2>
+    <main>
+        <div class="grid total-columns-12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </main>
+
+    <h2>4.2.2. 12-Column Grid Wrapped in &lt;main&gt; + External Column Added</h2>
+    <main>
+        <div class="grid total-columns-12">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+        </div>
+    </main>
+
+    <h2>4.2.3. 10-Column Grid Wrapped in &lt;main&gt; + External Column Added (Combined into 12-Column Grid Like Two Grids)</h2>
+    <main>
+        <div class="grid total-columns-6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </main>
+
+    <h2>5. 12-Column Grid with Semantic Elements (e.g., &lt;section&gt;)</h2>
+    <section class="grid total-columns-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </section>
+
+    <h2>6. 10-Column Grid with Individually Set Column Widths</h2>
+    <div class="grid total-columns-10">
+        <div style="flex-basis: 50px;">1 (50px)</div>
+        <div style="flex-basis: 75px;">2 (75px)</div>
+        <div style="flex-basis: 50px;">3 (50px)</div>
+        <div style="flex-basis: 100px;">4 (100px)</div>
+        <div style="flex-basis: 50px;">5 (50px)</div>
+        <div style="flex-basis: 80px;">6 (80px)</div>
+        <div style="flex-basis: 50px;">7 (50px)</div>
+        <div style="flex-basis: 60px;">8 (60px)</div>
+        <div style="flex-basis: 90px;">9 (90px)</div>
+        <div style="flex-basis: 50px;">10 (50px)</div>
+        <div style="flex-basis: 50px;">11 (50px)</div>
+        <div style="flex-basis: 60px;">12 (60px)</div>
+    </div>
+
+    <h2>7.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `.container` Optional)</h2>
+    <div class="grid">
+        <div>1</div>
+    </div>
+
+    <h2>7.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid; `.container` Optional)</h2>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+    </div>
+
+    <h2>7.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `.container` Optional)</h2>
+    <div class="grid total-columns-1">
+        <div>1</div>
+    </div>
+
+    <h2>7.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid; `.container` Optional)</h2>
+    <div class="grid total-columns-1">
+        <div>1</div>
+        <div>2</div>
+    </div>
+
+    <h2>8. Grid with 12+ Columns (100-Column Grid)</h2>
+    <div class="grid total-columns-n" style="--columns: 50;">
+        <script>
+            for (let n = 1; n <= 1000; n++) {
+                document.write(`<div>${n}</div>`)
+            }
+        </script>
+    </div>
+
+    <h2>9.1.1. Responsive Grid with Breakpoints and Auto Total Columns (8 of 12 Columns Used)</h2>
+    <div class="grid total-columns-sm-2 total-columns-md-4 total-columns-lg-8">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+
+    <h2>9.2.1. Responsive Grid with Breakpoints (8 of 12 Columns Used)</h2>
+    <div class="grid total-columns-sm-2 total-columns-md-4 total-columns-lg-8">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+
+    <h2>9.2.2. Responsive Grid with Breakpoints (12 of 12 Columns Used)</h2>
+    <div class="grid total-columns-sm-2 total-columns-md-4 total-columns-lg-12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    </section>
+
+    <h2>9.3.1. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-breakpoints-n`</h2>
+    <div class="grid total-columns-breakpoints-n"
+        style="--columns-sm: 1; --columns-md: 2; --columns-lg: 4; --columns-xl: 8; --columns-xxl: 16;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+    <h2>9.3.2. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-{breakpoint}-n`</h2>
+    <div class="grid total-columns-sm-n total-columns-md-n total-columns-lg-n total-columns-xl-n total-columns-xxl-n"
+        style="--columns-sm: 1; --columns-md: 2; --columns-lg: 4; --columns-xl: 8; --columns-xxl: 16;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+    <blockquote><strong>N.B.:</strong> (1) Inline CSS is not a good practice. Always use an externally defined class
+        instead of it. (2) For making columns auto, using CSS variable like
+        <code>--columns-{available breakpoint}: auto;</code> is not valid. For this reason, use classes like
+        <var>.total-columns-{available breakpoint}-auto</var>
+    </blockquote>
 </body>
 
 </html>
