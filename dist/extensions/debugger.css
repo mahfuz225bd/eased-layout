@@ -1,3 +1,17 @@
+@charset "UTF-8";
+
+/*!
+ * Eased Layout CSS Library v1.0.0
+ * Extension: Debugger
+ * File Name: debugger.css
+ * Description: CSS Debugger for any website.
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
 /* Universal outline for all elements */
 * {
   outline: 2px solid #F0F;
