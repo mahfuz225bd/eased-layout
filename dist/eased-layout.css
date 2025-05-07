@@ -78,6 +78,7 @@ article>aside:only-of-type {
 /* End: Semantic layout */
 
 /* Start: Grid system with flex */
+
 .row { display: flex; flex-wrap: wrap; }
 
 *:has(.row) { flex-direction: column; }
@@ -128,7 +129,7 @@ article>aside:only-of-type {
 
 /* End: Grid system with flex */
 
-/* Responsive design for semantic element while rendering in smaller screens */
+/* Start: Responsive design for semantic element while rendering in smaller screens */
 @media screen and (max-width: 900px) {
   .container:not(:has(.row)),
   main:not(:has(.row)),
@@ -156,6 +157,7 @@ article>aside:only-of-type {
   }
 }
 
+/* End: Responsive design for semantic element while rendering in smaller screens */
 
 /* Start: Breakpoints for responsiveness */
 
@@ -420,6 +422,6 @@ article>aside:only-of-type {
   - helper.css: 
   - navbar.css: 
   - print.css: 
-  - restore-box-sizing: 
-  - restore-margins: 
+  - restore-box-sizing.css: 
+  - restore-margins.css: 
 */

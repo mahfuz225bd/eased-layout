@@ -1,5 +1,4 @@
 @media print {
-
     /* Display utilities */
     .print-display-flex {
         display: flex !important;
