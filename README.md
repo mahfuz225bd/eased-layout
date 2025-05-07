@@ -409,6 +409,14 @@ This is highly recommended: use a custom class for each variable, and remember t
 
 #### Helpers
 
+
+The following table provides a comprehensive list of helper classes available in the `eased-layout.css` library. These classes are designed to simplify common styling tasks and enhance the flexibility of your layouts.
+
+| **Category**               | **Format**                                                                               | **Breakpoint Format**                                                      | **Description**      |
+| -------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------- |
+
+
+
 #### Navbar
 
 #### Print
