@@ -412,10 +412,111 @@ This is highly recommended: use a custom class for each variable, and remember t
 
 The following table provides a comprehensive list of helper classes available in the `eased-layout.css` library. These classes are designed to simplify common styling tasks and enhance the flexibility of your layouts.
 
-| **Category**               | **Format**                                                                               | **Breakpoint Format**                                                      | **Description**      |
-| -------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------- |
-
-
+| Category | Format | Breakpoint Format | Description |
+| --- | --- | --- | --- |
+| Typography | .lead |     | It makes a paragraph stand out. |
+|     | .display-{1-6} |     | Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight), and there are six classes to choose from: .display-1 to .display-6. |
+| Font | .fs-{1-6} |     | Responsive font size utility classes where .fs-1 is the largest and .fs-6 is the smallest. Sizes scale using calc() for .fs-1 to .fs-4 to adapt to viewport width, while .fs-5 and .fs-6 use fixed rem values. |
+|     | .font-monospace |     | Applies a monospace font stack for consistent character spacing, ideal for displaying code or tabular data. |
+|     | .font-style-{italic\|normal} |     | To specify italic or normal text. |
+|     | .font-weight-{lighter\|light\|normal\|medium\|semibold\|bold\|bolder} |     | Font weight utility classes using numeric values from 300 to 700, where each class name represents a visual weight: lighter (lighter than normal), light (300), normal (400), medium (500), semibold (600), bold (700), and bolder (bolder than bold). |
+| Text | .text-align-{left\|right} | .text-align-{left\|right}-{available breakpoints} | To specify text align left or right. |
+|     | .text-decoration-{none\|underline\|line-through} | .text-decoration-{none\|underline\|line-through}-{available breakpoints} | To specify the decoration line of a text. |
+|     | .text-{lowercase\|uppercase\|capitalize} | .text-{lowercase\|uppercase\|capitalize}-{available breakpoints} | To specify the text transformation (lowercase, uppercase, capitalize). |
+|     | .text-{wrap\|nowrap} | .text-{wrap\|nowrap}-{available breakpoints} | To specify how white-space inside an element is handled. |
+|     | .text-color-{black\|white\|muted\|black-50\|white-50\|reset} | .text-color-{black\|white\|muted\|black-50\|white-50\|reset}-{available breakpoints} | Text color utility classes for applying solid or semi-transparent black/white colors, muted tone (rgba(33, 37, 41, 0.75)), or resetting to the inherited text color. |
+|     | .text-break | .text-break-{available breakpoints} | Ensures long words or URLs break and wrap within their container to prevent overflow, using word-wrap and word-break properties for consistent behavior across browsers. |
+| Offset | .offset-{1-11} | .offset-{1-11}-{available breakpoints} | Utility classes for applying left margin offsets as percentages of the container width, ranging from 8.33% (.offset-1) to 91.66% (.offset-11), allowing for precise positioning of elements within a grid system. |
+| Margin and Padding | .m-{0-5\|auto} | .m-{0-5\|auto}-{available breakpoints} | Sets margin on all sides with values from 0px (no space) to 5px (maximum space), or auto for automatic margin. |
+|     | .mt-{0-5\|auto} | .mt-{0-5\|auto}-{available breakpoints} | Sets margin-top with values from 0px to 5px, or auto for automatic top margin. |
+|     | .ml-{0-5\|auto} | .ml-{0-5\|auto}-{available breakpoints} | Sets margin-left with values from 0px to 5px, or auto for automatic left margin. |
+|     | .mr-{0-5\|auto} | .mr-{0-5\|auto}-{available breakpoints} | Sets margin-right with values from 0px to 5px, or auto for automatic right margin. |
+|     | .mb-{0-5\|auto} | .mb-{0-5\|auto}-{available breakpoints} | Sets margin-bottom with values from 0px to 5px, or auto for automatic bottom margin. |
+|     | .mx-{0-5\|auto} | .mx-{0-5\|auto}-{available breakpoints} | Sets horizontal margin (left and right) with values from 0px to 5px, or auto for automatic horizontal margins. |
+|     | .my-{0-5\|auto} | .my-{0-5\|auto}-{available breakpoints} | Sets vertical margin (top and bottom) with values from 0px to 5px, or auto for automatic vertical margins. |
+|     | .p-{0-5} | .p-{0-5}-{available breakpoints} | Sets padding on all sides with values from 0px to 5px. |
+|     | .pt-{0-5} | .pt-{0-5}-{available breakpoints} | Sets padding-top with values from 0px to 5px. |
+|     | .pl-{0-5} | .pl-{0-5}-{available breakpoints} | Sets padding-left with values from 0px to 5px. |
+|     | .pr-{0-5} | .pr-{0-5}-{available breakpoints} | Sets padding-right with values from 0px to 5px. |
+|     | .pb-{0-5} | .pb-{0-5}-{available breakpoints} | Sets padding-bottom with values from 0px to 5px. |
+|     | .px-{0-5} | .px-{0-5}-{available breakpoints} | Sets horizontal padding (left and right) with values from 0px to 5px. |
+|     | .py-{0-5} | .py-{0-5}-{available breakpoints} | Sets vertical padding (top and bottom) with values from 0px to 5px. |
+| Gutter | .g-{1-5} |     | Sets consistent gap (margin) between elements in all directions. Values range from 0.25rem to 3rem, with higher numbers representing larger gaps. |
+|     | .gx-{1-5} |     | Sets horizontal gap (margin-left and margin-right) between elements. Values range from 0.25rem to 3rem, with larger numbers increasing the horizontal spacing. |
+|     | .gy-{1-5} |     | Sets vertical gap (margin-top and margin-bottom) between elements. Values range from 0.25rem to 3rem, with larger numbers increasing the vertical spacing. |
+| Ratio | .ratio-{1x1\|4x3\|16x9\|21x9} |     | These classes create responsive aspect ratios for elements. They use padding-top to maintain specific ratios (e.g., 1:1, 4:3, 16:9, 21:9) based on the width of the container. The child elements are absolutely positioned within these ratios to ensure they scale properly while preserving the intended aspect ratio. |
+| Position | .position-static\|relative\|absolute\|fixed\|sticky |     | Sets the CSS position property to control element placement within the document flow or relative to the viewport or parent. |
+|     | .position-absolute-{top-left\|top-center\|top-right\|middle-left\|middle-center\|middle-right\|bottom-left\|bottom-center\|bottom-right} |     | Absolutely positions the element at a specified corner or center of its relative parent. |
+|     | .position-fixed-{top-left\|top-center\|top-right\|middle-left\|middle-center\|middle-right\|bottom-left\|bottom-center\|bottom-right} |     | Fixes the element at a specified position relative to the viewport with z-index: 1030. |
+|     | .position-sticky-{top-left\|top-center\|top-right\|middle-left\|middle-center\|middle-right\|bottom-left\|bottom-center\|bottom-right} |     | Sticks the element at a specified position within the scroll container using position: sticky and z-index: 1020. |
+|     | .top-{0\|50\|100} |     | Sets the top position to 0%, 50%, or 100%. |
+|     | .left-{0\|50\|100} |     | Sets the left position to 0%, 50%, or 100%. |
+|     | .right-{0\|50\|100} |     | Sets the right position to 0%, 50%, or 100%. |
+|     | .bottom-{0\|50\|100} |     | Sets the bottom position to 0%, 50%, or 100%. |
+|     | .translate-middle |     | Centers the element both horizontally and vertically using transform: translate(-50%, -50%). |
+|     | .translate-middle-x |     | Centers the element horizontally using transform: translateX(-50%). |
+|     | .translate-middle-y |     | Centers the element vertically using transform: translateY(-50%). |
+|     | .h-center |     | Horizontally centers content using display: flex and justify-content: center. |
+|     | .center |     | Fully centers content both horizontally and vertically using flexbox. |
+|     | .absolute-{center\|h-center\|v-center} |     | Absolutely positions the element and centers it: fully (center), horizontally (h-center), or vertically (v-center) using CSS transforms. |
+|     | .v-center |     | Vertically centers content within a flex column layout that fills the container height. |
+|     | .v-align-{baseline\|top\|middle\|bottom\|text-bottom\|text-top} |     | Applies vertical alignment to inline or table-cell elements using the corresponding vertical-align value. |
+| Stacking Elements | .hstack |     | Places items in a row, evenly spaced and lined up in the center, stretching to fit the container. |
+|     | .vstack |     | Stacks items in a column, one below the other, stretching to fill the available space. |
+| Visibility | .visible |     | Makes an element visible on the page. |
+|     | .invisible |     | Hides an element from view without removing it from the layout. |
+|     | .visibility-hidden-focusable |     | Hides content visually but keeps it accessible for screen readers and makes it visible when focused (useful for accessibility). |
+| Opacity | .opacity-{0\|25\|50\|75\|100} |     | Changes how see-through an element is — 0 means completely invisible, 100 means fully solid. |
+| Overflow | .overflow-{auto\|hidden\|visible\|scroll\|x-auto\|x-hidden\|x-visible\|x-scroll\|y-auto\|y-hidden\|y-visible\|y-scroll} |     | Controls the overflow behavior for content, either horizontally (x) or vertically (y), with options to auto-scroll, hide, show, or always scroll. |
+| Float, Clear and Clearfix | .float-{start\|end\|none} |     | Controls the floating behavior of an element, either to the left (start), right (end), or removes floating (none). |
+|     | .clear-{left\|right\|both\|none} |     | Clears the float effect, either on the left, right, both sides, or removes clearing. |
+|     | .clearfix |     | Clears floats within a container, ensuring it properly contains floated elements. |
+| Object Fit | .object-fit-{contain\|cover\|fill\|scale\|none} |     | Controls how an image or video fits within its container, adjusting size and aspect ratio (e.g., contain scales to fit, cover fills and may crop, fill stretches, scale shrinks, none keeps original size). |
+| Display | .display-{inline\|block\|contents\|flex\|grid\|inline-block\|inline-flex\|inline-table\|run-in\|table\|table-caption\|table-column-group\|table-header-group\|table-footer-group\|row-group\|table-cell\|table-column\|table-row\|none} |     | Controls how elements are displayed on the page, with options for inline elements (inline), block-level elements (block), flexible layouts (flex), grid layouts (grid), table elements (table, table-cell, etc.), and visibility (none hides elements). |
+| Border | .border-style-{none\|hidden\|dotted\|dashed\|solid\|double\|groove\|ridge\|inset\|outset} |     | Sets the style of the border for an element, with options for no border (none), invisible (hidden), dotted (dotted), dashed (dashed), solid lines (solid), double lines (double), grooved (groove), ridged (ridge), inset (inset), or outset (outset). |
+|     | .border-{1-5} |     | Sets the border width to a specified value from 1px to 5px. |
+|     | .border-{top\|left\|right\|bottom}-{1-5} |     | Sets the border width for the specific side (top, left, right, bottom) to a value from 1px to 5px. |
+| Weight and Height | .w-{any number divisible by 5\|auto} |     | Sets the width to a percentage value (5% to 100%) or to auto. |
+|     | .max-w-100 |     | Sets the maximum width to 100%. |
+|     | .w-vw-100 |     | Sets the width to 100% of the viewport width (100vw). |
+|     | .min-width-vw-100 |     | Sets the minimum width to 100% of the viewport width (100vw). |
+|     | .h-{any number divisible by 5\|auto} |     | Sets the height to a percentage value (5% to 100%) or to auto. |
+|     | .max-h-100 |     | Sets the maximum height to 100%. |
+|     | .h-vh-100 |     | Sets the height to 100% of the viewport height (100vh). |
+|     | .min-h-vh-100 |     | Sets the minimum height to 100% of the viewport height (100vh). |
+| Line Height | .line-height-{0-1} |     | Sets the line height to either 0 or 1 for the text inside the element. |
+| Link Offset | .link-offset-{1-3} |     | Makes the underline on a link appear slightly lower, making it easier to read. Technically, it sets text-underline-offset to 0.125em, 0.25em, or 0.375em. |
+| User Select and Pointer Event | .link-offset-{1-3}-hover |     | Lowers the underline on a link only when you hover over it, creating a cleaner look. |
+| Border Radius | .rounded-{0-5\|circle\|pill} |     | Gives rounded corners to an element to make it look softer or more modern. Technically, it applies border-radius values: 0 for sharp corners, 1–5 for increasingly round corners (0.25rem to 2rem), circle makes the element fully circular (50%), and pill gives it an elongated capsule shape (50rem). |
+|     | .rounded-top-{0-5\|circle\|pill} |     | Rounds only the top-left and top-right corners of an element. Values from 0 to 5 adjust how rounded they are, while circle and pill give them fully rounded or capsule-like appearance. |
+|     | .rounded-left-{0-5\|circle\|pill} |     | Applies rounding to the top-left and bottom-left corners of an element. Values 0 to 5 adjust the curvature, with circle and pill making them more rounded or pill-shaped. |
+|     | .rounded-right-{0-5\|circle\|pill} |     | Rounds the top-right and bottom-right corners of an element. Values range from 0 (no rounding) to 5 (more rounded), with circle for a full curve and pill for an elongated curve. |
+|     | .rounded-bottom-{0-5\|circle\|pill} |     | Adds rounding to the bottom-left and bottom-right corners. The rounding level increases from 0 to 5, or use circle or pill for full or capsule-like curves. |
+| Z-index | .z-{n1\|0-3} |     | Sets how "in front" or "behind" an element appears on the screen — .z-n1 places the element behind others (z-index: -1), and .z-0 to .z-3 bring it progressively forward with higher stacking levels (z-index: 0 to 3). |
+| Flex | .flex-fill |     | This class makes the flex item take up all available space in a flex container. It sets the flex property to 1 1 auto, making it flexible and ensuring it expands to fill the container's space. |
+|     | .flex-direction-{row\|row-reverse\|column\|column-reverse} |     | Controls the direction of flex items in a container. row arranges them horizontally from left to right, row-reverse reverses that order, column arranges items vertically, and column-reverse reverses the vertical order. |
+|     | .flex-wrap-{nowrap\|wrap\|wrap-reverse} |     | Defines whether flex items wrap onto multiple lines. nowrap prevents wrapping, wrap allows items to wrap onto a new line if needed, and wrap-reverse wraps items in the opposite direction. |
+|     | .flex-basis-{0\|auto} |     | Sets the initial size of a flex item before any free space is distributed. 0 makes it take up no space initially, while auto means the size is based on the content of the item. |
+|     | .flex-grow-{0-1} |     | Determines how much a flex item will grow relative to other items in the container. 0 means no growth, and 1 means the item will grow to fill available space equally with other items. |
+|     | .flex-shrink-{0-1} |     | Specifies how a flex item should shrink if there is not enough space. 0 prevents shrinking, and 1 allows the item to shrink if necessary to fit into the container. |
+| Grid | .grid-auto-flow-{row\|column\|dense\|row-dense\|column-dense} |     | Controls the flow of items in a grid. row and column specify whether items should be placed in rows or columns, while dense attempts to fill in gaps by placing items in available spaces. row-dense and column-dense apply the dense layout in specific directions. |
+|     | .grid-auto-flow-{available breakpoints}-{row\|column\|dense\|row-dense\|column-dense} |     | Similar to the previous, but applies the flow setting to specific breakpoints (e.g., .grid-auto-flow-md-row). |
+|     | .grid-auto-rows-{auto\|0\|max-content\|min-content} |     | Sets the size of rows in a grid. auto adjusts the row size based on content, 0 collapses the row, max-content sets the row to the size of the largest item, and min-content sets it to the smallest item. |
+|     | .grid-auto-rows-{available breakpoints}-{auto\|0\|max-content\|min-content} |     | Similar to the previous, but applies to specific breakpoints (e.g., .grid-auto-rows-lg-auto). |
+|     | .grid-auto-columns-{auto\|0\|max-content\|min-content} |     | Similar to grid-auto-rows, but for column sizes. auto adjusts the column size based on content, 0 collapses the column, max-content sets the column to the size of the largest item, and min-content sets it to the smallest item. |
+|     | .grid-auto-columns-{available breakpoints}-{auto\|0\|max-content\|min-content} |     | Similar to the previous, but applies to specific breakpoints (e.g., .grid-auto-columns-md-auto). |
+|     | .align-content-{stretch\|center\|left\|right\|space-between\|space-around\|space-evenly} |     | Aligns multiple rows or columns within a flex or grid container. stretch stretches them to fill the space, center centers them, left aligns to the left, right aligns to the right, and the space-* options add varying amounts of space between items. |
+|     | .align-items-{normal\|stretch\|left\|right\|center\|baseline} |     | Aligns individual items in a flex or grid container along the cross axis. normal uses default alignment, stretch stretches them, left and right align them to respective sides, center centers them, and baseline aligns them based on the baseline of the text. |
+|     | .justify-content-{left\|right\|center\|space-between\|space-around\|space-evenly} |     | Aligns items along the main axis in a flex or grid container. left aligns items to the left, right to the right, center in the middle, and the space-* options distribute items with varying amounts of space between them. |
+|     | .align-self-{auto\|stretch\|center\|left\|right\|baseline} |     | Allows individual items to override their container’s align-items property. auto uses the container’s alignment, stretch stretches the item, center, left, and right align the item, and baseline aligns it based on the baseline. |
+|     | .column-gap-{0\|normal} |     | Sets the space between columns in a multi-column layout. 0 removes the gap, and normal applies the default gap size. |
+|     | .row-gap-{0\|normal} |     | Sets the space between rows in a multi-row layout. 0 removes the gap, and normal applies the default gap size. |
+|     | .order-{first\|0-12} |     | Controls the order in which items appear within a flex or grid container. first places the item first in the order, while numbers from 0 to 12 assign specific order positions. |
+| Others | .stretched-link-container and .stretched-link |     | The .stretched-link-container is used to create a relative positioning context for child elements. It ensures that the .stretched-link inside it, which is styled with absolute positioning, can extend across the entire container. The ::after pseudo-element of .stretched-link makes the link cover the entire container area, allowing for clickable zones that stretch beyond the visible link itself. |
+|     | .text-truncate |     | The .text-truncate class ensures that any overflowed text within an element is hidden and replaced with an ellipsis (...). It uses text-overflow: ellipsis to show this and prevents the text from wrapping onto the next line with white-space: nowrap. |
+|     | .vr |     | This class creates a vertical rule (a line) using inline-block display. It stretches to the height of its container (align-self: stretch) and has a width of 1px. The color of the line is defined by the currentcolor property, and its opacity is set to 0.25, making it faint and subtle. |
+|     | .focus-ring |     | The .focus-ring class adds a faint background color to elements, typically used to indicate focus in forms or interactive elements. The background color is set to a semi-transparent gray with rgba(108, 117, 125, 0.25), which gives a soft ring effect around the focused item. |
+|     | .background-gradient |     | This class applies a vertical gradient background to an element, transitioning from a semi-transparent white at the top to a fully transparent white at the bottom. The gradient uses linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)), creating a soft fade effect. The !important ensures the gradient is applied even if other styles try to override it. |
 
 #### Navbar
 
