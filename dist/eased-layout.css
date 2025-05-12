@@ -153,7 +153,6 @@ article>aside:only-of-type {
   .container:not(:has(.row)),
   main:not(:has(.row)) {
     flex: 0 0 100%;
-    margin: 0;
   }
 }
 
