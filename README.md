@@ -403,12 +403,11 @@ This is highly recommended: use a custom class for each variable, and remember t
 
 ### Extensions
 
-#### CSS Grid
-
 #### Debugger
 
-#### Helpers
+#### CSS Grid Based Grid Layout
 
+#### Helpers
 
 The following table provides a comprehensive list of helper classes available in the `eased-layout.css` library. These classes are designed to simplify common styling tasks and enhance the flexibility of your layouts.
 
@@ -524,13 +523,9 @@ The following table provides a comprehensive list of helper classes available in
 
 #### Restore Box Sizing
 
-#### Restore Margins
-
-#### Restoring the Box Sizing
-
 For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
-#### Restoring the Restoring Margins
+#### Restore Margins
 
 For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-margins.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
