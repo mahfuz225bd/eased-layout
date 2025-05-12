@@ -114,7 +114,7 @@ This library is very helpful for making semantic layouts with one or two asides 
 - The `div.container` can be excluded, if aside is not used.
 - Can be placed as a child of any element.
 
-> **Note:** `div.container` is used as a container in this framework, while other frameworks like Bootstrap use `.container` too.
+> **Note:** `div.container` is used as a container in this framework, while other frameworks like Bootstrap use `div.container` too.
 
 #### Layout Structures in Different Approaches
 
@@ -305,7 +305,7 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 #### Classes
 
-- **`.row`:** The `.row` class is used to create a horizontal grouping of elements. Child elements of `.row` should be considered as columns.
+- **`.row`:** The `.row` class is used to create a horizontal grouping of elements. Child elements of `.row` should be considered as columns. The `.row` class must be used on a &lt;div&gt; element. Applying it to other elements is not supported and may break the grid layout.
 
 - **`.total-columns-N` along with `.row`:** For making a 12-columned maximum grid layout. N should be 1 to 12, which is for specifying the total column of a `.row`. For a single-column layout, you can use `.row` directly without `.total-columned-1`.
 
@@ -736,7 +736,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
 
 <body>
     <h1>Eased Layout: Complete Examples of Grid System</h1>
-    <h2>1.1. 12-Column Grid without `.container` or &lt;main&gt;</h2>
+    <h2>1.1. 12-Column Grid without `div.container` or &lt;main&gt;</h2>
     <div class="row total-columns-12">
         <div>1</div>
         <div>2</div>
@@ -752,7 +752,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>12</div>
     </div>
 
-    <h2>1.2. 12-Column Grid without `.container` or &lt;main&gt; + External Column Added</h2>
+    <h2>1.2. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added</h2>
     <div class="row total-columns-12">
         <div>1</div>
         <div>2</div>
@@ -769,7 +769,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>13</div>
     </div>
 
-    <h2>1.3. 12-Column Grid without `.container` or &lt;main&gt; + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <h2>1.3. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added (Making a Single Row Look Like Two Rows)</h2>
     <div class="row total-columns-6">
         <div>1</div>
         <div>2</div>
@@ -785,7 +785,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>12</div>
     </div>
 
-    <h2>2.1.1. 12-Column Grid with `.container`</h2>
+    <h2>2.1.1. 12-Column Grid with `div.container`</h2>
     <div class="container row total-columns-12">
         <div>1</div>
         <div>2</div>
@@ -801,7 +801,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>12</div>
     </div>
 
-    <h2>2.1.2. 12-Column Grid with `.container` + External Column Added</h2>
+    <h2>2.1.2. 12-Column Grid with `div.container` + External Column Added</h2>
     <div class="container row total-columns-12">
         <div>1</div>
         <div>2</div>
@@ -818,7 +818,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>13</div>
     </div>
 
-    <h2>2.1.3. 12-Column Grid with `.container` + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <h2>2.1.3. 12-Column Grid with `div.container` + External Column Added (Making a Single Row Look Like Two Rows)</h2>
     <div class="container row total-columns-6">
         <div>1</div>
         <div>2</div>
@@ -1025,23 +1025,23 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div style="flex-basis: 60px;">12 (60px)</div>
     </div>
 
-    <h2>6.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `.container` Optional)</h2>
+    <h2>6.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `div.container` Optional)</h2>
     <div class="row">
         <div>1</div>
     </div>
 
-    <h2>6.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid; `.container` Optional)</h2>
+    <h2>6.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid; `div.container` Optional)</h2>
     <div class="row">
         <div>1</div>
         <div>2</div>
     </div>
 
-    <h2>6.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `.container` Optional)</h2>
+    <h2>6.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `div.container` Optional)</h2>
     <div class="row total-columns-1">
         <div>1</div>
     </div>
 
-    <h2>6.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid; `.container` Optional)</h2>
+    <h2>6.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid; `div.container` Optional)</h2>
     <div class="row total-columns-1">
         <div>1</div>
         <div>2</div>
@@ -1206,7 +1206,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>30</div>
     </div>
 
-    <h2>2.1. 12-Column Grid without `.container` or &lt;main&gt;</h2>
+    <h2>2.1. 12-Column Grid without `div.container` or &lt;main&gt;</h2>
     <div class="grid total-columns-12">
         <div>1</div>
         <div>2</div>
@@ -1222,7 +1222,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>12</div>
     </div>
 
-    <h2>2.2. 12-Column Grid without `.container` or &lt;main&gt; + External Column Added</h2>
+    <h2>2.2. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added</h2>
     <div class="grid total-columns-12">
         <div>1</div>
         <div>2</div>
@@ -1239,7 +1239,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>13</div>
     </div>
 
-    <h2>2.3. 12-Column Grid without `.container` or &lt;main&gt; + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <h2>2.3. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added (Making a Single Row Look Like Two Rows)</h2>
     <div class="grid total-columns-6">
         <div>1</div>
         <div>2</div>
@@ -1255,7 +1255,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>12</div>
     </div>
 
-    <h2>3.1.1. 12-Column Grid with `.container`</h2>
+    <h2>3.1.1. 12-Column Grid with `div.container`</h2>
     <div class="container grid total-columns-12">
         <div>1</div>
         <div>2</div>
@@ -1271,7 +1271,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>12</div>
     </div>
 
-    <h2>3.1.2. 12-Column Grid with `.container` + External Column Added</h2>
+    <h2>3.1.2. 12-Column Grid with `div.container` + External Column Added</h2>
     <div class="container grid total-columns-12">
         <div>1</div>
         <div>2</div>
@@ -1288,7 +1288,7 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div>13</div>
     </div>
 
-    <h2>3.1.3. 12-Column Grid with `.container` + External Column Added (Making a Single Row Look Like Two Rows)</h2>
+    <h2>3.1.3. 12-Column Grid with `div.container` + External Column Added (Making a Single Row Look Like Two Rows)</h2>
     <div class="container grid total-columns-6">
         <div>1</div>
         <div>2</div>
@@ -1495,23 +1495,23 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
         <div style="flex-basis: 60px;">12 (60px)</div>
     </div>
 
-    <h2>7.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `.container` Optional)</h2>
+    <h2>7.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `div.container` Optional)</h2>
     <div class="grid">
         <div>1</div>
     </div>
 
-    <h2>7.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid; `.container` Optional)</h2>
+    <h2>7.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid; `div.container` Optional)</h2>
     <div class="grid">
         <div>1</div>
         <div>2</div>
     </div>
 
-    <h2>7.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `.container` Optional)</h2>
+    <h2>7.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `div.container` Optional)</h2>
     <div class="grid total-columns-1">
         <div>1</div>
     </div>
 
-    <h2>7.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid; `.container` Optional)</h2>
+    <h2>7.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid; `div.container` Optional)</h2>
     <div class="grid total-columns-1">
         <div>1</div>
         <div>2</div>
