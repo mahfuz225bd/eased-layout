@@ -1,16 +1,16 @@
 ## TODOs for Future Releases
 
-**Primary Decisions:**
-
 - **Complete CSS Support for Older Browsers (layout.old.css):**
   - Float layout
   - Inline-block layout
   - Table-based layouts (**Note:** Semantically incorrect, avoid for new layouts)
   - Source File: `/_others/layout.old.css`
 
-Urgent TODOs:
-
+- CSS grid layout with columns property
+- (Maybe) Split flex based grid as extension
 - Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
+- Drag Bar
+- Add more features to helpers.css
 
 **Possible Future Enhancements:**
 
