@@ -12,337 +12,337 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-.grid { display: grid; }
+.row { display: grid; }
 
-.container:has(.grid), main:has(.grid) { display: block; }
+.container:has(.row), main:has(.row) { display: block; }
 
-.grid.total-columns-1 { grid-template-columns: repeat(1, 1fr); }
-.grid.total-columns-2 { grid-template-columns: repeat(2, 1fr); }
-.grid.total-columns-3 { grid-template-columns: repeat(3, 1fr); }
-.grid.total-columns-4 { grid-template-columns: repeat(4, 1fr); }
-.grid.total-columns-5 { grid-template-columns: repeat(5, 1fr); }
-.grid.total-columns-6 { grid-template-columns: repeat(6, 1fr); }
-.grid.total-columns-7 { grid-template-columns: repeat(7, 1fr); }
-.grid.total-columns-8 { grid-template-columns: repeat(8, 1fr); }
-.grid.total-columns-9 { grid-template-columns: repeat(9, 1fr); }
-.grid.total-columns-10 { grid-template-columns: repeat(10, 1fr); }
-.grid.total-columns-11 { grid-template-columns: repeat(11, 1fr); }
-.grid.total-columns-12 { grid-template-columns: repeat(12, 1fr); }
-.grid.total-columns-n { grid-template-columns: repeat(var(--columns), 1fr); }
-.grid.total-columns-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+.row.total-columns-1 { grid-template-columns: repeat(1, 1fr); }
+.row.total-columns-2 { grid-template-columns: repeat(2, 1fr); }
+.row.total-columns-3 { grid-template-columns: repeat(3, 1fr); }
+.row.total-columns-4 { grid-template-columns: repeat(4, 1fr); }
+.row.total-columns-5 { grid-template-columns: repeat(5, 1fr); }
+.row.total-columns-6 { grid-template-columns: repeat(6, 1fr); }
+.row.total-columns-7 { grid-template-columns: repeat(7, 1fr); }
+.row.total-columns-8 { grid-template-columns: repeat(8, 1fr); }
+.row.total-columns-9 { grid-template-columns: repeat(9, 1fr); }
+.row.total-columns-10 { grid-template-columns: repeat(10, 1fr); }
+.row.total-columns-11 { grid-template-columns: repeat(11, 1fr); }
+.row.total-columns-12 { grid-template-columns: repeat(12, 1fr); }
+.row.total-columns-n { grid-template-columns: repeat(var(--columns), 1fr); }
+.row.total-columns-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
 /* <576px */
 @media (max-width: 575.98px) {
-    .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-lg-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-lg-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-lg-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-lg-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-lg-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-lg-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-lg-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-lg-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-lg-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-lg-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-lg-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
+    .row.total-columns-lg-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-lg-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-lg-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-lg-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-lg-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-lg-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-lg-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-lg-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-lg-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-lg-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-lg-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 
-    .grid.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-md-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-md-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-md-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-md-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-md-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-md-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-md-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-md-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-md-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-md-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-md-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-md-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-md-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-md-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-md-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-md-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-md-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-md-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-md-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-md-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-md-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-md-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-sm-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-sm-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-sm-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-sm-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-sm-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-sm-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-sm-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-sm-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-sm-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-sm-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-sm-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-sm-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-sm-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-sm-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))), 1fr); }
+    .row.total-columns-sm-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-sm-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-sm-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-sm-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-sm-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-sm-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-sm-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-sm-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-sm-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-sm-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-sm-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-sm-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-sm-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-sm-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))), 1fr); }
 }
 
 /* ≥576px */
 @media (min-width: 576px) {
-    .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-lg-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-lg-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-lg-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-lg-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-lg-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-lg-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-lg-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-lg-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-lg-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-lg-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-lg-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
+    .row.total-columns-lg-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-lg-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-lg-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-lg-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-lg-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-lg-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-lg-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-lg-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-lg-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-lg-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-lg-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 
-    .grid.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-md-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-md-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-md-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-md-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-md-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-md-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-md-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-md-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-md-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-md-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-md-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-md-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-md-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-md-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-md-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-md-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-md-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-md-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-md-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-md-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-md-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-md-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-sm-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-sm-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-sm-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-sm-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-sm-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-sm-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-sm-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-sm-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-sm-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-sm-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-sm-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-sm-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-sm-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-sm-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))), 1fr); }
+    .row.total-columns-sm-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-sm-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-sm-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-sm-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-sm-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-sm-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-sm-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-sm-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-sm-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-sm-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-sm-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-sm-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-sm-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-sm-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))), 1fr); }
 }
 
 /* ≥768px */
 @media (min-width: 768px) {
-    .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-lg-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-lg-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-lg-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-lg-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-lg-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-lg-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-lg-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-lg-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-lg-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-lg-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-lg-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
+    .row.total-columns-lg-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-lg-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-lg-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-lg-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-lg-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-lg-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-lg-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-lg-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-lg-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-lg-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-lg-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 
-    .grid.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-md-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-md-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-md-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-md-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-md-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-md-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-md-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-md-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-md-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-md-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-md-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-md-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))), 1fr); }
+    .row.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-md-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-md-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-md-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-md-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-md-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-md-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-md-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-md-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-md-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-md-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-md-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-md-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))), 1fr); }
 }
 
 /* ≥992px */
 @media (min-width: 992px) {
-    .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-lg-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-lg-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-lg-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-lg-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-lg-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-lg-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-lg-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-lg-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-lg-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-lg-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-lg-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
+    .row.total-columns-lg-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-lg-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-lg-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-lg-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-lg-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-lg-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-lg-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-lg-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-lg-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-lg-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-lg-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 }
 
 /* ≥1200px */
 @media (min-width: 1200px) {
-    .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
-    .grid.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-xl-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-xl, var(--columns-xxl, 1)), 1fr); }
+    .row.total-columns-xl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xl-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-xl, var(--columns-xxl, 1)), 1fr); }
 }
 
 /* ≥1400px */
 @media (min-width: 1400px) {
-    .grid.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
-    .grid.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
-    .grid.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
-    .grid.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
-    .grid.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
-    .grid.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
-    .grid.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
-    .grid.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
-    .grid.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
-    .grid.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
-    .grid.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .grid.total-columns-xxl-n,
-    .grid.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-xxl, 1), 1fr); }
+    .row.total-columns-xxl-1 { grid-template-columns: repeat(1, 1fr); }
+    .row.total-columns-xxl-2 { grid-template-columns: repeat(2, 1fr); }
+    .row.total-columns-xxl-3 { grid-template-columns: repeat(3, 1fr); }
+    .row.total-columns-xxl-4 { grid-template-columns: repeat(4, 1fr); }
+    .row.total-columns-xxl-5 { grid-template-columns: repeat(5, 1fr); }
+    .row.total-columns-xxl-6 { grid-template-columns: repeat(6, 1fr); }
+    .row.total-columns-xxl-7 { grid-template-columns: repeat(7, 1fr); }
+    .row.total-columns-xxl-8 { grid-template-columns: repeat(8, 1fr); }
+    .row.total-columns-xxl-9 { grid-template-columns: repeat(9, 1fr); }
+    .row.total-columns-xxl-10 { grid-template-columns: repeat(10, 1fr); }
+    .row.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
+    .row.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
+    .row.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    .row.total-columns-xxl-n,
+    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-xxl, 1), 1fr); }
 }
