@@ -416,8 +416,8 @@ div.row.total-columns-n>* { flex: 0 0 calc(100% / var(--columns)); }
 */
 
 /* Extensions:
-  - grid.grid.css: This extension is for creating responsive grid layouts using CSS Grid.
   - debugger.css: CSS Debugger for Eased Layout. Can be used for without eased layout.
+  - grid.grid.css: This extension is for creating responsive grid layouts using CSS Grid.
   - helper.css: A CSS extension that provides a set of utility classes for common layout tasks, including typography, font styles, text alignment, offsets, margins, paddings, and more. This extension is designed to work seamlessly with the Eased Layout CSS Library (Or without), allowing for easy integration into existing projects.
   - navbar.css: A minimalist extension for adding horizontal or vertical navigation bars to any website layout.
   - print.css: A CSS extension for print styles, providing a set of utility classes to control the layout and appearance of printed documents.

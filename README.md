@@ -51,8 +51,8 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 ├── /dist
 |   ├── /_others (unnecessary, included for temporary)
 |   ├── /extensions
-|   |   ├── css-grid.css
 |   |   ├── debugger.css
+|   |   ├── grid.grid.css
 |   |   ├── helper.css
 |   |   ├── navbar.css
 |   |   ├── print.css
@@ -307,7 +307,7 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 - **`.row`:** The `.row` class is used to create a horizontal grouping of elements. Child elements of `.row` should be considered as columns. The `.row` class must be used on a &lt;div&gt; element. Applying it to other elements is not supported and may break the grid layout.
 
-- **`.total-columns-N` along with `.row`:** For making a 12-columned maximum grid layout. N should be 1 to 12, which is for specifying the total column of a `.row`. For a single-column layout, you can use `.row` directly without `.total-columned-1`.
+- **`.total-columns-{N}` along with `.row`:** For making a 12-columned maximum grid layout. `{N}` should be 1 to 12, which is for specifying the total column of a `.row`. For a single-column layout, you can use `.row` directly without `.total-columned-1`.
 
 - **`.total-columns-n` along with `.row` and custom class or style attribute:** To create a grid with dynamically calculated N number of column widths using the `--columns` CSS variable. It can be done with both a custom class or style attribute. Here is the complete example:
 
