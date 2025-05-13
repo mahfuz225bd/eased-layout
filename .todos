@@ -10,6 +10,7 @@
 - (Maybe) Split flex based grid as extension
 - Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
 - Drag Bar
+- Drag and Drop
 - Add more features to helpers.css
 
 **Possible Future Enhancements:**
