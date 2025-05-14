@@ -10,34 +10,32 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 400px; /* Set fixed height for each grid */
             overflow: hidden;
             border: 1px solid #ccc;
             margin-bottom: 20px;
         }
 
-        .row {
+        .resizable-grid>* {
             display: flex;
             flex-direction: row;
             width: 100%;
         }
 
-        .panel {
+        .resizable-grid>*>* {
             background: #f0f0f0;
             overflow: auto;
-            padding: 10px;
             box-sizing: border-box;
             flex-shrink: 0;
         }
 
-        .drag-bar-vertical {
+        [role="separator"][aria-orientation="vertical"] {
             width: 4px;
             background: #aaa;
             cursor: col-resize;
             flex-shrink: 0;
         }
 
-        .drag-bar-horizontal {
+        [role="separator"][aria-orientation="horizontal"] {
             height: 4px;
             background: #aaa;
             cursor: row-resize;
@@ -48,44 +46,42 @@
 
 <body>
 
-    <!-- First Resizable Grid -->
-    <div class="resizable-grid">
-        <div class="row">
-            <div class="panel" style="width: 33%;">Grid 1 - Top Left</div>
-            <div class="drag-bar-vertical"></div>
-            <div class="panel" style="width: 33%;">Grid 1 - Top Middle</div>
-            <div class="drag-bar-vertical"></div>
-            <div class="panel" style="width: 33%;">Grid 1 - Top Right</div>
+    <div class="resizable-grid" style="height: 400px;">
+        <div>
+            <div style="width: 33%;">Grid 1 - Top Left</div>
+            <div role="separator" aria-orientation="vertical"></div>
+            <div style="width: 33%;">Grid 1 - Top Middle</div>
+            <div role="separator" aria-orientation="vertical"></div>
+            <div style="width: 33%;">Grid 1 - Top Right</div>
         </div>
-        <div class="drag-bar-horizontal"></div>
-        <div class="row">
-            <div class="panel" style="width: 50%;">Grid 1 - Bottom Left</div>
-            <div class="drag-bar-vertical"></div>
-            <div class="panel" style="width: 50%;">Grid 1 - Bottom Right</div>
+        <div role="separator" aria-orientation="horizontal"></div>
+        <div>
+            <div style="width: 50%;">Grid 1 - Bottom Left</div>
+            <div role="separator" aria-orientation="vertical"></div>
+            <div style="width: 50%;">Grid 1 - Bottom Right</div>
         </div>
     </div>
 
-    <!-- Second Resizable Grid -->
-    <div class="resizable-grid">
-        <div class="row">
-            <div class="panel" style="width: 50%;">Grid 2 - Row 1 Left</div>
-            <div class="drag-bar-vertical"></div>
-            <div class="panel" style="width: 50%;">Grid 2 - Row 1 Right</div>
+    <div class="resizable-grid" style="height: 300px;">
+        <div>
+            <div style="width: 30%;">Grid 2 - Top Left</div>
+            <div role="separator" aria-orientation="vertical"></div>
+            <div style="width: 70%;">Grid 2 - Top Right</div>
         </div>
-        <div class="drag-bar-horizontal"></div>
-        <div class="row">
-            <div class="panel" style="width: 100%;">Grid 2 - Row 2 Full</div>
+        <div role="separator" aria-orientation="horizontal"></div>
+        <div>
+            <div style="width: 100%;">Grid 2 - Full Width Column</div>
         </div>
     </div>
 
     <script>
         function setRowHeightsForAllGrids() {
             document.querySelectorAll('.resizable-grid').forEach(grid => {
-                const rows = grid.querySelectorAll('.row');
-                const rowCount = rows.length;
-                const rowHeightPercent = 100 / rowCount;
-
-                rows.forEach(row => {
+                const children = Array.from(grid.children).filter(
+                    el => !el.matches('[role="separator"][aria-orientation="horizontal"]')
+                );
+                const rowHeightPercent = 100 / children.length;
+                children.forEach(row => {
                     row.style.height = `${rowHeightPercent}%`;
                 });
             });
@@ -116,8 +112,9 @@
                 const min = 50;
 
                 if (newLeftWidth > min && newLeftWidth < totalWidth - min) {
-                    leftPanel.style.width = newLeftWidth + 'px';
-                    rightPanel.style.width = (totalWidth - newLeftWidth) + 'px';
+                    const containerWidth = container.offsetWidth;
+                    leftPanel.style.width = (newLeftWidth / containerWidth) * 100 + '%';
+                    rightPanel.style.width = ((totalWidth - newLeftWidth) / containerWidth) * 100 + '%';
                 }
             });
 
@@ -142,7 +139,6 @@
                 const rect = grid.getBoundingClientRect();
                 const pointerY = e.clientY - rect.top;
 
-                const topRect = topRow.getBoundingClientRect();
                 const totalHeight = rect.height;
                 const newTopHeight = pointerY;
                 const min = 50;
@@ -166,20 +162,25 @@
             setRowHeightsForAllGrids();
 
             document.querySelectorAll('.resizable-grid').forEach(grid => {
-                const rows = grid.querySelectorAll('.row');
-                const hBars = grid.querySelectorAll('.drag-bar-horizontal');
+                const children = Array.from(grid.children).filter(
+                    el => !el.matches('[role="separator"][aria-orientation="horizontal"]')
+                );
+
+                const hBars = grid.querySelectorAll('[role="separator"][aria-orientation="horizontal"]');
 
                 // Horizontal drag
                 hBars.forEach((bar, i) => {
-                    if (rows[i + 1]) {
-                        initHorizontalDrag(bar, rows[i], rows[i + 1], grid);
+                    if (children[i + 1]) {
+                        initHorizontalDrag(bar, children[i], children[i + 1], grid);
                     }
                 });
 
                 // Vertical drag within each row
-                rows.forEach(row => {
-                    const panels = row.querySelectorAll('.panel');
-                    const bars = row.querySelectorAll('.drag-bar-vertical');
+                children.forEach(row => {
+                    const panels = Array.from(row.children).filter(
+                        el => !el.matches('[role="separator"][aria-orientation="vertical"]')
+                    );
+                    const bars = row.querySelectorAll('[role="separator"][aria-orientation="vertical"]');
                     bars.forEach((bar, i) => {
                         if (panels[i + 1]) {
                             initVerticalDrag(bar, panels[i], panels[i + 1]);
