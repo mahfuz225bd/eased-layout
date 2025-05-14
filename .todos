@@ -8,7 +8,6 @@
 
 - CSS grid layout with columns property
 - Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
-- Drag Bar
 - Drag and Drop
 - Add more features to helpers.css
 
