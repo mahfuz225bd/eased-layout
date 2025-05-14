@@ -299,11 +299,35 @@ A **nested `aside` layout** introduces multiple layers of asides, typically used
 
 This structure allows for **layered, multi-level navigation**, where each aside focuses on different types of supplementary content depending on the section or context within the page.
 
-### Guideline for Designing Grid Layout
+
+### Responsive Design
+
+#### Available Breakpoints
+
+`eased-layout.css` has six default breakpoints for applying responsiveness. Here is a table showing breakpoints, class infixes, and dimensions for responsive layouts where the class infix for the specified screen widths is explained in the next sections.
+
+| Breakpoint        | Class Infix | Dimensions |
+| ----------------- | ----------- | ---------- |
+| Extra small       | None        | <576px     |
+| Small             | sm          | ≥576px     |
+| Medium            | md          | ≥768px     |
+| Large             | lg          | ≥992px     |
+| Extra large       | xl          | ≥1200px    |
+| Extra extra large | xxl         | ≥1400px    |
+
+#### Semantic Layout
+
+No need for any extra classes to apply basic responsiveness; provided styles for it as built-in. It will automatically change asides from horizontal to vertical when the media screen is less than 900px.
+
+### Extensions
+
+#### Debugger
+
+#### CSS Flexbox Based Grid Layout
 
 `eased-layout.css` is also providing a design grid system (row-columned) layout. CSS rules are applied for creating a flexible grid layout using the classes `.row` and `.total-columns-N`, where N should be 1 to 12.
 
-#### Classes
+##### Classes
 
 - **`.row`:** The `.row` class is used to create a horizontal grouping of elements. Child elements of `.row` should be considered as columns. The `.row` class must be used on a &lt;div&gt; element. Applying it to other elements is not supported and may break the grid layout.
 
@@ -364,46 +388,23 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 > Note: It is suggested not to use the style attribute for setting `--columns` CSS; instead, always use a custom class.
 
-#### Container Fluid
+##### Container Fluid
 
 For simplicity, there are no any class provided to make a container fluid. Moreover, `.total-columns-1` can be used for a container fluid which is completely optional.
 
-### Responsive Design
-
-#### Available Breakpoints
-
-`eased-layout.css` has six default breakpoints for applying responsiveness. Here is a table showing breakpoints, class infixes, and dimensions for responsive layouts where the class infix for the specified screen widths is explained in the next sections.
-
-| Breakpoint        | Class Infix | Dimensions |
-| ----------------- | ----------- | ---------- |
-| Extra small       | None        | <576px     |
-| Small             | sm          | ≥576px     |
-| Medium            | md          | ≥768px     |
-| Large             | lg          | ≥992px     |
-| Extra large       | xl          | ≥1200px    |
-| Extra extra large | xxl         | ≥1400px    |
-
-#### Semantic Layout
-
-No need for any extra classes to apply basic responsiveness; provided styles for it as built-in. It will automatically change asides from horizontal to vertical when the media screen is less than 900px.
-
-#### Grid Layout
+##### Responsive
 
 There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
 
 Along with `.row`, use any class according to the format: `.total-{available breakpoint}-{columns}`; columns should be 1 to 12.
 
-##### 12+ Columns
+###### 12+ Columns
 
 Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
 
 Alternatively, along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoint}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
 
 This is highly recommended: use a custom class for each variable, and remember that you don't need custom or additional classes and variables for any breakpoints if the total column number is not more than 12.
-
-### Extensions
-
-#### Debugger
 
 #### CSS Grid Based Grid Layout
 
