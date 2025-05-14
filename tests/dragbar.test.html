@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Resizable Grids</title>
+</head>
+
+<link rel="stylesheet" href="../dist/extensions/dragbar/style.css">
+
+<body>
+    <div class="resizable-grid" style="height: 400px;">
+        <div>
+            <div style="width: 33%;">Grid 1 - Top Left</div>
+            <div role="separator" aria-orientation="vertical"></div>
+            <div style="width: 33%;">Grid 1 - Top Middle</div>
+            <div role="separator" aria-orientation="vertical"></div>
+            <div style="width: 33%;">Grid 1 - Top Right</div>
+        </div>
+        <div role="separator" aria-orientation="horizontal"></div>
+        <div>
+            <div style="width: 50%;">Grid 1 - Bottom Left</div>
+            <div role="separator" aria-orientation="vertical"></div>
+            <div style="width: 50%;">Grid 1 - Bottom Right</div>
+        </div>
+    </div>
+
+    <div class="resizable-grid" style="height: 300px;">
+        <div>
+            <div style="width: 30%;">Grid 2 - Top Left</div>
+            <div role="separator" aria-orientation="vertical"></div>
+            <div style="width: 70%;">Grid 2 - Top Right</div>
+        </div>
+        <div role="separator" aria-orientation="horizontal"></div>
+        <div>
+            <div style="width: 100%;">Grid 2 - Full Width Column</div>
+        </div>
+    </div>
+</body>
+
+<script src="../dist/extensions/dragbar/script.js"></script>
+
+</html>

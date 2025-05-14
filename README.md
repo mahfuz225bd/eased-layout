@@ -1668,12 +1668,14 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
   - **Extra extra large** (`≥1400px`): Uses the `xxl` class infix.
 
 6. **Extensions:**
-  - `css-grid.css`: 
-  - `debugger.css`: 
-  - `helper.css`: 
-  - `navbar.css`: 
-  - `print.css`: 
-  - `restore-box-sizing.css`: 
-  - `restore-margins.css`: 
+  - **Debugger**: 
+  - **Drag Bar**: 
+  - **CSS Flex Based Grid Layout**: 
+  - **CSS Grid Based Grid Layout**: 
+  - **Helpers**: 
+  - **Navbar**: 
+  - **Print**: 
+  - **Restore Box Sizing**: 
+  - **Restore Margins**: 
 
 This release lays the foundation for a robust, responsive, and customizable front-end framework.
