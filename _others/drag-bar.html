@@ -2,88 +2,194 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Drag Bar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Resizable Grids</title>
     <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+        .resizable-grid {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 400px; /* Set fixed height for each grid */
+            overflow: hidden;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
         }
 
-        .drag-bar-content {
+        .row {
             display: flex;
-            height: 100%;
+            flex-direction: row;
             width: 100%;
         }
 
-        .drag-bar-content>* {
-            height: 100%;
+        .panel {
+            background: #f0f0f0;
+            overflow: auto;
+            padding: 10px;
+            box-sizing: border-box;
+            flex-shrink: 0;
         }
 
-        .drag-bar-content>*:first-child {
-            width: 50%;
-        }
-
-        .drag-bar-content>*:last-child {
-            flex-grow: 1;
-        }
-
-        .drag-bar {
+        .drag-bar-vertical {
             width: 4px;
-            background: #AAA;
+            background: #aaa;
             cursor: col-resize;
+            flex-shrink: 0;
+        }
+
+        .drag-bar-horizontal {
+            height: 4px;
+            background: #aaa;
+            cursor: row-resize;
+            flex-shrink: 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="drag-bar-content">
-        <div>Left Panel Content</div>
-        <div>Right Panel Content</div>
+
+    <!-- First Resizable Grid -->
+    <div class="resizable-grid">
+        <div class="row">
+            <div class="panel" style="width: 33%;">Grid 1 - Top Left</div>
+            <div class="drag-bar-vertical"></div>
+            <div class="panel" style="width: 33%;">Grid 1 - Top Middle</div>
+            <div class="drag-bar-vertical"></div>
+            <div class="panel" style="width: 33%;">Grid 1 - Top Right</div>
+        </div>
+        <div class="drag-bar-horizontal"></div>
+        <div class="row">
+            <div class="panel" style="width: 50%;">Grid 1 - Bottom Left</div>
+            <div class="drag-bar-vertical"></div>
+            <div class="panel" style="width: 50%;">Grid 1 - Bottom Right</div>
+        </div>
+    </div>
+
+    <!-- Second Resizable Grid -->
+    <div class="resizable-grid">
+        <div class="row">
+            <div class="panel" style="width: 50%;">Grid 2 - Row 1 Left</div>
+            <div class="drag-bar-vertical"></div>
+            <div class="panel" style="width: 50%;">Grid 2 - Row 1 Right</div>
+        </div>
+        <div class="drag-bar-horizontal"></div>
+        <div class="row">
+            <div class="panel" style="width: 100%;">Grid 2 - Row 2 Full</div>
+        </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.drag-bar-content');
-            const leftPanel = container.children[0];
-            const rightPanel = container.children[1];
+        function setRowHeightsForAllGrids() {
+            document.querySelectorAll('.resizable-grid').forEach(grid => {
+                const rows = grid.querySelectorAll('.row');
+                const rowCount = rows.length;
+                const rowHeightPercent = 100 / rowCount;
 
-            // Call the function to initialize drag bar with the panels
-            initializeDragBar(leftPanel, rightPanel);
-        });
+                rows.forEach(row => {
+                    row.style.height = `${rowHeightPercent}%`;
+                });
+            });
+        }
 
-        function initializeDragBar(leftPanel, rightPanel) {
-            const container = document.querySelector('.drag-bar-content');
-
-            // Create the drag bar dynamically
-            const dragBar = document.createElement('div');
-            dragBar.classList.add('drag-bar');
-
-            // Insert the drag bar between the two panels
-            container.insertBefore(dragBar, rightPanel);
-
+        function initVerticalDrag(bar, leftPanel, rightPanel) {
             let isDragging = false;
 
-            dragBar.addEventListener('mousedown', () => isDragging = true);
+            bar.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+                isDragging = true;
+                document.body.style.userSelect = 'none';
+            });
 
             document.addEventListener('mousemove', (e) => {
                 if (!isDragging) return;
 
-                const containerRect = container.getBoundingClientRect();
-                const newWidth = e.clientX - containerRect.left;
+                const container = bar.parentElement;
+                const rect = container.getBoundingClientRect();
+                const pointerX = e.clientX - rect.left;
 
-                // Ensure width constraints
-                if (newWidth > 50 && newWidth < containerRect.width - 50) {
-                    leftPanel.style.width = newWidth + 'px';
-                    rightPanel.style.width = (containerRect.width - newWidth - dragBar.offsetWidth) + 'px';
+                const leftRect = leftPanel.getBoundingClientRect();
+                const rightRect = rightPanel.getBoundingClientRect();
+
+                const leftStart = leftRect.left - rect.left;
+                const totalWidth = leftRect.width + rightRect.width;
+                const newLeftWidth = pointerX - leftStart;
+                const min = 50;
+
+                if (newLeftWidth > min && newLeftWidth < totalWidth - min) {
+                    leftPanel.style.width = newLeftWidth + 'px';
+                    rightPanel.style.width = (totalWidth - newLeftWidth) + 'px';
                 }
             });
 
-            document.addEventListener('mouseup', () => isDragging = false);
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                document.body.style.userSelect = '';
+            });
         }
+
+        function initHorizontalDrag(bar, topRow, bottomRow, grid) {
+            let isDragging = false;
+
+            bar.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+                isDragging = true;
+                document.body.style.userSelect = 'none';
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+
+                const rect = grid.getBoundingClientRect();
+                const pointerY = e.clientY - rect.top;
+
+                const topRect = topRow.getBoundingClientRect();
+                const totalHeight = rect.height;
+                const newTopHeight = pointerY;
+                const min = 50;
+
+                if (newTopHeight > min && newTopHeight < totalHeight - min) {
+                    const topPercent = (newTopHeight / totalHeight) * 100;
+                    const bottomPercent = 100 - topPercent;
+
+                    topRow.style.height = `${topPercent}%`;
+                    bottomRow.style.height = `${bottomPercent}%`;
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                document.body.style.userSelect = '';
+            });
+        }
+
+        function initAllGrids() {
+            setRowHeightsForAllGrids();
+
+            document.querySelectorAll('.resizable-grid').forEach(grid => {
+                const rows = grid.querySelectorAll('.row');
+                const hBars = grid.querySelectorAll('.drag-bar-horizontal');
+
+                // Horizontal drag
+                hBars.forEach((bar, i) => {
+                    if (rows[i + 1]) {
+                        initHorizontalDrag(bar, rows[i], rows[i + 1], grid);
+                    }
+                });
+
+                // Vertical drag within each row
+                rows.forEach(row => {
+                    const panels = row.querySelectorAll('.panel');
+                    const bars = row.querySelectorAll('.drag-bar-vertical');
+                    bars.forEach((bar, i) => {
+                        if (panels[i + 1]) {
+                            initVerticalDrag(bar, panels[i], panels[i + 1]);
+                        }
+                    });
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initAllGrids);
     </script>
 </body>
 
