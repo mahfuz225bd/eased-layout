@@ -1,6 +1,7 @@
 ## TODOs for Future Releases
 
 - **Complete CSS Support for Older Browsers (layout.old.css):**
+
   - Float layout
   - Inline-block layout
   - Table-based layouts (**Note:** Semantically incorrect, avoid for new layouts)
@@ -10,6 +11,25 @@
 - Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
 - Drag and Drop
 - Add more features to helpers.css
+
+Sidebar
+
+- Fixed sidebar
+- Sidenav overlay
+- Sidenav overlay without animation
+- Sidenav push \w opacity
+- Sidenav full width
+- Full Screen Navigation (Slide Left, Right, Top, Bottom, No animation)
+- Collapse sidebar
+
+- Shrink on scroll
+- Scroll up button
+- Overlay
+- Change bg on scroll
+- Read more/less
+- Scroll Indicator
+- HTML includes
+- Gradient Bg scroll
 
 **Possible Future Enhancements:**
 
@@ -131,4 +151,3 @@ Screen Width of Small Devices (Collected from ChatGPT):
 | **Smartwatches**      | 240px – 454px            | 240×240, 360×360, 454×454     | Apple Watch, Galaxy Watch           |
 | **Small Phones**      | 320px – 540px            | 320×480 (iPhone 3GS), 540×960 | Android phones (2010–2014 era)      |
 | **Mini Web Views**    | \~360px                  | 360 CSS pixels (viewport)     | Often used as mobile design base    |
-
