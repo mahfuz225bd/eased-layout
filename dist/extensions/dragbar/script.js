@@ -1,3 +1,14 @@
+/*!
+ * Eased Layout CSS Library v1.0.0
+ * Extension: Dragbar
+ * Description: An Extension for creating resizable grid layouts with dragbars. This extension allows users to resize grid items (both horizontally and vertically) by dragging the dividers between them, providing a flexible and interactive layout experience.
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
 function setRowHeightsForAllGrids() {
   document.querySelectorAll(".resizable-grid").forEach((grid) => {
     const children = Array.from(grid.children).filter(

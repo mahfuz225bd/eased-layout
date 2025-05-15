@@ -3,8 +3,7 @@
 /*!
  * Eased Layout CSS Library v1.0.0
  * Extension: Navbar
- * File Name: navbar.css
- * Description: A minimalist CSS extension for adding horizontal or vertical navigation bars to any website layout. No additional classes or IDs are required—simply use semantic HTML structures like: 
+ * Description: A minimalist extension for adding horizontal or vertical navigation bars to any website layout. No additional classes or IDs are required—simply use semantic HTML structures like: 
  *   (i) nav > ul 
  *   (ii) [role="navigation"] > ul 
  *   (iii) ul[role="navigation"]
