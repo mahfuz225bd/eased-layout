@@ -152,8 +152,16 @@ Screen Width of Small Devices (Collected from ChatGPT):
 | **Small Phones**      | 320px – 540px            | 320×480 (iPhone 3GS), 540×960 | Android phones (2010–2014 era)      |
 | **Mini Web Views**    | \~360px                  | 360 CSS pixels (viewport)     | Often used as mobile design base    |
 
-64px
-128px
-240px
-360px
-454px
+
+| Breakpoint        | Class Infix | Dimensions |
+| ----------------- | ----------- | ---------- |
+| Miniscule         | m           | ≥64px      |
+| Extra tiny        | xtn         | ≥128px     |
+| Tiny              | tn          | ≥240px     |
+| Extra extra small | xxm         | ≥360px     |
+| Extra small       | xm          | ≥454px     |
+| Small             | sm          | ≥576px     |
+| Medium            | md          | ≥768px     |
+| Large             | lg          | ≥992px     |
+| Extra large       | xl          | ≥1200px    |
+| Extra extra large | xxl         | ≥1400px    |

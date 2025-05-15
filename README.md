@@ -59,7 +59,7 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 |   |   ├── restore-box-sizing.css
 |   |   ├── restore-margins.css
 |   ├── eased-layout.css
-├── /tests (for testing, included temporarily)
+├── /tests
 ```
 
 ### Builtin Features
