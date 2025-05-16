@@ -14,19 +14,6 @@
 
 body, h1, h2, h3, h4, h5, h6, p, pre, hr, table, caption { margin: 0; }
 
-/* Start: High-contrast outline on focus */
-
-/* Universal focus style */
-:focus { outline: 3px solid #FF0; outline-offset: 3px; }
-
-/* Focus style for buttons */
-button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus, [role="button"] { outline: 3px solid #0F0; }
-
-/* Focus style for links, menu items and tab */
-a:focus, [role="link"]:focus, [role="menuitem"]:focus, [role="menuitemradio"]:focus, [role="menuitemcheckbox"]:focus, [role="tab"]:focus { outline: 3px solid #00F; }
-
-/* End: High-contrast outline on focus */
-
 /* Start: Semantic layout */
 
 header,
