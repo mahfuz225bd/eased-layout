@@ -13,7 +13,7 @@
 
 .row { display: grid; }
 
-.container:has(.row), main:has(.row) { display: block; }
+div.container:has(.row), main:has(.row) { display: block; }
 
 .row.total-columns-1 { grid-template-columns: repeat(1, 1fr); }
 .row.total-columns-2 { grid-template-columns: repeat(2, 1fr); }
