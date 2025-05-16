@@ -73,8 +73,6 @@
     .row.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .row.total-columns-lg-n,
-    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 
     .row.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
     .row.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
@@ -103,6 +101,7 @@
     .row.total-columns-sm-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-sm-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-sm-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+    
     .row.total-columns-sm-n,
     .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))), 1fr); }
 }
@@ -150,8 +149,6 @@
     .row.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .row.total-columns-lg-n,
-    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 
     .row.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
     .row.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
@@ -180,6 +177,7 @@
     .row.total-columns-sm-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-sm-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-sm-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+
     .row.total-columns-sm-n,
     .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))), 1fr); }
 }
@@ -227,8 +225,6 @@
     .row.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
-    .row.total-columns-lg-n,
-    .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 
     .row.total-columns-md-1 { grid-template-columns: repeat(1, 1fr); }
     .row.total-columns-md-2 { grid-template-columns: repeat(2, 1fr); }
@@ -243,6 +239,7 @@
     .row.total-columns-md-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-md-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-md-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+
     .row.total-columns-md-n,
     .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))), 1fr); }
 }
@@ -290,6 +287,7 @@
     .row.total-columns-lg-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-lg-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-lg-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+
     .row.total-columns-lg-n,
     .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))), 1fr); }
 }
@@ -323,6 +321,7 @@
     .row.total-columns-xl-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-xl-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-xl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+
     .row.total-columns-xl-n,
     .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-xl, var(--columns-xxl, 1)), 1fr); }
 }
@@ -342,6 +341,7 @@
     .row.total-columns-xxl-11 { grid-template-columns: repeat(11, 1fr); }
     .row.total-columns-xxl-12 { grid-template-columns: repeat(12, 1fr); }
     .row.total-columns-xxl-auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+
     .row.total-columns-xxl-n,
     .row.total-columns-breakpoints-n { grid-template-columns: repeat(var(--columns-xxl, 1), 1fr); }
 }
