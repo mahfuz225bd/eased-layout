@@ -10,125 +10,146 @@
 */
 
 function setRowHeightsForAllGrids() {
-  document.querySelectorAll(".resizable-grid").forEach((grid) => {
-    const children = Array.from(grid.children).filter(
-      (el) => !el.matches('[role="separator"][aria-orientation="horizontal"]')
-    );
-    const rowHeightPercent = 100 / children.length;
-    children.forEach((row) => {
-      row.style.height = `${rowHeightPercent}%`;
-    });
-  });
+  var grids = document.getElementsByClassName("resizable-grid");
+  for (var i = 0; i < grids.length; i++) {
+    var grid = grids[i];
+    var children = [];
+    var gridChildren = grid.children;
+    for (var j = 0; j < gridChildren.length; j++) {
+      var el = gridChildren[j];
+      if (!(el.getAttribute("role") === "separator" && el.getAttribute("aria-orientation") === "horizontal")) {
+        children.push(el);
+      }
+    }
+
+    var rowHeightPercent = 100 / children.length;
+    for (var k = 0; k < children.length; k++) {
+      children[k].style.height = rowHeightPercent + "%";
+    }
+  }
 }
 
 function initVerticalDrag(bar, leftPanel, rightPanel) {
-  let isDragging = false;
+  var isDragging = false;
 
-  bar.addEventListener("mousedown", (e) => {
+  bar.onmousedown = function(e) {
     e.preventDefault();
     isDragging = true;
     document.body.style.userSelect = "none";
-  });
+  };
 
-  document.addEventListener("mousemove", (e) => {
+  document.onmousemove = function(e) {
     if (!isDragging) return;
 
-    const container = bar.parentElement;
-    const rect = container.getBoundingClientRect();
-    const pointerX = e.clientX - rect.left;
+    var container = bar.parentNode;
+    var rect = container.getBoundingClientRect();
+    var pointerX = e.clientX - rect.left;
 
-    const leftRect = leftPanel.getBoundingClientRect();
-    const rightRect = rightPanel.getBoundingClientRect();
+    var leftRect = leftPanel.getBoundingClientRect();
+    var rightRect = rightPanel.getBoundingClientRect();
 
-    const leftStart = leftRect.left - rect.left;
-    const totalWidth = leftRect.width + rightRect.width;
-    const newLeftWidth = pointerX - leftStart;
-    const min = 50;
+    var leftStart = leftRect.left - rect.left;
+    var totalWidth = leftRect.width + rightRect.width;
+    var newLeftWidth = pointerX - leftStart;
+    var min = 50;
 
     if (newLeftWidth > min && newLeftWidth < totalWidth - min) {
-      const containerWidth = container.offsetWidth;
+      var containerWidth = container.offsetWidth;
       leftPanel.style.width = (newLeftWidth / containerWidth) * 100 + "%";
-      rightPanel.style.width =
-        ((totalWidth - newLeftWidth) / containerWidth) * 100 + "%";
+      rightPanel.style.width = ((totalWidth - newLeftWidth) / containerWidth) * 100 + "%";
     }
-  });
+  };
 
-  document.addEventListener("mouseup", () => {
+  document.onmouseup = function() {
     isDragging = false;
     document.body.style.userSelect = "";
-  });
+  };
 }
 
 function initHorizontalDrag(bar, topRow, bottomRow, grid) {
-  let isDragging = false;
+  var isDragging = false;
 
-  bar.addEventListener("mousedown", (e) => {
+  bar.onmousedown = function(e) {
     e.preventDefault();
     isDragging = true;
     document.body.style.userSelect = "none";
-  });
+  };
 
-  document.addEventListener("mousemove", (e) => {
+  document.onmousemove = function(e) {
     if (!isDragging) return;
 
-    const rect = grid.getBoundingClientRect();
-    const pointerY = e.clientY - rect.top;
-
-    const totalHeight = rect.height;
-    const newTopHeight = pointerY;
-    const min = 50;
+    var rect = grid.getBoundingClientRect();
+    var pointerY = e.clientY - rect.top;
+    var totalHeight = rect.height;
+    var newTopHeight = pointerY;
+    var min = 50;
 
     if (newTopHeight > min && newTopHeight < totalHeight - min) {
-      const topPercent = (newTopHeight / totalHeight) * 100;
-      const bottomPercent = 100 - topPercent;
+      var topPercent = (newTopHeight / totalHeight) * 100;
+      var bottomPercent = 100 - topPercent;
 
-      topRow.style.height = `${topPercent}%`;
-      bottomRow.style.height = `${bottomPercent}%`;
+      topRow.style.height = topPercent + "%";
+      bottomRow.style.height = bottomPercent + "%";
     }
-  });
+  };
 
-  document.addEventListener("mouseup", () => {
+  document.onmouseup = function() {
     isDragging = false;
     document.body.style.userSelect = "";
-  });
+  };
 }
 
 function applyDragbarAll() {
   setRowHeightsForAllGrids();
 
-  document.querySelectorAll(".resizable-grid").forEach((grid) => {
-    const children = Array.from(grid.children).filter(
-      (el) => !el.matches('[role="separator"][aria-orientation="horizontal"]')
-    );
+  var grids = document.getElementsByClassName("resizable-grid");
+  for (var i = 0; i < grids.length; i++) {
+    var grid = grids[i];
+    var children = [];
+    var gridChildren = grid.children;
 
-    const hBars = grid.querySelectorAll(
-      '[role="separator"][aria-orientation="horizontal"]'
-    );
-
-    // Horizontal drag
-    hBars.forEach((bar, i) => {
-      if (children[i + 1]) {
-        initHorizontalDrag(bar, children[i], children[i + 1], grid);
+    for (var j = 0; j < gridChildren.length; j++) {
+      var el = gridChildren[j];
+      if (!(el.getAttribute("role") === "separator" && el.getAttribute("aria-orientation") === "horizontal")) {
+        children.push(el);
       }
-    });
+    }
 
-    // Vertical drag within each row
-    children.forEach((row) => {
-      const panels = Array.from(row.children).filter(
-        (el) => !el.matches('[role="separator"][aria-orientation="vertical"]')
-      );
-      const bars = row.querySelectorAll(
-        '[role="separator"][aria-orientation="vertical"]'
-      );
-      bars.forEach((bar, i) => {
-        if (panels[i + 1]) {
-          initVerticalDrag(bar, panels[i], panels[i + 1]);
+    var hBars = grid.querySelectorAll('[role="separator"][aria-orientation="horizontal"]');
+    for (var k = 0; k < hBars.length; k++) {
+      var bar = hBars[k];
+      if (children[k + 1]) {
+        initHorizontalDrag(bar, children[k], children[k + 1], grid);
+      }
+    }
+
+    for (var m = 0; m < children.length; m++) {
+      var row = children[m];
+      var panels = [];
+      var rowChildren = row.children;
+
+      for (var n = 0; n < rowChildren.length; n++) {
+        var panel = rowChildren[n];
+        if (!(panel.getAttribute("role") === "separator" && panel.getAttribute("aria-orientation") === "vertical")) {
+          panels.push(panel);
         }
-      });
-    });
-  });
+      }
+
+      var bars = row.querySelectorAll('[role="separator"][aria-orientation="vertical"]');
+      for (var p = 0; p < bars.length; p++) {
+        var vBar = bars[p];
+        if (panels[p + 1]) {
+          initVerticalDrag(vBar, panels[p], panels[p + 1]);
+        }
+      }
+    }
+  }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  applyDragbarAll();
-});
+if (document.addEventListener) {
+  document.addEventListener("DOMContentLoaded", function() {
+    applyDragbarAll();
+  });
+} else {
+  window.attachEvent("onload", applyDragbarAll);
+}
