@@ -159,8 +159,7 @@ Screen Width of Small Devices (Collected from ChatGPT):
 | Breakpoint        | Class Infix | Dimensions |
 | ----------------- | ----------- | ---------- |
 | Miniscule         | None        | <64px      |
-| Extra Tiny        | xtn         | ≥64px      |
-| Tiny              | tn          | ≥128px     |
+| Tiny              | tn          | ≥64px      |
 | Ultra Small       | us          | ≥128px     |
 | Compact           | cp          | ≥240px     |
 | Extra extra small | xxs         | ≥360px     |
