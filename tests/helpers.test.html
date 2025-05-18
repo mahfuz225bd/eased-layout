@@ -30,41 +30,41 @@
     </style>
 
     <script>
-        function test(classPrefix, valueOrValues, hasBreakpoints = false, baseClassName = '') {
+        function test(classPrefix, classPostfixOrPostfixes, hasBreakpoints = false, baseClassName = '') {
             // available breakpoints (excluding undefined first element)
             const breakpoints = ['tn', 'us', 'cp', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
             const results = [];
 
             if (hasBreakpoints) {
-                // Format 1: With breakpoint, with valueOrValues
-                if (valueOrValues) {
-                    const isValues = Array.isArray(valueOrValues);
-                    const isValue = !isValues;
+                // Format 1: With breakpoint, with classPostfixOrPostfixes
+                if (classPostfixOrPostfixes) {
+                    const isPostfixes = Array.isArray(classPostfixOrPostfixes);
+                    const isPostfix = !isPostfixes;
 
-                    if (isValues) {
-                        const values = [...valueOrValues];
+                    if (isPostfixes) {
+                        const values = [...classPostfixOrPostfixes];
 
                         values.forEach((value) => {
-                            const strValue = new String(value);
+                            const strPostfix = new String(value);
 
                             for (const bp of breakpoints) {
-                                const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strValue}` : `${classPrefix}-${bp}-${strValue}`;
-                                results.push(`<div class="${fullClass}">.${classPrefix}-${bp}-${strValue}</div>`);
+                                const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strPostfix}` : `${classPrefix}-${bp}-${strPostfix}`;
+                                results.push(`<div class="${fullClass}">.${classPrefix}-${bp}-${strPostfix}</div>`);
                             }
                         });
                     }
 
-                    if (isValue) {
-                        const strValue = new String(valueOrValues);
+                    if (isPostfix) {
+                        const strPostfix = new String(classPostfixOrPostfixes);
 
                         for (const bp of breakpoints) {
-                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strValue}` : `${classPrefix}-${bp}-${strValue}`;
-                            results.push(`<div class="${fullClass}">.${classPrefix}-${bp}-${strValue}</div>`);
+                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strPostfix}` : `${classPrefix}-${bp}-${strPostfix}`;
+                            results.push(`<div class="${fullClass}">.${classPrefix}-${bp}-${strPostfix}</div>`);
                         }
                     }
                 }
-                // Format 2: With breakpoint, without valueOrValues
+                // Format 2: With breakpoint, without classPostfixOrPostfixes
                 else {
                     for (const bp of breakpoints) {
                         const fullClass = `${baseClassName} ${classPrefix}-${bp}`;
@@ -72,35 +72,35 @@
                     }
                 }
             } else {
-                // Format 3: Without breakpoint, with valueOrValues
-                if (valueOrValues) {
-                    const isValues = Array.isArray(valueOrValues);
-                    const isValue = !isValues;
+                // Format 3: Without breakpoint, with classPostfixOrPostfixes
+                if (classPostfixOrPostfixes) {
+                    const isPostfixes = Array.isArray(classPostfixOrPostfixes);
+                    const isPostfix = !isPostfixes;
 
-                    if (isValues) {
-                        const values = [...valueOrValues];
+                    if (isPostfixes) {
+                        const values = [...classPostfixOrPostfixes];
 
                         values.forEach((value) => {
-                            const strValue = new String(value);
+                            const strPostfix = new String(value);
 
-                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strValue}` : `${classPrefix}-${strValue}`;
-                            results.push(`<div class="${fullClass}">.${classPrefix}-${strValue}</div>`);
+                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
+                            results.push(`<div class="${fullClass}">.${classPrefix}-${strPostfix}</div>`);
                         });
                     }
 
-                    if (isValue) {
-                        const strValue = new String(valueOrValues);
+                    if (isPostfix) {
+                        const strPostfix = new String(classPostfixOrPostfixes);
 
-                        const fullClass = `${baseClassName} ${classPrefix}-${strValue}`;
-                        results.push(`<div class="${fullClass}">.${classPrefix}-${strValue}</div>`);
+                        const fullClass = `${baseClassName} ${classPrefix}-${strPostfix}`;
+                        results.push(`<div class="${fullClass}">.${classPrefix}-${strPostfix}</div>`);
                     }
 
 
                 }
-                // Format 4: Without breakpoint, without valueOrValues
+                // Format 4: Without breakpoint, without classPostfixOrPostfixes
                 else {
                     const className = classPrefix
-                    
+
                     const fullClass = baseClassName ? `${baseClassName} ${className}` : className;
                     results.push(`<div class="${fullClass}">.${className}</div>`);
                 }
