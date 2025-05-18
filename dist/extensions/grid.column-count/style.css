@@ -1,0 +1,935 @@
+@charset "UTF-8";
+
+/*!
+ * Eased Layout CSS Library v1.0.0
+ * Extension: CSS Column-Count Property Based Grid Layout
+ * Description: This extension is for creating responsive grid layouts using CSS column-count property.
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+.row { column-gap: 0; column-count: 1; }
+
+div.container:has(.row), main:has(.row) { display: block; }
+
+.row.total-columns-1 { column-count: 1; }
+.row.total-columns-2 { column-count: 2; }
+.row.total-columns-3 { column-count: 3; }
+.row.total-columns-4 { column-count: 4; }
+.row.total-columns-5 { column-count: 5; }
+.row.total-columns-6 { column-count: 6; }
+.row.total-columns-7 { column-count: 7; }
+.row.total-columns-8 { column-count: 8; }
+.row.total-columns-9 { column-count: 9; }
+.row.total-columns-10 { column-count: 10; }
+.row.total-columns-11 { column-count: 11; }
+.row.total-columns-12 { column-count: 12; }
+.row.total-columns-n { column-count: var(--columns); }
+
+/* Start: Breakpoints for responsiveness */
+
+/* Miniscule (Below 64px) */
+@media (max-width: 63.98px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-md-1 { column-count: 1; }
+  .row.total-columns-md-2 { column-count: 2; }
+  .row.total-columns-md-3 { column-count: 3; }
+  .row.total-columns-md-4 { column-count: 4; }
+  .row.total-columns-md-5 { column-count: 5; }
+  .row.total-columns-md-6 { column-count: 6; }
+  .row.total-columns-md-7 { column-count: 7; }
+  .row.total-columns-md-8 { column-count: 8; }
+  .row.total-columns-md-9 { column-count: 9; }
+  .row.total-columns-md-10 { column-count: 10; }
+  .row.total-columns-md-11 { column-count: 11; }
+  .row.total-columns-md-12 { column-count: 12; }
+
+  .row.total-columns-sm-1 { column-count: 1; }
+  .row.total-columns-sm-2 { column-count: 2; }
+  .row.total-columns-sm-3 { column-count: 3; }
+  .row.total-columns-sm-4 { column-count: 4; }
+  .row.total-columns-sm-5 { column-count: 5; }
+  .row.total-columns-sm-6 { column-count: 6; }
+  .row.total-columns-sm-7 { column-count: 7; }
+  .row.total-columns-sm-8 { column-count: 8; }
+  .row.total-columns-sm-9 { column-count: 9; }
+  .row.total-columns-sm-10 { column-count: 10; }
+  .row.total-columns-sm-11 { column-count: 11; }
+  .row.total-columns-sm-12 { column-count: 12; }
+
+  .row.total-columns-xs-1 { column-count: 1; }
+  .row.total-columns-xs-2 { column-count: 2; }
+  .row.total-columns-xs-3 { column-count: 3; }
+  .row.total-columns-xs-4 { column-count: 4; }
+  .row.total-columns-xs-5 { column-count: 5; }
+  .row.total-columns-xs-6 { column-count: 6; }
+  .row.total-columns-xs-7 { column-count: 7; }
+  .row.total-columns-xs-8 { column-count: 8; }
+  .row.total-columns-xs-9 { column-count: 9; }
+  .row.total-columns-xs-10 { column-count: 10; }
+  .row.total-columns-xs-11 { column-count: 11; }
+  .row.total-columns-xs-12 { column-count: 12; }
+
+  .row.total-columns-xxs-1 { column-count: 1; }
+  .row.total-columns-xxs-2 { column-count: 2; }
+  .row.total-columns-xxs-3 { column-count: 3; }
+  .row.total-columns-xxs-4 { column-count: 4; }
+  .row.total-columns-xxs-5 { column-count: 5; }
+  .row.total-columns-xxs-6 { column-count: 6; }
+  .row.total-columns-xxs-7 { column-count: 7; }
+  .row.total-columns-xxs-8 { column-count: 8; }
+  .row.total-columns-xxs-9 { column-count: 9; }
+  .row.total-columns-xxs-10 { column-count: 10; }
+  .row.total-columns-xxs-11 { column-count: 11; }
+  .row.total-columns-xxs-12 { column-count: 12; }
+
+  .row.total-columns-cp-1 { column-count: 1; }
+  .row.total-columns-cp-2 { column-count: 2; }
+  .row.total-columns-cp-3 { column-count: 3; }
+  .row.total-columns-cp-4 { column-count: 4; }
+  .row.total-columns-cp-5 { column-count: 5; }
+  .row.total-columns-cp-6 { column-count: 6; }
+  .row.total-columns-cp-7 { column-count: 7; }
+  .row.total-columns-cp-8 { column-count: 8; }
+  .row.total-columns-cp-9 { column-count: 9; }
+  .row.total-columns-cp-10 { column-count: 10; }
+  .row.total-columns-cp-11 { column-count: 11; }
+  .row.total-columns-cp-12 { column-count: 12; }
+
+  .row.total-columns-us-1 { column-count: 1; }
+  .row.total-columns-us-2 { column-count: 2; }
+  .row.total-columns-us-3 { column-count: 3; }
+  .row.total-columns-us-4 { column-count: 4; }
+  .row.total-columns-us-5 { column-count: 5; }
+  .row.total-columns-us-6 { column-count: 6; }
+  .row.total-columns-us-7 { column-count: 7; }
+  .row.total-columns-us-8 { column-count: 8; }
+  .row.total-columns-us-9 { column-count: 9; }
+  .row.total-columns-us-10 { column-count: 10; }
+  .row.total-columns-us-11 { column-count: 11; }
+  .row.total-columns-us-12 { column-count: 12; }
+
+  .row.total-columns-tn-1 { column-count: 1; }
+  .row.total-columns-tn-2 { column-count: 2; }
+  .row.total-columns-tn-3 { column-count: 3; }
+  .row.total-columns-tn-4 { column-count: 4; }
+  .row.total-columns-tn-5 { column-count: 5; }
+  .row.total-columns-tn-6 { column-count: 6; }
+  .row.total-columns-tn-7 { column-count: 7; }
+  .row.total-columns-tn-8 { column-count: 8; }
+  .row.total-columns-tn-9 { column-count: 9; }
+  .row.total-columns-tn-10 { column-count: 10; }
+  .row.total-columns-tn-11 { column-count: 11; }
+  .row.total-columns-tn-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-tn-n { column-count: var(--columns-tn, var(--columns-us, var(--columns-cp, var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))))))))); }
+}
+
+/* Tiny (≥64px) */
+@media (min-width: 64px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-md-1 { column-count: 1; }
+  .row.total-columns-md-2 { column-count: 2; }
+  .row.total-columns-md-3 { column-count: 3; }
+  .row.total-columns-md-4 { column-count: 4; }
+  .row.total-columns-md-5 { column-count: 5; }
+  .row.total-columns-md-6 { column-count: 6; }
+  .row.total-columns-md-7 { column-count: 7; }
+  .row.total-columns-md-8 { column-count: 8; }
+  .row.total-columns-md-9 { column-count: 9; }
+  .row.total-columns-md-10 { column-count: 10; }
+  .row.total-columns-md-11 { column-count: 11; }
+  .row.total-columns-md-12 { column-count: 12; }
+
+  .row.total-columns-sm-1 { column-count: 1; }
+  .row.total-columns-sm-2 { column-count: 2; }
+  .row.total-columns-sm-3 { column-count: 3; }
+  .row.total-columns-sm-4 { column-count: 4; }
+  .row.total-columns-sm-5 { column-count: 5; }
+  .row.total-columns-sm-6 { column-count: 6; }
+  .row.total-columns-sm-7 { column-count: 7; }
+  .row.total-columns-sm-8 { column-count: 8; }
+  .row.total-columns-sm-9 { column-count: 9; }
+  .row.total-columns-sm-10 { column-count: 10; }
+  .row.total-columns-sm-11 { column-count: 11; }
+  .row.total-columns-sm-12 { column-count: 12; }
+
+  .row.total-columns-xs-1 { column-count: 1; }
+  .row.total-columns-xs-2 { column-count: 2; }
+  .row.total-columns-xs-3 { column-count: 3; }
+  .row.total-columns-xs-4 { column-count: 4; }
+  .row.total-columns-xs-5 { column-count: 5; }
+  .row.total-columns-xs-6 { column-count: 6; }
+  .row.total-columns-xs-7 { column-count: 7; }
+  .row.total-columns-xs-8 { column-count: 8; }
+  .row.total-columns-xs-9 { column-count: 9; }
+  .row.total-columns-xs-10 { column-count: 10; }
+  .row.total-columns-xs-11 { column-count: 11; }
+  .row.total-columns-xs-12 { column-count: 12; }
+
+  .row.total-columns-xxs-1 { column-count: 1; }
+  .row.total-columns-xxs-2 { column-count: 2; }
+  .row.total-columns-xxs-3 { column-count: 3; }
+  .row.total-columns-xxs-4 { column-count: 4; }
+  .row.total-columns-xxs-5 { column-count: 5; }
+  .row.total-columns-xxs-6 { column-count: 6; }
+  .row.total-columns-xxs-7 { column-count: 7; }
+  .row.total-columns-xxs-8 { column-count: 8; }
+  .row.total-columns-xxs-9 { column-count: 9; }
+  .row.total-columns-xxs-10 { column-count: 10; }
+  .row.total-columns-xxs-11 { column-count: 11; }
+  .row.total-columns-xxs-12 { column-count: 12; }
+
+  .row.total-columns-cp-1 { column-count: 1; }
+  .row.total-columns-cp-2 { column-count: 2; }
+  .row.total-columns-cp-3 { column-count: 3; }
+  .row.total-columns-cp-4 { column-count: 4; }
+  .row.total-columns-cp-5 { column-count: 5; }
+  .row.total-columns-cp-6 { column-count: 6; }
+  .row.total-columns-cp-7 { column-count: 7; }
+  .row.total-columns-cp-8 { column-count: 8; }
+  .row.total-columns-cp-9 { column-count: 9; }
+  .row.total-columns-cp-10 { column-count: 10; }
+  .row.total-columns-cp-11 { column-count: 11; }
+  .row.total-columns-cp-12 { column-count: 12; }
+
+  .row.total-columns-us-1 { column-count: 1; }
+  .row.total-columns-us-2 { column-count: 2; }
+  .row.total-columns-us-3 { column-count: 3; }
+  .row.total-columns-us-4 { column-count: 4; }
+  .row.total-columns-us-5 { column-count: 5; }
+  .row.total-columns-us-6 { column-count: 6; }
+  .row.total-columns-us-7 { column-count: 7; }
+  .row.total-columns-us-8 { column-count: 8; }
+  .row.total-columns-us-9 { column-count: 9; }
+  .row.total-columns-us-10 { column-count: 10; }
+  .row.total-columns-us-11 { column-count: 11; }
+  .row.total-columns-us-12 { column-count: 12; }
+
+  .row.total-columns-tn-1 { column-count: 1; }
+  .row.total-columns-tn-2 { column-count: 2; }
+  .row.total-columns-tn-3 { column-count: 3; }
+  .row.total-columns-tn-4 { column-count: 4; }
+  .row.total-columns-tn-5 { column-count: 5; }
+  .row.total-columns-tn-6 { column-count: 6; }
+  .row.total-columns-tn-7 { column-count: 7; }
+  .row.total-columns-tn-8 { column-count: 8; }
+  .row.total-columns-tn-9 { column-count: 9; }
+  .row.total-columns-tn-10 { column-count: 10; }
+  .row.total-columns-tn-11 { column-count: 11; }
+  .row.total-columns-tn-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-tn, var(--columns-us, var(--columns-cp, var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))))))))); }
+}
+
+/* Ultra Small (≥128px) */
+@media (min-width: 128px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-md-1 { column-count: 1; }
+  .row.total-columns-md-2 { column-count: 2; }
+  .row.total-columns-md-3 { column-count: 3; }
+  .row.total-columns-md-4 { column-count: 4; }
+  .row.total-columns-md-5 { column-count: 5; }
+  .row.total-columns-md-6 { column-count: 6; }
+  .row.total-columns-md-7 { column-count: 7; }
+  .row.total-columns-md-8 { column-count: 8; }
+  .row.total-columns-md-9 { column-count: 9; }
+  .row.total-columns-md-10 { column-count: 10; }
+  .row.total-columns-md-11 { column-count: 11; }
+  .row.total-columns-md-12 { column-count: 12; }
+
+  .row.total-columns-sm-1 { column-count: 1; }
+  .row.total-columns-sm-2 { column-count: 2; }
+  .row.total-columns-sm-3 { column-count: 3; }
+  .row.total-columns-sm-4 { column-count: 4; }
+  .row.total-columns-sm-5 { column-count: 5; }
+  .row.total-columns-sm-6 { column-count: 6; }
+  .row.total-columns-sm-7 { column-count: 7; }
+  .row.total-columns-sm-8 { column-count: 8; }
+  .row.total-columns-sm-9 { column-count: 9; }
+  .row.total-columns-sm-10 { column-count: 10; }
+  .row.total-columns-sm-11 { column-count: 11; }
+  .row.total-columns-sm-12 { column-count: 12; }
+
+  .row.total-columns-xs-1 { column-count: 1; }
+  .row.total-columns-xs-2 { column-count: 2; }
+  .row.total-columns-xs-3 { column-count: 3; }
+  .row.total-columns-xs-4 { column-count: 4; }
+  .row.total-columns-xs-5 { column-count: 5; }
+  .row.total-columns-xs-6 { column-count: 6; }
+  .row.total-columns-xs-7 { column-count: 7; }
+  .row.total-columns-xs-8 { column-count: 8; }
+  .row.total-columns-xs-9 { column-count: 9; }
+  .row.total-columns-xs-10 { column-count: 10; }
+  .row.total-columns-xs-11 { column-count: 11; }
+  .row.total-columns-xs-12 { column-count: 12; }
+
+  .row.total-columns-xxs-1 { column-count: 1; }
+  .row.total-columns-xxs-2 { column-count: 2; }
+  .row.total-columns-xxs-3 { column-count: 3; }
+  .row.total-columns-xxs-4 { column-count: 4; }
+  .row.total-columns-xxs-5 { column-count: 5; }
+  .row.total-columns-xxs-6 { column-count: 6; }
+  .row.total-columns-xxs-7 { column-count: 7; }
+  .row.total-columns-xxs-8 { column-count: 8; }
+  .row.total-columns-xxs-9 { column-count: 9; }
+  .row.total-columns-xxs-10 { column-count: 10; }
+  .row.total-columns-xxs-11 { column-count: 11; }
+  .row.total-columns-xxs-12 { column-count: 12; }
+
+  .row.total-columns-cp-1 { column-count: 1; }
+  .row.total-columns-cp-2 { column-count: 2; }
+  .row.total-columns-cp-3 { column-count: 3; }
+  .row.total-columns-cp-4 { column-count: 4; }
+  .row.total-columns-cp-5 { column-count: 5; }
+  .row.total-columns-cp-6 { column-count: 6; }
+  .row.total-columns-cp-7 { column-count: 7; }
+  .row.total-columns-cp-8 { column-count: 8; }
+  .row.total-columns-cp-9 { column-count: 9; }
+  .row.total-columns-cp-10 { column-count: 10; }
+  .row.total-columns-cp-11 { column-count: 11; }
+  .row.total-columns-cp-12 { column-count: 12; }
+
+  .row.total-columns-us-1 { column-count: 1; }
+  .row.total-columns-us-2 { column-count: 2; }
+  .row.total-columns-us-3 { column-count: 3; }
+  .row.total-columns-us-4 { column-count: 4; }
+  .row.total-columns-us-5 { column-count: 5; }
+  .row.total-columns-us-6 { column-count: 6; }
+  .row.total-columns-us-7 { column-count: 7; }
+  .row.total-columns-us-8 { column-count: 8; }
+  .row.total-columns-us-9 { column-count: 9; }
+  .row.total-columns-us-10 { column-count: 10; }
+  .row.total-columns-us-11 { column-count: 11; }
+  .row.total-columns-us-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-us, var(--columns-cp, var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))))))); }
+}
+
+/* Compact (≥240px) */
+@media (min-width: 240px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-md-1 { column-count: 1; }
+  .row.total-columns-md-2 { column-count: 2; }
+  .row.total-columns-md-3 { column-count: 3; }
+  .row.total-columns-md-4 { column-count: 4; }
+  .row.total-columns-md-5 { column-count: 5; }
+  .row.total-columns-md-6 { column-count: 6; }
+  .row.total-columns-md-7 { column-count: 7; }
+  .row.total-columns-md-8 { column-count: 8; }
+  .row.total-columns-md-9 { column-count: 9; }
+  .row.total-columns-md-10 { column-count: 10; }
+  .row.total-columns-md-11 { column-count: 11; }
+  .row.total-columns-md-12 { column-count: 12; }
+
+  .row.total-columns-sm-1 { column-count: 1; }
+  .row.total-columns-sm-2 { column-count: 2; }
+  .row.total-columns-sm-3 { column-count: 3; }
+  .row.total-columns-sm-4 { column-count: 4; }
+  .row.total-columns-sm-5 { column-count: 5; }
+  .row.total-columns-sm-6 { column-count: 6; }
+  .row.total-columns-sm-7 { column-count: 7; }
+  .row.total-columns-sm-8 { column-count: 8; }
+  .row.total-columns-sm-9 { column-count: 9; }
+  .row.total-columns-sm-10 { column-count: 10; }
+  .row.total-columns-sm-11 { column-count: 11; }
+  .row.total-columns-sm-12 { column-count: 12; }
+
+  .row.total-columns-xs-1 { column-count: 1; }
+  .row.total-columns-xs-2 { column-count: 2; }
+  .row.total-columns-xs-3 { column-count: 3; }
+  .row.total-columns-xs-4 { column-count: 4; }
+  .row.total-columns-xs-5 { column-count: 5; }
+  .row.total-columns-xs-6 { column-count: 6; }
+  .row.total-columns-xs-7 { column-count: 7; }
+  .row.total-columns-xs-8 { column-count: 8; }
+  .row.total-columns-xs-9 { column-count: 9; }
+  .row.total-columns-xs-10 { column-count: 10; }
+  .row.total-columns-xs-11 { column-count: 11; }
+  .row.total-columns-xs-12 { column-count: 12; }
+
+  .row.total-columns-xxs-1 { column-count: 1; }
+  .row.total-columns-xxs-2 { column-count: 2; }
+  .row.total-columns-xxs-3 { column-count: 3; }
+  .row.total-columns-xxs-4 { column-count: 4; }
+  .row.total-columns-xxs-5 { column-count: 5; }
+  .row.total-columns-xxs-6 { column-count: 6; }
+  .row.total-columns-xxs-7 { column-count: 7; }
+  .row.total-columns-xxs-8 { column-count: 8; }
+  .row.total-columns-xxs-9 { column-count: 9; }
+  .row.total-columns-xxs-10 { column-count: 10; }
+  .row.total-columns-xxs-11 { column-count: 11; }
+  .row.total-columns-xxs-12 { column-count: 12; }
+
+  .row.total-columns-cp-1 { column-count: 1; }
+  .row.total-columns-cp-2 { column-count: 2; }
+  .row.total-columns-cp-3 { column-count: 3; }
+  .row.total-columns-cp-4 { column-count: 4; }
+  .row.total-columns-cp-5 { column-count: 5; }
+  .row.total-columns-cp-6 { column-count: 6; }
+  .row.total-columns-cp-7 { column-count: 7; }
+  .row.total-columns-cp-8 { column-count: 8; }
+  .row.total-columns-cp-9 { column-count: 9; }
+  .row.total-columns-cp-10 { column-count: 10; }
+  .row.total-columns-cp-11 { column-count: 11; }
+  .row.total-columns-cp-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-cp, var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))))))); }
+}
+
+/* Extra Extra Small (≥360px) */
+@media (min-width: 360px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-md-1 { column-count: 1; }
+  .row.total-columns-md-2 { column-count: 2; }
+  .row.total-columns-md-3 { column-count: 3; }
+  .row.total-columns-md-4 { column-count: 4; }
+  .row.total-columns-md-5 { column-count: 5; }
+  .row.total-columns-md-6 { column-count: 6; }
+  .row.total-columns-md-7 { column-count: 7; }
+  .row.total-columns-md-8 { column-count: 8; }
+  .row.total-columns-md-9 { column-count: 9; }
+  .row.total-columns-md-10 { column-count: 10; }
+  .row.total-columns-md-11 { column-count: 11; }
+  .row.total-columns-md-12 { column-count: 12; }
+
+  .row.total-columns-sm-1 { column-count: 1; }
+  .row.total-columns-sm-2 { column-count: 2; }
+  .row.total-columns-sm-3 { column-count: 3; }
+  .row.total-columns-sm-4 { column-count: 4; }
+  .row.total-columns-sm-5 { column-count: 5; }
+  .row.total-columns-sm-6 { column-count: 6; }
+  .row.total-columns-sm-7 { column-count: 7; }
+  .row.total-columns-sm-8 { column-count: 8; }
+  .row.total-columns-sm-9 { column-count: 9; }
+  .row.total-columns-sm-10 { column-count: 10; }
+  .row.total-columns-sm-11 { column-count: 11; }
+  .row.total-columns-sm-12 { column-count: 12; }
+
+  .row.total-columns-xs-1 { column-count: 1; }
+  .row.total-columns-xs-2 { column-count: 2; }
+  .row.total-columns-xs-3 { column-count: 3; }
+  .row.total-columns-xs-4 { column-count: 4; }
+  .row.total-columns-xs-5 { column-count: 5; }
+  .row.total-columns-xs-6 { column-count: 6; }
+  .row.total-columns-xs-7 { column-count: 7; }
+  .row.total-columns-xs-8 { column-count: 8; }
+  .row.total-columns-xs-9 { column-count: 9; }
+  .row.total-columns-xs-10 { column-count: 10; }
+  .row.total-columns-xs-11 { column-count: 11; }
+  .row.total-columns-xs-12 { column-count: 12; }
+
+  .row.total-columns-xxs-1 { column-count: 1; }
+  .row.total-columns-xxs-2 { column-count: 2; }
+  .row.total-columns-xxs-3 { column-count: 3; }
+  .row.total-columns-xxs-4 { column-count: 4; }
+  .row.total-columns-xxs-5 { column-count: 5; }
+  .row.total-columns-xxs-6 { column-count: 6; }
+  .row.total-columns-xxs-7 { column-count: 7; }
+  .row.total-columns-xxs-8 { column-count: 8; }
+  .row.total-columns-xxs-9 { column-count: 9; }
+  .row.total-columns-xxs-10 { column-count: 10; }
+  .row.total-columns-xxs-11 { column-count: 11; }
+  .row.total-columns-xxs-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))))); }
+}
+
+/* Extra Small (≥454px) */
+@media (min-width: 454px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-md-1 { column-count: 1; }
+  .row.total-columns-md-2 { column-count: 2; }
+  .row.total-columns-md-3 { column-count: 3; }
+  .row.total-columns-md-4 { column-count: 4; }
+  .row.total-columns-md-5 { column-count: 5; }
+  .row.total-columns-md-6 { column-count: 6; }
+  .row.total-columns-md-7 { column-count: 7; }
+  .row.total-columns-md-8 { column-count: 8; }
+  .row.total-columns-md-9 { column-count: 9; }
+  .row.total-columns-md-10 { column-count: 10; }
+  .row.total-columns-md-11 { column-count: 11; }
+  .row.total-columns-md-12 { column-count: 12; }
+
+  .row.total-columns-sm-1 { column-count: 1; }
+  .row.total-columns-sm-2 { column-count: 2; }
+  .row.total-columns-sm-3 { column-count: 3; }
+  .row.total-columns-sm-4 { column-count: 4; }
+  .row.total-columns-sm-5 { column-count: 5; }
+  .row.total-columns-sm-6 { column-count: 6; }
+  .row.total-columns-sm-7 { column-count: 7; }
+  .row.total-columns-sm-8 { column-count: 8; }
+  .row.total-columns-sm-9 { column-count: 9; }
+  .row.total-columns-sm-10 { column-count: 10; }
+  .row.total-columns-sm-11 { column-count: 11; }
+  .row.total-columns-sm-12 { column-count: 12; }
+
+  .row.total-columns-xs-1 { column-count: 1; }
+  .row.total-columns-xs-2 { column-count: 2; }
+  .row.total-columns-xs-3 { column-count: 3; }
+  .row.total-columns-xs-4 { column-count: 4; }
+  .row.total-columns-xs-5 { column-count: 5; }
+  .row.total-columns-xs-6 { column-count: 6; }
+  .row.total-columns-xs-7 { column-count: 7; }
+  .row.total-columns-xs-8 { column-count: 8; }
+  .row.total-columns-xs-9 { column-count: 9; }
+  .row.total-columns-xs-10 { column-count: 10; }
+  .row.total-columns-xs-11 { column-count: 11; }
+  .row.total-columns-xs-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))))); }
+}
+
+/* Small (≥576px) */
+@media (min-width: 576px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-md-1 { column-count: 1; }
+  .row.total-columns-md-2 { column-count: 2; }
+  .row.total-columns-md-3 { column-count: 3; }
+  .row.total-columns-md-4 { column-count: 4; }
+  .row.total-columns-md-5 { column-count: 5; }
+  .row.total-columns-md-6 { column-count: 6; }
+  .row.total-columns-md-7 { column-count: 7; }
+  .row.total-columns-md-8 { column-count: 8; }
+  .row.total-columns-md-9 { column-count: 9; }
+  .row.total-columns-md-10 { column-count: 10; }
+  .row.total-columns-md-11 { column-count: 11; }
+  .row.total-columns-md-12 { column-count: 12; }
+
+  .row.total-columns-sm-1 { column-count: 1; }
+  .row.total-columns-sm-2 { column-count: 2; }
+  .row.total-columns-sm-3 { column-count: 3; }
+  .row.total-columns-sm-4 { column-count: 4; }
+  .row.total-columns-sm-5 { column-count: 5; }
+  .row.total-columns-sm-6 { column-count: 6; }
+  .row.total-columns-sm-7 { column-count: 7; }
+  .row.total-columns-sm-8 { column-count: 8; }
+  .row.total-columns-sm-9 { column-count: 9; }
+  .row.total-columns-sm-10 { column-count: 10; }
+  .row.total-columns-sm-11 { column-count: 11; }
+  .row.total-columns-sm-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))); }
+}
+
+/* Medium (≥768px) */
+@media (min-width: 768px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-md-1 { column-count: 1; }
+  .row.total-columns-md-2 { column-count: 2; }
+  .row.total-columns-md-3 { column-count: 3; }
+  .row.total-columns-md-4 { column-count: 4; }
+  .row.total-columns-md-5 { column-count: 5; }
+  .row.total-columns-md-6 { column-count: 6; }
+  .row.total-columns-md-7 { column-count: 7; }
+  .row.total-columns-md-8 { column-count: 8; }
+  .row.total-columns-md-9 { column-count: 9; }
+  .row.total-columns-md-10 { column-count: 10; }
+  .row.total-columns-md-11 { column-count: 11; }
+  .row.total-columns-md-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))); }
+}
+
+/* Large (≥992px) */
+@media (min-width: 992px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-lg-1 { column-count: 1; }
+  .row.total-columns-lg-2 { column-count: 2; }
+  .row.total-columns-lg-3 { column-count: 3; }
+  .row.total-columns-lg-4 { column-count: 4; }
+  .row.total-columns-lg-5 { column-count: 5; }
+  .row.total-columns-lg-6 { column-count: 6; }
+  .row.total-columns-lg-7 { column-count: 7; }
+  .row.total-columns-lg-8 { column-count: 8; }
+  .row.total-columns-lg-9 { column-count: 9; }
+  .row.total-columns-lg-10 { column-count: 10; }
+  .row.total-columns-lg-11 { column-count: 11; }
+  .row.total-columns-lg-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))); }
+}
+
+/* Extra Large (≥1200px) */
+@media (min-width: 1200px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-xl-1 { column-count: 1; }
+  .row.total-columns-xl-2 { column-count: 2; }
+  .row.total-columns-xl-3 { column-count: 3; }
+  .row.total-columns-xl-4 { column-count: 4; }
+  .row.total-columns-xl-5 { column-count: 5; }
+  .row.total-columns-xl-6 { column-count: 6; }
+  .row.total-columns-xl-7 { column-count: 7; }
+  .row.total-columns-xl-8 { column-count: 8; }
+  .row.total-columns-xl-9 { column-count: 9; }
+  .row.total-columns-xl-10 { column-count: 10; }
+  .row.total-columns-xl-11 { column-count: 11; }
+  .row.total-columns-xl-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-xl, var(--columns-xxl, 1)); }
+}
+
+/* Extra Extra Large (≥1400px) */
+@media (min-width: 1400px) {
+  .row.total-columns-xxl-1 { column-count: 1; }
+  .row.total-columns-xxl-2 { column-count: 2; }
+  .row.total-columns-xxl-3 { column-count: 3; }
+  .row.total-columns-xxl-4 { column-count: 4; }
+  .row.total-columns-xxl-5 { column-count: 5; }
+  .row.total-columns-xxl-6 { column-count: 6; }
+  .row.total-columns-xxl-7 { column-count: 7; }
+  .row.total-columns-xxl-8 { column-count: 8; }
+  .row.total-columns-xxl-9 { column-count: 9; }
+  .row.total-columns-xxl-10 { column-count: 10; }
+  .row.total-columns-xxl-11 { column-count: 11; }
+  .row.total-columns-xxl-12 { column-count: 12; }
+
+  .row.total-columns-breakpoints-n { column-count: var(--columns-xxl, 1); }
+}
+
+/* End: Breakpoints for responsiveness */
