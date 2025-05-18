@@ -308,7 +308,12 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 | Breakpoint        | Class Infix | Dimensions |
 | ----------------- | ----------- | ---------- |
-| Extra small       | None        | <576px     |
+| Miniscule         | None        | <64px      |
+| Tiny              | tn          | ≥64px      |
+| Ultra Small       | us          | ≥128px     |
+| Compact           | cp          | ≥240px     |
+| Extra extra small | xxs         | ≥360px     |
+| Extra small       | xs          | ≥454px     |
 | Small             | sm          | ≥576px     |
 | Medium            | md          | ≥768px     |
 | Large             | lg          | ≥992px     |
@@ -587,12 +592,18 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
 
 5. **Available Breakpoints for Responsive Design:**
 
-  - **Extra small** (`<576px`): No class infix needed.
+  - **Miniscule** (`<64px`): No class infix needed.
+  - **Tiny** (`≥64px`): Uses the `tn` class infix.
+  - **Ultra Small** (`≥128px`): Uses the `us` class infix.
+  - **Compact** (`≥240px`): Uses the `cp` class infix.
+  - **Extra extra small** (`≥360px`): Uses the `xxs` class infix.
+  - **Extra small** (`≥454px`): Uses the `xs` class infix.
   - **Small** (`≥576px`): Uses the `sm` class infix.
   - **Medium** (`≥768px`): Uses the `md` class infix.
   - **Large** (`≥992px`): Uses the `lg` class infix.
   - **Extra large** (`≥1200px`): Uses the `xl` class infix.
   - **Extra extra large** (`≥1400px`): Uses the `xxl` class infix.
+
 
 6. **Extensions:**
   - **Debugger**: 
