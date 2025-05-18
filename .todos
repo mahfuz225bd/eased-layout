@@ -7,11 +7,11 @@
   - Table-based layouts (**Note:** Semantically incorrect, avoid for new layouts)
   - Source File: `/_others/layout.old.css`
 
-- CSS grid layout with columns property
-- Add more smaller breakpoints for more smaller devices (smartwatch, featured phone) with (maybe) changing font-sizes
+- Make valid `.total-columns-{breakpoint}-n` classes usage for the CSS Column-Count Property Based Grid System.
 - Drag and Drop
 - Add more features to helpers.css
 - flex-basis like feature for grid.grid
+- row span, col span and more features for gird.grid
 
 Sidebar
 
@@ -154,18 +154,3 @@ Screen Width of Small Devices (Collected from ChatGPT):
 | **Smartwatches**      | 240px – 454px            | 240×240, 360×360, 454×454     | Apple Watch, Galaxy Watch           |
 | **Small Phones**      | 320px – 540px            | 320×480 (iPhone 3GS), 540×960 | Android phones (2010–2014 era)      |
 | **Mini Web Views**    | \~360px                  | 360 CSS pixels (viewport)     | Often used as mobile design base    |
-
-
-| Breakpoint        | Class Infix | Dimensions |
-| ----------------- | ----------- | ---------- |
-| Miniscule         | None        | <64px      |
-| Tiny              | tn          | ≥64px      |
-| Ultra Small       | us          | ≥128px     |
-| Compact           | cp          | ≥240px     |
-| Extra extra small | xxs         | ≥360px     |
-| Extra small       | xs          | ≥454px     |
-| Small             | sm          | ≥576px     |
-| Medium            | md          | ≥768px     |
-| Large             | lg          | ≥992px     |
-| Extra large       | xl          | ≥1200px    |
-| Extra extra large | xxl         | ≥1400px    |
