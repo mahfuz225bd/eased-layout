@@ -484,7 +484,7 @@ The following table provides a comprehensive list of helper classes available in
 |     | .max-h-100 |     | Sets the maximum height to 100%. |
 |     | .h-vh-100 |     | Sets the height to 100% of the viewport height (100vh). |
 |     | .min-h-vh-100 |     | Sets the minimum height to 100% of the viewport height (100vh). |
-| Line Height | .line-height-{0-1} |     | Sets the line height to either 0 or 1 for the text inside the element. |
+| Line Height | .line-height-{normal|0-1} |     | Sets the line height to normal or 0 or 1 for the text inside the element. |
 | Link Offset | .link-offset-{1-3} |     | Makes the underline on a link appear slightly lower, making it easier to read. Technically, it sets text-underline-offset to 0.125em, 0.25em, or 0.375em. |
 | User Select and Pointer Event | .link-offset-{1-3}-hover |     | Lowers the underline on a link only when you hover over it, creating a cleaner look. |
 | Border Radius | .rounded-{0-5\|circle\|pill} |     | Gives rounded corners to an element to make it look softer or more modern. Technically, it applies border-radius values: 0 for sharp corners, 1–5 for increasingly round corners (0.25rem to 2rem), circle makes the element fully circular (50%), and pill gives it an elongated capsule shape (50rem). |
