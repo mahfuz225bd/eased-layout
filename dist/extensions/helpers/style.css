@@ -727,9 +727,6 @@
 
 /* Start: Others */
 
-.stretched-link-container { position: relative; }
-.stretched-link::after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; content: ""; }
-
 .text-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .vr { display: inline-block; align-self: stretch; width: 1px; min-height: 1em; background-color: currentcolor; opacity: 0.25; }
 .focus-ring { background-color: rgba(108, 117, 125, 0.25); }
