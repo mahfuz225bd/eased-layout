@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../dist/extensions/helpers/style.css">
     <style>
         .box {
-            width: 100px;
+            width: 150px;
             height: 100px;
             background-color: lightblue;
             margin: 10px;
@@ -30,7 +30,7 @@
     </style>
 
     <script>
-        function test(baseClassName = '', className, hasBreakpoints = false, valueOrValues) {
+        function test(className, valueOrValues, hasBreakpoints = false, baseClassName = '') {
             // available breakpoints (excluding undefined first element)
             const breakpoints = ['tn', 'us', 'cp', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
@@ -40,7 +40,7 @@
                 // Format 1: With breakpoint, with valueOrValues
                 if (valueOrValues) {
                     const isValues = Array.isArray(valueOrValues);
-                    const isValue = typeof valueOrValues === 'string' || valueOrValues instanceof String;
+                    const isValue = !isValues;
 
                     if (isValues) {
                         const values = [...valueOrValues];
@@ -75,7 +75,7 @@
                 // Format 3: Without breakpoint, with valueOrValues
                 if (valueOrValues) {
                     const isValues = Array.isArray(valueOrValues);
-                    const isValue = typeof valueOrValues === 'string' || valueOrValues instanceof String;
+                    const isValue = !isValues;
 
                     if (isValues) {
                         const values = [...valueOrValues];
@@ -102,7 +102,7 @@
                     const fullClass = baseClassName ? `${baseClassName} ${className}` : className;
                     results.push(`<div class="${fullClass}">.${className}</div>`);
                 }
-            }            
+            }
 
             // Append the results to the body with a h3
             const container = document.querySelector('.container');
@@ -111,7 +111,7 @@
             testItem.className = 'test-item';
 
             const h3 = document.createElement('h3');
-            h3.textContent = `.${className}-`;
+            h3.textContent = `Class Prefix/Class Name: ${className}`;
             h3.id = `test-${className}`;
             testItem.appendChild(h3);
 
@@ -137,182 +137,183 @@
 
     <nav>
         <input type="search" id="searchList" placeholder="Search list" />
-        <ul id="navigation"></ul>
+        <ol id="navigation"></ol>
     </nav>
 
     <div class="container"></div>
 
     <script>
         // Typography
-        test('', 'lead', false, '');
-        test('', 'display', false, [1, 2, 3, 4, 5, 6]);
+        test('lead', '', false);
+        test('display', [1, 2, 3, 4, 5, 6], false);
 
         // Font
-        test('', 'fs', false, [1, 2, 3, 4, 5, 6]);
-        test('', 'font', false, 'monospace');
-        test('', 'font-style', false, ['italic', 'normal']);
-        test('', 'font-weight', false, ['lighter', 'light', 'normal', 'medium', 'semibold', 'bold', 'bolder']);
+        test('fs', [1, 2, 3, 4, 5, 6], false);
+        test('font', 'monospace', false);
+        test('font-style', ['italic', 'normal'], false);
+        test('font-weight', ['lighter', 'light', 'normal', 'medium', 'semibold', 'bold', 'bolder'], false);
 
         // Text
-        test('', 'text-align', true, ['left', 'center', 'right']);
-        test('', 'text-decoration', true, ['none', 'underline', 'line-through']);
-        test('', 'text', true, ['lowercase', 'uppercase', 'capitalize', 'wrap', 'nowrap']);
-        test('', 'text-color', true, ['black', 'white', 'muted', 'black-50', 'white-50', 'reset']);
-        test('', 'text-break', true, '');
+        test('text-align', ['left', 'center', 'right'], true);
+        test('text-decoration', ['none', 'underline', 'line-through'], true);
+        test('text', ['lowercase', 'uppercase', 'capitalize', 'wrap', 'nowrap'], true);
+        test('text-color', ['black', 'white', 'muted', 'black-50', 'white-50', 'reset'], true);
+        test('text-break', '', true);
 
         // Offset
-        test('box', 'offset', true, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+        test('offset', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], true, 'box');
 
         // Margin
-        test('box', 'm', true, [0, 1, 2, 3, 4, 5]);
-        test('box', 'mt', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'ml', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'mr', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'mb', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'mx', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'my', true, [0, 1, 2, 3, 4, 5, 'auto']);
+        test('m', [0, 1, 2, 3, 4, 5], true, 'box');
+        test('mt', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('ml', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('mr', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('mb', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('mx', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('my', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
 
         // Padding
-        test('box', 'p', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'pt', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'pl', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'pr', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'pb', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'px', true, [0, 1, 2, 3, 4, 5, 'auto']);
-        test('box', 'py', true, [0, 1, 2, 3, 4, 5, 'auto']);
+        test('p', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('pt', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('pl', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('pr', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('pb', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('px', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
+        test('py', [0, 1, 2, 3, 4, 5, 'auto'], true, 'box');
 
         // Gutter
-        test('box', 'g', false, [0, 1, 2, 3, 4, 5]);
-        test('box', 'gx', false, [0, 1, 2, 3, 4, 5]);
-        test('box', 'gy', false, [0, 1, 2, 3, 4, 5]);
+        test('g', [0, 1, 2, 3, 4, 5], false, 'box');
+        test('gx', [0, 1, 2, 3, 4, 5], false, 'box');
+        test('gy', [0, 1, 2, 3, 4, 5], false, 'box');
 
         // Ratio
-        test('box', 'ratio', false, ['1x1', '4x3', '16x9', '21x9']);
+        test('ratio', ['1x1', '4x3', '16x9', '21x9'], false, 'box');
 
         // Position
-        test('box', 'position', true, ['static', 'relative', 'absolute', 'fixed', 'sticky']);
-        test('box', 'position-absolute', true, [
+        test('position', ['static', 'relative', 'absolute', 'fixed', 'sticky'], true, 'box');
+        test('position-absolute', [
             'top-left', 'top-center', 'top-right',
             'middle-left', 'middle-center', 'middle-right',
             'bottom-left', 'bottom-center', 'bottom-right'
-        ]);
-        test('box', 'position-fixed', true, [
+        ], true, 'box');
+        test('position-fixed', [
             'top-left', 'top-center', 'top-right',
             'middle-left', 'middle-center', 'middle-right',
             'bottom-left', 'bottom-center', 'bottom-right'
-        ]);
-        test('box', 'position-sticky', true, [
+        ], true, 'box');
+        test('position-sticky', [
             'top-left', 'top-center', 'top-right',
             'middle-left', 'middle-center', 'middle-right',
             'bottom-left', 'bottom-center', 'bottom-right'
-        ]);
-        test('box', 'top', true, [0, 50, 100]);
-        test('box', 'left', true, [0, 50, 100]);
-        test('box', 'right', true, [0, 50, 100]);
-        test('box', 'bottom', true, [0, 50, 100]);
-        test('box', 'translate', true, ['middle', 'middle-x', 'middle-y']);
+        ], true, 'box');
+        test('top', [0, 50, 100], true, 'box');
+        test('left', [0, 50, 100], true, 'box');
+        test('right', [0, 50, 100], true, 'box');
+        test('bottom', [0, 50, 100], true, 'box');
+        test('translate', ['middle', 'middle-x', 'middle-y'], true, 'box');
 
         // Alignments
-        test('box', 'h-center', false, '');
-        test('box', 'center', false, '');
-        test('box', 'absolute-center', false, ['center', 'h-center', 'v-center']);
-        test('box', 'v-align', false, ['baseline', 'top', 'middle', 'bottom', 'text-bottom', 'text-top']);
+        test('h-center', '', false, 'box');
+        test('center', '', false, 'box');
+        test('absolute-center', ['center', 'h-center', 'v-center'], false, 'box');
+        test('v-align', ['baseline', 'top', 'middle', 'bottom', 'text-bottom', 'text-top'], false, 'box');
 
         // Stack
-        test('box', 'hstack', false, '');
-        test('box', 'vstack', false, '');
+        test('hstack', '', false, 'box');
+        test('vstack', '', false, 'box');
 
         // Visibility
-        test('box', 'visible', false, '');
-        test('box', 'invisible', false, '');
-        test('box', 'visually-hidden-focusable', false, '');
+        test('visible', '', false, 'box');
+        test('invisible', '', false, 'box');
+        test('visually-hidden-focusable', '', false, 'box');
 
         // Opacity
-        test('box', 'opacity', false, [0, 25, 50, 75, 100]);
+        test('opacity', [0, 25, 50, 75, 100], false, 'box');
 
         // Overflow
-        test('box', 'overflow', false, ['auto', 'hidden', 'visible', 'scroll']);
-        test('box', 'overflow-x', false, ['auto', 'hidden', 'visible', 'scroll']);
-        test('box', 'overflow-y', false, ['auto', 'hidden', 'visible', 'scroll']);
+        test('overflow', ['auto', 'hidden', 'visible', 'scroll'], false, 'box');
+        test('overflow-x', ['auto', 'hidden', 'visible', 'scroll'], false, 'box');
+        test('overflow-y', ['auto', 'hidden', 'visible', 'scroll'], false, 'box');
 
         // Float, Clear and Clearfix
-        test('box', 'float', true, ['left', 'right', 'none']);
-        test('box', 'clear', true, ['left', 'right', 'both', 'none']);
-        test('box', 'clearfix', false, '');
+        test('float', ['left', 'right', 'none'], true, 'box');
+        test('clear', ['left', 'right', 'both', 'none'], true, 'box');
+        test('clearfix', '', false, 'box');
 
         // Object Fit
-        test('box', 'object-fit', true, ['contain', 'cover', 'fill', 'scale', 'none']);
+        test('object-fit', ['contain', 'cover', 'fill', 'scale', 'none'], true, 'box');
 
         // Display
-        test('box', 'd', true, [
+        test('d', [
             'inline', 'block', 'contents', 'flex', 'grid', 'inline-block', 'inline-flex', 'inline-grid', 'inline-table',
             'list-item', 'run-in', 'table', 'table-caption', 'table-column-group', 'table-header-group', 'table-footer-group',
             'table-row-group', 'table-cell', 'table-column', 'table-row', 'none'
-        ]);
+        ], true, 'box');
 
         // Border
-        test('box', 'border-style', false, [
+        test('border-style', [
             'none', 'hidden', 'dotted', 'dashed', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset'
-        ]);
-        test('box', 'border', false, [0, 1, 2, 3, 4, 5]);
-        test('box', 'border-top', false, [1, 2, 3, 4, 5]);
-        test('box', 'border-left', false, [1, 2, 3, 4, 5]);
-        test('box', 'border-right', false, [1, 2, 3, 4, 5]);
-        test('box', 'border-bottom', false, [1, 2, 3, 4, 5]);
+        ], false, 'box');
+        test('border', [0, 1, 2, 3, 4, 5], false, 'box');
+        test('border-top', [1, 2, 3, 4, 5], false, 'box');
+        test('border-left', [1, 2, 3, 4, 5], false, 'box');
+        test('border-right', [1, 2, 3, 4, 5], false, 'box');
+        test('border-bottom', [1, 2, 3, 4, 5], false, 'box');
 
         // Width and Height
-        test('box', 'width', false, [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 'auto']);
-        test('box', 'max-width', false, 100);
-        test('box', 'vw-width', false, 100);
-        test('box', 'min-width', false, '100vw');
+        test('w', [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 'auto'], false, 'box');
+        test('max-width', 100, false, 'box');
+        test('vw-width', 100, false, 'box');
+        test('min-width', '100vw', false, 'box');
 
-        test('box', 'height', false, [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 'auto']);
-        test('box', 'max-height', false, 100);
-        test('box', 'vh-height', false, 100);
-        test('box', 'min-height', false, '100vh');
+        test('h', [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 'auto'], false, 'box');
+        test('max-height', 100, false, 'box');
+        test('vh-height', 100, false, 'box');
+        test('min-height', '100vh', false, 'box');
 
         // Line Height
-        test('box', 'line-height', false, [0, 1]);
+        test('line-height', [0, 1], false, 'box');
 
         // Link Offset
-        test('box', 'link-offset', false, [1, 2, 3]);
-        test('box', 'link-offset-hover', false, [1, 2, 3]);
+        test('link-offset', [1, 2, 3], false, 'box');
+        test('link-offset-hover', [1, 2, 3], false, 'box');
 
         // User Select and Pointer Event
-        test('box', 'user-select', false, ['all', 'auto', 'none']);
-        test('box', 'pointer-events', false, ['none', 'auto']);
+        test('user-select', ['all', 'auto', 'none'], false, 'box');
+        test('pointer-events', ['none', 'auto'], false, 'box');
 
         // Rounded
-        test('box', 'rounded', false, [0, 1, 2, 3, 4, 5, 'circle', 'pill']);
-        test('box', 'rounded-top', false, [0, 1, 2, 3, 4, 5, 'circle', 'pill']);
-        test('box', 'rounded-left', false, [0, 1, 2, 3, 4, 5, 'circle', 'pill']);
-        test('box', 'rounded-right', false, [0, 1, 2, 3, 4, 5, 'circle', 'pill']);
-        test('box', 'rounded-bottom', false, [0, 1, 2, 3, 4, 5, 'circle', 'pill']);
+        test('rounded', [0, 1, 2, 3, 4, 5, 'circle', 'pill'], false, 'box');
+        test('rounded-top', [0, 1, 2, 3, 4, 5, 'circle', 'pill'], false, 'box');
+        test('rounded-left', [0, 1, 2, 3, 4, 5, 'circle', 'pill'], false, 'box');
+        test('rounded-right', [0, 1, 2, 3, 4, 5, 'circle', 'pill'], false, 'box');
+        test('rounded-bottom', [0, 1, 2, 3, 4, 5, 'circle', 'pill'], false, 'box');
 
         // Z-index
-        test('box', 'z-index', false, ['n1', 0, 1, 2, 3]);
+        test('z-index', ['n1', 0, 1, 2, 3], false, 'box');
 
         // Flex
-        test('box', 'flex-fill', true);
-        test('box', 'flex-direction', true, ['row, row-reverse', 'column', 'column-reverse']);
-        test('box', 'flex-wrap', ['nowrap', 'wrap', 'wrap-reverse']);
-        test('box', 'flex-basis', true, [0, 'auto']);
-        test('box', 'flex-grow', true, [0, 1]);
-        test('box', 'flex-shrink', true, [0, 1]);
+        test('flex-fill', '', true, 'box');
+        test('flex-direction', ['row, row-reverse', 'column', 'column-reverse'], true, 'box');
+        test('flex-wrap', ['nowrap', 'wrap', 'wrap-reverse'], false, 'box');
+        test('flex-basis', [0, 'auto'], true, 'box');
+        test('flex-grow', [0, 1], true, 'box');
+        test('flex-shrink', [0, 1], true, 'box');
 
-        /* Grid Styles */
-        test('box', 'grid-auto-flow', true, ['row', 'column', 'dense', 'row-dense', 'column-dense']);
-        test('box', 'grid-auto-rows', true, ['auto', 0, 'min-content', 'max-content']);
-        test('box', 'grid-auto-columns', true, ['auto', 0, 'min-content', 'max-content']);
+        // Grid Styles
+        test('grid-auto-flow', ['row', 'column', 'dense', 'row-dense', 'column-dense'], true, 'box');
+        test('grid-auto-rows', ['auto', 0, 'min-content', 'max-content'], true, 'box');
+        test('grid-auto-columns', ['auto', 0, 'min-content', 'max-content'], true, 'box');
 
-        /* Flex and Grid Styles */
-        test('box', 'align-content-stretch', true, ['stretch', 'center', 'left', 'right', 'space-between', 'space-around', 'space-evenly']);
-        test('box', 'align-items-normal', true, ['normal', 'stretch', 'left', 'right', 'center', 'baseline']);
-        test('box', 'justify-content', true, ['left', 'right', 'center', 'space-between', 'space-around', 'space-evenly']);
-        test('box', 'align-self', true, ['auto', 'stretch', 'center', 'left', 'right', 'baseline']);
-        test('box', 'column-gap', true, [0, 'normal']);
-        test('box', 'row-gap', true, [0, 'normal']);
-        test('box', 'order', true, ['first', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+        // Flex and Grid Styles
+        test('align-content-stretch', ['stretch', 'center', 'left', 'right', 'space-between', 'space-around', 'space-evenly'], true, 'box');
+        test('align-items-normal', ['normal', 'stretch', 'left', 'right', 'center', 'baseline'], true, 'box');
+        test('justify-content', ['left', 'right', 'center', 'space-between', 'space-around', 'space-evenly'], true, 'box');
+        test('align-self', ['auto', 'stretch', 'center', 'left', 'right', 'baseline'], true, 'box');
+        test('column-gap', [0, 'normal'], true, 'box');
+        test('row-gap', [0, 'normal'], true, 'box');
+        test('order', ['first', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], true, 'box');
+
 
         // DOMContentLoaded
         document.addEventListener('DOMContentLoaded', function () {
