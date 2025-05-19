@@ -933,3 +933,16 @@ div.container:has(.row), main:has(.row) { display: block; }
 }
 
 /* End: Breakpoints for responsiveness */
+
+/* Layout Rules (Grid Layout):
+   - The grid system uses `.row` for organizing content in columns. Without classes for columns, immediate child elements of a `.row` are considered columns.
+   - Fixed Grid (12 columns): Use `.total-columns-1` to `.total-columns-12` to define column widths (e.g., `.total-columns-2` = 50%).
+   - For 12+ columns: Use `.total-columns-n` to `.row` element with `--columns` variable. The column widths will be calculated automatically by `width: calc(100% / var(--columns))`.
+*/
+
+/* Responsive for Layout Rules (Grid Layout):
+   - There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
+   - For Fixed Grid (12 columns): Along with `.row`, use any class according to the format: `.total-{available breakpoint}-{columns}`; columns should be 1 to 12.
+   - 12+ columns: Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value
+                  Alternatively, [Invalid for CSS Column-Count Property Based Grid Layout] along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoint}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
+*/
