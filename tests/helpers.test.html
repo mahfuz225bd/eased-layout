@@ -21,6 +21,20 @@
             height: 100px;
         }
 
+        .badge {
+            display: inline-block;
+            padding: 0.35em 0.65em;
+            font-size: 0.75em;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.375rem;
+            background-color: dodgerblue;
+        }
+
         .test-item {
             display: none;
         }
@@ -138,6 +152,9 @@
                 }
                 // Format 2: With breakpoint, without classPostfixOrPostfixes
                 else {
+                    const fullClass = baseClassName ? `${baseClassName} ${classPrefix}` : `${classPrefix}`;
+                    results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
+
                     for (const bp of breakpoints) {
                         const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}` : `${classPrefix}-${bp}`;
                         results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
@@ -237,8 +254,8 @@
         test('text-align', [{ classPostfix: 'left', defaultClass: 'text-align-right' }, 'center', 'right'], true, '', 'p');
         test('text-decoration', [{ classPostfix: 'none', defaultClass: 'text-decoration-line-through' }, 'underline', 'line-through'], true, '', 'p');
         test('text', [{ classPostfix: 'lowercase', defaultClass: 'text-uppercase' }, 'uppercase', 'capitalize'], true, '', 'p');
-        test('text-wrap', '', true, '', 'p', {}, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
-        test('text-nowrap', '', true, '', 'p', {}, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+        test('text-wrap', '', true, '', '', { 'style': 'max-width: 15px' }, '');
+        test('text-nowrap', '', true, '', '', { 'style': 'max-width: 15px' }, '');
         test('text-color', [{ classPostfix: 'black', defaultClass: 'text-color-white' }, 'white', 'muted', 'black-50', 'white-50', 'reset'], true, '', 'p');
         test('text-break', '', true, '', 'p');
 
