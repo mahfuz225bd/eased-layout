@@ -45,21 +45,9 @@
     <script>
         // Create a element with a class name and text content
         function createElement(className, innerHTML, tagName, attributes = {}) {
-
             const element = document.createElement(tagName || 'div');
+
             element.className = className;
-
-            // className.trim().split(/\s+/).forEach(cls => {
-            //     try {
-            //         if (!cls) return; // just in case
-            //         console.log(`Adding class: "${cls}"`);
-            //         element.classList.add(cls);
-            //     } catch (e) {
-            //         console.error(`Invalid class: "${cls}"`, e);
-            //         throw e;
-            //     }
-            // });
-
             element.innerHTML = innerHTML;
 
             for (const [attr, value] of Object.entries(attributes)) {
@@ -88,35 +76,63 @@
 
                         // Push normal classes (without breakpoints)
                         values.forEach((value) => {
-                            const strPostfix = new String(value);
-                            results.push(`<h4>Class Postfix: ${strPostfix}</h4>`);
+                            let strClassPostfix, defaultClass = '';
 
-                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
-                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                            if (typeof value === 'object') {
+                                strClassPostfix = value.classPostfix;
+                                defaultClass = value.defaultClass || '';
+                                results.push(`<h4>Class Postfix: ${strClassPostfix}</h4>`);
+
+                                const fullClass = baseClassName
+                                    ? `${baseClassName} ${classPrefix}-${strClassPostfix}`.trim()
+                                    : `${classPrefix}-${strClassPostfix}`.trim();
+
+                                results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
+                            } else {
+                                strClassPostfix = value;
+                                results.push(`<h4>Class Postfix: ${strClassPostfix}</h4>`);
+
+                                const fullClass = baseClassName
+                                    ? `${baseClassName} ${defaultClass} ${classPrefix}-${strClassPostfix}`.trim()
+                                    : `${defaultClass} ${classPrefix}-${strClassPostfix}`.trim();
+
+                                results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
+                            }
                         });
 
                         // Push with breakpoints
                         values.forEach((value) => {
-                            const strPostfix = new String(value);
-                            results.push(`<h4>Class Postfix: {available breakpoints}-${strPostfix}</h4>`);
+                            let strClassPostfix, defaultClass = '';
+
+                            if (typeof value === 'object') {
+                                strClassPostfix = value.classPostfix;
+                                defaultClass = value.defaultClass || '';
+                            } else {
+                                strClassPostfix = value;
+                            }
+
+                            results.push(`<h4>Class Postfix: {available breakpoints}-${strClassPostfix}</h4>`);
 
                             for (const bp of breakpoints) {
-                                const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strPostfix}` : `${classPrefix}-${bp}-${strPostfix}`;
-                                results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                                const fullClass = baseClassName
+                                    ? `${baseClassName} ${defaultClass} ${classPrefix}-${bp}-${strClassPostfix}`.trim()
+                                    : `${defaultClass} ${classPrefix}-${bp}-${strClassPostfix}`.trim();
+
+                                results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
                             }
                         });
                     }
 
                     if (isPostfix) {
-                        const strPostfix = new String(classPostfixOrPostfixes);
+                        const strClassPostfix = new String(classPostfixOrPostfixes);
                         // Push normal class (without breakpoints)
-                        const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
-                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                        const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strClassPostfix}` : `${classPrefix}-${strClassPostfix}`;
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
 
                         // Push with breakpoints classes
                         for (const bp of breakpoints) {
-                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strPostfix}` : `${classPrefix}-${bp}-${strPostfix}`;
-                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strClassPostfix}` : `${classPrefix}-${bp}-${strClassPostfix}`;
+                            results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
                         }
                     }
                 }
@@ -124,7 +140,7 @@
                 else {
                     for (const bp of breakpoints) {
                         const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}` : `${classPrefix}-${bp}`;
-                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
                     }
                 }
             } else {
@@ -137,19 +153,19 @@
                         const values = [...classPostfixOrPostfixes];
 
                         values.forEach((value) => {
-                            const strPostfix = new String(value);                            
-                            results.push(`<h4>Class Postfix: ${strPostfix}</h4>`);
+                            const strClassPostfix = new String(value);
+                            results.push(`<h4>Class Postfix: ${strClassPostfix}</h4>`);
 
-                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
-                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strClassPostfix}` : `${classPrefix}-${strClassPostfix}`;
+                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${classPrefix}-${strClassPostfix}`, tagName, attributes));
                         });
                     }
 
                     if (isPostfix) {
-                        const strPostfix = new String(classPostfixOrPostfixes);
+                        const strClassPostfix = new String(classPostfixOrPostfixes);
 
-                        const fullClass = `${baseClassName} ${classPrefix}-${strPostfix}`;
-                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                        const fullClass = `${baseClassName} ${classPrefix}-${strClassPostfix}`;
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
                     }
 
 
@@ -159,7 +175,7 @@
                     const className = classPrefix
 
                     const fullClass = baseClassName ? `${baseClassName} ${className}` : className;
-                    results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                    results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
                 }
             }
 
@@ -218,10 +234,12 @@
 
         // TODO: Classlist for each class prefix (get argument as object)
         // Text
-        test('text-align', ['left', 'center', 'right'], true, '', 'p');
-        test('text-decoration', ['none', 'underline', 'line-through'], true, '', 'p');
-        test('text', ['lowercase', 'uppercase', 'capitalize', 'wrap', 'nowrap'], true, '', 'p');
-        test('text-color', ['black', 'white', 'muted', 'black-50', 'white-50', 'reset'], true, '', 'p');
+        test('text-align', [{ classPostfix: 'left', defaultClass: 'text-align-right' }, 'center', 'right'], true, '', 'p');
+        test('text-decoration', [{ classPostfix: 'none', defaultClass: 'text-decoration-line-through' }, 'underline', 'line-through'], true, '', 'p');
+        test('text', [{ classPostfix: 'lowercase', defaultClass: 'text-uppercase' }, 'uppercase', 'capitalize'], true, '', 'p');
+        test('text-wrap', '', true, '', 'p', {}, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+        test('text-nowrap', '', true, '', 'p', {}, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+        test('text-color', [{ classPostfix: 'black', defaultClass: 'text-color-white' }, 'white', 'muted', 'black-50', 'white-50', 'reset'], true, '', 'p');
         test('text-break', '', true, '', 'p');
 
         // Offset
