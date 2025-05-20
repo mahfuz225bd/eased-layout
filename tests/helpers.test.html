@@ -86,9 +86,19 @@
                     if (isPostfixes) {
                         const values = [...classPostfixOrPostfixes];
 
+                        // Push normal classes (without breakpoints)
                         values.forEach((value) => {
                             const strPostfix = new String(value);
                             results.push(`<h4>Class Postfix: ${strPostfix}</h4>`);
+
+                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
+                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
+                        });
+
+                        // Push with breakpoints
+                        values.forEach((value) => {
+                            const strPostfix = new String(value);
+                            results.push(`<h4>Class Postfix: {available breakpoints}-${strPostfix}</h4>`);
 
                             for (const bp of breakpoints) {
                                 const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strPostfix}` : `${classPrefix}-${bp}-${strPostfix}`;
@@ -99,7 +109,11 @@
 
                     if (isPostfix) {
                         const strPostfix = new String(classPostfixOrPostfixes);
+                        // Push normal class (without breakpoints)
+                        const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
 
+                        // Push with breakpoints classes
                         for (const bp of breakpoints) {
                             const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strPostfix}` : `${classPrefix}-${bp}-${strPostfix}`;
                             results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
