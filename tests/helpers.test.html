@@ -123,9 +123,10 @@
                         const values = [...classPostfixOrPostfixes];
 
                         values.forEach((value) => {
-                            const strPostfix = new String(value);
-                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
+                            const strPostfix = new String(value);                            
                             results.push(`<h4>Class Postfix: ${strPostfix}</h4>`);
+
+                            const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
                             results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
                         });
                     }
