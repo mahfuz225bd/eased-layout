@@ -32,10 +32,46 @@
         nav input[type="search"] {
             margin-left: 37px;
         }
+
+        h3 {
+            color: blue;
+        }
+
+        h4 {
+            color: green;
+        }
     </style>
 
     <script>
-        function test(classPrefix, classPostfixOrPostfixes, hasBreakpoints = false, baseClassName = '', tagName = 'div') {
+        // Create a element with a class name and text content
+        function createElement(className, innerHTML, tagName, attributes = {}) {
+
+            const element = document.createElement(tagName || 'div');
+            element.className = className;
+
+            // className.trim().split(/\s+/).forEach(cls => {
+            //     try {
+            //         if (!cls) return; // just in case
+            //         console.log(`Adding class: "${cls}"`);
+            //         element.classList.add(cls);
+            //     } catch (e) {
+            //         console.error(`Invalid class: "${cls}"`, e);
+            //         throw e;
+            //     }
+            // });
+
+            element.innerHTML = innerHTML;
+
+            for (const [attr, value] of Object.entries(attributes)) {
+                element.setAttribute(attr, value);
+            }
+
+            return element.outerHTML;
+        }
+
+
+        // Function to create test elements
+        function test(classPrefix, classPostfixOrPostfixes, hasBreakpoints = false, baseClassName = '', tagName = 'div', attributes = {}, innerHTML = '') {
             // available breakpoints (excluding undefined first element)
             const breakpoints = ['tn', 'us', 'cp', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
@@ -52,10 +88,11 @@
 
                         values.forEach((value) => {
                             const strPostfix = new String(value);
+                            results.push(`<h4>Class Postfix: ${strPostfix}</h4>`);
 
                             for (const bp of breakpoints) {
                                 const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strPostfix}` : `${classPrefix}-${bp}-${strPostfix}`;
-                                results.push(`<${tagName} class="${fullClass}">.${classPrefix}-${bp}-${strPostfix}</${tagName}>`);
+                                results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
                             }
                         });
                     }
@@ -65,15 +102,15 @@
 
                         for (const bp of breakpoints) {
                             const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}-${strPostfix}` : `${classPrefix}-${bp}-${strPostfix}`;
-                            results.push(`<${tagName} class="${fullClass}">.${classPrefix}-${bp}-${strPostfix}</${tagName}>`);
+                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
                         }
                     }
                 }
                 // Format 2: With breakpoint, without classPostfixOrPostfixes
                 else {
                     for (const bp of breakpoints) {
-                        const fullClass = `${baseClassName} ${classPrefix}-${bp}`;
-                        results.push(`<${tagName} class="${fullClass}">.${classPrefix}-${bp}</${tagName}>`);
+                        const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}` : `${classPrefix}-${bp}`;
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
                     }
                 }
             } else {
@@ -87,9 +124,9 @@
 
                         values.forEach((value) => {
                             const strPostfix = new String(value);
-
                             const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strPostfix}` : `${classPrefix}-${strPostfix}`;
-                            results.push(`<${tagName} class="${fullClass}">.${classPrefix}-${strPostfix}</${tagName}>`);
+                            results.push(`<h4>Class Postfix: ${strPostfix}</h4>`);
+                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
                         });
                     }
 
@@ -97,7 +134,7 @@
                         const strPostfix = new String(classPostfixOrPostfixes);
 
                         const fullClass = `${baseClassName} ${classPrefix}-${strPostfix}`;
-                        results.push(`<${tagName} class="${fullClass}">.${classPrefix}-${strPostfix}</${tagName}>`);
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
                     }
 
 
@@ -107,7 +144,7 @@
                     const className = classPrefix
 
                     const fullClass = baseClassName ? `${baseClassName} ${className}` : className;
-                    results.push(`<${tagName} class="${fullClass}">.${className}</${tagName}>`);
+                    results.push(createElement(fullClass, innerHTML ? innerHTML : `.${fullClass}`, tagName, attributes));
                 }
             }
 
@@ -118,7 +155,7 @@
             testItem.className = 'test-item';
 
             const h3 = document.createElement('h3');
-            h3.textContent = `Class Prefix/Class Name: ${classPrefix}`;
+            h3.textContent = `Class Prefix: ${classPrefix}`;
             h3.id = `test-${classPrefix}`;
             testItem.appendChild(h3);
 
@@ -152,10 +189,8 @@
     <script>
         // TODO: for hasBreakpoints=true, along with breakpoint class examples, should provide normal class examples as well
         // TODO: Classlist for each class prefix (get argument as object)
-        // TODO: Attribute for self element
         // TODO: Parent element
         // TODO: Child element
-        // TODO: InnerHTML for self element
 
         // Typography
         test('lead', '', false, '', 'p');
@@ -201,8 +236,9 @@
         test('gx', [0, 1, 2, 3, 4, 5], false, 'box');
         test('gy', [0, 1, 2, 3, 4, 5], false, 'box');
 
-        // Ratio (TODO: attribute for self element)
-        test('ratio', ['1x1', '4x3', '16x9', '21x9'], false, 'box-full');
+
+        // Ratio
+        test('ratio', ['1x1', '4x3', '16x9', '21x9'], false, '', '', {}, '<iframe src="https://cdn.pixabay.com/video/2025/04/29/275633_large.mp4" allowfullscreen></iframe>');
 
         // Position
         test('position', ['static', 'relative', 'absolute', 'fixed', 'sticky'], true, 'box');
@@ -235,10 +271,9 @@
         test('absolute-center', ['center', 'h-center', 'v-center'], false, 'box');
         test('v-align', ['baseline', 'top', 'middle', 'bottom', 'text-bottom', 'text-top'], false, 'box');
 
-        // TODO: Child element
         // Stack
-        test('hstack', '', false, 'box');
-        test('vstack', '', false, 'box');
+        test('hstack', '', false, '', 'div', {}, '<button>Button1</button><button>Button2</button><button>Button3</button><a href="#">Link1</a><a href="#">Link2</a>');
+        test('vstack', '', false, '', 'div', {}, '<button>Button1</button><button>Button2</button><button>Button3</button><a href="#">Link1</a><a href="#">Link2</a>');
 
         // Visibility
         test('visible', '', false, 'box');
@@ -258,9 +293,13 @@
         test('clear', ['left', 'right', 'both', 'none'], true, 'box');
         test('clearfix', '', false, 'box');
 
-        // TODO: attribute for self element
         // Object Fit
-        test('object-fit', ['contain', 'cover', 'fill', 'scale', 'none'], true, 'box', 'img');
+        let [height, width] = [140, 200];
+        test('object-fit-contain', '', true, '', 'img', { src: `data:image/svg+xml,%3Csvg%20style%3D'font-size%3A%201.125rem%3B%20font-family%3Asystem-ui%2C-apple-system%2C%22Segoe%20UI%22%2CRoboto%2C%22Helvetica%20Neue%22%2C%22Noto%20Sans%22%2C%22Liberation%20Sans%22%2CArial%2Csans-serif%2C%22Apple%20Color%20Emoji%22%2C%22Segoe%20UI%20Emoji%22%2C%22Segoe%20UI%20Symbol%22%2C%22Noto%20Color%20Emoji%22%3B%20-webkit-user-select%3A%20none%3B%20-moz-user-select%3A%20none%3B%20user-select%3A%20none%3B%20text-anchor%3A%20middle%3B'%20width%3D'200'%20height%3D'200'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Ctitle%3EPlaceholder%3C%2Ftitle%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23868e96'%3E%3C%2Frect%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20fill%3D'%23dee2e6'%20dy%3D'.3em'%3EObject%20fit%20contain%3C%2Ftext%3E%3C%2Fsvg%3E`, width, height, alt: 'Placeholder: Object fit contain' });
+        test('object-fit-cover', '', true, '', 'img', { src: `data:image/svg+xml,%3Csvg%20style%3D'font-size%3A%201.125rem%3B%20font-family%3Asystem-ui%2C-apple-system%2C%22Segoe%20UI%22%2CRoboto%2C%22Helvetica%20Neue%22%2C%22Noto%20Sans%22%2C%22Liberation%20Sans%22%2CArial%2Csans-serif%2C%22Apple%20Color%20Emoji%22%2C%22Segoe%20UI%20Emoji%22%2C%22Segoe%20UI%20Symbol%22%2C%22Noto%20Color%20Emoji%22%3B%20-webkit-user-select%3A%20none%3B%20-moz-user-select%3A%20none%3B%20user-select%3A%20none%3B%20text-anchor%3A%20middle%3B'%20width%3D'200'%20height%3D'200'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Ctitle%3EPlaceholder%3C%2Ftitle%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23868e96'%3E%3C%2Frect%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20fill%3D'%23dee2e6'%20dy%3D'.3em'%3EObject%20fit%20cover%3C%2Ftext%3E%3C%2Fsvg%3E`, width, height, alt: 'Placeholder: Object fit cover' });
+        test('object-fit-fill', '', true, '', 'img', { src: `data:image/svg+xml,%3Csvg%20style%3D'font-size%3A%201.125rem%3B%20font-family%3Asystem-ui%2C-apple-system%2C%22Segoe%20UI%22%2CRoboto%2C%22Helvetica%20Neue%22%2C%22Noto%20Sans%22%2C%22Liberation%20Sans%22%2CArial%2Csans-serif%2C%22Apple%20Color%20Emoji%22%2C%22Segoe%20UI%20Emoji%22%2C%22Segoe%20UI%20Symbol%22%2C%22Noto%20Color%20Emoji%22%3B%20-webkit-user-select%3A%20none%3B%20-moz-user-select%3A%20none%3B%20user-select%3A%20none%3B%20text-anchor%3A%20middle%3B'%20width%3D'200'%20height%3D'200'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Ctitle%3EPlaceholder%3C%2Ftitle%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23868e96'%3E%3C%2Frect%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20fill%3D'%23dee2e6'%20dy%3D'.3em'%3EObject%20fit%20fill%3C%2Ftext%3E%3C%2Fsvg%3E`, width, height, alt: 'Placeholder: Object fit fill' });
+        test('object-fit-scale', '', true, '', 'img', { src: `data:image/svg+xml,%3Csvg%20style%3D'font-size%3A%201.125rem%3B%20font-family%3Asystem-ui%2C-apple-system%2C%22Segoe%20UI%22%2CRoboto%2C%22Helvetica%20Neue%22%2C%22Noto%20Sans%22%2C%22Liberation%20Sans%22%2CArial%2Csans-serif%2C%22Apple%20Color%20Emoji%22%2C%22Segoe%20UI%20Emoji%22%2C%22Segoe%20UI%20Symbol%22%2C%22Noto%20Color%20Emoji%22%3B%20-webkit-user-select%3A%20none%3B%20-moz-user-select%3A%20none%3B%20user-select%3A%20none%3B%20text-anchor%3A%20middle%3B'%20width%3D'200'%20height%3D'200'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Ctitle%3EPlaceholder%3C%2Ftitle%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23868e96'%3E%3C%2Frect%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20fill%3D'%23dee2e6'%20dy%3D'.3em'%3EObject%20fit%20scale%20down%3C%2Ftext%3E%3C%2Fsvg%3E`, width, height, alt: 'Placeholder: Object fit scale down' });
+        test('object-fit-none', '', true, '', 'img', { src: `data:image/svg+xml,%3Csvg%20style%3D'font-size%3A%201.125rem%3B%20font-family%3Asystem-ui%2C-apple-system%2C%22Segoe%20UI%22%2CRoboto%2C%22Helvetica%20Neue%22%2C%22Noto%20Sans%22%2C%22Liberation%20Sans%22%2CArial%2Csans-serif%2C%22Apple%20Color%20Emoji%22%2C%22Segoe%20UI%20Emoji%22%2C%22Segoe%20UI%20Symbol%22%2C%22Noto%20Color%20Emoji%22%3B%20-webkit-user-select%3A%20none%3B%20-moz-user-select%3A%20none%3B%20user-select%3A%20none%3B%20text-anchor%3A%20middle%3B'%20width%3D'200'%20height%3D'200'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Ctitle%3EPlaceholder%3C%2Ftitle%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23868e96'%3E%3C%2Frect%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20fill%3D'%23dee2e6'%20dy%3D'.3em'%3EObject%20fit%20none%3C%2Ftext%3E%3C%2Fsvg%3E`, width, height, alt: 'Placeholder: Object fit none' });
 
         // Display
         test('d', [
@@ -290,9 +329,9 @@
         test('vh-height', 100, false, 'box');
         test('min-height', '100vh', false, 'box');
 
-        // TODO: innerHTML for self element
         // Line Height
-        test('line-height', [0, 1], false, 'box');
+        test('line-height-0', '', false, 'box', 'p', {}, '.line-height-0<br>.line-height-0<br>.line-height-0');
+        test('line-height-1', '', false, 'box', 'p', {}, '.line-height-1<br>.line-height-1<br>.line-height-1');
 
         // Link Offset
         test('link-offset', [1, 2, 3], false, '', 'a');
@@ -300,7 +339,7 @@
 
         // User Select and Pointer Event
         test('user-select', ['all', 'auto', 'none'], false, '', 'p');
-        test('pointer-events', ['none', 'auto'], false, '', 'a href="#"');
+        test('pointer-events', ['none', 'auto'], false, '', 'a');
 
         // Rounded
         test('rounded', [0, 1, 2, 3, 4, 5, 'circle', 'pill'], false, 'box');
@@ -313,11 +352,12 @@
         test('z-index', ['n1', 0, 1, 2, 3], false, 'box');
 
         // Flex
-        // TODO: Parent element
         // TODO: Child element
-        test('flex-fill', '', true, 'box');
-        test('flex-direction', ['row, row-reverse', 'column', 'column-reverse'], true, 'box');
-        test('flex-wrap', ['nowrap', 'wrap', 'wrap-reverse'], false, 'box');
+        test('flex-direction', ['row', 'row-reverse', 'column', 'column-reverse'], true, 'd-flex', 'div', {}, '<div style="color: red;">Flex item 1</div><div style="color:green;">Flex item 2</div><div style="color: blue;">Flex item 3</div>');
+        test('flex-wrap', ['nowrap', 'wrap', 'wrap-reverse'], false, 'd-flex', '', {}, '<div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div><div class="p-2">Flex item</div>');
+
+        // TODO: Parent element
+        test('flex-fill', '', true, 'box', '', {}, 'flex-fill');
         test('flex-basis', [0, 'auto'], true, 'box');
         test('flex-grow', [0, 1], true, 'box');
         test('flex-shrink', [0, 1], true, 'box');
