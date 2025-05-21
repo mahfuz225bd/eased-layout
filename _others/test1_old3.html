@@ -21,11 +21,11 @@
             clear: both;
         }
 
-        main section,
+        /*main section,
         main article,
         .container main {
             width: 60%
-        }
+        }*/
 
         /* Utility classes */
         .container::after,
@@ -140,8 +140,44 @@
     <footer>Footer</footer>
 
     <script>
-        const elements = document.querySelectorAll('aside, .container main, main .container, section, article');
-        elements.forEach(el => el.classList.add('left'));
+        function updateLayoutWidths() {
+            document.querySelectorAll('.container, main').forEach(parent => {
+                const asides = parent.querySelectorAll(':scope > aside');
+
+                // Find the main content element
+                const mainContent = parent.querySelector(
+                    ':scope > main, :scope > .container, :scope > section, :scope > article'
+                );
+
+                const parentWidth = parent.clientWidth;
+
+                if (asides.length === 2) {
+                    const asideWidth = parentWidth * 0.25;
+                    const mainWidth = parentWidth * 0.50;
+                    asides.forEach(el => el.style.width = `${asideWidth}px`);
+                    if (mainContent) mainContent.style.width = `${mainWidth}px`;
+                } else if (asides.length === 1) {
+                    const asideWidth = parentWidth * 0.20;
+                    const mainWidth = parentWidth * 0.80;
+                    asides[0].style.width = `${asideWidth}px`;
+                    if (mainContent) mainContent.style.width = `${mainWidth}px`;
+                } else {
+                    if (mainContent) mainContent.style.width = `${parentWidth}px`;
+                }
+            });
+        }
+
+        function applyLeftClass() {
+            const elements = document.querySelectorAll('aside, .container main, main .container, section, article');
+            elements.forEach(el => el.classList.add('left'));
+        }
+
+        window.addEventListener('load', () => {
+            applyLeftClass();
+            updateLayoutWidths();
+        });
+
+        window.addEventListener('resize', updateLayoutWidths);
     </script>
 
 </body>
