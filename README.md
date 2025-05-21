@@ -428,7 +428,7 @@ The following table provides a comprehensive list of helper classes available in
 | Text | .text-align-{left\|right} | .text-align-{left\|right}-{available breakpoints} | To specify text align left or right. |
 |     | .text-decoration-{none\|underline\|line-through} | .text-decoration-{none\|underline\|line-through}-{available breakpoints} | To specify the decoration line of a text. |
 |     | .text-{lowercase\|uppercase\|capitalize} | .text-{lowercase\|uppercase\|capitalize}-{available breakpoints} | To specify the text transformation (lowercase, uppercase, capitalize). |
-|     | .text-{wrap\|nowrap} | .text-{wrap\|nowrap}-{available breakpoints} | To specify how white-space inside an element is handled. |
+|     | .white-space-{normal\|nowrap} | .text-{normal\|nowrap}-{available breakpoints} | To specify how white-space inside an element is handled. |
 |     | .text-color-{black\|white\|muted\|black-50\|white-50\|reset} | .text-color-{black\|white\|muted\|black-50\|white-50\|reset}-{available breakpoints} | Text color utility classes for applying solid or semi-transparent black/white colors, muted tone (rgba(33, 37, 41, 0.75)), or resetting to the inherited text color. |
 |     | .text-break | .text-break-{available breakpoints} | Ensures long words or URLs break and wrap within their container to prevent overflow, using word-wrap and word-break properties for consistent behavior across browsers. |
 | Offset | .offset-{1-11} | .offset-{1-11}-{available breakpoints} | Utility classes for applying left margin offsets as percentages of the container width, ranging from 8.33% (.offset-1) to 91.66% (.offset-11), allowing for precise positioning of elements within a grid system. |

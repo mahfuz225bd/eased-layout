@@ -66,8 +66,8 @@
 .text-uppercase { text-transform: uppercase !important; }
 .text-capitalize { text-transform: capitalize !important; }
 
-.text-wrap { white-space: normal !important; }
-.text-nowrap { white-space: nowrap !important; }
+.white-space-normal { white-space: normal !important; }
+.white-space-nowrap { white-space: nowrap !important; }
 
 .text-color-black { color: rgba(0, 0, 0, 1) !important; }
 .text-color-white { color: rgba(255, 255, 255, 1) !important; }
@@ -1390,8 +1390,8 @@
    .text-us-uppercase { text-transform: uppercase !important; }
    .text-us-capitalize { text-transform: capitalize !important; }
 
-   .text-us-wrap { white-space: normal !important; }
-   .text-us-nowrap { white-space: nowrap !important; }
+   .white-space-us-normal { white-space: normal !important; }
+   .white-space-us-nowrap { white-space: nowrap !important; }
 
    .text-color-us-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-us-white { color: rgba(255, 255, 255, 1) !important; }
@@ -1710,8 +1710,8 @@
    .text-cp-uppercase { text-transform: uppercase !important; }
    .text-cp-capitalize { text-transform: capitalize !important; }
 
-   .text-cp-wrap { white-space: normal !important; }
-   .text-cp-nowrap { white-space: nowrap !important; }
+   .white-space-cp-normal { white-space: normal !important; }
+   .white-space-cp-nowrap { white-space: nowrap !important; }
 
    .text-color-cp-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-cp-white { color: rgba(255, 255, 255, 1) !important; }
@@ -2030,8 +2030,8 @@
    .text-xxs-uppercase { text-transform: uppercase !important; }
    .text-xxs-capitalize { text-transform: capitalize !important; }
 
-   .text-xxs-wrap { white-space: normal !important; }
-   .text-xxs-nowrap { white-space: nowrap !important; }
+   .white-space-xxs-normal { white-space: normal !important; }
+   .white-space-xxs-nowrap { white-space: nowrap !important; }
 
    .text-color-xxs-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-xxs-white { color: rgba(255, 255, 255, 1) !important; }
@@ -2350,8 +2350,8 @@
    .text-xs-uppercase { text-transform: uppercase !important; }
    .text-xs-capitalize { text-transform: capitalize !important; }
 
-   .text-xs-wrap { white-space: normal !important; }
-   .text-xs-nowrap { white-space: nowrap !important; }
+   .white-space-xs-normal { white-space: normal !important; }
+   .white-space-xs-nowrap { white-space: nowrap !important; }
 
    .text-color-xs-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-xs-white { color: rgba(255, 255, 255, 1) !important; }
@@ -2670,8 +2670,8 @@
    .text-sm-uppercase { text-transform: uppercase !important; }
    .text-sm-capitalize { text-transform: capitalize !important; }
 
-   .text-sm-wrap { white-space: normal !important; }
-   .text-sm-nowrap { white-space: nowrap !important; }
+   .white-space-sm-normal { white-space: normal !important; }
+   .white-space-sm-nowrap { white-space: nowrap !important; }
 
    .text-color-sm-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-sm-white { color: rgba(255, 255, 255, 1) !important; }
@@ -2990,8 +2990,8 @@
    .text-md-uppercase { text-transform: uppercase !important; }
    .text-md-capitalize { text-transform: capitalize !important; }
 
-   .text-md-wrap { white-space: normal !important; }
-   .text-md-nowrap { white-space: nowrap !important; }
+   .white-space-md-normal { white-space: normal !important; }
+   .white-space-md-nowrap { white-space: nowrap !important; }
 
    .text-color-md-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-md-white { color: rgba(255, 255, 255, 1) !important; }
@@ -3310,8 +3310,8 @@
    .text-lg-uppercase { text-transform: uppercase !important; }
    .text-lg-capitalize { text-transform: capitalize !important; }
 
-   .text-lg-wrap { white-space: normal !important; }
-   .text-lg-nowrap { white-space: nowrap !important; }
+   .white-space-lg-normal { white-space: normal !important; }
+   .white-space-lg-nowrap { white-space: nowrap !important; }
 
    .text-color-lg-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-lg-white { color: rgba(255, 255, 255, 1) !important; }
@@ -3630,8 +3630,8 @@
    .text-xl-uppercase { text-transform: uppercase !important; }
    .text-xl-capitalize { text-transform: capitalize !important; }
 
-   .text-xl-wrap { white-space: normal !important; }
-   .text-xl-nowrap { white-space: nowrap !important; }
+   .white-space-xl-normal { white-space: normal !important; }
+   .white-space-xl-nowrap { white-space: nowrap !important; }
 
    .text-color-xl-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-xl-white { color: rgba(255, 255, 255, 1) !important; }
@@ -3954,8 +3954,8 @@
    .text-xxl-uppercase { text-transform: uppercase !important; }
    .text-xxl-capitalize { text-transform: capitalize !important; }
  
-   .text-xxl-wrap { white-space: normal !important; }
-   .text-xxl-nowrap { white-space: nowrap !important; }
+   .white-space-xxl-normal { white-space: normal !important; }
+   .white-space-xxl-nowrap { white-space: nowrap !important; }
  
    .text-color-xxl-black { color: rgba(0, 0, 0, 1) !important; }
    .text-color-xxl-white { color: rgba(255, 255, 255, 1) !important; }
