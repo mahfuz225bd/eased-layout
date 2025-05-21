@@ -48,7 +48,7 @@
         }
 
         h3 {
-            color: blue;
+            color: crimson;
         }
 
         h4 {
@@ -57,6 +57,21 @@
     </style>
 
     <script>
+        function formatWrappedInput(input) {
+            // Normalize input to an array
+            const items = Array.isArray(input) ? input : [input];
+
+            // Extract classPostfix or string value
+            const result = items.map(item => {
+                if (typeof item === 'object' && item !== null && 'classPostfix' in item) {
+                    return String(item.classPostfix);
+                }
+                return String(item);
+            });
+
+            return `{${result.join('|')}}`;
+        }
+
         // Create a element with a class name and text content
         function createElement(className, innerHTML, tagName, attributes = {}) {
             const element = document.createElement(tagName || 'div');
@@ -74,6 +89,9 @@
 
         // Function to create test elements
         function test(classPrefix, classPostfixOrPostfixes, hasBreakpoints = false, baseClassName = '', tagName = 'div', attributes = {}, innerHTML = '') {
+            // class format
+            let classFormat = '';
+
             // available breakpoints (excluding undefined first element)
             const breakpoints = ['tn', 'us', 'cp', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
@@ -149,6 +167,8 @@
                             results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
                         }
                     }
+
+                    classFormat = `${classPrefix}-${formatWrappedInput(classPostfixOrPostfixes)} Or ${classPrefix}-{available breakpoints}-${formatWrappedInput(classPostfixOrPostfixes)}`;
                 }
                 // Format 2: With breakpoint, without classPostfixOrPostfixes
                 else {
@@ -159,6 +179,8 @@
                         const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${bp}` : `${classPrefix}-${bp}`;
                         results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
                     }
+
+                    classFormat = `${classPrefix} Or ${classPrefix}-{available breakpoints}`;
                 }
             } else {
                 // Format 3: Without breakpoint, with classPostfixOrPostfixes
@@ -185,7 +207,7 @@
                         results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
                     }
 
-
+                    classFormat = `${classPrefix}-${formatWrappedInput(classPostfixOrPostfixes)}`;
                 }
                 // Format 4: Without breakpoint, without classPostfixOrPostfixes
                 else {
@@ -193,6 +215,8 @@
 
                     const fullClass = baseClassName ? `${baseClassName} ${className}` : className;
                     results.push(createElement(fullClass, innerHTML ? innerHTML : `${fullClass}`, tagName, attributes));
+
+                    classFormat = `${className}`;
                 }
             }
 
@@ -203,7 +227,7 @@
             testItem.className = 'test-item';
 
             const h3 = document.createElement('h3');
-            h3.textContent = `Class Prefix: ${classPrefix}`;
+            h3.textContent = `Format: ${classFormat}`;
             h3.id = `test-${classPrefix}`;
             testItem.appendChild(h3);
 
@@ -254,8 +278,8 @@
         test('text-align', [{ classPostfix: 'left', defaultClass: 'text-align-right' }, 'center', 'right'], true, '', 'p');
         test('text-decoration', [{ classPostfix: 'none', defaultClass: 'text-decoration-line-through' }, 'underline', 'line-through'], true, '', 'p');
         test('text', [{ classPostfix: 'lowercase', defaultClass: 'text-uppercase' }, 'uppercase', 'capitalize'], true, '', 'p');
-        test('text-wrap', '', true, '', '', { 'style': 'max-width: 15px' }, '');
-        test('text-nowrap', '', true, '', '', { 'style': 'max-width: 15px' }, '');
+        test('text-wrap', '', true, '', '', { 'style': 'max-width: 40px' }, '', '');
+        test('text-nowrap', '', true, '', '', { 'style': 'max-width: 40px' }, '', '');
         test('text-color', [{ classPostfix: 'black', defaultClass: 'text-color-white' }, 'white', 'muted', 'black-50', 'white-50', 'reset'], true, '', 'p');
         test('text-break', '', true, '', 'p');
 
