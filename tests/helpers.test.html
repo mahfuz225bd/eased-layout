@@ -278,8 +278,7 @@
         test('text-align', [{ classPostfix: 'left', defaultClass: 'text-align-right' }, 'center', 'right'], true, '', 'p');
         test('text-decoration', [{ classPostfix: 'none', defaultClass: 'text-decoration-line-through' }, 'underline', 'line-through'], true, '', 'p');
         test('text', [{ classPostfix: 'lowercase', defaultClass: 'text-uppercase' }, 'uppercase', 'capitalize'], true, '', 'p');
-        test('text-wrap', '', true, '', '', { 'style': 'max-width: 40px' }, '', '');
-        test('text-nowrap', '', true, '', '', { 'style': 'max-width: 40px' }, '', '');
+        test('white-space', ['normal', 'nowrap'], true, '', '', { 'style': 'max-width: 40px; border: 1px solid #000;' }, '', '');
         test('text-color', [{ classPostfix: 'black', defaultClass: 'text-color-white' }, 'white', 'muted', 'black-50', 'white-50', 'reset'], true, '', 'p');
         test('text-break', '', true, '', 'p');
 
