@@ -140,11 +140,28 @@
     <footer>Footer</footer>
 
     <script>
+        const singleAsideWidth = '25%'; // Can be '25%' or 250
+        const doubleAsideWidth = 200;   // Can be '20%' or 200
+
+        // Adds the "left" class to layout-relevant elements
         function applyLeftClass() {
             const elements = document.querySelectorAll('aside, .container main, main .container, section, article');
             elements.forEach(el => el.classList.add('left'));
         }
 
+        // Converts a width value (percentage string or number) to pixels
+        function getPixelValue(value, total) {
+            if (typeof value === 'number') {
+                return value;
+            }
+            if (typeof value === 'string' && value.endsWith('%')) {
+                const percent = parseFloat(value);
+                return total * (percent / 100);
+            }
+            return 0;
+        }
+
+        // Updates widths based on layout conditions and screen size
         function updateLayoutWidths() {
             const isMobile = window.innerWidth <= 900;
 
@@ -159,34 +176,39 @@
                 const parentWidth = parent.clientWidth;
 
                 if (isMobile) {
+                    // 100% width for all on small screens
                     asides.forEach(el => el.style.width = '100%');
                     mainContent.style.width = '100%';
                 } else {
                     if (asides.length === 2) {
-                        const asideWidth = parentWidth * 0.25;
-                        const mainWidth = parentWidth * 0.50;
+                        // Two asides + main layout
+                        const asideWidth = getPixelValue(doubleAsideWidth, parentWidth);
+                        const mainWidth = parentWidth - 2 * asideWidth;
                         asides.forEach(el => el.style.width = `${asideWidth}px`);
                         mainContent.style.width = `${mainWidth}px`;
                     } else if (asides.length === 1) {
-                        const asideWidth = parentWidth * 0.20;
-                        const mainWidth = parentWidth * 0.80;
+                        // Single aside + main layout
+                        const asideWidth = getPixelValue(singleAsideWidth, parentWidth);
+                        const mainWidth = parentWidth - asideWidth;
                         asides[0].style.width = `${asideWidth}px`;
                         mainContent.style.width = `${mainWidth}px`;
                     } else {
+                        // Only main content
                         mainContent.style.width = `${parentWidth}px`;
                     }
                 }
             });
         }
 
+        // Initialize on page load
         window.addEventListener('load', () => {
             applyLeftClass();
             updateLayoutWidths();
         });
 
+        // Recalculate on window resize
         window.addEventListener('resize', updateLayoutWidths);
     </script>
-
 
 </body>
 
