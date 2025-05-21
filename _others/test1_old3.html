@@ -146,9 +146,9 @@
         // Adds the "left" class to layout-relevant elements
         function applyLeftClass() {
             var elements = document.querySelectorAll('aside, .container main, main .container, section, article');
-            Array.prototype.forEach.call(elements, function (el) {
-                el.classList.add('left');
-            });
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.add('left');
+            }
         }
 
         // Converts a width value (percentage string or number) to pixels
@@ -168,30 +168,31 @@
             var isMobile = window.innerWidth <= 900;
 
             var containers = document.querySelectorAll('.container, main');
-            Array.prototype.forEach.call(containers, function (parent) {
+            for (var i = 0; i < containers.length; i++) {
+                var parent = containers[i];
                 var asides = parent.querySelectorAll(':scope > aside');
                 var mainContent = parent.querySelector(
                     ':scope > main, :scope > .container, :scope > section, :scope > article'
                 );
 
-                if (!mainContent) return;
+                if (!mainContent) continue;
 
                 var parentWidth = parent.clientWidth;
 
                 if (isMobile) {
                     // 100% width for all on small screens
-                    Array.prototype.forEach.call(asides, function (el) {
-                        el.style.width = '100%';
-                    });
+                    for (var j = 0; j < asides.length; j++) {
+                        asides[j].style.width = '100%';
+                    }
                     mainContent.style.width = '100%';
                 } else {
                     if (asides.length === 2) {
                         // Two asides + main layout
                         var asideWidth = getPixelValue(doubleAsideWidth, parentWidth);
                         var mainWidth = parentWidth - 2 * asideWidth;
-                        Array.prototype.forEach.call(asides, function (el) {
-                            el.style.width = asideWidth + 'px';
-                        });
+                        for (var k = 0; k < asides.length; k++) {
+                            asides[k].style.width = asideWidth + 'px';
+                        }
                         mainContent.style.width = mainWidth + 'px';
                     } else if (asides.length === 1) {
                         // Single aside + main layout
@@ -204,7 +205,7 @@
                         mainContent.style.width = parentWidth + 'px';
                     }
                 }
-            });
+            }
         }
 
         // Initialize on page load
