@@ -196,7 +196,7 @@
                             results.push(`<h4>Class Postfix: ${strClassPostfix}</h4>`);
 
                             const fullClass = baseClassName ? `${baseClassName} ${classPrefix}-${strClassPostfix}` : `${classPrefix}-${strClassPostfix}`;
-                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${classPrefix}-${strClassPostfix}`, tagName, attributes));
+                            results.push(createElement(fullClass, innerHTML ? innerHTML : `${classPrefix}-${strClassPostfix}`, tagName, attributes));
                         });
                     }
 
@@ -279,8 +279,8 @@
         test('text-decoration', [{ classPostfix: 'none', defaultClass: 'text-decoration-line-through' }, 'underline', 'line-through'], true, '', 'p');
         test('text', [{ classPostfix: 'lowercase', defaultClass: 'text-uppercase' }, 'uppercase', 'capitalize'], true, '', 'p');
         test('white-space', ['normal', 'nowrap'], true, '', '', { 'style': 'max-width: 40px; border: 1px solid #000;' }, '', '');
-        test('text-color', [{ classPostfix: 'black', defaultClass: 'text-color-white' }, 'white', 'muted', 'black-50', 'white-50', 'reset'], true, '', 'p');
-        test('text-break', '', true, '', 'p');
+        test('text-color', [{ classPostfix: 'black', defaultClass: 'text-color-white' }, 'white', 'muted', 'black-50', 'white-50', { classPostfix: 'reset', defaultClass: 'text-color-muted' }], true, '', 'p');
+        test('text-break', '', true, '', 'p', '');
 
         // Offset
         test('offset', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], true, 'box');
