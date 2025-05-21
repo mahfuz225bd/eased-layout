@@ -47,97 +47,102 @@
     <h1>Method 1 [header + (div.container -> aside + main + aside) + footer]:</h1>
     <header>Header, in body</header>
     <div class="container">
-        <aside class="left">Left aside, in div.container</aside>
-        <main class="left">Main</main>
-        <aside class="left">Right aside, in div.container</aside>
+        <aside>Left aside, in div.container</aside>
+        <main>Main</main>
+        <aside>Right aside, in div.container</aside>
     </div>
     <footer>Footer, in body</footer>
 
     <h1>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h1>
     <header>Header, in body</header>
     <main>
-        <aside class="left">Left aside, in main</aside>
-        <section class="left">Main</section>
-        <aside class="left">Right aside, in main</aside>
+        <aside>Left aside, in main</aside>
+        <section>Main</section>
+        <aside>Right aside, in main</aside>
     </main>
     <footer>Footer, in body</footer>
 
     <h1>Method 2.2 [header + main -> (aside + article + aside) + footer]:</h1>
     <header>Header, in body</header>
     <main>
-        <aside class="left">Left aside, in main</aside>
-        <article class="left">Main</article>
-        <aside class="left">Right aside, in main</aside>
+        <aside>Left aside, in main</aside>
+        <article>Main</article>
+        <aside>Right aside, in main</aside>
     </main>
     <footer>Footer, in body</footer>
 
     <h1>Method 3.1 [main -> (header + aside + section + aside + footer)]:</h1>
     <main>
         <header>Header, in main</header>
-        <aside class="left">Left aside, in main</aside>
-        <section class="left">Main</section>
-        <aside class="left">Right aside, in main</aside>
+        <aside>Left aside, in main</aside>
+        <section>Main</section>
+        <aside>Right aside, in main</aside>
         <footer>Footer, in main</footer>
     </main>
 
     <h1>Method 3.2 [main -> (header + aside + article + aside + footer)]:</h1>
     <main>
         <header>Header, in main</header>
-        <aside class="left">Left aside, in main</aside>
-        <article class="left">Main</article>
-        <aside class="left">Right aside, in main</aside>
+        <aside>Left aside, in main</aside>
+        <article>Main</article>
+        <aside>Right aside, in main</aside>
         <footer>Footer, in main</footer>
     </main>
 
     <h1>Method 4 [(div.container -> header + aside + main + aside + footer)]:</h1>
     <div class="container">
         <header>Header, in div.container</header>
-        <aside class="left">Left aside, in div.container</aside>
-        <main class="left">Main</main>
-        <aside class="left">Right aside, in div.container</aside>
+        <aside>Left aside, in div.container</aside>
+        <main>Main</main>
+        <aside>Right aside, in div.container</aside>
         <footer>Footer, in div.container</footer>
     </div>
 
     <h1>Single Aside (Left) Example 1:</h1>
     <header>Header</header>
     <div class="container">
-        <aside class="left">Left aside</aside>
-        <main class="left">Main</main>
+        <aside>Left aside</aside>
+        <main>Main</main>
     </div>
     <footer>Footer</footer>
 
     <h1>Single Aside (Left) Example 2:</h1>
     <header>Header</header>
     <main>
-        <aside class="left">Left aside</aside>
-        <div class="container left">Main</div>
+        <aside>Left aside</aside>
+        <div class="container">Main</div>
     </main>
     <footer>Footer</footer>
 
     <h1>Single Aside (Right) Example 1:</h1>
     <header>Header</header>
     <div class="container">
-        <main class="left">Main</main>
-        <aside class="left">Right aside</aside>
+        <main>Main</main>
+        <aside>Right aside</aside>
     </div>
     <footer>Footer</footer>
 
     <h1>Single Aside (Right) Example 2:</h1>
     <header>Header</header>
     <div class="container">
-        <main class="left">Lorem</main>
-        <aside class="left">Right aside</aside>
+        <main>Lorem</main>
+        <aside>Right aside</aside>
     </div>
     <footer>Footer</footer>
 
     <h1>Double Aside Example:</h1>
     <header>Header</header>
     <div class="container">
-        <aside class="left">Left aside</aside>
-        <main class="left">Main</main>
-        <aside class="left">Right aside</aside>
+        <aside>Left aside</aside>
+        <main>Main</main>
+        <aside>Right aside</aside>
     </div>
     <footer>Footer</footer>
+
+    <script>
+        const elements = document.querySelectorAll('aside, .container main, main .container, section, article');
+        elements.forEach(el => el.classList.add('left'));
+    </script>
 
 </body>
 
