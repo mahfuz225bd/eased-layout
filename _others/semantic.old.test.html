@@ -165,7 +165,7 @@
 
         // Updates widths based on layout conditions and screen size
         function updateLayoutWidths() {
-            var isMobile = window.innerWidth <= 900;
+            var isSmallerDevice = window.innerWidth <= 900;
 
             var containers = document.querySelectorAll('.container, main');
             for (var i = 0; i < containers.length; i++) {
@@ -179,7 +179,7 @@
 
                 var parentWidth = parent.clientWidth;
 
-                if (isMobile) {
+                if (isSmallerDevice) {
                     // 100% width for all on small screens
                     for (var j = 0; j < asides.length; j++) {
                         asides[j].style.width = '100%';
