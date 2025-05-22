@@ -1,11 +1,10 @@
 ## TODOs for Future Releases
 
-- **Complete CSS Support for Older Browsers (layout.old.css):**
+- **Complete Support for Older Browsers (semantic.old.test.html):**
 
-  - Float layout
-  - Inline-block layout
-  - Table-based layouts (**Note:** Semantically incorrect, avoid for new layouts)
-  - Source File: `/_others/layout.old.css`
+  - Converting JS code into JS 1.0 (0% CSS) (semantic.old.test.html)
+  - adding vendorPrefixes with JS for all properties
+
 
 - Make valid `.total-columns-{breakpoint}-n` classes usage for the CSS Column-Count Property Based Grid System.
 - Drag and Drop
