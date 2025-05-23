@@ -12,34 +12,42 @@
 */
 
 .resizable-grid {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    width: 100%;
+    border: 1px solid #aaa;
+    overflow: hidden;
+}
+
+.resizable-grid>div {
+    position: absolute;
+    left: 0;
     width: 100%;
     overflow: hidden;
 }
 
-.resizable-grid>* {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.resizable-grid>*>* {
+.resizable-grid>div>div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     overflow: auto;
-    box-sizing: border-box;
-    flex-shrink: 0;
 }
 
 [role="separator"][aria-orientation="vertical"] {
-    width: 4px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
     background: #aaa;
     cursor: col-resize;
-    flex-shrink: 0;
+    z-index: 2;
 }
 
 [role="separator"][aria-orientation="horizontal"] {
-    height: 4px;
-    background: #aaa; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #aaa;
     cursor: row-resize;
-    flex-shrink: 0;
+    z-index: 2;
 }
