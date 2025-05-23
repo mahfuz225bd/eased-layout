@@ -13,6 +13,7 @@
 - row span, col span and more features for gird.grid
 - Complete test code for helpers
 - Complete eased-layout.js (to manage/control the full framework)
+- Test and complete dragbar
 
 Sidebar
 
