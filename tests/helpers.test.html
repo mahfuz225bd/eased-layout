@@ -327,11 +327,11 @@
             'middle-left', 'middle-center', 'middle-right',
             'bottom-left', 'bottom-center', 'bottom-right'
         ], true, 'box');
-        // TODO: Classlist for self element
-        test('top', [0, 50, 100], true, 'box');
-        test('left', [0, 50, 100], true, 'box');
-        test('right', [0, 50, 100], true, 'box');
-        test('bottom', [0, 50, 100], true, 'box');
+
+        test('top', [0, 50, 100], true, 'box position-absolute');
+        test('left', [0, 50, 100], true, 'box position-absolute');
+        test('right', [0, 50, 100], true, 'box position-absolute');
+        test('bottom', [0, 50, 100], true, 'box position-absolute');
         test('translate', ['middle', 'middle-x', 'middle-y'], true, 'box');
 
         // TODO: Parent element

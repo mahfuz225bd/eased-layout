@@ -301,15 +301,15 @@
 
 /* Start: Alignments */
 
-.h-center { display: flex; justify-content: center; }
+.h-center { display: flex !important; justify-content: center !important; }
 
-.center, .position-sticky-top-center, .position-sticky-middle-center, .position-sticky-bottom-center { display: flex; justify-content: center; align-items: center; }
+.center, .position-sticky-top-center, .position-sticky-middle-center, .position-sticky-bottom-center { display: flex !important; justify-content: center !important; align-items: center !important; }
 
-.absolute-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.absolute-h-center { position: absolute; left: 50%; transform: translateX(-50%); }
-.absolute-v-center { position: absolute; top: 50%; transform: translateY(-50%); }
+.absolute-center { position: absolute !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; }
+.absolute-h-center { position: absolute !important; left: 50% !important; transform: translateX(-50%) !important; }
+.absolute-v-center { position: absolute !important; top: 50% !important; transform: translateY(-50%) !important; }
 
-.v-center { display: flex; flex-direction: column; justify-content: center; height: 100%; }
+.v-center { display: flex !important; flex-direction: column !important; justify-content: center !important; height: 100% !important; }
 
 .v-align-baseline { vertical-align: baseline !important; }
 .v-align-top { vertical-align: top !important; }
@@ -317,7 +317,6 @@
 .v-align-bottom { vertical-align: bottom !important; }
 .v-align-text-bottom { vertical-align: text-bottom !important; }
 .v-align-text-top { vertical-align: text-top !important; }
-
 
 /* End: Alignments */
 
