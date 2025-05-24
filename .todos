@@ -12,7 +12,7 @@
 - flex-basis like feature for grid.grid
 - row span, col span and more features for gird.grid
 - Complete test code for helpers:
-   - position and related classes
+   - position and it's related classes
    - 
 - Complete eased-layout.js (to manage/control the full framework)
 - Test and complete dragbar
