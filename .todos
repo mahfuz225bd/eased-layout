@@ -5,7 +5,6 @@
   - Converting JS code into JS 1.0 (0% CSS) (semantic.old.test.html)
   - adding vendorPrefixes with JS for all properties
 
-
 - Make valid `.total-columns-{breakpoint}-n` classes usage for the CSS Column-Count Property Based Grid System.
 - Drag and Drop
 - flex-basis like feature for grid.grid
