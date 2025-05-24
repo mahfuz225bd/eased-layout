@@ -9,121 +9,124 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
  */
 
-function layoutGrid(grid) {
-  const rows = [];
-  const children = Array.from(grid.children);
-
-  for (let i = 0; i < children.length; i++) {
-    if (children[i].getAttribute("role") !== "separator") {
-      rows.push(children[i]);
-    }
-  }
-
-  const rowHeight = 100 / rows.length;
-  rows.forEach((row, i) => {
-    row.style.top = `${i * rowHeight}%`;
-    row.style.height = `${rowHeight}%`;
-
-    layoutRow(row);
-  });
-
-  const hSeparators = grid.querySelectorAll(
-    '[role="separator"][aria-orientation="horizontal"]'
-  );
-  hSeparators.forEach((sep, i) => {
-    sep.style.top = `${(i + 1) * rowHeight}%`;
-    sep.style.height = "4px";
-    sep.style.position = "absolute";
-
-    sep.addEventListener("mousedown", (e) => {
-      e.preventDefault();
-      const startY = e.clientY;
-      const topRow = rows[i];
-      const bottomRow = rows[i + 1];
-      const gridHeight = grid.offsetHeight;
-
-      const topStart = topRow.offsetHeight;
-
-      function onMouseMove(e) {
-        const dy = e.clientY - startY;
-        const newTop = topStart + dy;
-        const newTopPct = (newTop / gridHeight) * 100;
-        const newBottomPct = 100 - newTopPct;
-
-        topRow.style.height = `${newTopPct}%`;
-        bottomRow.style.top = `${newTopPct + 1}%`;
-        bottomRow.style.height = `${newBottomPct - 1}%`;
-        sep.style.top = `${newTopPct}%`;
-      }
-
-      function onMouseUp() {
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
-      }
-
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp);
+function setRowHeightsForAllGrids() {
+  document.querySelectorAll(".resizable-grid").forEach((grid) => {
+    const children = Array.from(grid.children).filter(
+      (el) => !el.matches('[role="separator"][aria-orientation="horizontal"]')
+    );
+    const rowHeightPercent = 100 / children.length;
+    children.forEach((row) => {
+      row.style.height = `${rowHeightPercent}%`;
     });
   });
 }
 
-function layoutRow(row) {
-  const children = Array.from(row.children);
-  const panels = [];
-  const separators = [];
+function initVerticalDrag(bar, leftPanel, rightPanel) {
+  let isDragging = false;
 
-  children.forEach((child) => {
-    if (child.getAttribute("role") === "separator") {
-      separators.push(child);
-    } else {
-      panels.push(child);
+  bar.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    isDragging = true;
+    document.body.style.userSelect = "none";
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+
+    const container = bar.parentElement;
+    const rect = container.getBoundingClientRect();
+    const pointerX = e.clientX - rect.left;
+
+    const leftRect = leftPanel.getBoundingClientRect();
+    const rightRect = rightPanel.getBoundingClientRect();
+
+    const leftStart = leftRect.left - rect.left;
+    const totalWidth = leftRect.width + rightRect.width;
+    const newLeftWidth = pointerX - leftStart;
+    const min = 50;
+
+    if (newLeftWidth > min && newLeftWidth < totalWidth - min) {
+      const containerWidth = container.offsetWidth;
+      leftPanel.style.width = (newLeftWidth / containerWidth) * 100 + "%";
+      rightPanel.style.width =
+        ((totalWidth - newLeftWidth) / containerWidth) * 100 + "%";
     }
   });
 
-  let totalWidth = 0;
-  panels.forEach((panel, i) => {
-    const width = parseFloat(panel.style.width) || 100 / panels.length;
-    panel.style.left = `${totalWidth}%`;
-    panel.style.width = `${width}%`;
-    totalWidth += width;
-
-    if (separators[i]) {
-      separators[i].style.left = `${totalWidth}%`;
-      separators[i].style.width = "4px";
-
-      separators[i].addEventListener("mousedown", (e) => {
-        e.preventDefault();
-        const startX = e.clientX;
-        const leftPanel = panels[i];
-        const rightPanel = panels[i + 1];
-        const rowWidth = row.offsetWidth;
-
-        const leftStart = leftPanel.offsetWidth;
-
-        function onMouseMove(e) {
-          const dx = e.clientX - startX;
-          const newLeft = leftStart + dx;
-          const leftPct = (newLeft / rowWidth) * 100;
-          const rightPct = 100 - leftPct;
-
-          leftPanel.style.width = `${leftPct}%`;
-          rightPanel.style.left = `${leftPct + 0.5}%`;
-          rightPanel.style.width = `${rightPct - 0.5}%`;
-          separators[i].style.left = `${leftPct}%`;
-        }
-
-        function onMouseUp() {
-          document.removeEventListener("mousemove", onMouseMove);
-          document.removeEventListener("mouseup", onMouseUp);
-        }
-
-        document.addEventListener("mousemove", onMouseMove);
-        document.addEventListener("mouseup", onMouseUp);
-      });
-    }
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    document.body.style.userSelect = "";
   });
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".resizable-grid").forEach(layoutGrid);
-});
+function initHorizontalDrag(bar, topRow, bottomRow, grid) {
+  let isDragging = false;
+
+  bar.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    isDragging = true;
+    document.body.style.userSelect = "none";
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+
+    const rect = grid.getBoundingClientRect();
+    const pointerY = e.clientY - rect.top;
+
+    const totalHeight = rect.height;
+    const newTopHeight = pointerY;
+    const min = 50;
+
+    if (newTopHeight > min && newTopHeight < totalHeight - min) {
+      const topPercent = (newTopHeight / totalHeight) * 100;
+      const bottomPercent = 100 - topPercent;
+
+      topRow.style.height = `${topPercent}%`;
+      bottomRow.style.height = `${bottomPercent}%`;
+    }
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    document.body.style.userSelect = "";
+  });
+}
+
+function initAllGrids() {
+  setRowHeightsForAllGrids();
+
+  document.querySelectorAll(".resizable-grid").forEach((grid) => {
+    const children = Array.from(grid.children).filter(
+      (el) => !el.matches('[role="separator"][aria-orientation="horizontal"]')
+    );
+
+    const hBars = grid.querySelectorAll(
+      '[role="separator"][aria-orientation="horizontal"]'
+    );
+
+    // Horizontal drag
+    hBars.forEach((bar, i) => {
+      if (children[i + 1]) {
+        initHorizontalDrag(bar, children[i], children[i + 1], grid);
+      }
+    });
+
+    // Vertical drag within each row
+    children.forEach((row) => {
+      const panels = Array.from(row.children).filter(
+        (el) => !el.matches('[role="separator"][aria-orientation="vertical"]')
+      );
+      const bars = row.querySelectorAll(
+        '[role="separator"][aria-orientation="vertical"]'
+      );
+      bars.forEach((bar, i) => {
+        if (panels[i + 1]) {
+          initVerticalDrag(bar, panels[i], panels[i + 1]);
+        }
+      });
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initAllGrids);

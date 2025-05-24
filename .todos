@@ -4,13 +4,13 @@
 
   - Converting JS code into JS 1.0 (0% CSS) (semantic.old.test.html)
   - adding vendorPrefixes with JS for all properties
+  - Complete dragbar for older browsers without flex (and try best for 0% CSS)
 
 - Make valid `.total-columns-{breakpoint}-n` classes usage for the CSS Column-Count Property Based Grid System.
 - Drag and Drop
 - flex-basis like feature for grid.grid
 - row span, col span and more features for gird.grid
 - Complete eased-layout.js (to manage/control the full framework)
-- Test and complete dragbar
 
 - Add more features to helpers.css
 - Complete test code for helpers
