@@ -21,6 +21,17 @@
             height: 100px !important;
         }
 
+        .box-for-v-align {
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            background-color: #e0e0e0;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+        }
+
         .test-item {
             display: none;
         }
@@ -59,7 +70,7 @@
         }
 
         // Create a element with a class name and text content
-        function createElement(className, innerHTML, tagName, attributes = {}) {
+        function createElement(className, innerHTML, tagName, attributes = {}, parentElement = {}) {
             const element = document.createElement(tagName || 'div');
 
             element.className = className;
@@ -67,6 +78,20 @@
 
             for (const [attr, value] of Object.entries(attributes)) {
                 element.setAttribute(attr, value);
+            }
+
+            if (parentElement) {
+                const parent = document.createElement(parentElement.tagName || 'div');
+                parent.className = parentElement.className || '';
+                parent.style = parentElement.style || '';
+
+                for (const [attr, value] of Object.entries(parentElement.attributes || {})) {
+                    parent.setAttribute(attr, value);
+                }
+
+                parent.appendChild(element);
+
+                return parent.outerHTML;
             }
 
             return element.outerHTML;
@@ -106,7 +131,7 @@
                                     ? `${baseClassName} ${mainClass}`.trim()
                                     : mainClass;
 
-                                results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                                results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
                             } else {
                                 strClassPostfix = value;
                                 results.push(`<h4>Class Postfix: ${strClassPostfix}</h4>`);
@@ -116,7 +141,7 @@
                                     ? `${baseClassName} ${defaultClass} ${mainClass}`.trim()
                                     : `${defaultClass} ${mainClass}`.trim();
 
-                                results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                                results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
                             }
                         });
 
@@ -139,7 +164,7 @@
                                     ? `${baseClassName} ${defaultClass} ${mainClass}`.trim()
                                     : `${defaultClass} ${mainClass}`.trim();
 
-                                results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                                results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
                             }
                         });
                     }
@@ -149,13 +174,13 @@
                         // Push normal class (without breakpoints)
                         const mainClass = `${classPrefix}-${strClassPostfix}`.trim()
                         const fullClass = baseClassName ? `${baseClassName} ${mainClass}`.trim() : mainClass;
-                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
 
                         // Push with breakpoints classes
                         for (const bp of breakpoints) {
                             const mainClass = `${classPrefix}-${bp}-${strClassPostfix}`.trim()
                             const fullClass = baseClassName ? `${baseClassName} ${mainClass}`.trim() : mainClass;
-                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
                         }
                     }
 
@@ -167,12 +192,12 @@
 
                     const mainClass = `${className}`.trim()
                     const fullClass = baseClassName ? mainClass : mainClass;
-                    results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                    results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
 
                     for (const bp of breakpoints) {
                         const mainClass = `${className}-${bp}`.trim()
                         const fullClass = baseClassName ? `${baseClassName} ${mainClass}`.trim() : mainClass;
-                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
                     }
 
                     classFormat = `${classPrefix} Or ${classPrefix}-{available breakpoints}`;
@@ -191,7 +216,7 @@
                             results.push(`<h4>Class Postfix: ${strClassPostfix}</h4>`);
                             const mainClass = `${classPrefix}-${strClassPostfix}`.trim()
                             const fullClass = baseClassName ? `${baseClassName} ${mainClass}` : `${mainClass}`.trim();
-                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                            results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
                         });
                     }
 
@@ -200,7 +225,7 @@
 
                         const mainClass = `${classPrefix}-${strClassPostfix}`.trim()
                         const fullClass = baseClassName ? `${baseClassName} ${mainClass}` : `${mainClass}}`.trim();
-                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                        results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
                     }
 
                     classFormat = `${classPrefix}-${formatWrappedInput(classPostfixOrPostfixes)}`;
@@ -210,7 +235,7 @@
                     const className = classPrefix
                     const mainClass = `${className}`.trim()
                     const fullClass = baseClassName ? `${baseClassName} ${mainClass}`.trim() : mainClass
-                    results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes));
+                    results.push(createElement(fullClass, innerHTML ? innerHTML : `.${mainClass}`, tagName, attributes, parentElement));
 
                     classFormat = `${className}`;
                 }
@@ -333,8 +358,8 @@
         test('h-center', '', false, 'box');
         test('v-center', '', false, 'box');
         test('center', '', false, 'box');
-        test('absolute-center', ['center', 'h-center', 'v-center'], false, 'box');
-        test('v-align', ['baseline', 'top', 'middle', 'bottom', 'text-bottom', 'text-top'], false, 'box');
+        test('absolute', ['center', 'h-center', 'v-center'], false, 'box', 'div', {}, '', { tagName: 'div', className: 'position-relative', style: 'height: 500px; width: 500px; border: 1px solid black;' });
+        test('v-align', ['baseline', 'top', 'middle', 'bottom', 'text-bottom', 'text-top'], false, '', 'div', {}, '<div class="box-for-v-align v-align-top">-top</div><div class="box-for-v-align v-align-middle">-middle</div><div class="box-for-v-align v-align-bottom">-bottom</div><div class="box-for-v-align v-align-baseline">-baseline</div><div class="box-for-v-align v-align-text-top">-text-top</div><div class="box-for-v-align v-align-text-bottom">-text-bottom</div><span style="display: inline-block; font-size: 14px; vertical-align: baseline;">← Baseline Text</span>', { tagName: 'div', className: 'p-5', style: 'border: 1px solid #ccc; line-height: 100px; font-size: 0; ' });
 
         // Stack
         test('hstack', '', false, '', 'div', {}, '<button>Button1</button><button>Button2</button><button>Button3</button><a href="#">Link1</a><a href="#">Link2</a>');
@@ -349,9 +374,9 @@
         test('opacity', [0, 25, 50, 75, 100], false, 'box');
 
         // Overflow
-        test('overflow', ['auto', 'hidden', 'visible', 'scroll'], false, 'box');
-        test('overflow-x', ['auto', 'hidden', 'visible', 'scroll'], false, 'box');
-        test('overflow-y', ['auto', 'hidden', 'visible', 'scroll'], false, 'box');
+        test('overflow', ['auto', 'hidden', 'visible', 'scroll'], false, 'box', 'div', {}, 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+        test('overflow-x', ['auto', 'hidden', 'visible', 'scroll'], false, 'box', 'div', {}, 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+        test('overflow-y', ['auto', 'hidden', 'visible', 'scroll'], false, 'box', 'div', {}, 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
 
         // Float, Clear and Clearfix
         test('float', ['left', 'right', 'none'], true, 'box');

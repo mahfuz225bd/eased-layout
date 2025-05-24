@@ -4,15 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/extensions/helpers/style.css">
     <style>
+        body {
+            margin: 0;
+        }
+
+        .box,
+        .box-full {
+            background-color: lightblue;
+            margin: 10px;
+            border: 1px solid #000;
+        }
+
+        .box {
+            width: 150px;
+            height: 100px !important;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        .inner-box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: absolute;
+        }
     </style>
 </head>
 
 <body>
+    <div class="box position-relative">
+        <div class="inner-box absolute-center">Fully Centered</div>
+    </div>
 
-    <div class="absolute-center">Fully Centered</div>
-    <div class="absolute-h-center">Horizontally Centered</div>
-    <div class="absolute-v-center">Vertically Centered</div>
+    <div class="box position-relative">
+        <div class="inner-box absolute-h-center">Horizontally Centered</div>
+    </div>
+
+    <div class="box position-relative">
+        <div class="inner-box absolute-v-center">Vertically Centered</div>
+    </div>
 
 </body>
 
