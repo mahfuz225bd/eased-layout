@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Navbar</title>
+    <link rel="stylesheet" href="../dist/extensions/navbar/style.css" />
+</head>
+
+<style>
+    .blank-container {
+        height: 150px;
+        width: 100%;
+        background-color: #f0f0f0;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <h1>Multilevel Navigation Bar with Pure CSS</h1>
+
+    <h2>default (except aside)</h2>
+
+    <h3>ul[role="navigation"]</h3>
+    <ul role="navigation">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About</a>
+            <ul>
+                <li><a href="#">Team</a></li>
+                <li>
+                    <a href="#">History</a>
+                    <ul>
+                        <li><a href="#">2020</a></li>
+                        <li>
+                            <a href="#">2021</a>
+                            <ul>
+                                <li><a href="#">Q1</a></li>
+                                <li><a href="#">Q2</a></li>
+                                <li>
+                                    <a href="#">Q3</a>
+                                    <ul>
+                                        <li><a href="#">July</a></li>
+                                        <li><a href="#">August</a></li>
+                                        <li><a href="#">September</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Services</a>
+            <ul>
+                <li><a href="#">Consulting</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Design</a></li>
+                <li>
+                    <a href="#">Marketing</a>
+                    <ul>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">PPC</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li>
+                            <a href="#">Strategy</a>
+                            <ul>
+                                <li><a href="#">Branding</a></li>
+                                <li><a href="#">Market Research</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>[role="navigation"] > ul</h3>
+    <div role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>nav > ul</h3>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h2>.horizontal (except aside)</h2>
+
+    <h3>ul.horizontal[role="navigation"]</h3>
+    <ul role="navigation">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About</a>
+            <ul>
+                <li><a href="#">Team</a></li>
+                <li>
+                    <a href="#">History</a>
+                    <ul>
+                        <li><a href="#">2020</a></li>
+                        <li>
+                            <a href="#">2021</a>
+                            <ul>
+                                <li><a href="#">Q1</a></li>
+                                <li><a href="#">Q2</a></li>
+                                <li>
+                                    <a href="#">Q3</a>
+                                    <ul>
+                                        <li><a href="#">July</a></li>
+                                        <li><a href="#">August</a></li>
+                                        <li><a href="#">September</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Services</a>
+            <ul>
+                <li><a href="#">Consulting</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Design</a></li>
+                <li>
+                    <a href="#">Marketing</a>
+                    <ul>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">PPC</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li>
+                            <a href="#">Strategy</a>
+                            <ul>
+                                <li><a href="#">Branding</a></li>
+                                <li><a href="#">Market Research</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>.horizontal[role="navigation"] > ul</h3>
+    <div class="horizontal" role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>nav.horizontal > ul</h3>
+    <nav class="horizontal">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h2>.vertical (except aside)</h2>
+
+    <h3>ul.vertical[role="navigation"]</h3>
+    <ul class="vertical" role="navigation">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About</a>
+            <ul>
+                <li><a href="#">Team</a></li>
+                <li>
+                    <a href="#">History</a>
+                    <ul>
+                        <li><a href="#">2020</a></li>
+                        <li>
+                            <a href="#">2021</a>
+                            <ul>
+                                <li><a href="#">Q1</a></li>
+                                <li><a href="#">Q2</a></li>
+                                <li>
+                                    <a href="#">Q3</a>
+                                    <ul>
+                                        <li><a href="#">July</a></li>
+                                        <li><a href="#">August</a></li>
+                                        <li><a href="#">September</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Services</a>
+            <ul>
+                <li><a href="#">Consulting</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Design</a></li>
+                <li>
+                    <a href="#">Marketing</a>
+                    <ul>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">PPC</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li>
+                            <a href="#">Strategy</a>
+                            <ul>
+                                <li><a href="#">Branding</a></li>
+                                <li><a href="#">Market Research</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>.vertical[role="navigation"] > ul</h3>
+    <div class="vertical" role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>nav.vertical > ul</h3>
+    <nav class="vertical">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h2>default (aside)</h2>
+
+    <h3>aside > ul[role="navigation"]</h3>
+    <aside>
+        <ul role="navigation">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside > [role="navigation"] > ul</h3>
+    <aside>
+        <div role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li>
+                            <a href="#">History</a>
+                            <ul>
+                                <li><a href="#">2020</a></li>
+                                <li>
+                                    <a href="#">2021</a>
+                                    <ul>
+                                        <li><a href="#">Q1</a></li>
+                                        <li><a href="#">Q2</a></li>
+                                        <li>
+                                            <a href="#">Q3</a>
+                                            <ul>
+                                                <li><a href="#">July</a></li>
+                                                <li><a href="#">August</a></li>
+                                                <li><a href="#">September</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li>
+                            <a href="#">Marketing</a>
+                            <ul>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li>
+                                    <a href="#">Strategy</a>
+                                    <ul>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Market Research</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside[role="navigation"] > ul</h3>
+    <aside role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside > nav > ul</h3>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li>
+                            <a href="#">History</a>
+                            <ul>
+                                <li><a href="#">2020</a></li>
+                                <li>
+                                    <a href="#">2021</a>
+                                    <ul>
+                                        <li><a href="#">Q1</a></li>
+                                        <li><a href="#">Q2</a></li>
+                                        <li>
+                                            <a href="#">Q3</a>
+                                            <ul>
+                                                <li><a href="#">July</a></li>
+                                                <li><a href="#">August</a></li>
+                                                <li><a href="#">September</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li>
+                            <a href="#">Marketing</a>
+                            <ul>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li>
+                                    <a href="#">Strategy</a>
+                                    <ul>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Market Research</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h2>.horizontal (aside)</h2>
+
+    <h3>aside > ul.horizontal[role="navigation"]</h3>
+    <aside>
+        <ul class="horizontal" role="navigation">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside > .horizontal[role="navigation"] > ul</h3>
+    <aside>
+        <div class="horizontal" role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li>
+                            <a href="#">History</a>
+                            <ul>
+                                <li><a href="#">2020</a></li>
+                                <li>
+                                    <a href="#">2021</a>
+                                    <ul>
+                                        <li><a href="#">Q1</a></li>
+                                        <li><a href="#">Q2</a></li>
+                                        <li>
+                                            <a href="#">Q3</a>
+                                            <ul>
+                                                <li><a href="#">July</a></li>
+                                                <li><a href="#">August</a></li>
+                                                <li><a href="#">September</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li>
+                            <a href="#">Marketing</a>
+                            <ul>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li>
+                                    <a href="#">Strategy</a>
+                                    <ul>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Market Research</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside.horizontal[role="navigation"] > ul</h3>
+    <aside class="horizontal" role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside > nav.horizontal > ul</h3>
+    <aside>
+        <nav class="horizontal">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li>
+                            <a href="#">History</a>
+                            <ul>
+                                <li><a href="#">2020</a></li>
+                                <li>
+                                    <a href="#">2021</a>
+                                    <ul>
+                                        <li><a href="#">Q1</a></li>
+                                        <li><a href="#">Q2</a></li>
+                                        <li>
+                                            <a href="#">Q3</a>
+                                            <ul>
+                                                <li><a href="#">July</a></li>
+                                                <li><a href="#">August</a></li>
+                                                <li><a href="#">September</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li>
+                            <a href="#">Marketing</a>
+                            <ul>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li>
+                                    <a href="#">Strategy</a>
+                                    <ul>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Market Research</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h2>.vertical (aside)</h2>
+
+    <h3>aside > ul.vertical[role="navigation"]</h3>
+    <aside>
+        <ul class="vertical" role="navigation">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside > .vertical[role="navigation"] > ul</h3>
+    <aside>
+        <div class="vertical" role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li>
+                            <a href="#">History</a>
+                            <ul>
+                                <li><a href="#">2020</a></li>
+                                <li>
+                                    <a href="#">2021</a>
+                                    <ul>
+                                        <li><a href="#">Q1</a></li>
+                                        <li><a href="#">Q2</a></li>
+                                        <li>
+                                            <a href="#">Q3</a>
+                                            <ul>
+                                                <li><a href="#">July</a></li>
+                                                <li><a href="#">August</a></li>
+                                                <li><a href="#">September</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li>
+                            <a href="#">Marketing</a>
+                            <ul>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li>
+                                    <a href="#">Strategy</a>
+                                    <ul>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Market Research</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside.vertical[role="navigation"] > ul</h3>
+    <aside class="vertical" role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li>
+                        <a href="#">History</a>
+                        <ul>
+                            <li><a href="#">2020</a></li>
+                            <li>
+                                <a href="#">2021</a>
+                                <ul>
+                                    <li><a href="#">Q1</a></li>
+                                    <li><a href="#">Q2</a></li>
+                                    <li>
+                                        <a href="#">Q3</a>
+                                        <ul>
+                                            <li><a href="#">July</a></li>
+                                            <li><a href="#">August</a></li>
+                                            <li><a href="#">September</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li>
+                        <a href="#">Marketing</a>
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">PPC</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li>
+                                <a href="#">Strategy</a>
+                                <ul>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Market Research</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+
+    <h3>aside > nav.vertical > ul</h3>
+    <aside>
+        <nav class="vertical">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li>
+                            <a href="#">History</a>
+                            <ul>
+                                <li><a href="#">2020</a></li>
+                                <li>
+                                    <a href="#">2021</a>
+                                    <ul>
+                                        <li><a href="#">Q1</a></li>
+                                        <li><a href="#">Q2</a></li>
+                                        <li>
+                                            <a href="#">Q3</a>
+                                            <ul>
+                                                <li><a href="#">July</a></li>
+                                                <li><a href="#">August</a></li>
+                                                <li><a href="#">September</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li>
+                            <a href="#">Marketing</a>
+                            <ul>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li>
+                                    <a href="#">Strategy</a>
+                                    <ul>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Market Research</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="blank-container">&nbsp;</div>
+</body>
+
+</html>
