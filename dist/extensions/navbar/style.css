@@ -22,6 +22,8 @@ nav ul,
 ul[role="navigation"] {
   list-style: none;
   white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 nav > ul > li,
