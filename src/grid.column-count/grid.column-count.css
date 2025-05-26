@@ -286,7 +286,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-us-11 { column-count: 11; }
   .row.total-columns-us-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-us, var(--columns-cp, var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))))))); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-us-n { column-count: var(--columns-us, var(--columns-cp, var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))))))); }
 }
 
 /* Compact (≥240px) */
@@ -395,7 +396,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-cp-11 { column-count: 11; }
   .row.total-columns-cp-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-cp, var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))))))); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-cp-n { column-count: var(--columns-cp, var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))))))); }
 }
 
 /* Extra Extra Small (≥360px) */
@@ -491,7 +493,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-xxs-11 { column-count: 11; }
   .row.total-columns-xxs-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))))); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-xxs-n { column-count: var(--columns-xxs, var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))))); }
 }
 
 /* Extra Small (≥454px) */
@@ -574,7 +577,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-xs-11 { column-count: 11; }
   .row.total-columns-xs-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))))); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-xs-n { column-count: var(--columns-xs, var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))))); }
 }
 
 /* Small (≥576px) */
@@ -644,7 +648,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-sm-11 { column-count: 11; }
   .row.total-columns-sm-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-sm-n { column-count: var(--columns-sm, var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))))); }
 }
 
 /* Medium (≥768px) */
@@ -701,7 +706,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-md-11 { column-count: 11; }
   .row.total-columns-md-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-md-n { column-count: var(--columns-md, var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1)))); }
 }
 
 /* Large (≥992px) */
@@ -745,7 +751,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-lg-11 { column-count: 11; }
   .row.total-columns-lg-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-lg-n { column-count: var(--columns-lg, var(--columns-xl, var(--columns-xxl, 1))); }
 }
 
 /* Extra Large (≥1200px) */
@@ -776,7 +783,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-xl-11 { column-count: 11; }
   .row.total-columns-xl-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-xl, var(--columns-xxl, 1)); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-xl-n { column-count: var(--columns-xl, var(--columns-xxl, 1)); }
 }
 
 /* Extra Extra Large (≥1400px) */
@@ -794,7 +802,8 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
   .row.total-columns-xxl-11 { column-count: 11; }
   .row.total-columns-xxl-12 { column-count: 12; }
 
-  .row.total-columns-breakpoints-n { column-count: var(--columns-xxl, 1); }
+  .row.total-columns-breakpoints-n,
+  .row.total-columns-xxl-n { column-count: var(--columns-xxl, 1); }
 }
 
 /* End: Breakpoints for responsiveness */
@@ -809,5 +818,5 @@ div.container:has(.row), main:has(.row), div.container.row, main.row { display: 
    - There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
    - For Fixed Grid (12 columns): Along with `.row`, use any class according to the format: `.total-{available breakpoint}-{columns}`; columns should be 1 to 12.
    - 12+ columns: Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need whose format is: --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value
-                  Alternatively, [Invalid for CSS Column-Count Property Based Grid Layout] along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoint}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
+                  Alternatively, along with `.row`, use multiple classes whose format is like `total-columns-{available breakpoint}-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
 */
