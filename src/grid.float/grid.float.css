@@ -11,14 +11,14 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-.row::after { content: ""; display: table; clear: both; }
-
-.row > * { float: left; width: 100%; }
-
 div.container:has(.row),
 main:has(.row) {
   display: block;
 }
+
+.row::after { content: ""; display: table; clear: both; }
+
+.row > * { float: left; width: 100%; }
 
 .row.total-columns-1 > * { width: 100%; }
 .row.total-columns-2 > * { width: 50%; }
