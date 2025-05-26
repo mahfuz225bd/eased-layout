@@ -347,7 +347,7 @@
         <div>12</div>
     </section>
 
-    <h2>6. 10-Column Grid with Individually Set Column Widths</h2>
+    <h2>6.1. 10-Column Grid with Individually Set Column Widths</h2>
     <div class="row total-columns-10"
         style="grid-template-columns: 50px 75px 50px 100px 50px 80px 50px 60px 90px 50px 50px 60px;">
         <div>1 (50px)</div>
@@ -362,6 +362,22 @@
         <div>10 (50px)</div>
         <div>11 (50px)</div>
         <div>12 (60px)</div>
+    </div>
+
+    <h2>6.2. Auto-Column Grid with Individually Set Column Widths</h2>
+    <div class="row" style="grid-auto-columns: min-content; grid-auto-flow: column;">
+        <div style="width: 50px;">1 (50px)</div>
+        <div style="width: 75px;">2 (75px)</div>
+        <div style="width: 50px;">3 (50px)</div>
+        <div style="width: 100px;">4 (100px)</div>
+        <div style="width: 50px;">5 (50px)</div>
+        <div style="width: 80px;">6 (80px)</div>
+        <div style="width: 50px;">7 (50px)</div>
+        <div style="width: 60px;">8 (60px)</div>
+        <div style="width: 90px;">9 (90px)</div>
+        <div style="width: 50px;">10 (50px)</div>
+        <div style="width: 50px;">11 (50px)</div>
+        <div style="width: 60px;">12 (60px)</div>
     </div>
 
     <h2>7.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `div.container` Optional)

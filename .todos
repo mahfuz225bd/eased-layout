@@ -7,7 +7,6 @@
   - Complete dragbar for older browsers without flex (and try best for 0% CSS)
 
 - Drag and Drop
-- flex-basis like feature for grid.grid
 - row span, col span and more features for gird.grid
 - Complete eased-layout.js (to manage/control the full framework)
 
