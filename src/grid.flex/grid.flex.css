@@ -11,14 +11,14 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-.row { display: flex; flex-wrap: wrap; flex-direction: row; }
-
-*:has(.row) { flex-direction: column; }
-
 div.container:has(.row),
 main:has(.row) {
   flex-wrap: nowrap;
 }
+
+.row { display: flex; flex-wrap: wrap; flex-direction: row; }
+
+*:has(.row) { flex-direction: column; }
 
 /* Single column (full width) as default */
 .row > * { flex: 0 0 100%; }
