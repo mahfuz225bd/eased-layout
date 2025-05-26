@@ -304,7 +304,7 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 #### Available Breakpoints
 
-`eased-layout.css` has six default breakpoints for applying responsiveness. Here is a table showing breakpoints, class infixes, and dimensions for responsive layouts where the class infix for the specified screen widths is explained in the next sections.
+`eased-layout.css` has eleven default breakpoints for applying responsiveness. Here is a table showing breakpoints, class infixes, and dimensions for responsive layouts where the class infix for the specified screen widths is explained in the next sections.
 
 | Breakpoint        | Class Infix | Dimensions |
 | ----------------- | ----------- | ---------- |
