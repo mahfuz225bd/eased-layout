@@ -79,14 +79,6 @@ article>aside:only-of-type {
   article.row {
     flex-direction: row;
   }
-
-  /* aside,
-  section,
-  article,
-  div.container,
-  main {
-    flex: 0 0 100%;
-  } */
 }
 
 /* End: Responsive design for semantic element while rendering in smaller screens */

@@ -15,6 +15,11 @@
 
 .row > * { float: left; width: 100%; }
 
+div.container:has(.row),
+main:has(.row) {
+  display: block;
+}
+
 .row.total-columns-1 > * { width: 100%; }
 .row.total-columns-2 > * { width: 50%; }
 .row.total-columns-3 > * { width: 33.33%; }
