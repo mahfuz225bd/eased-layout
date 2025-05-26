@@ -27,11 +27,6 @@ main {
   flex-wrap: wrap;
 }
 
-div.container:has(.row),
-main:has(.row) {
-  flex-wrap: nowrap;
-}
-
 /* Main content and container's direct child elements take equal space by default */
 
 main,

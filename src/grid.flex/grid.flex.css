@@ -15,6 +15,11 @@
 
 *:has(.row) { flex-direction: column; }
 
+div.container:has(.row),
+main:has(.row) {
+  flex-wrap: nowrap;
+}
+
 /* Single column (full width) as default */
 .row > * { flex: 0 0 100%; }
 
