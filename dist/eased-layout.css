@@ -27,6 +27,11 @@ main {
   flex-wrap: wrap;
 }
 
+div.container:has(.row),
+main:has(.row) {
+  flex-wrap: nowrap;
+}
+
 /* Main content and container's direct child elements take equal space by default */
 
 main,
@@ -40,21 +45,21 @@ div.container>article {
 
 /* Sidebars (asides) have a default width of 20% */
 
-main>aside,
+/* main>aside,
 div.container>aside,
 section>aside,
 article>aside {
   flex: 0 0 20%;
-}
+} */
 
 /* Single aside takes up 25% width */
 
-main>aside:only-of-type,
+/* main>aside:only-of-type,
 div.container>aside:only-of-type,
 section>aside:only-of-type,
 article>aside:only-of-type {
   flex: 0 0 25%;
-}
+} */
 
 /* Fallback for browsers not supporting flexbox */
 
@@ -66,29 +71,27 @@ article>aside:only-of-type {
 
 /* Start: Responsive design for semantic element while rendering in smaller screens */
 @media screen and (max-width: 900px) {
-  div.container:not(:has(div.row)),
-  main:not(:has(div.row)),
-  section:not(:has(div.row)),
-  article:not(:has(div.row)) {
+  div.container,
+  main,
+  section,
+  article {
     flex-direction: column;
   }
 
-  div.container div.row,
-  main div.row,
-  section div.row,
-  article div.row {
+  div.container.row,
+  main.row,
+  section.row,
+  article.row {
     flex-direction: row;
   }
 
-  header:not(:has(div.row)),
-  aside:not(:has(div.row)),
-  section:not(:has(div.row)),
-  article:not(:has(div.row)),
-  footer:not(:has(div.row)),
-  div.container:not(:has(div.row)),
-  main:not(:has(div.row)) {
+  /* aside,
+  section,
+  article,
+  div.container,
+  main {
     flex: 0 0 100%;
-  }
+  } */
 }
 
 /* End: Responsive design for semantic element while rendering in smaller screens */
