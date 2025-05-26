@@ -11,9 +11,9 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-.row { display: grid; }
-
 div.container:has(.row), main:has(.row) { display: block; }
+
+.row, div.container.row, main.row { display: grid; }
 
 .row.total-columns-1 { grid-template-columns: repeat(1, 1fr); }
 .row.total-columns-2 { grid-template-columns: repeat(2, 1fr); }
