@@ -2,8 +2,9 @@
 
 /*!
  * Eased Layout CSS Library v1.0.0
- * Extension: Debugger
- * Description: CSS Debugger for Eased Layout. Can be used for without eased layout.
+ * File Name: debugger.css
+ * Description: a minimal CSS utility library designed for visual debugging. It outlines elements with distinct colors for various states (hover, focus, active, invalid, etc.), 
+ *              disables transitions/animations, and includes helper classes for color and pseudo-element inspection. Ideal for UI debugging and layout visualization.
  * Author: Muhammad Sultan Al Mahfuz
  * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
  * Licensed under the MIT License

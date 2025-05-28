@@ -2,8 +2,9 @@
 
 /*!
  * Eased Layout CSS Library v1.0.0
- * Extension: Restore Box Sizing
- * Description: An extension that restores the default box-sizing behavior of all elements to `content-box`.
+ * File Name: restore-box-sizing.css
+ * Description: It resets the box-sizing property to content-box for all elements, with exceptions for specific form elements like checkboxes, radios, and legends.
+ *              It is useful in projects that require legacy or non-normalized box model behavior.
  * Author: Muhammad Sultan Al Mahfuz
  * Copyright (c) 2025 Muhammad Sultan Al Mahfuz
  * Licensed under the MIT License

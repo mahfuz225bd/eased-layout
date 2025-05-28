@@ -2,13 +2,10 @@
 
 /*!
  * Eased Layout CSS Library v1.0.0
- * Extension: Navbar
- * Description: A minimalist extension for adding horizontal or vertical navigation bars to any website layout. No additional classes or IDs are required—simply use semantic HTML structures like: 
- *   (i) nav > ul 
- *   (ii) [role="navigation"] > ul 
- *   (iii) ul[role="navigation"]
- * Designed for simplicity and ease of integration into modern web designs.
- *
+ * Extension: navbar.css
+ * Description: Pure CSS for multi-level navigation menus, featuring hover-activated submenus, adaptable horizontal/vertical layouts, and indicator arrows.
+ *              Valid Approaches:
+ *              (i) 
  * Author: Muhammad Sultan Al Mahfuz
  * Copyright (c) 2025 Muhammad Sultan Al Mahfuz
  * Licensed under the MIT License
@@ -26,22 +23,22 @@ ul[role="navigation"] {
   padding: 0;
 }
 
-nav > ul > li,
-[role="navigation"] > ul > li,
-ul[role="navigation"] > li {
+nav>ul>li,
+[role="navigation"]>ul>li,
+ul[role="navigation"]>li {
   display: inline-block;
   position: relative;
 }
 
 nav li,
 [role="navigation"] li,
-ul[role="navigation"] li{
+ul[role="navigation"] li {
   position: relative;
 }
 
 nav a,
 [role="navigation"] a,
-ul[role="navigation"] a{
+ul[role="navigation"] a {
   display: block;
   text-decoration: none;
   white-space: nowrap;
@@ -64,9 +61,9 @@ ul[role="navigation"] li ul {
 }
 
 /* Show submenu on hover */
-nav li:hover > ul,
-[role="navigation"] li:hover > ul,
-ul[role="navigation"] li:hover > ul{
+nav li:hover>ul,
+[role="navigation"] li:hover>ul,
+ul[role="navigation"] li:hover>ul {
   display: block;
 }
 
@@ -79,49 +76,49 @@ ul[role="navigation"] li ul li ul {
 }
 
 /* Down arrow for top-level items with submenu */
-nav > ul > li:has(ul) > a::after,
-[role="navigation"] > ul > li:has(ul) > a::after,
-ul[role="navigation"] > li:has(ul) > a::after {
+nav>ul>li:has(ul)>a::after,
+[role="navigation"]>ul>li:has(ul)>a::after,
+ul[role="navigation"]>li:has(ul)>a::after {
   content: " ▼";
   font-size: 0.8em;
 }
 
 /* Right arrow for deeper submenu items */
-aside nav.horizontal ul ul li:has(ul) > a::after,
-aside .horizontal[role="navigation"] ul ul li:has(ul) > a::after,
-aside.horizontal[role="navigation"] ul ul li:has(ul) > a::after,
-aside ul.horizontal[role="navigation"] ul li:has(ul) > a::after,
-nav ul ul li:has(ul) > a::after,
-[role="navigation"] ul ul li:has(ul) > a::after,
-ul[role="navigation"] ul li:has(ul) > a::after {
+aside nav.horizontal ul ul li:has(ul)>a::after,
+aside .horizontal[role="navigation"] ul ul li:has(ul)>a::after,
+aside.horizontal[role="navigation"] ul ul li:has(ul)>a::after,
+aside ul.horizontal[role="navigation"] ul li:has(ul)>a::after,
+nav ul ul li:has(ul)>a::after,
+[role="navigation"] ul ul li:has(ul)>a::after,
+ul[role="navigation"] ul li:has(ul)>a::after {
   content: " ▶";
   font-size: 0.8em;
 }
 
 /* Vertical layout support + vertical while nav is inside aside */
-aside nav > ul > li,
-aside [role="navigation"] > ul > li,
-aside[role="navigation"] > ul > li,
-aside ul[role="navigation"] > li,
-nav.vertical > ul > li,
-.vertical[role="navigation"] > ul > li,
-ul.vertical[role="navigation"] > li {
+aside nav>ul>li,
+aside [role="navigation"]>ul>li,
+aside[role="navigation"]>ul>li,
+aside ul[role="navigation"]>li,
+nav.vertical>ul>li,
+.vertical[role="navigation"]>ul>li,
+ul.vertical[role="navigation"]>li {
   display: block !important;
 }
 
 aside nav ul,
-aside [role="navigation"] > ul,
-aside[role="navigation"] > ul,
+aside [role="navigation"]>ul,
+aside[role="navigation"]>ul,
 aside ul[role="navigation"],
-.vertical > ul{
+.vertical>ul {
   display: block;
-}    
+}
 
 aside nav ul li ul,
-aside [role="navigation"] > ul li ul,
-aside[role="navigation"] > ul li ul,
+aside [role="navigation"]>ul li ul,
+aside[role="navigation"]>ul li ul,
 aside ul[role="navigation"] li ul,
-.vertical li ul{
+.vertical li ul {
   position: relative !important;
   top: auto !important;
   left: auto !important;
@@ -129,28 +126,28 @@ aside ul[role="navigation"] li ul,
   display: none;
 }
 
-aside nav ul ul li:has(ul) > a::after,
-aside [role="navigation"] ul ul li:has(ul) > a::after,
-aside[role="navigation"] ul ul li:has(ul) > a::after,
-aside ul[role="navigation"] ul li:has(ul) > a::after,
-nav.vertical ul ul li:has(ul) > a::after,
-[role="navigation"].vertical ul ul li:has(ul) > a::after,
-ul[role="navigation"].vertical ul li:has(ul) > a::after{
+aside nav ul ul li:has(ul)>a::after,
+aside [role="navigation"] ul ul li:has(ul)>a::after,
+aside[role="navigation"] ul ul li:has(ul)>a::after,
+aside ul[role="navigation"] ul li:has(ul)>a::after,
+nav.vertical ul ul li:has(ul)>a::after,
+[role="navigation"].vertical ul ul li:has(ul)>a::after,
+ul[role="navigation"].vertical ul li:has(ul)>a::after {
   content: " ▼";
   font-size: 0.8em;
 }
 
 /* Horizontal override (same as default for clarity) */
-nav.horizontal > ul > li,
-[role="navigation"].horizontal > ul > li,
-ul[role="navigation"].horizontal > li {
+nav.horizontal>ul>li,
+[role="navigation"].horizontal>ul>li,
+ul[role="navigation"].horizontal>li {
   display: inline-block !important;
 }
 
 nav.horizontal li ul,
 [role="navigation"].horizontal li ul,
 ul[role="navigation"].horizontal li ul,
-.horizontal li ul{
+.horizontal li ul {
   position: absolute !important;
   top: 100%;
   left: 0;
@@ -159,7 +156,7 @@ ul[role="navigation"].horizontal li ul,
 nav.horizontal li ul li ul,
 [role="navigation"].horizontal li ul li ul,
 ul[role="navigation"].horizontal li ul li ul,
-.horizontal li ul li ul{
+.horizontal li ul li ul {
   top: 0;
   left: 100%;
 }

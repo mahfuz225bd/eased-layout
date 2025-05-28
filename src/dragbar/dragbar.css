@@ -2,8 +2,11 @@
 
 /*!
  * Eased Layout CSS Library v1.0.0
- * Extension: Dragbar
- * Description: An Extension for creating resizable grid layouts with dragbars. This extension allows users to resize grid items (both horizontally and vertically) by dragging the dividers between them, providing a flexible and interactive layout experience.
+ * File Name: dragbar.css
+ * Description: dragbar.css and dragbar.js are part of the Eased Layout CSS Library that enable resizable grid layouts.
+ *              - dragbar.css defines styles for vertical and horizontal dragbars.
+ *              - dragbar.js adds interactive mouse-driven resizing for grid rows and columns.
+ *              Both files are required for proper functionality—CSS for styling and layout, JavaScript for interactive behavior. Ideal for building flexible, user-resizable interfaces.
  * Author: Muhammad Sultan Al Mahfuz
  * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
  * Licensed under the MIT License
