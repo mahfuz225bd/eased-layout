@@ -196,12 +196,12 @@
             }
         }
 
-        window.addEventListener('load', function () {
+        window.onload = function () {
             applyFloatLeft();
             updateLayoutWidths();
-        });
+        };
 
-        window.addEventListener('resize', updateLayoutWidths);
+        window.onresize = updateLayoutWidths;
     </script>
 
 
