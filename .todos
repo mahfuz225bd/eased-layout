@@ -1,11 +1,5 @@
 ## TODOs for Future Releases
 
-- **Complete Support for Older Browsers (semantic.old.test.html):**
-
-  - Converting JS code into JS 1.0 (0% CSS) (semantic.old.test.html)
-  - adding vendorPrefixes with JS for all properties
-  - Complete dragbar for older browsers without flex (and try best for 0% CSS)
-
 - Drag and Drop
 - row span, col span and more features for gird.grid
 - Complete eased-layout.js (to manage/control the full framework)
@@ -33,7 +27,7 @@ Sidebar
 - Gradient Bg scroll
 
 - Update Basic File Structure section of [README.md](https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#) file.
-- Check and update (if necessary) the documentation
+- Check and update (if necessary) the full documentation
 - Update release note
 
 **Possible Future Enhancements:**
