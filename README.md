@@ -321,7 +321,6 @@ A **nested `aside` layout** introduces multiple layers of asides, typically used
 
 This structure allows for **layered, multi-level navigation**, where each aside focuses on different types of supplementary content depending on the section or context within the page.
 
-
 ### Responsive Design
 
 #### Available Breakpoints
