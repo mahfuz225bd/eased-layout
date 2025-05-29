@@ -3,19 +3,20 @@
 - Drag and Drop
 - row span, col span and more features for gird.grid
 - Complete eased-layout.js (to manage/control the full framework)
+- Restore semantic layout
 
 - Add more features to helpers.css
 - Complete test code for helpers
 
 Sidebar
 
+- Collapse sidebar
 - Fixed sidebar
 - Sidenav overlay
 - Sidenav overlay without animation
 - Sidenav push \w opacity
 - Sidenav full width
 - Full Screen Navigation (Slide Left, Right, Top, Bottom, No animation)
-- Collapse sidebar
 
 - Shrink on scroll
 - Scroll up button
