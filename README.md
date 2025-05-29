@@ -49,17 +49,38 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 
 ```
 /eased-layout
-├── /dist
 |   ├── /_others (unnecessary, included for temporary)
-|   ├── /extensions
-|   |   ├── debugger.css
-|   |   ├── grid.grid.css
-|   |   ├── helper.css
-|   |   ├── navbar.css
-|   |   ├── print.css
-|   |   ├── restore-box-sizing.css
-|   |   ├── restore-margins.css
-|   ├── eased-layout.css
+|   ├── /dist
+|   ├── /src
+|   |   ├── /basic-reset
+|   |   |   ├── basic-reset.css
+|   |   ├── /debugger.css
+|   |   |   ├── debugger.css
+|   |   ├── /dragbar
+|   |   |   ├── dragbar.css
+|   |   |   ├── dragbar.js
+|   |   ├── /focus
+|   |   |   ├── focus.css
+|   |   ├── /grid.column-count
+|   |   |   ├── grid.column-count.css
+|   |   ├── /grid.flex
+|   |   |   ├── grid.flex.css
+|   |   ├── /grid.float
+|   |   |   ├── grid.float.css
+|   |   ├── /grid.grid
+|   |   |   ├── grid.grid.css
+|   |   ├── /helpers
+|   |   |   ├── helpers.css
+|   |   ├── /grid.flex
+|   |   |   ├── grid.flex.css
+|   |   ├── /navbar
+|   |   |   ├── navbar.css
+|   |   ├── /print
+|   |   |   ├── print.css
+|   |   ├── /semantic-layout
+|   |   |   ├── semantic-layout.css
+|   |   ├── /stretched-link
+|   |   |   ├── stretched-link.css
 ├── /tests
 ```
 
