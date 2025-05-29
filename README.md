@@ -20,7 +20,7 @@ First, Download this repository. Here are the ways to download the repository:
    - If you don’t have Git installed, download and install it from [Git's official website](https://git-scm.com/downloads).
    - After installation is being complete successfully, run this command to clone the repository:
      ```bash
-     git clone https://github.com/your-username/repository-name.git
+     git clone https://github.com/mahfuz225bd/eased-layout.git
      ```
 
 2. **Download ZIP**:
