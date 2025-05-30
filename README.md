@@ -139,7 +139,7 @@ This library is very helpful for making semantic layouts with one or two asides 
 - The `div.container` can be excluded, if aside is not used.
 - Can be placed as a child of any element.
 
-> **Note:** `div.container` is used as a container in this framework, while other frameworks like Bootstrap use `div.container` too.
+> **Note:** `div.container` is used as a container in this libarary.
 
 #### Layout Structures in Different Approaches
 
@@ -697,4 +697,4 @@ For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `ta
   - **Restore Box Sizing**: 
   - **Restore Margins**: 
 
-This release lays the foundation for a robust, responsive, and customizable front-end framework.
+This release lays the foundation for a robust, responsive, and customizable front-end library.
