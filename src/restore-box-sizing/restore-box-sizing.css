@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*!
- * Eased Layout CSS Library v1.0.0
+ * Eased Layout Framework v1.0.0
  * File Name: restore-box-sizing.css
  * Description: It resets the box-sizing property to content-box for all elements, with exceptions for specific form elements like checkboxes, radios, and legends.
  *              It is useful in projects that require legacy or non-normalized box model behavior.

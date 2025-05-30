@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /*!
- * Eased Layout CSS Library v1.0.0
+ * Eased Layout Framework v1.0.0
  * File Name: debugger.css
- * Description: a minimal CSS utility library designed for visual debugging. It outlines elements with distinct colors for various states (hover, focus, active, invalid, etc.), 
+ * Description: a minimal CSS utility framework designed for visual debugging. It outlines elements with distinct colors for various states (hover, focus, active, invalid, etc.), 
  *              disables transitions/animations, and includes helper classes for color and pseudo-element inspection. Ideal for UI debugging and layout visualization.
  * Author: Muhammad Sultan Al Mahfuz
  * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
@@ -139,22 +139,64 @@ position: sticky {
 }
 
 /* Background Color Classes */
-.db-bg-red { background-color: red; }
-.db-bg-green { background-color: green; }
-.db-bg-blue { background-color: blue; }
-.db-bg-white { background-color: white; }
-.db-bg-black { background-color: black; }
+.db-bg-red {
+  background-color: red;
+}
+
+.db-bg-green {
+  background-color: green;
+}
+
+.db-bg-blue {
+  background-color: blue;
+}
+
+.db-bg-white {
+  background-color: white;
+}
+
+.db-bg-black {
+  background-color: black;
+}
 
 /* Text Color Classes */
-.db-color-red { color: red; }
-.db-color-green { color: green; }
-.db-color-blue { color: blue; }
-.db-color-white { color: white; }
-.db-color-black { color: black; }
+.db-color-red {
+  color: red;
+}
+
+.db-color-green {
+  color: green;
+}
+
+.db-color-blue {
+  color: blue;
+}
+
+.db-color-white {
+  color: white;
+}
+
+.db-color-black {
+  color: black;
+}
 
 /* Border Color Classes */
-.db-border-red { border-color: red; }
-.db-border-green { border-color: green; }
-.db-border-blue { border-color: blue; }
-.db-border-white { border-color: white; }
-.db-border-black { border-color: black; }
+.db-border-red {
+  border-color: red;
+}
+
+.db-border-green {
+  border-color: green;
+}
+
+.db-border-blue {
+  border-color: blue;
+}
+
+.db-border-white {
+  border-color: white;
+}
+
+.db-border-black {
+  border-color: black;
+}

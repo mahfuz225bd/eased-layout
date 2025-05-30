@@ -1,8 +1,8 @@
 /*!
- * Eased Layout CSS Library v1.0.0
+ * Eased Layout Framework v1.0.0
  * File Name: semantic-layout.js
  * Description: This JavaScript fallback module provides layout support for browsers that do not support Flexbox. It dynamically adjusts element widths based on the pre-defined
- *              `window.layoutConfig` object, using its `singleAsideWidth` and `doubleAsideWidth` properties. It also applies float-based behavior to semantic layout elements 
+ *              `window.layoutConfig` object, using its `singleAsideWidth` and `doubleAsideWidth` properties. It also applies float-based behavior to semantic layout elements
  *              such as <aside>, <main>, <section>, and <article>, effectively simulating a responsive layout using traditional CSS float techniques.
  * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
  * Licensed under the MIT License

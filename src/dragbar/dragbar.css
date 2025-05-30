@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /*!
- * Eased Layout CSS Library v1.0.0
+ * Eased Layout Framework v1.0.0
  * File Name: dragbar.css
- * Description: dragbar.css and dragbar.js are part of the Eased Layout CSS Library that enable resizable grid layouts.
+ * Description: dragbar.css and dragbar.js are part of the Eased Layout Framework that enable resizable grid layouts.
  *              - dragbar.css defines styles for vertical and horizontal dragbars.
  *              - dragbar.js adds interactive mouse-driven resizing for grid rows and columns.
  *              Both files are required for proper functionality—CSS for styling and layout, JavaScript for interactive behavior. Ideal for building flexible, user-resizable interfaces.

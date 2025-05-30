@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*!
- * Eased Layout CSS Library v1.0.0
+ * Eased Layout Framework v1.0.0
  * File Name: semantic-layout.css
  * Description: It focuses on most minimalistic styling common HTML5 semantic elements such as header, footer, main, section, and article, along with div.container, allowing for clean and adaptable layouts.
  * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
@@ -10,9 +10,26 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-body, h1, h2, h3, h4, h5, h6, p, pre, hr, table, caption { margin: 0; }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+hr,
+table,
+caption {
+  margin: 0;
+}
 
 /* Start: Semantic layout */
 
@@ -41,13 +58,24 @@ div.container>article {
 /* Fallback for browsers not supporting flexbox */
 
 @supports not (display: flex) {
-  header, aside, main, section, article, footer, div.container { display: block; width: 100%; }
+
+  header,
+  aside,
+  main,
+  section,
+  article,
+  footer,
+  div.container {
+    display: block;
+    width: 100%;
+  }
 }
 
 /* End: Semantic layout */
 
 /* Start: Responsive design for semantic element while rendering in smaller screens */
 @media screen and (max-width: 900px) {
+
   div.container,
   main,
   section,

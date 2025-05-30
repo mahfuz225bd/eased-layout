@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 /*!
- * Eased Layout CSS Library v1.0.0
+ * Eased Layout Framework v1.0.0
  * File Name: print.css
- * Description: It is a part of Eased Layout CSS Library designed to optimize layout and styling for printed pages. It offers utility classes for display, spacing, 
- *              text formatting, borders, visibility, and page breaks, all scoped within @media print. Use it with the core library to create clean, customizable print outputs.
+ * Description: It is a part of Eased Layout Framework designed to optimize layout and styling for printed pages. It offers utility classes for display, spacing, 
+ *              text formatting, borders, visibility, and page breaks, all scoped within @media print. Use it with the core framework to create clean, customizable print outputs.
  * Author: Muhammad Sultan Al Mahfuz
  * Copyright (c) 2025 Muhammad Sultan Al Mahfuz
  * Licensed under the MIT License
@@ -14,6 +14,7 @@
  */
 
 @media print {
+
     /* Display utilities */
     .print-display-flex {
         display: flex !important;
