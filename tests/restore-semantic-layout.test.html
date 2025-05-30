@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test: Complete Examples with HTML5 Semantic Layout Design</title>
+    <link rel="stylesheet" href="../src/restore-semantic-layout/restore-semantic-layout.css">
     <link rel="stylesheet" href="../src/semantic-layout/semantic-layout.css">
     <style>
         header,
@@ -31,7 +32,15 @@
 </head>
 
 <body>
-    <h1>Test: Complete Examples for Restoring HTML5 Semantic Layout Design</h1>
+    <h1>Test: Complete Examples with HTML5 Semantic Layout Design</h1>
+    <h2>Method 1 [header + (div.container -> aside + main + aside) + footer]:</h2>
+    <header>Header, in body</header>
+    <div class="container">
+        <aside>Left aside, in div.container</aside>
+        <main>Main Content as main, in div.container</main>
+        <aside>Right aside, in div.container</aside>
+    </div>
+    <footer>Footer, in body</footer>
 
     <h2>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h2>
     <header>Header, in body</header>
@@ -150,7 +159,7 @@
     </main>
     <footer>Footer, in body</footer>
 
-<script src="../src/semantic-layout/semantic-layout.js"></script>
+    <script src="../src/semantic-layout/semantic-layout.js"></script>
 </body>
 
 </html>
