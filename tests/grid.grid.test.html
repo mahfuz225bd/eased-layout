@@ -35,7 +35,7 @@
     <h1>Test: Complete Examples of Grid System (CSS Grid)</h1>
 
     <h2>1. Unlimited Columns with `.total-column-auto`</h2>
-    <div class="row total-columns-auto">
+    <div class="grid row total-columns-auto">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -69,7 +69,7 @@
     </div>
 
     <h2>2.1. 12-Column Grid without `div.container` or &lt;main&gt;</h2>
-    <div class="row total-columns-12">
+    <div class="grid row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -85,7 +85,7 @@
     </div>
 
     <h2>2.2. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added</h2>
-    <div class="row total-columns-12">
+    <div class="grid row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -104,7 +104,7 @@
     <h2>2.3. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added (Making a Single row
         Look
         Like Two rows)</h2>
-    <div class="row total-columns-6">
+    <div class="grid row total-columns-6">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -120,7 +120,7 @@
     </div>
 
     <h2>3.1.1. 12-Column Grid with `div.container`</h2>
-    <div class="container row total-columns-12">
+    <div class="container grid row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -136,7 +136,7 @@
     </div>
 
     <h2>3.1.2. 12-Column Grid with `div.container` + External Column Added</h2>
-    <div class="container row total-columns-12">
+    <div class="container grid row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -154,7 +154,7 @@
 
     <h2>3.1.3. 12-Column Grid with `div.container` + External Column Added (Making a Single row Look Like Two
         rows)</h2>
-    <div class="container row total-columns-6">
+    <div class="container grid row total-columns-6">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -170,7 +170,7 @@
     </div>
 
     <h2>3.2.1. 12-Column Grid with &lt;main&gt;</h2>
-    <main class="row total-columns-12">
+    <main class="grid row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -186,7 +186,7 @@
     </main>
 
     <h2>3.2.2. 12-Column Grid with &lt;main&gt; + External Column Added</h2>
-    <main class="row total-columns-12">
+    <main class="grid row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -204,7 +204,7 @@
 
     <h2>3.2.3. 12-Column Grid with &lt;main&gt; + External Column Added (Making a Single row Look Like Two
         rows)</h2>
-    <main class="row total-columns-6">
+    <main class="grid row total-columns-6">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -221,7 +221,7 @@
 
     <h2>4.1.1. 12-Column Grid Wrapped in `div.container`</h2>
     <div class="container">
-        <div class="row total-columns-12">
+        <div class="grid row total-columns-12">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -239,7 +239,7 @@
 
     <h2>4.1.2. 12-Column Grid Wrapped in `div.container` + External Column Added</h2>
     <div class="container">
-        <div class="row total-columns-12">
+        <div class="grid row total-columns-12">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -259,7 +259,7 @@
     <h2>4.1.3. 12-Column Grid Wrapped in `div.container` + External Column Added (Combined into 10-Column Grid Like Two
         Grids)</h2>
     <div class="container">
-        <div class="row total-columns-6">
+        <div class="grid row total-columns-6">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -277,7 +277,7 @@
 
     <h2>4.2.1. 12-Column Grid Wrapped in &lt;main&gt;</h2>
     <main>
-        <div class="row total-columns-12">
+        <div class="grid row total-columns-12">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -295,7 +295,7 @@
 
     <h2>4.2.2. 12-Column Grid Wrapped in &lt;main&gt; + External Column Added</h2>
     <main>
-        <div class="row total-columns-12">
+        <div class="grid row total-columns-12">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -315,7 +315,7 @@
     <h2>4.2.3. 10-Column Grid Wrapped in &lt;main&gt; + External Column Added (Combined into 12-Column Grid Like Two
         Grids)</h2>
     <main>
-        <div class="row total-columns-6">
+        <div class="grid row total-columns-6">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -332,7 +332,7 @@
     </main>
 
     <h2>5. 12-Column Grid with Semantic Elements (e.g., &lt;section&gt;)</h2>
-    <section class="row total-columns-12">
+    <section class="grid row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -348,7 +348,7 @@
     </section>
 
     <h2>6.1. 12-Column Grid with Individually Set Column Widths with `grid-template-columns`</h2>
-    <div class="row total-columns-10"
+    <div class="grid row total-columns-10"
         style="grid-template-columns: 50px 75px 50px 100px 50px 80px 50px 60px 90px 50px 50px 60px;">
         <div>1 (50px)</div>
         <div>2 (75px)</div>
@@ -365,7 +365,7 @@
     </div>
 
     <h2>6.2. 12-Column Grid with Individually Set Column Widths with `grid-auto-columns: min-content;` and `grid-auto-flow: column;`</h2>
-    <div class="row" style="grid-auto-columns: min-content; grid-auto-flow: column;">
+    <div class="grid row" style="grid-auto-columns: min-content; grid-auto-flow: column;">
         <div style="width: 50px;">1 (50px)</div>
         <div style="width: 75px;">2 (75px)</div>
         <div style="width: 50px;">3 (50px)</div>
@@ -381,7 +381,7 @@
     </div>
 
     <h2>6.3. 12-Column Grid with Individually Set Column Widths with `.total-columns-auto`</h2>
-    <div class="row total-columns-auto">
+    <div class="grid row total-columns-auto">
         <div style="width: 50px;">1 (50px)</div>
         <div style="width: 75px;">2 (75px)</div>
         <div style="width: 50px;">3 (50px)</div>
@@ -398,31 +398,31 @@
 
     <h2>7.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `div.container` Optional)
     </h2>
-    <div class="row">
+    <div class="grid row">
         <div>1</div>
     </div>
 
     <h2>7.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid;
         `div.container` Optional)</h2>
-    <div class="row">
+    <div class="grid row">
         <div>1</div>
         <div>2</div>
     </div>
 
     <h2>7.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `div.container` Optional)</h2>
-    <div class="row total-columns-1">
+    <div class="grid row total-columns-1">
         <div>1</div>
     </div>
 
     <h2>7.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid;
         `div.container` Optional)</h2>
-    <div class="row total-columns-1">
+    <div class="grid row total-columns-1">
         <div>1</div>
         <div>2</div>
     </div>
 
     <h2>8. Grid with 12+ Columns (100-Column Grid)</h2>
-    <div class="row total-columns-n" style="--columns: 50;">
+    <div class="grid row total-columns-n" style="--columns: 50;">
         <script>
             for (let n = 1; n <= 1000; n++) {
                 document.write(`<div>${n}</div>`)
@@ -431,7 +431,7 @@
     </div>
 
     <h2>9.1.1. Responsive Grid with Breakpoints and Auto Total Columns (12 of 12 Columns Used)</h2>
-    <div class="row total-columns-sm-2 total-columns-md-auto total-columns-lg-6 total-columns-xl-12">
+    <div class="grid row total-columns-sm-2 total-columns-md-auto total-columns-lg-6 total-columns-xl-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -447,7 +447,7 @@
     </div>
 
     <h2>9.2.1. Responsive Grid with Breakpoints (8 of 12 Columns Used)</h2>
-    <div class="row total-columns-sm-2 total-columns-md-4 total-columns-lg-8">
+    <div class="grid row total-columns-sm-2 total-columns-md-4 total-columns-lg-8">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -459,7 +459,7 @@
     </div>
 
     <h2>9.2.2. Responsive Grid with Breakpoints (12 of 12 Columns Used)</h2>
-    <div class="row total-columns-sm-2 total-columns-md-4 total-columns-lg-12">
+    <div class="grid row total-columns-sm-2 total-columns-md-4 total-columns-lg-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -476,7 +476,7 @@
     </section>
 
     <h2>9.3.1. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-breakpoints-n`</h2>
-    <div class="row total-columns-breakpoints-n"
+    <div class="grid row total-columns-breakpoints-n"
         style="--columns-sm: 1; --columns-md: 2; --columns-lg: 4; --columns-xl: 8; --columns-xxl: 16;">
         <div>1</div>
         <div>2</div>
@@ -497,7 +497,7 @@
     </div>
 
     <h2>9.3.2. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-{available breakpoint}-n`</h2>
-    <div class="row total-columns-sm-n total-columns-md-n total-columns-lg-n total-columns-xl-n total-columns-xxl-n"
+    <div class="grid row total-columns-sm-n total-columns-md-n total-columns-lg-n total-columns-xl-n total-columns-xxl-n"
         style="--columns-sm: 1; --columns-md: 2; --columns-lg: 4; --columns-xl: 8; --columns-xxl: 16;">
         <div>1</div>
         <div>2</div>
