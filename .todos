@@ -10,13 +10,9 @@
 
 Sidebar
 
-- Collapse sidebar
-- Fixed sidebar
-- Sidenav overlay
-- Sidenav overlay without animation
-- Sidenav push \w opacity
-- Sidenav full width
-- Full Screen Navigation (Slide Left, Right, Top, Bottom, No animation)
+- Add transition
+- .no-animation for transition: none
+- Slide Left, Right, Top, Bottom, No animation
 
 - Shrink on scroll
 - Scroll up button

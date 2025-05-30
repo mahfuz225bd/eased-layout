@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: Complete Examples with HTML5 Semantic Layout Design</title>
+
+    <link rel="stylesheet" href="../src/semantic-layout/semantic-layout.css">
+    <link rel="stylesheet" href="../src/aside/aside.css">
+
+    <style>
+        header,
+        aside,
+        main,
+        section,
+        article,
+        footer {
+            border: 1px solid #000;
+        }
+
+        div.container {
+            border: 1px solid red;
+        }
+
+        body {
+            padding: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Test: Aside</h1>
+    <header>Header, in body</header>
+    <div class="container">
+        <aside class="collapse fixed-left full-height">Left aside, in div.container <a href="#" class="btn-close-aside">&times;</a></aside>
+        <main><button onclick="openAside('.collapse', ['h1', 'header', '.container', 'footer'])">Open Aside</button><button onclick="toggleAside('.collapse', ['h1', 'header', '.container', 'footer'])">Toggle Aside</button></main>
+        <aside>Right aside, in div.container</aside>
+    </div>
+    <footer>Footer, in body</footer>
+
+    <script src="../src/aside/aside.js"></script>
+    <script src="../src/semantic-layout/semantic-layout.js"></script>
+</body>
+
+</html>

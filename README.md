@@ -52,8 +52,13 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 |   ├── /_others (unnecessary, included for temporary)
 |   ├── /dist
 |   ├── /src
+|   |   ├── /aside
+|   |   |   ├── aside.css
+|   |   |   ├── aside.js
 |   |   ├── /basic-reset
 |   |   |   ├── basic-reset.css
+|   |   ├── /column-count
+|   |   |   ├── column-count.css
 |   |   ├── /debugger.css
 |   |   |   ├── debugger.css
 |   |   ├── /dragbar
@@ -61,8 +66,6 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 |   |   |   ├── dragbar.js
 |   |   ├── /focus
 |   |   |   ├── focus.css
-|   |   ├── /grid.column-count
-|   |   |   ├── grid.column-count.css
 |   |   ├── /grid.flex
 |   |   |   ├── grid.flex.css
 |   |   ├── /grid.float
@@ -345,15 +348,69 @@ This structure allows for **layered, multi-level navigation**, where each aside 
 
 No need for any extra classes to apply basic responsiveness; provided styles for it as built-in. It will automatically change asides from horizontal to vertical when the media screen is less than 900px.
 
-### Extensions
+### Aside
 
-#### Debugger
+#### JavaScript Functions
 
-#### CSS Flexbox Based Grid Layout
+1. Off-canvas: `openAside(asideSelector, otherElementOrElements)`
+
+    * Opens the aside panel.
+    * Adjusts layout margins for nearby elements according to otherElementOrElements argument (e.g., header, footer).
+    * Adds a semi-transparent background if css class `.body-bg-opacity` is used to aside.
+
+2. Overlay: `openAside(asideSelector)`
+
+    * Opens the aside panel.
+    * Adds a semi-transparent background if css class `.body-bg-opacity` is used to aside.
+
+3. Off-canvas: `closeAside(asideSelector, otherElementOrElements)`
+
+    * Closes the aside panel by setting its width to `0` and hiding it.
+    * Resets adjusted margins according to otherElementOrElements argument (e.g., header, footer) and background color.
+
+4. Overlay: `closeAside(asideSelector)`
+
+    * Closes the aside panel by setting its width to `0` and hiding it.
+
+5. Off-canvas: `toggleAside(asideSelector, otherElementOrElements)`
+
+    * Toggles the aside panel open/close.
+
+6. Overlay: `toggleAside(asideSelector)`
+
+    * Toggles the aside panel open/close.
+
+7. `isAsideOpen(asideSelector)`
+
+    * Returns `true` if the aside panel is currently open (width ≠ 0).
+
+#### CSS Classes
+
+Position & Display:
+
+  * `.fixed-left` – Fixes the aside to the left of the viewport.
+  * `.fixed-right` – Fixes the aside to the right of the viewport.
+  * `.collapse` – Hides the aside (`width: 0`, `display: none`).
+
+Size:
+
+  * `.full-width` – Makes the aside span 100% of the container width.
+  * `.full-height` – Makes the aside span 100% of the container height.
+
+Style Utilities:
+
+  * `.bg-white` – White background with black text.
+  * `.bg-black` – Black background with white text.
+
+### Column Count
+
+### Debugger
+
+### CSS Flexbox Based Grid Layout
 
 `eased-layout.css` is also providing a design grid system (row-columned) layout. CSS rules are applied for creating a flexible grid layout using the classes `.row` and `.total-columns-N`, where N should be 1 to 12.
 
-##### Classes
+#### Classes
 
 - **`.row`:** The `.row` class is used to create a horizontal grouping of elements. Child elements of `.row` should be considered as columns. The `.row` class must be used on a &lt;div&gt; element. Applying it to other elements is not supported and may break the grid layout.
 
@@ -414,17 +471,17 @@ No need for any extra classes to apply basic responsiveness; provided styles for
 
 > Note: It is suggested not to use the style attribute for setting `--columns` CSS; instead, always use a custom class.
 
-##### Container Fluid
+#### Container Fluid
 
 For simplicity, there are no any class provided to make a container fluid. Moreover, `.total-columns-1` can be used for a container fluid which is completely optional.
 
-##### Responsive
+#### Responsive
 
 There are six built-in breakpoints provided (with plans to extend more smaller breakpoints) in this library. For applying those breakpoints for responsiveness, sm/md/lg/xl/xxl should be used as class infixes.
 
 Along with `.row`, use any class according to the format: `.total-{available breakpoint}-{columns}`; columns should be 1 to 12.
 
-###### 12+ Columns
+##### 12+ Columns
 
 Along with `.row`, use the class `.total-columns-breakpoints-n` and available CSS variables according to your need, whose format is --columns-{available breakpoint}: {columns}; columns can be any non-zero integer value.
 
@@ -432,9 +489,11 @@ Alternatively, along with `.row`, use multiple classes whose format is like `tot
 
 This is highly recommended: use a custom class for each variable, and remember that you don't need custom or additional classes and variables for any breakpoints if the total column number is not more than 12.
 
-#### CSS Grid Based Grid Layout
+### CSS Float Based Grid Layout
 
-#### Helpers
+### CSS Grid Based Grid Layout
+
+### Helpers
 
 The following table provides a comprehensive list of helper classes available in the `eased-layout.css` library. These classes are designed to simplify common styling tasks and enhance the flexibility of your layouts.
 
@@ -543,17 +602,19 @@ The following table provides a comprehensive list of helper classes available in
 |     | .focus-ring |     | The .focus-ring class adds a faint background color to elements, typically used to indicate focus in forms or interactive elements. The background color is set to a semi-transparent gray with rgba(108, 117, 125, 0.25), which gives a soft ring effect around the focused item. |
 |     | .background-gradient |     | This class applies a vertical gradient background to an element, transitioning from a semi-transparent white at the top to a fully transparent white at the bottom. The gradient uses linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)), creating a soft fade effect. The !important ensures the gradient is applied even if other styles try to override it. |
 
-#### Navbar
+### Navbar
 
-#### Print
+### Print
 
-#### Restore Box Sizing
+### Restore Box Sizing
 
 For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-box-sizing.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
-#### Restore Margins
+### Restore Margins
 
 For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-margins.css">` must be provided after the main library file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
+
+### Stretched Link
 
 ### Complete Examples for HTML5 Semantic Elements:
 
