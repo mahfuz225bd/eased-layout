@@ -10,13 +10,7 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
  */
 
-function isFlexNotSupported() {
-  const el = document.createElement("div");
-  el.style.display = "flex";
-  return el.style.display != "flex";
-}
-
-if (isFlexNotSupported()) {
+if (isFlexNotSupported() && isRestoreSemanticLayoutNotIncluded()) {
   window.layoutConfig = {
     singleAsideWidth: 230,
     doubleAsideWidth: 200,
@@ -99,4 +93,17 @@ if (isFlexNotSupported()) {
   };
 
   window.onresize = updateLayoutWidths;
+}
+
+function isFlexNotSupported() {
+  const el = document.createElement("div");
+  el.style.display = "flex";
+  return el.style.display != "flex";
+}
+
+function isRestoreSemanticLayoutNotIncluded() {
+  const links = document.querySelectorAll('link[rel="stylesheet"]');
+  return !Array.from(links).some((link) =>
+    link.href.includes("restore-semantic-layout.css")
+  );
 }
