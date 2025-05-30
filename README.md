@@ -81,6 +81,10 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 |   |   |   ├── navbar.css
 |   |   ├── /print
 |   |   |   ├── print.css
+|   |   ├── /restore
+|   |   |   ├── restore-box-sizing.css
+|   |   |   ├── restore-margins.css
+|   |   |   ├── restore-semantic-layout.css
 |   |   ├── /semantic-layout
 |   |   |   ├── semantic-layout.css
 |   |   ├── /stretched-link
@@ -607,27 +611,19 @@ The following table provides a comprehensive list of helper classes available in
 
 ### Print
 
-### Restore Box Sizing
+### Restore
+
+#### Restore Box Sizing
 
 For restoring CSS style `box-sizing` as `content-box` (which is default by HTML), include `restore-box-sizing.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-box-sizing.css">` must be provided after the main framework file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
-### Restore Margins
+#### Restore Margins
 
 For restoring the default margins of `body`, `h1` to `h6`, `p`, `pre`, `hr`, `table`, and `caption` HTML elements, include `restore-margins.css`. For including, `<link rel="stylesheet" href="{root directory}/dist/extensions/restore-margins.css">` must be provided after the main framework file `eased-layout.css` or `eased-layout.min.css`. You should set `href` to your HTML document carefully according to the [file structure](#basic-file-structure).
 
+#### Restore Semantic Layout
+
 ### Stretched Link
-
-### Complete Examples for HTML5 Semantic Elements:
-
-```html
-
-```
-
-### Complete Examples for Grid System:
-
-```html
-
-```
 
 ## TODOs
 
