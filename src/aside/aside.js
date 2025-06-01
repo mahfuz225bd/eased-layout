@@ -1,9 +1,9 @@
 /*!
  * Eased Layout Framework v1.0.0
  * File Name: aside.js
- * Description: aside.css and aside.js for the Eased Layout Framework that support control aside as fixed-position or normal sidebar.
- *              - aside.css handles positioning left or right, collapsing, setting full height or width, disabling transition and setting background as white or black for asides.
- *              - aside.js manages interactive behavior like opening, closing, toggling panels, and applying optional background overlays for asides.
+ * Description: This is for Eased Layout Framework that support control aside as fixed-position or normal sidebar.
+ *              - css file handles positioning left or right, collapsing, setting full height or width, disabling transition and setting background as white or black for asides.
+ *              - js file manages interactive behavior like opening, closing, toggling panels, and applying optional background overlays for asides.
  *              Both files work together—CSS for appearance, JavaScript for functionality. Perfect for implementing aside.
  * Author: Muhammad Sultan Al Mahfuz
  * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
