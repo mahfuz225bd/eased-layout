@@ -1,0 +1,31 @@
+/*!
+ * Eased Layout Framework v1.0.0
+ * File Name: basic-reset.css
+ * Description: Basic CSS Reset with normalizes default browser styling by setting `box-sizing: border-box` for all elements and removing default margins from common HTML tags.
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+hr,
+table,
+caption {
+    margin: 0;
+}

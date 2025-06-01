@@ -1,0 +1,129 @@
+/*!
+ * Eased Layout Framework v1.0.0
+ * File Name: debugger.css
+ * Description: A minimal CSS utility framework designed for visual debugging. It outlines elements with distinct colors for various states (hover, focus, active, invalid, etc.), 
+                disables transitions/animations, and includes helper classes for color and pseudo-element inspection. Ideal for UI debugging and layout visualization.
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+body.debug * {
+  outline: 2px solid #F0F; /* Magenta outline for all elements */
+  padding: 10px;
+
+  animation: none !important; /* Disable all animations */
+  transition: none !important; /* Disable all transitions */
+}
+
+body.debug {
+  border: 2px dashed blue; /* Outline the body to see its boundaries */
+  overflow: auto; /* Ensure scrolling is enabled */
+}
+
+body.debug *:hover {
+  outline: 3px solid #FF0; /* Bright yellow outline for hover */
+  outline-offset: 2px; /* Match focus offset for consistency */
+}
+
+body.debug *:focus {
+  outline: 3px dashed #0FF; /* Cyan outline for keyboard focus */
+  outline-offset: 4px; /* Extra spacing for clarity */
+}
+
+body.debug *:active {
+  outline: 3px solid #0F0; /* Bright green outline for active state */
+  outline-offset: 2px; /* Match focus and hover offset for consistency */
+}
+
+body.debug a:visited {
+  outline: 2px dashed #C0F; /* Violet outline for visited links */
+  outline-offset: 2px;
+}
+
+body.debug *:focus-visible {
+  outline: 3px solid #FF5; /* Neon orange outline for focus-visible state */
+  outline-offset: 3px;
+}
+
+body.debug *:disabled {
+  outline: 2px dashed #8F8; /* Soft greenish grey outline for disabled elements */
+  outline-offset: 1px;
+}
+
+body.debug *:checked {
+  outline: 3px solid #F33; /* Bright red outline for checked elements */
+  outline-offset: 2px;
+}
+
+body.debug *:invalid {
+  outline: 3px solid #F44; /* Bright crimson outline for invalid form fields */
+  outline-offset: 2px;
+}
+
+body.debug *:valid {
+  outline: 3px solid #3F3; /* Bright lime outline for valid form fields */
+  outline-offset: 2px;
+}
+
+body.debug [disabled] {
+  cursor: not-allowed;
+}
+
+body.debug [hidden] {
+  visibility: visible !important;
+  background-color: yellow;
+}
+
+/* Sticky/fixed element debugging */
+body.debug [style*="position: fixed"],
+body.debug [style*="position: sticky"],
+body.debug *[style*="position:fixed"],
+body.debug *[style*="position:sticky"] {
+  border: 2px dashed purple; /* Purple dashed border for fixed/sticky elements */
+  background-color: rgba(255, 255, 0, 0.2); /* Yellow background for better visibility */
+}
+
+/* Useful classes for debugging */
+
+/* Debug with pseudo-elements */
+body.debug .db-before::before {
+  content: 'Before';
+  display: block;
+  background-color: rgba(0, 255, 255, 0.5);
+  color: black;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+body.debug .db-after::after {
+  content: 'After';
+  display: block;
+  background-color: rgba(255, 255, 0, 0.5);
+  color: black;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+/* Background Color Classes */
+body.debug .db-bg-red { background-color: red; }
+body.debug .db-bg-green { background-color: green; }
+body.debug .db-bg-blue { background-color: blue; }
+body.debug .db-bg-white { background-color: white; }
+body.debug .db-bg-black { background-color: black; }
+
+/* Text Color Classes */
+body.debug .db-color-red { color: red; }
+body.debug .db-color-green { color: green; }
+body.debug .db-color-blue { color: blue; }
+body.debug .db-color-white { color: white; }
+body.debug .db-color-black { color: black; }
+
+/* Border Color Classes */
+body.debug .db-border-red { border-color: red; }
+body.debug .db-border-green { border-color: green; }
+body.debug .db-border-blue { border-color: blue; }
+body.debug .db-border-white { border-color: white; }
+body.debug .db-border-black { border-color: black; }

@@ -1,0 +1,13 @@
+/*!
+ * Eased Layout Framework v1.0.0
+ * File Name: focus.min.css
+ * Description: It enhances focus visibility across interactive elements. It applies consistent and accessible outlines for general focus states, buttons, links, and common ARIA roles.
+                This extension improves keyboard navigation clarity and supports better accessibility in user interfaces.
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+:focus{outline:3px solid #ff0;outline-offset:3px}[role=button],button:focus,input[type=button]:focus,input[type=reset]:focus,input[type=submit]:focus{outline:3px solid #0f0}[role=link]:focus,[role=menuitem]:focus,[role=menuitemcheckbox]:focus,[role=menuitemradio]:focus,[role=tab]:focus,a:focus{outline:3px solid #00f}

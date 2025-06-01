@@ -1,0 +1,19 @@
+/*!
+ * Eased Layout Framework v1.0.0
+ * File Name: restore-semantic-layout.css
+ * Description: restore-semantic-layout.css restores semantic layout behaviors for consistent styling across browsers in the Eased Layout Framework.
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+header,
+footer,
+div.container,
+main,
+section,
+article {
+    display: block;
+}

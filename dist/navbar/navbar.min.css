@@ -1,0 +1,16 @@
+/*!
+ * Eased Layout Framework v1.0.0
+ * File Name: navbar.min.css
+ * Description: Pure CSS for multi-level navigation menus, featuring hover-activated submenus, adaptable horizontal/vertical with or without .vertical/.horizontal classes, and indicator arrows.
+                Valid Approaches:
+                (i) nav ul
+                (ii) [role="navigation"] ul
+                (ii) ul[role="navigation"]
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+[role=navigation] ul,nav ul,ul[role=navigation]{list-style:none;white-space:nowrap;margin:0;padding:0}[role=navigation]>ul>li,nav>ul>li,ul[role=navigation]>li{display:inline-block;position:relative}[role=navigation] li,nav li,ul[role=navigation] li{position:relative}[role=navigation] a,nav a,ul[role=navigation] a{display:block;text-decoration:none;white-space:nowrap}[role=navigation] li ul,nav li ul,ul[role=navigation] li ul{display:none;position:absolute;top:100%;left:0;white-space:nowrap}[role=navigation] li:hover>ul,nav li:hover>ul,ul[role=navigation] li:hover>ul{display:block}[role=navigation] li ul li ul,nav li ul li ul,ul[role=navigation] li ul li ul{top:0;left:100%}[role=navigation]>ul>li:has(ul)>a::after,nav>ul>li:has(ul)>a::after,ul[role=navigation]>li:has(ul)>a::after{content:" ▼";font-size:.8em}[role=navigation] ul ul li:has(ul)>a::after,aside .horizontal[role=navigation] ul ul li:has(ul)>a::after,aside nav.horizontal ul ul li:has(ul)>a::after,aside ul.horizontal[role=navigation] ul li:has(ul)>a::after,aside.horizontal[role=navigation] ul ul li:has(ul)>a::after,nav ul ul li:has(ul)>a::after,ul[role=navigation] ul li:has(ul)>a::after{content:" ▶";font-size:.8em}.vertical[role=navigation]>ul>li,aside [role=navigation]>ul>li,aside nav>ul>li,aside ul[role=navigation]>li,aside[role=navigation]>ul>li,nav.vertical>ul>li,ul.vertical[role=navigation]>li{display:block!important}.vertical>ul,aside [role=navigation]>ul,aside nav ul,aside ul[role=navigation],aside[role=navigation]>ul{display:block}.vertical li ul,aside [role=navigation]>ul li ul,aside nav ul li ul,aside ul[role=navigation] li ul,aside[role=navigation]>ul li ul{position:relative!important;top:auto!important;left:auto!important;margin-left:1em;display:none}[role=navigation].vertical ul ul li:has(ul)>a::after,aside [role=navigation] ul ul li:has(ul)>a::after,aside nav ul ul li:has(ul)>a::after,aside ul[role=navigation] ul li:has(ul)>a::after,aside[role=navigation] ul ul li:has(ul)>a::after,nav.vertical ul ul li:has(ul)>a::after,ul[role=navigation].vertical ul li:has(ul)>a::after{content:" ▼";font-size:.8em}[role=navigation].horizontal>ul>li,nav.horizontal>ul>li,ul[role=navigation].horizontal>li{display:inline-block!important}.horizontal li ul,[role=navigation].horizontal li ul,nav.horizontal li ul,ul[role=navigation].horizontal li ul{position:absolute!important;top:100%;left:0}.horizontal li ul li ul,[role=navigation].horizontal li ul li ul,nav.horizontal li ul li ul,ul[role=navigation].horizontal li ul li ul{top:0;left:100%}

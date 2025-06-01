@@ -1,0 +1,129 @@
+/*!
+ * Eased Layout Framework v1.0.0
+ * File Name: semantic-layout.css
+ * Description: It focuses on most minimalistic styling common HTML5 semantic elements such as header, footer, main, section, and article, along with div.container, allowing for clean and adaptable layouts.
+ * Author: Muhammad Sultan Al Mahfuz
+ * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
+ * Licensed under the MIT License
+ *
+ * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+hr,
+table,
+caption {
+  margin: 0;
+}
+
+/* Start: Semantic layout */
+
+header,
+footer {
+  width: 100%;
+}
+
+div.container,
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebars (asides) have a default width of 20% */
+
+/* main>aside,
+div.container>aside,
+section>aside,
+article>aside {
+  flex: 0 0 20%;
+} */
+
+/* Single aside takes up 25% width */
+
+/* main>aside:only-of-type,
+div.container>aside:only-of-type,
+section>aside:only-of-type,
+article>aside:only-of-type {
+  flex: 0 0 25%;
+} */
+
+/* Main content and container's direct child elements take equal space by default */
+
+main,
+div.container,
+main>section,
+main>article,
+div.container>section,
+div.container>article {
+  flex: 1;
+}
+
+/* Fallback for browsers not supporting flexbox */
+
+@supports not (display: flex) {
+
+  header,
+  aside,
+  main,
+  section,
+  article,
+  footer,
+  div.container {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* End: Semantic layout */
+
+/* Start: Responsive design for semantic element while rendering in smaller screens */
+@media screen and (max-width: 900px) {
+
+  div.container,
+  main,
+  section,
+  article {
+    flex-direction: column;
+  }
+
+  div.container.row,
+  main.row,
+  section.row,
+  article.row {
+    flex-direction: row;
+  }
+}
+
+/* End: Responsive design for semantic element while rendering in smaller screens */
+
+/* Layout Rules (HTML5 Semantic Layout):
+    Header Placement:
+        Optional; can be placed in the body, inside a div.container, or as a child of aside, main, article, or section.
+        Though optional, having at least one header element is highly recommended as it improves SEO by providing search engines with context, and enhances accessibility too.
+
+    Aside Combinations:
+        None, one (left), one (right), or two asides.
+
+    Main Content:
+        Must use main. Can section, or article be used as optional.
+
+    Footer Placement:
+        Optional; can be placed in the body or inside a div.container.
+
+    container Usage:
+        The div.container serves as a container. It is optional and can be placed as a child of any element.
+*/
