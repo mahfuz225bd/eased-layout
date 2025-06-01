@@ -53,7 +53,7 @@ const descriptions = {
 
   "stretched-link": `It provides a CSS-only solution for creating a stretched link effect on elements.`,
   bundle: `eased-layout.css and eased-layout.js are concatenated bundles of core styles and scripts for the Eased Layout Framework.
-             These files combine essential layout, accessibility, reset, print, and helper utilities to streamline usage in production deployments.`,
+                These files combine essential layout, accessibility, reset, print, and helper utilities to streamline usage in production deployments.`,
 };
 
 // Remove existing /*! ... */ header at the very top
