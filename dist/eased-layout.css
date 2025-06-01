@@ -88,24 +88,6 @@ main {
   flex-wrap: wrap;
 }
 
-/* Sidebars (asides) have a default width of 20% */
-
-/* main>aside,
-div.container>aside,
-section>aside,
-article>aside {
-  flex: 0 0 20%;
-} */
-
-/* Single aside takes up 25% width */
-
-/* main>aside:only-of-type,
-div.container>aside:only-of-type,
-section>aside:only-of-type,
-article>aside:only-of-type {
-  flex: 0 0 25%;
-} */
-
 /* Main content and container's direct child elements take equal space by default */
 
 main,
