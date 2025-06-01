@@ -32,14 +32,14 @@
 }
 
 [role="separator"][aria-orientation="vertical"] {
-    width: 1px;
+    width: 3px;
     background: #aaa;
     cursor: col-resize;
     flex-shrink: 0;
 }
 
 [role="separator"][aria-orientation="horizontal"] {
-    height: 1px;
+    height: 3px;
     background: #aaa;
     cursor: row-resize;
     flex-shrink: 0;

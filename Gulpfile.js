@@ -203,4 +203,6 @@ function bundleJS() {
     .pipe(dest("dist"));
 }
 
-exports.default = parallel(css, js, bundleCSS, bundleJS);
+exports.css = parallel(css, bundleCSS)
+exports.js = parallel(js, bundleJS)
+exports.default = parallel(exports.css, exports.js);

@@ -12,4 +12,4 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-.resizable-grid{display:flex;flex-direction:column;width:100%;overflow:hidden}.resizable-grid>*{display:flex;flex-direction:row;width:100%}.resizable-grid>*>:not([role=separator]){overflow:auto;box-sizing:border-box;flex-shrink:0}[role=separator][aria-orientation=vertical]{width:1px;background:#aaa;cursor:col-resize;flex-shrink:0}[role=separator][aria-orientation=horizontal]{height:1px;background:#aaa;cursor:row-resize;flex-shrink:0}
+.resizable-grid{display:flex;flex-direction:column;width:100%;overflow:hidden}.resizable-grid>*{display:flex;flex-direction:row;width:100%}.resizable-grid>*>:not([role=separator]){overflow:auto;box-sizing:border-box;flex-shrink:0}[role=separator][aria-orientation=vertical]{width:3px;background:#aaa;cursor:col-resize;flex-shrink:0}[role=separator][aria-orientation=horizontal]{height:3px;background:#aaa;cursor:row-resize;flex-shrink:0}
