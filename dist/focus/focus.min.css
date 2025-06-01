@@ -10,4 +10,4 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-:focus{outline:3px solid #ff0;outline-offset:3px}[role=button],button:focus,input[type=button]:focus,input[type=reset]:focus,input[type=submit]:focus{outline:3px solid #0f0}[role=link]:focus,[role=menuitem]:focus,[role=menuitemcheckbox]:focus,[role=menuitemradio]:focus,[role=tab]:focus,a:focus{outline:3px solid #00f}
+body.enable-focus-outline :focus{outline:3px solid #ff0;outline-offset:3px}body.enable-focus-outline [role=button]:focus,body.enable-focus-outline button:focus,body.enable-focus-outline input[type=button]:focus,body.enable-focus-outline input[type=reset]:focus,body.enable-focus-outline input[type=submit]:focus{outline:3px solid #0f0}body.enable-focus-outline [role=link]:focus,body.enable-focus-outline [role=menuitem]:focus,body.enable-focus-outline [role=menuitemcheckbox]:focus,body.enable-focus-outline [role=menuitemradio]:focus,body.enable-focus-outline [role=tab]:focus,body.enable-focus-outline a:focus{outline:3px solid #00f}

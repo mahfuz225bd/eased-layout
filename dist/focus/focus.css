@@ -10,27 +10,27 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-/* Universal focus style */
-:focus {
+/* Only apply focus outlines when body has class 'enable-focus-outline' */
+body.enable-focus-outline :focus {
     outline: 3px solid #FF0;
     outline-offset: 3px;
 }
 
 /* Focus style for buttons */
-button:focus,
-input[type="button"]:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-[role="button"] {
+body.enable-focus-outline button:focus,
+body.enable-focus-outline input[type="button"]:focus,
+body.enable-focus-outline input[type="submit"]:focus,
+body.enable-focus-outline input[type="reset"]:focus,
+body.enable-focus-outline [role="button"]:focus {
     outline: 3px solid #0F0;
 }
 
-/* Focus style for links, menu items and tab */
-a:focus,
-[role="link"]:focus,
-[role="menuitem"]:focus,
-[role="menuitemradio"]:focus,
-[role="menuitemcheckbox"]:focus,
-[role="tab"]:focus {
+/* Focus style for links, menu items and tabs */
+body.enable-focus-outline a:focus,
+body.enable-focus-outline [role="link"]:focus,
+body.enable-focus-outline [role="menuitem"]:focus,
+body.enable-focus-outline [role="menuitemradio"]:focus,
+body.enable-focus-outline [role="menuitemcheckbox"]:focus,
+body.enable-focus-outline [role="tab"]:focus {
     outline: 3px solid #00F;
 }

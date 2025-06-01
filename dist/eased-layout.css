@@ -30,28 +30,28 @@ table,
 caption {
     margin: 0;
 }
-/* Universal focus style */
-:focus {
+/* Only apply focus outlines when body has class 'enable-focus-outline' */
+body.enable-focus-outline :focus {
     outline: 3px solid #FF0;
     outline-offset: 3px;
 }
 
 /* Focus style for buttons */
-button:focus,
-input[type="button"]:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-[role="button"] {
+body.enable-focus-outline button:focus,
+body.enable-focus-outline input[type="button"]:focus,
+body.enable-focus-outline input[type="submit"]:focus,
+body.enable-focus-outline input[type="reset"]:focus,
+body.enable-focus-outline [role="button"]:focus {
     outline: 3px solid #0F0;
 }
 
-/* Focus style for links, menu items and tab */
-a:focus,
-[role="link"]:focus,
-[role="menuitem"]:focus,
-[role="menuitemradio"]:focus,
-[role="menuitemcheckbox"]:focus,
-[role="tab"]:focus {
+/* Focus style for links, menu items and tabs */
+body.enable-focus-outline a:focus,
+body.enable-focus-outline [role="link"]:focus,
+body.enable-focus-outline [role="menuitem"]:focus,
+body.enable-focus-outline [role="menuitemradio"]:focus,
+body.enable-focus-outline [role="menuitemcheckbox"]:focus,
+body.enable-focus-outline [role="tab"]:focus {
     outline: 3px solid #00F;
 }
 *,
@@ -7819,7 +7819,7 @@ div.container:has(.column-count), main:has(.column-count), div.container.column-
   .column-count.total-columns-breakpoints-n,
   .column-count.total-columns-xxl-n { column-count: var(--columns-xxl, 1); }
 }
-body.debug * {
+body.enable-debugger * {
   outline: 2px solid #F0F; /* Magenta outline for all elements */
   padding: 10px;
 
@@ -7827,70 +7827,70 @@ body.debug * {
   transition: none !important; /* Disable all transitions */
 }
 
-body.debug {
+body.enable-debugger {
   border: 2px dashed blue; /* Outline the body to see its boundaries */
   overflow: auto; /* Ensure scrolling is enabled */
 }
 
-body.debug *:hover {
+body.enable-debugger *:hover {
   outline: 3px solid #FF0; /* Bright yellow outline for hover */
   outline-offset: 2px; /* Match focus offset for consistency */
 }
 
-body.debug *:focus {
+body.enable-debugger *:focus {
   outline: 3px dashed #0FF; /* Cyan outline for keyboard focus */
   outline-offset: 4px; /* Extra spacing for clarity */
 }
 
-body.debug *:active {
+body.enable-debugger *:active {
   outline: 3px solid #0F0; /* Bright green outline for active state */
   outline-offset: 2px; /* Match focus and hover offset for consistency */
 }
 
-body.debug a:visited {
+body.enable-debugger a:visited {
   outline: 2px dashed #C0F; /* Violet outline for visited links */
   outline-offset: 2px;
 }
 
-body.debug *:focus-visible {
+body.enable-debugger *:focus-visible {
   outline: 3px solid #FF5; /* Neon orange outline for focus-visible state */
   outline-offset: 3px;
 }
 
-body.debug *:disabled {
+body.enable-debugger *:disabled {
   outline: 2px dashed #8F8; /* Soft greenish grey outline for disabled elements */
   outline-offset: 1px;
 }
 
-body.debug *:checked {
+body.enable-debugger *:checked {
   outline: 3px solid #F33; /* Bright red outline for checked elements */
   outline-offset: 2px;
 }
 
-body.debug *:invalid {
+body.enable-debugger *:invalid {
   outline: 3px solid #F44; /* Bright crimson outline for invalid form fields */
   outline-offset: 2px;
 }
 
-body.debug *:valid {
+body.enable-debugger *:valid {
   outline: 3px solid #3F3; /* Bright lime outline for valid form fields */
   outline-offset: 2px;
 }
 
-body.debug [disabled] {
+body.enable-debugger [disabled] {
   cursor: not-allowed;
 }
 
-body.debug [hidden] {
+body.enable-debugger [hidden] {
   visibility: visible !important;
   background-color: yellow;
 }
 
 /* Sticky/fixed element debugging */
-body.debug [style*="position: fixed"],
-body.debug [style*="position: sticky"],
-body.debug *[style*="position:fixed"],
-body.debug *[style*="position:sticky"] {
+body.enable-debugger [style*="position: fixed"],
+body.enable-debugger [style*="position: sticky"],
+body.enable-debugger *[style*="position:fixed"],
+body.enable-debugger *[style*="position:sticky"] {
   border: 2px dashed purple; /* Purple dashed border for fixed/sticky elements */
   background-color: rgba(255, 255, 0, 0.2); /* Yellow background for better visibility */
 }
@@ -7898,7 +7898,7 @@ body.debug *[style*="position:sticky"] {
 /* Useful classes for debugging */
 
 /* Debug with pseudo-elements */
-body.debug .db-before::before {
+body.enable-debugger .db-before::before {
   content: 'Before';
   display: block;
   background-color: rgba(0, 255, 255, 0.5);
@@ -7907,7 +7907,7 @@ body.debug .db-before::before {
   margin-bottom: 10px;
 }
 
-body.debug .db-after::after {
+body.enable-debugger .db-after::after {
   content: 'After';
   display: block;
   background-color: rgba(255, 255, 0, 0.5);
@@ -7917,22 +7917,22 @@ body.debug .db-after::after {
 }
 
 /* Background Color Classes */
-body.debug .db-bg-red { background-color: red; }
-body.debug .db-bg-green { background-color: green; }
-body.debug .db-bg-blue { background-color: blue; }
-body.debug .db-bg-white { background-color: white; }
-body.debug .db-bg-black { background-color: black; }
+body.enable-debugger .db-bg-red { background-color: red; }
+body.enable-debugger .db-bg-green { background-color: green; }
+body.enable-debugger .db-bg-blue { background-color: blue; }
+body.enable-debugger .db-bg-white { background-color: white; }
+body.enable-debugger .db-bg-black { background-color: black; }
 
 /* Text Color Classes */
-body.debug .db-color-red { color: red; }
-body.debug .db-color-green { color: green; }
-body.debug .db-color-blue { color: blue; }
-body.debug .db-color-white { color: white; }
-body.debug .db-color-black { color: black; }
+body.enable-debugger .db-color-red { color: red; }
+body.enable-debugger .db-color-green { color: green; }
+body.enable-debugger .db-color-blue { color: blue; }
+body.enable-debugger .db-color-white { color: white; }
+body.enable-debugger .db-color-black { color: black; }
 
 /* Border Color Classes */
-body.debug .db-border-red { border-color: red; }
-body.debug .db-border-green { border-color: green; }
-body.debug .db-border-blue { border-color: blue; }
-body.debug .db-border-white { border-color: white; }
-body.debug .db-border-black { border-color: black; }
+body.enable-debugger .db-border-red { border-color: red; }
+body.enable-debugger .db-border-green { border-color: green; }
+body.enable-debugger .db-border-blue { border-color: blue; }
+body.enable-debugger .db-border-white { border-color: white; }
+body.enable-debugger .db-border-black { border-color: black; }
