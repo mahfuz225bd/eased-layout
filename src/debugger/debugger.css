@@ -10,115 +10,86 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-/* Universal outline for all elements */
-* {
-  outline: 2px solid #F0F;
-  /* Magenta outline for all elements */
+body.debug * {
+  outline: 2px solid #F0F; /* Magenta outline for all elements */
   padding: 10px;
 
-  animation: none !important;
-  /* Disable all animations */
-  transition: none !important;
-  /* Disable all transitions */
+  animation: none !important; /* Disable all animations */
+  transition: none !important; /* Disable all transitions */
 }
 
-/* Visualize the viewport and scrolling */
-body {
-  border: 2px dashed blue;
-  /* Outline the body to see its boundaries */
-  overflow: auto;
-  /* Ensure scrolling is enabled */
+body.debug {
+  border: 2px dashed blue; /* Outline the body to see its boundaries */
+  overflow: auto; /* Ensure scrolling is enabled */
 }
 
-/* Enhanced hover outline */
-:hover {
-  outline: 3px solid #FF0;
-  /* Bright yellow outline for hover */
-  outline-offset: 2px;
-  /* Match focus offset for consistency */
+body.debug *:hover {
+  outline: 3px solid #FF0; /* Bright yellow outline for hover */
+  outline-offset: 2px; /* Match focus offset for consistency */
 }
 
-/* Accessible keyboard navigation focus */
-:focus {
-  outline: 3px dashed #0FF;
-  /* Cyan outline for keyboard focus */
-  outline-offset: 4px;
-  /* Extra spacing for clarity */
+body.debug *:focus {
+  outline: 3px dashed #0FF; /* Cyan outline for keyboard focus */
+  outline-offset: 4px; /* Extra spacing for clarity */
 }
 
-/* Outline for active elements (e.g., buttons) */
-:active {
-  outline: 3px solid #0F0;
-  /* Bright green outline for active state */
-  outline-offset: 2px;
-  /* Match focus and hover offset for consistency */
+body.debug *:active {
+  outline: 3px solid #0F0; /* Bright green outline for active state */
+  outline-offset: 2px; /* Match focus and hover offset for consistency */
 }
 
-/* Outline for visited links */
-:visited {
-  outline: 2px dashed #C0F;
-  /* Violet outline for visited links */
+body.debug a:visited {
+  outline: 2px dashed #C0F; /* Violet outline for visited links */
   outline-offset: 2px;
 }
 
-/* Outline for focus-visible elements (used for elements focused via keyboard) */
-:focus-visible {
-  outline: 3px solid #FF5;
-  /* Neon orange outline for focus-visible state */
+body.debug *:focus-visible {
+  outline: 3px solid #FF5; /* Neon orange outline for focus-visible state */
   outline-offset: 3px;
 }
 
-/* Outline for disabled form elements */
-:disabled {
-  outline: 2px dashed #8F8;
-  /* Soft greenish grey outline for disabled elements */
+body.debug *:disabled {
+  outline: 2px dashed #8F8; /* Soft greenish grey outline for disabled elements */
   outline-offset: 1px;
 }
 
-/* Outline for checked elements (e.g., checkboxes, radio buttons) */
-:checked {
-  outline: 3px solid #F33;
-  /* Bright red outline for checked elements */
+body.debug *:checked {
+  outline: 3px solid #F33; /* Bright red outline for checked elements */
   outline-offset: 2px;
 }
 
-/* Outline for elements with invalid form input */
-:invalid {
-  outline: 3px solid #F44;
-  /* Bright crimson outline for invalid form fields */
+body.debug *:invalid {
+  outline: 3px solid #F44; /* Bright crimson outline for invalid form fields */
   outline-offset: 2px;
 }
 
-/* Outline for elements with valid form input */
-:valid {
-  outline: 3px solid #3F3;
-  /* Bright lime outline for valid form fields */
+body.debug *:valid {
+  outline: 3px solid #3F3; /* Bright lime outline for valid form fields */
   outline-offset: 2px;
 }
 
-/* Disabled state cursor */
-[disabled] {
+body.debug [disabled] {
   cursor: not-allowed;
 }
 
-[hidden] {
+body.debug [hidden] {
   visibility: visible !important;
   background-color: yellow;
 }
 
 /* Sticky/fixed element debugging */
-position: fixed,
-position: sticky {
-  border: 2px dashed purple;
-  /* Purple dashed border for fixed/sticky elements */
-  background-color: rgba(255, 255, 0, 0.2);
-  /* Yellow background for better visibility */
+body.debug [style*="position: fixed"],
+body.debug [style*="position: sticky"],
+body.debug *[style*="position:fixed"],
+body.debug *[style*="position:sticky"] {
+  border: 2px dashed purple; /* Purple dashed border for fixed/sticky elements */
+  background-color: rgba(255, 255, 0, 0.2); /* Yellow background for better visibility */
 }
 
 /* Useful classes for debugging */
 
 /* Debug with pseudo-elements */
-.db-before::before {
+body.debug .db-before::before {
   content: 'Before';
   display: block;
   background-color: rgba(0, 255, 255, 0.5);
@@ -127,7 +98,7 @@ position: sticky {
   margin-bottom: 10px;
 }
 
-.db-after::after {
+body.debug .db-after::after {
   content: 'After';
   display: block;
   background-color: rgba(255, 255, 0, 0.5);
@@ -137,64 +108,22 @@ position: sticky {
 }
 
 /* Background Color Classes */
-.db-bg-red {
-  background-color: red;
-}
-
-.db-bg-green {
-  background-color: green;
-}
-
-.db-bg-blue {
-  background-color: blue;
-}
-
-.db-bg-white {
-  background-color: white;
-}
-
-.db-bg-black {
-  background-color: black;
-}
+body.debug .db-bg-red { background-color: red; }
+body.debug .db-bg-green { background-color: green; }
+body.debug .db-bg-blue { background-color: blue; }
+body.debug .db-bg-white { background-color: white; }
+body.debug .db-bg-black { background-color: black; }
 
 /* Text Color Classes */
-.db-color-red {
-  color: red;
-}
-
-.db-color-green {
-  color: green;
-}
-
-.db-color-blue {
-  color: blue;
-}
-
-.db-color-white {
-  color: white;
-}
-
-.db-color-black {
-  color: black;
-}
+body.debug .db-color-red { color: red; }
+body.debug .db-color-green { color: green; }
+body.debug .db-color-blue { color: blue; }
+body.debug .db-color-white { color: white; }
+body.debug .db-color-black { color: black; }
 
 /* Border Color Classes */
-.db-border-red {
-  border-color: red;
-}
-
-.db-border-green {
-  border-color: green;
-}
-
-.db-border-blue {
-  border-color: blue;
-}
-
-.db-border-white {
-  border-color: white;
-}
-
-.db-border-black {
-  border-color: black;
-}
+body.debug .db-border-red { border-color: red; }
+body.debug .db-border-green { border-color: green; }
+body.debug .db-border-blue { border-color: blue; }
+body.debug .db-border-white { border-color: white; }
+body.debug .db-border-black { border-color: black; }
