@@ -1,6 +1,16 @@
 ## TODOs for Future Releases
 
 - Drag and Drop
+- Make supportable dragbar for (without row for single row):
+```html
+<div class="resizable-grid" style="height: 400px;">
+   <div style="width: 33.33%;">Grid - Top Left</div>
+   <div role="separator" aria-orientation="vertical"></div>
+   <div style="width: 33.33%;">Grid - Top Middle</div>
+   <div role="separator" aria-orientation="vertical"></div>
+   <div style="width: 33.33%;">Grid - Top Right</div>
+</div>
+```
 - row span, col span and more features for gird.grid
 - Complete eased-layout.js (to manage/control the full framework)
 - Restore semantic layout
