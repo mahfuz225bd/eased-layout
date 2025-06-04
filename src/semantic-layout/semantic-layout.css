@@ -76,24 +76,6 @@ div.container>article {
 
 /* End: Responsive design for semantic element while rendering in smaller screens */
 
-/* Start: Fallback for browsers not supporting flexbox */
-
-@supports not (display: flex) {
-
-  header,
-  aside,
-  main,
-  section,
-  article,
-  footer,
-  div.container {
-    display: block;
-    width: 100%;
-  }
-}
-
-/* End: Fallback for browsers not supporting flexbox */
-
 /* Layout Rules (HTML5 Semantic Layout):
     Header Placement:
         Optional; can be placed in the body, inside a div.container, or as a child of aside, main, article, or section.
