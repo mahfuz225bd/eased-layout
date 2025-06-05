@@ -344,3 +344,54 @@ function initAllGrids() {
 }
 
 document.addEventListener("DOMContentLoaded", initAllGrids);
+
+function adjustColumnWidthsIfAuto() {
+  var targetElements = document.querySelectorAll(".total-columns-auto");
+  for (var i = 0; i < targetElements.length; i++) {
+    var el = targetElements[i];
+    var children = el.children;
+    var childrenCount = children.length;
+
+    if (childrenCount === 0) continue;
+
+    var totalWidth = el.clientWidth;
+    var childWidth = totalWidth / childrenCount;
+
+    for (var j = 0; j < children.length; j++) {
+      children[j].style.flex = "0 0 " + childWidth + "px";
+    }
+  }
+}
+
+// Execute adjustColumnWidthsIfAuto on DOM ready
+document.addEventListener("DOMContentLoaded", adjustColumnWidthsIfAuto);
+
+// Execute adjustColumnWidthsIfAuto on window resize
+window.addEventListener("resize", adjustColumnWidthsIfAuto);
+
+function adjustColumnWidthsIfAuto() {
+  var targetElements = document.querySelectorAll(".total-columns-auto");
+  for (var i = 0; i < targetElements.length; i++) {
+    var el = targetElements[i];
+    var children = el.children;
+    var childrenCount = children.length;
+
+    if (childrenCount === 0) {
+      continue;
+    }
+
+    var totalWidth = el.clientWidth;
+    var childWidth = totalWidth / childrenCount;
+
+    for (var j = 0; j < children.length; j++) {
+      children[j].style.width = childWidth + 'px';
+    }
+  }
+}
+
+
+// Execute adjustColumnWidthsIfAuto on DOM ready
+document.addEventListener("DOMContentLoaded", adjustColumnWidthsIfAuto);
+
+// Execute adjustColumnWidthsIfAuto on window resize
+window.addEventListener("resize", adjustColumnWidthsIfAuto);

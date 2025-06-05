@@ -189,6 +189,8 @@ function bundleJS() {
     "src/semantic-layout/semantic-layout.js",
     "src/aside/aside.js",
     "src/dragbar/dragbar.js",
+    "src/grid.flex/grid.flex.js",
+    "src/grid.float/grid.float.js",
   ];
 
   return src(jsFiles, { allowEmpty: true })

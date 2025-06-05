@@ -54,25 +54,10 @@ div.container>article {
   flex: 1;
 }
 
-/* Fallback for browsers not supporting flexbox */
-
-@supports not (display: flex) {
-
-  header,
-  aside,
-  main,
-  section,
-  article,
-  footer,
-  div.container {
-    display: block;
-    width: 100%;
-  }
-}
-
 /* End: Semantic layout */
 
 /* Start: Responsive design for semantic element while rendering in smaller screens */
+
 @media screen and (max-width: 900px) {
 
   div.container,
