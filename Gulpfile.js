@@ -4,7 +4,6 @@ const terser = require("gulp-terser");
 const rename = require("gulp-rename");
 const through2 = require("through2");
 const concat = require("gulp-concat");
-const groupMediaQueries = require("gulp-group-css-media-queries");
 
 const descriptions = {
   aside: `This is for Eased Layout Framework that support control aside as fixed-position or normal sidebar.
@@ -175,7 +174,6 @@ function bundleCSS() {
   return src(cssFiles, { allowEmpty: true })
     .pipe(stripHeader())
     .pipe(concat("eased-layout.css"))
-    .pipe(groupMediaQueries())
     .pipe(addHeader())
     .pipe(dest("dist"))
     .pipe(cleanCSS())
