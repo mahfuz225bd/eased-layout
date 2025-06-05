@@ -23,6 +23,7 @@ function adjustColumnWidthsIfAuto() {
 
     for (var j = 0; j < children.length; j++) {
       children[j].style.flex = "0 0 " + childWidth + "px";
+      children[j].style.width = childWidth + 'px';
     }
   }
 }
