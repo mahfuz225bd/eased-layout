@@ -14,7 +14,6 @@
 - Merging grid.grid + float.gird + flex.grid as grid
 - row span, col span and more features for gird.grid
 - Complete eased-layout.js (to manage/control the full framework)
-- Restore semantic layout
 
 - Add more features to helpers.css
 - Complete test code for helpers
