@@ -21,9 +21,16 @@ function adjustColumnWidthsIfAuto() {
     var totalWidth = el.clientWidth;
     var childWidth = totalWidth / childrenCount;
 
+    var parentDisplay = window.getComputedStyle(el).display;
+
     for (var j = 0; j < children.length; j++) {
-      children[j].style.flex = "0 0 " + childWidth + "px";
-      children[j].style.width = childWidth + 'px';
+      if (parentDisplay === "flex" || parentDisplay === "inline-flex") {
+        children[j].style.flex = "0 0 " + childWidth + "px";
+      } else {
+        children[j].style.flex = ""; // Clear flex if it was set previously
+      }
+
+      children[j].style.width = childWidth + "px";
     }
   }
 }
