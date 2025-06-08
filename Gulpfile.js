@@ -1,4 +1,4 @@
-const { src, dest, parallel } = require("gulp");
+const { src, dest, watch, parallel } = require("gulp");
 const cleanCSS = require("gulp-clean-css");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
@@ -164,9 +164,7 @@ function bundleCSS() {
     "src/stretched-link/stretched-link.css",
     "src/dragbar/dragbar.css",
     "src/print/print.css",
-    "src/grid.flex/grid.flex.css",
-    "src/grid.float/grid.float.css",
-    "src/grid.grid/grid.grid.css",
+    "src/grid/grid.css",
     "src/column-count/column-count.css",
     "src/debugger/debugger.css",
   ];
@@ -189,8 +187,7 @@ function bundleJS() {
     "src/semantic-layout/semantic-layout.js",
     "src/aside/aside.js",
     "src/dragbar/dragbar.js",
-    "src/grid.flex/grid.flex.js",
-    "src/grid.float/grid.float.js",
+    "src/grid/grid.js",
   ];
 
   return src(jsFiles, { allowEmpty: true })
@@ -205,6 +202,12 @@ function bundleJS() {
     .pipe(dest("dist"));
 }
 
-exports.css = parallel(css, bundleCSS)
-exports.js = parallel(js, bundleJS)
+function watchFiles() {
+  watch("src/**/*.css", exports.css);
+  watch("src/**/*.js", exports.js);
+}
+
+exports.css = parallel(css, bundleCSS);
+exports.js = parallel(js, bundleJS);
+exports.watch = watchFiles;
 exports.default = parallel(exports.css, exports.js);
