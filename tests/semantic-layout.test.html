@@ -34,6 +34,15 @@
 <body>
     <h1>Test: Complete Examples for Restoring HTML5 Semantic Layout Design</h1>
 
+    <h1>Method 1 [header + (div.container -> aside + main + aside) + footer]:</h1>
+    <header>Header, in body</header>
+    <div class="container">
+        <aside class="left">Left aside, in div.container</aside>
+        <main class="left">Main</main>
+        <aside class="left">Right aside, in div.container</aside>
+    </div>
+    <footer>Footer, in body</footer>
+
     <h2>Method 2.1 [header + main -> (aside + section + aside) + footer]:</h2>
     <header>Header, in body</header>
     <main>
@@ -142,7 +151,7 @@
     </main>
     <footer>Footer, in body</footer>
 
-<script src="../dist/eased-layout.min.js"></script>
+    <script src="../dist/eased-layout.min.js"></script>
 </body>
 
 </html>
