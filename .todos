@@ -11,9 +11,9 @@
    <div style="width: 33.33%;">Grid - Top Right</div>
 </div>
 ```
-- Merging grid.grid + float.gird + flex.grid as grid
-- row span, col span and more features for gird.grid
-- Complete eased-layout.js (to manage/control the full framework)
+- Along with .row allow .grid class
+   - For .grid.total-columns-n, apply .total-columns-n to all .row which are directly child of .grid (must be implemented by JS)
+   - row span, col span and more features for gird.grid (try to implement by CSS), grid.flex (try to implement by JS) and grid.float (try to implement by JS)
 
 - Add more features to helpers.css
 - Complete test code for helpers
