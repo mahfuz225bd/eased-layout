@@ -9,6 +9,31 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
+/* Start: Basic Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+hr,
+table,
+caption {
+    margin: 0;
+}
+
+/* End: Basic Reset */
+
 div.container:has(.row), main:has(.row) { display: block; }
 
 .row::after { content: ""; display: table;  clear: both; }
