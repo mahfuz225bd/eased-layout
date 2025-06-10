@@ -1,7 +1,7 @@
 /*!
  * Eased Layout Framework v1.0.0
  * File Name: semantic-layout.min.css
- * Description: It focuses on most minimalistic styling common HTML5 semantic elements such as header, footer, main, section, and article, along with div.container, allowing for clean and adaptable layouts.
+ * Description: It focuses on most minimalistic styling common HTML5 semantic elements such as header, footer, aside, main, section, and article, along with div.container, allowing for clean and adaptable layouts.
  * Author: Muhammad Sultan Al Mahfuz
  * Copyright (c) 2025 by Muhammad Sultan Al Mahfuz
  * Licensed under the MIT License
@@ -9,4 +9,4 @@
  * Full documentation and usage instructions are available in the `README.md` file. (https://github.com/mahfuz225bd/eased-layout?tab=readme-ov-file#documentation)
 */
 
-*,::after,::before{box-sizing:border-box}body,caption,h1,h2,h3,h4,h5,h6,hr,p,pre,table{margin:0}footer,header{width:100%}div.container,main{display:flex;flex-wrap:wrap}div.container,div.container>article,div.container>section,main,main>article,main>section{flex:1}@media screen and (max-width:900px){article,div.container,main,section{flex-direction:column}article.row,div.container.row,main.row,section.row{flex-direction:row}}
+footer,header{width:100%}div.container,main{display:flex;flex-wrap:wrap}div.container,div.container>article,div.container>section,main,main>article,main>section{flex:1}@media screen and (max-width:900px){article,div.container,main,section{flex-direction:column}article.row,div.container.row,main.row,section.row{flex-direction:row}}

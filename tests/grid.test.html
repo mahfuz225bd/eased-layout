@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test: Complete Examples of Grid System</title>
-    <!-- <link rel="stylesheet" href="../dist/basic-reset/basic-reset.min.css">
-    <link rel="stylesheet" href="../dist/semantic-layout/semantic-layout.min.css">
-    <link rel="stylesheet" href="../dist/grid.flex/grid.flex.min.css"> -->
+    
     <link rel="stylesheet" href="../dist/eased-layout.min.css">
+
     <style>
         .row,
         .row>*,
@@ -33,43 +32,9 @@
 
 <body>
     <h1>Test: Complete Examples of Grid System (CSS Flex)</h1>
-    
-    <h2>1. Unlimited Columns with `.total-column-auto`</h2>
-    <div class="flex row total-columns-auto">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
-        <div>13</div>
-        <div>14</div>
-        <div>15</div>
-        <div>16</div>
-        <div>17</div>
-        <div>18</div>
-        <div>19</div>
-        <div>20</div>
-        <div>21</div>
-        <div>22</div>
-        <div>23</div>
-        <div>24</div>
-        <div>25</div>
-        <div>26</div>
-        <div>27</div>
-        <div>28</div>
-        <div>29</div>
-        <div>30</div>
-    </div>
 
-    <h2>2.1. 12-Column Grid without `div.container` or &lt;main&gt;</h2>
-    <div class="flex row total-columns-12">
+    <h2>1.1. 12-Column Grid without `div.container` or &lt;main&gt;</h2>
+    <div class="row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -84,8 +49,8 @@
         <div>12</div>
     </div>
 
-    <h2>2.2. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added</h2>
-    <div class="flex row total-columns-12">
+    <h2>1.2. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added</h2>
+    <div class="row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -101,10 +66,10 @@
         <div>13</div>
     </div>
 
-    <h2>2.3. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added (Making a Single row
+    <h2>1.3. 12-Column Grid without `div.container` or &lt;main&gt; + External Column Added (Making a Single row
         Look
         Like Two rows)</h2>
-    <div class="flex row total-columns-6">
+    <div class="row total-columns-6">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -119,8 +84,8 @@
         <div>12</div>
     </div>
 
-    <h2>3.1.1. 12-Column Grid with `div.container`</h2>
-    <div class="container flex row total-columns-12">
+    <h2>2.1.1. 12-Column Grid with `div.container`</h2>
+    <div class="container row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -135,8 +100,8 @@
         <div>12</div>
     </div>
 
-    <h2>3.1.2. 12-Column Grid with `div.container` + External Column Added</h2>
-    <div class="container flex row total-columns-12">
+    <h2>2.1.2. 12-Column Grid with `div.container` + External Column Added</h2>
+    <div class="container row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -152,9 +117,9 @@
         <div>13</div>
     </div>
 
-    <h2>3.1.3. 12-Column Grid with `div.container` + External Column Added (Making a Single row Look Like Two
+    <h2>2.1.3. 12-Column Grid with `div.container` + External Column Added (Making a Single row Look Like Two
         rows)</h2>
-    <div class="container flex row total-columns-6">
+    <div class="container row total-columns-6">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -169,8 +134,8 @@
         <div>12</div>
     </div>
 
-    <h2>3.2.1. 12-Column Grid with &lt;main&gt;</h2>
-    <main class="flex row total-columns-12">
+    <h2>2.2.1. 12-Column Grid with &lt;main&gt;</h2>
+    <main class="row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -185,8 +150,8 @@
         <div>12</div>
     </main>
 
-    <h2>3.2.2. 12-Column Grid with &lt;main&gt; + External Column Added</h2>
-    <main class="flex row total-columns-12">
+    <h2>2.2.2. 12-Column Grid with &lt;main&gt; + External Column Added</h2>
+    <main class="row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -202,9 +167,9 @@
         <div>13</div>
     </main>
 
-    <h2>3.2.3. 12-Column Grid with &lt;main&gt; + External Column Added (Making a Single row Look Like Two
+    <h2>2.2.3. 12-Column Grid with &lt;main&gt; + External Column Added (Making a Single row Look Like Two
         rows)</h2>
-    <main class="flex row total-columns-6">
+    <main class="row total-columns-6">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -219,9 +184,9 @@
         <div>12</div>
     </main>
 
-    <h2>4.1.1. 12-Column Grid Wrapped in `div.container`</h2>
+    <h2>3.1.1. 12-Column Grid Wrapped in `div.container`</h2>
     <div class="container">
-        <div class="flex row total-columns-12">
+        <div class="row total-columns-12">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -237,9 +202,9 @@
         </div>
     </div>
 
-    <h2>4.1.2. 12-Column Grid Wrapped in `div.container` + External Column Added</h2>
+    <h2>3.1.2. 12-Column Grid Wrapped in `div.container` + External Column Added</h2>
     <div class="container">
-        <div class="flex row total-columns-12">
+        <div class="row total-columns-12">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -256,10 +221,10 @@
         </div>
     </div>
 
-    <h2>4.1.3. 12-Column Grid Wrapped in `div.container` + External Column Added (Combined into 10-Column Grid Like Two
+    <h2>3.1.3. 12-Column Grid Wrapped in `div.container` + External Column Added (Combined into 10-Column Grid Like Two
         Grids)</h2>
     <div class="container">
-        <div class="flex row total-columns-6">
+        <div class="row total-columns-6">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -275,9 +240,9 @@
         </div>
     </div>
 
-    <h2>4.2.1. 12-Column Grid Wrapped in &lt;main&gt;</h2>
+    <h2>3.2.1. 12-Column Grid Wrapped in &lt;main&gt;</h2>
     <main>
-        <div class="flex row total-columns-12">
+        <div class="row total-columns-12">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -293,9 +258,9 @@
         </div>
     </main>
 
-    <h2>4.2.2. 12-Column Grid Wrapped in &lt;main&gt; + External Column Added</h2>
+    <h2>3.2.2. 12-Column Grid Wrapped in &lt;main&gt; + External Column Added</h2>
     <main>
-        <div class="flex row total-columns-12">
+        <div class="row total-columns-12">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -312,10 +277,10 @@
         </div>
     </main>
 
-    <h2>4.2.3. 10-Column Grid Wrapped in &lt;main&gt; + External Column Added (Combined into 12-Column Grid Like Two
+    <h2>3.2.3. 10-Column Grid Wrapped in &lt;main&gt; + External Column Added (Combined into 12-Column Grid Like Two
         Grids)</h2>
     <main>
-        <div class="flex row total-columns-6">
+        <div class="row total-columns-6">
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -331,8 +296,8 @@
         </div>
     </main>
 
-    <h2>5. 12-Column Grid with Semantic Elements (e.g., &lt;section&gt;)</h2>
-    <section class="flex row total-columns-12">
+    <h2>4. 12-Column Grid with Semantic Elements (e.g., &lt;section&gt;)</h2>
+    <section class="row total-columns-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -347,8 +312,8 @@
         <div>12</div>
     </section>
 
-    <h2>6. 10-Column Grid with Individually Set Column Widths</h2>
-    <div class="flex row total-columns-10">
+    <h2>5. 10-Column Grid with Individually Set Column Widths</h2>
+    <div class="row total-columns-10">
         <div style="flex-basis: 50px;">1 (50px)</div>
         <div style="flex-basis: 75px;">2 (75px)</div>
         <div style="flex-basis: 50px;">3 (50px)</div>
@@ -363,33 +328,33 @@
         <div style="flex-basis: 60px;">12 (60px)</div>
     </div>
 
-    <h2>7.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `div.container` Optional)
+    <h2>6.1.1. Single-Column Example without `.total-columns-1` (Defaults to Container Fluid; `div.container` Optional)
     </h2>
-    <div class="flex row">
+    <div class="row">
         <div>1</div>
     </div>
 
-    <h2>7.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid;
+    <h2>6.1.2. Single-Column Example without `.total-columns-1` + External Column Added (Defaults to Container Fluid;
         `div.container` Optional)</h2>
-    <div class="flex row">
+    <div class="row">
         <div>1</div>
         <div>2</div>
     </div>
 
-    <h2>7.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `div.container` Optional)</h2>
-    <div class="flex row total-columns-1">
+    <h2>6.2.1. Single-Column Example with `.total-columns-1` (Acts Like Container Fluid; `div.container` Optional)</h2>
+    <div class="row total-columns-1">
         <div>1</div>
     </div>
 
-    <h2>7.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid;
+    <h2>6.2.2. Single-Column Example with `.total-columns-1` + External Column Added (Acts Like Container Fluid;
         `div.container` Optional)</h2>
-    <div class="flex row total-columns-1">
+    <div class="row total-columns-1">
         <div>1</div>
         <div>2</div>
     </div>
 
-    <h2>8. Grid with 12+ Columns (100-Column Grid)</h2>
-    <div class="flex row total-columns-n" style="--columns: 50;">
+    <h2>7. Grid with 12+ Columns (100-Column Grid)</h2>
+    <div class="row total-columns-n" style="--columns: 50;">
         <script>
             for (let n = 1; n <= 1000; n++) {
                 document.write(`<div>${n}</div>`)
@@ -397,8 +362,8 @@
         </script>
     </div>
 
-    <h2>9.1.1. Responsive Grid with Breakpoints (8 of 12 Columns Used)</h2>
-    <div class="flex row total-columns-sm-2 total-columns-md-4 total-columns-lg-8">
+    <h2>8.1.1. Responsive Grid with Breakpoints (8 of 12 Columns Used)</h2>
+    <div class="row total-columns-sm-2 total-columns-md-4 total-columns-lg-8">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -409,8 +374,8 @@
         <div>8</div>
     </div>
 
-    <h2>9.1.2. Responsive Grid with Breakpoints (12 of 12 Columns Used)</h2>
-    <div class="flex row total-columns-sm-2 total-columns-md-4 total-columns-lg-12">
+    <h2>8.1.2. Responsive Grid with Breakpoints (12 of 12 Columns Used)</h2>
+    <div class="row total-columns-sm-2 total-columns-md-4 total-columns-lg-12">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -426,8 +391,8 @@
     </div>
     </section>
 
-    <h2>9.2.1. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-breakpoints-n`</h2>
-    <div class="flex row total-columns-breakpoints-n"
+    <h2>8.2.1. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-breakpoints-n`</h2>
+    <div class="row total-columns-breakpoints-n"
         style="--columns-sm: 1; --columns-md: 2; --columns-lg: 4; --columns-xl: 8; --columns-xxl: 16;">
         <div>1</div>
         <div>2</div>
@@ -447,8 +412,8 @@
         <div>16</div>
     </div>
 
-    <h2>9.2.2. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-{available breakpoint}-n`</h2>
-    <div class="flex row total-columns-sm-n total-columns-md-n total-columns-lg-n total-columns-xl-n total-columns-xxl-n"
+    <h2>8.2.2. Responsive Grid with Breakpoints and 12+ Columns using `.total-columns-{available breakpoint}-n`</h2>
+    <div class="row total-columns-sm-n total-columns-md-n total-columns-lg-n total-columns-xl-n total-columns-xxl-n"
         style="--columns-sm: 1; --columns-md: 2; --columns-lg: 4; --columns-xl: 8; --columns-xxl: 16;">
         <div>1</div>
         <div>2</div>
@@ -470,8 +435,6 @@
 
     <blockquote><strong>N.B.:</strong> Inline CSS is not a good practice. Always use an externally defined class
         instead of it.</blockquote>
-
-    <script src="../dist/eased-layout.min.js"></script>
 </body>
 
 </html>

@@ -26,7 +26,7 @@ const descriptions = {
   focus: `It enhances focus visibility across interactive elements. It applies consistent and accessible outlines for general focus states, buttons, links, and common ARIA roles.
                 This extension improves keyboard navigation clarity and supports better accessibility in user interfaces.`,
 
-  "grid.flex": `This is for creating responsive grid layouts using CSS Flexbox.`,
+  grid: `This is for creating responsive grid layouts using CSS Flex.`,
 
   "grid.float": `This is for creating responsive grid layouts using CSS float.`,
 
@@ -46,10 +46,7 @@ const descriptions = {
 
   restore: `restore-box-sizing.css, restore-margins.css, and restore-semantic-layout.css restore default box-sizing, margins, and semantic layout behaviors respectively for consistent styling across browsers in the Eased Layout Framework.`,
 
-  "semantic-layout": `It focuses on most minimalistic styling common HTML5 semantic elements such as header, footer, main, section, and article, along with div.container, allowing for clean and adaptable layouts.`,
-  "semantic-layout.js": `This JavaScript fallback module provides layout support for browsers that do not support Flexbox. It dynamically adjusts element widths based on the pre-defined
-                \`window.layoutConfig\` object, using its \`singleAsideWidth\` and \`doubleAsideWidth\` properties. It also applies float-based behavior to semantic layout elements
-                such as <aside>, <main>, <section>, and <article>, effectively simulating a responsive layout using traditional CSS float techniques.`,
+  "semantic-layout": `It focuses on most minimalistic styling common HTML5 semantic elements such as header, footer, aside, main, section, and article, along with div.container, allowing for clean and adaptable layouts.`,
 
   "stretched-link": `It provides a CSS-only solution for creating a stretched link effect on elements.`,
   bundle: `eased-layout.css and eased-layout.js are concatenated bundles of core styles and scripts for the Eased Layout Framework.
