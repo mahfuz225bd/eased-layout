@@ -105,7 +105,7 @@ This `eased-layout` framework includes focus styles for accessibility: a green o
 
 ##### Restoring the Focus Style
 
-Not provided to restore or override the focus styles. However, it can be removed to edit downloaded `eased-layout.css` or `eased-layout.min.css`.
+The `eased-layout` framework not provided features to restore or override the focus styles. However, it can be removed to edit downloaded `eased-layout.css` or `eased-layout.min.css`.
 
 ### Guideline for Designing Semantic Layout
 
