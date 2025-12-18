@@ -50,9 +50,7 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 
 ```
 /eased-layout
-|   ├── /_others (unnecessary, included for temporary)
 |   ├── /dist
-|   ├── /src
 |   |   ├── /aside
 |   |   |   ├── aside.css
 |   |   |   ├── aside.js
@@ -89,7 +87,10 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 |   |   |   ├── semantic-layout.css
 |   |   ├── /stretched-link
 |   |   |   ├── stretched-link.css
-├── /tests
+|   |   ├── /eased-layout.css
+|   |   ├── /eased-layout.js
+|   |   ├── /eased-layout.min.css
+|   |   ├── /eased-layout.min.js
 ```
 
 ### Builtin Features
@@ -104,7 +105,7 @@ This `eased-layout` framework includes focus styles for accessibility: a green o
 
 ##### Restoring the Focus Style
 
-Not provided to restore the focus style. However, it can be removed to edit downloaded `eased-layout.css` or `eased-layout.min.css`.
+Not provided to restore or override the focus styles. However, it can be removed to edit downloaded `eased-layout.css` or `eased-layout.min.css`.
 
 ### Guideline for Designing Semantic Layout
 
