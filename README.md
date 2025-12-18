@@ -109,7 +109,7 @@ The `eased-layout` framework not provided features to restore or override the fo
 
 ### Guideline for Designing Semantic Layout
 
-This framework is very helpful for making semantic layouts with one or two asides (sidebars), including responsiveness. Aside might be helpful for building layouts for blogs, documentations, e-commerce, dashboards, file managers, and much more, where sidebars play important roles, including navigation, table of contents, calendar, filtering items like products, portfolio, articles, article's archives, categories, tags, and many other useful widgets. This feature will not be required if you're not using aside as a sidebar.
+This framework is very helpful for making semantic layouts with one or two asides (sidebars), including responsiveness. Aside might be helpful for building layouts including blogs, documentations, e-commerce, dashboards, file managers, and much more, where sidebars play an important role for navigation, table of contents, calendars (date navigation), article archive links, categories, tags, filtering items like products, portfolios, articles, and many other useful widgets. The pre-defined semantic layout feature will not be required if you're not using an aside as a sidebar.
 
 #### Placement Options
 
