@@ -145,7 +145,7 @@ This framework is very helpful for making semantic layouts with one or two aside
 - The `div.container` can be excluded, if aside is not used.
 - Can be placed as a child of any element.
 
-> **Note:** `div.container` is used as a container in this libarary.
+> **Note:** `div.container` is used as a container in this framework.
 
 #### Layout Structures in Different Approaches
 
