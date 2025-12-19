@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test: Complete Examples of Grid System (CSS Grid)</title>
 
-    <!-- <link rel="stylesheet" href="../dist/basic-reset/basic-reset.min.css"> -->
-    <!-- semantic-layout.min.css is not required to include. It is included because some grid system examples are applied with semantic layout. -->
-    <link rel="stylesheet" href="../dist/semantic-layout/semantic-layout.min.css">
+    <link rel="stylesheet" href="../dist/eased-layout.min.css">
+
+    <!-- semantic-layout.min.css is not required to be included. It is included because some grid system examples are applied with semantic layout. Additionally, semantic-layout.min.css features are already included in eased-layout.min.css. You don't require semantic-layout.min.css if you already included the eased-layout.min.css. -->
+    <!-- <link rel="stylesheet" href="../dist/semantic-layout/semantic-layout.min.css"> -->
     <link rel="stylesheet" href="../dist/grid/grid.grid.min.css">
 
     <style>
@@ -333,7 +334,8 @@
         <div>12 (60px)</div>
     </div>
 
-    <h2>5.2. 12-Column Grid with Individually Set Column Widths with `grid-auto-columns: min-content;` and `grid-auto-flow: column;`</h2>
+    <h2>5.2. 12-Column Grid with Individually Set Column Widths with `grid-auto-columns: min-content;` and
+        `grid-auto-flow: column;`</h2>
     <div class="grid row" style="grid-auto-columns: min-content; grid-auto-flow: column;">
         <div style="width: 50px;">1 (50px)</div>
         <div style="width: 75px;">2 (75px)</div>
