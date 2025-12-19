@@ -30,6 +30,7 @@ table,
 caption {
     margin: 0;
 }
+
 /* Only apply focus outlines when body has class 'enable-focus-outline' */
 body.enable-focus-outline :focus {
     outline: 3px solid #FF0;
@@ -54,6 +55,7 @@ body.enable-focus-outline [role="menuitemcheckbox"]:focus,
 body.enable-focus-outline [role="tab"]:focus {
     outline: 3px solid #00F;
 }
+
 /* Start: Semantic layout */
 
 header,
@@ -118,6 +120,7 @@ div.container>article {
     container Usage:
         The div.container serves as a container. It is optional and can be placed as a child of any element.
 */
+
 aside.fixed-left,
 aside.fixed-right {
     position: fixed;
@@ -157,6 +160,7 @@ aside.bg-black {
     background-color: #000;
     color: #FFF;
 }
+
 nav ul,
 [role="navigation"] ul,
 ul[role="navigation"] {
@@ -303,6 +307,7 @@ ul[role="navigation"].horizontal li ul li ul,
   top: 0;
   left: 100%;
 }
+
 /* Start: Typography */
 
 .lead { font-size: 1.25rem; font-weight: 300; }
@@ -4208,6 +4213,7 @@ ul[role="navigation"].horizontal li ul li ul,
 }
 
 /* End: Breakpoints for responsiveness */
+
 .stretched-link-container {
     position: relative;
 }
@@ -4221,6 +4227,7 @@ ul[role="navigation"].horizontal li ul li ul,
     z-index: 1;
     content: "";
 }
+
 .resizable-grid {
     display: flex;
     flex-direction: column;
@@ -4253,6 +4260,7 @@ ul[role="navigation"].horizontal li ul li ul,
     cursor: row-resize;
     flex-shrink: 0;
 }
+
 @media print {
 
     /* Display utilities */
@@ -4477,6 +4485,7 @@ ul[role="navigation"].horizontal li ul li ul,
         display: block !important;
     }
 }
+
 div.container:has(.row), main:has(.row) { flex-wrap: nowrap; }
 
 .row { display: flex; flex-wrap: wrap; flex-direction: row; }
@@ -5308,6 +5317,7 @@ div.container:has(.row), main:has(.row) { flex-wrap: nowrap; }
 }
 
 /* End: Breakpoints for responsiveness */
+
 div.container:has(.column-count), main:has(.column-count), div.container.column-count, main.column-count { display: block; }
 
 .column-count { column-gap: 0; column-count: 1; }
@@ -6102,6 +6112,7 @@ div.container:has(.column-count), main:has(.column-count), div.container.column-
   .column-count.total-columns-breakpoints-n,
   .column-count.total-columns-xxl-n { column-count: var(--columns-xxl, 1); }
 }
+
 body.enable-debugger * {
   outline: 2px solid #F0F; /* Magenta outline for all elements */
   padding: 10px;
