@@ -46,47 +46,62 @@ Now, Create a file in the root directory or anywhere and set `href` properly acc
 </html>
 ```
 
-### Basic File Structure
+### File Structure
 
 ```
 /eased-layout
-|   ├── /dist
-|   |   ├── /aside
-|   |   |   ├── aside.css
-|   |   |   ├── aside.js
-|   |   ├── /basic-reset
-|   |   |   ├── basic-reset.css
-|   |   ├── /column-count
-|   |   |   ├── column-count.css
-|   |   ├── /debugger.css
-|   |   |   ├── debugger.css
-|   |   ├── /dragbar
-|   |   |   ├── dragbar.css
-|   |   |   ├── dragbar.js
-|   |   ├── /focus
-|   |   |   ├── focus.css
-|   |   ├── /grid.flex
-|   |   |   ├── grid.flex.css
-|   |   ├── /grid.float
-|   |   |   ├── grid.float.css
-|   |   ├── /grid.grid
-|   |   |   ├── grid.grid.css
-|   |   ├── /helpers
-|   |   |   ├── helpers.css
-|   |   ├── /grid.flex
-|   |   |   ├── grid.flex.css
-|   |   ├── /navbar
-|   |   |   ├── navbar.css
-|   |   ├── /print
-|   |   |   ├── print.css
-|   |   ├── /restore
-|   |   |   ├── restore-box-sizing.css
-|   |   |   ├── restore-margins.css
-|   |   |   ├── restore-semantic-layout.css
-|   |   ├── /semantic-layout
-|   |   |   ├── semantic-layout.css
-|   |   ├── /stretched-link
-|   |   |   ├── stretched-link.css
+|   ├── /dist
+|   |   ├── /aside
+|   |   |   ├── aside.css
+|   |   |   ├── aside.min.css
+|   |   |   ├── aside.js
+|   |   |   ├── aside.min.js
+|   |   ├── /basic-reset
+|   |   |   ├── basic-reset.css
+|   |   |   ├── basic-reset.min.css
+|   |   ├── /column-count
+|   |   |   ├── column-count.css
+|   |   |   ├── column-count.min.css
+|   |   ├── /debugger.css
+|   |   |   ├── debugger.css
+|   |   |   ├── debugger.min.css
+|   |   ├── /dragbar
+|   |   |   ├── dragbar.css
+|   |   |   ├── dragbar.min.css
+|   |   |   ├── dragbar.js
+|   |   |   ├── dragbar.min.js
+|   |   ├── /focus
+|   |   |   ├── focus.css
+|   |   |   ├── focus.min.css
+|   |   ├── /grid
+|   |   |   ├── grid.css
+|   |   |   ├── grid.min.css
+|   |   |   ├── grid.float.css
+|   |   |   ├── grid.float.min.css
+|   |   |   ├── grid.grid.css
+|   |   |   ├── grid.grid.min.css
+|   |   ├── /helpers
+|   |   |   ├── helpers.css
+|   |   |   ├── helpers.min.css
+|   |   ├── /navbar
+|   |   |   ├── navbar.css
+|   |   |   ├── navbar.min.css
+|   |   ├── /print
+|   |   |   ├── print.css
+|   |   |   ├── print.min.css
+|   |   ├── /restore
+|   |   |   ├── restore-box-sizing.css
+|   |   |   ├── restore-box-sizing.min.css
+|   |   |   ├── restore-margins.css
+|   |   |   ├── restore-margins.min.css
+|   |   |   ├── restore-semantic-layout.css
+|   |   |   ├── restore-semantic-layout.min.css
+|   |   ├── /semantic-layout
+|   |   |   ├── semantic-layout.css
+|   |   |   ├── semantic-layout.min.css
+|   |   ├── /stretched-link
+|   |   |   ├── stretched-link.css
+|   |   |   ├── stretched-link.min.css
 |   |   ├── /eased-layout.css
 |   |   ├── /eased-layout.js
 |   |   ├── /eased-layout.min.css
